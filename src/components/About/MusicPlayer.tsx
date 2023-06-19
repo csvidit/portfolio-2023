@@ -17,13 +17,13 @@ import useSound from "use-sound";
 const MusicPlayer = () => {
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(true);
-  const audioRef = useRef(new Audio("lavender_haze.mp3"));
+  const audioRef = useRef<HTMLAudioElement | undefined>(new Audio("lavender_haze.mp3"));
 
   useEffect(() => {
     if (playing) {
-      audioRef.current.play();
+      audioRef.current?.play();
     } else {
-      audioRef.current.pause();
+      audioRef.current?.pause();
     }
   }, [playing]);
 

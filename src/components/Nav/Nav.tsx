@@ -27,8 +27,6 @@ const Nav = () => {
   const [open, setOpen] = useState(false);
   const pathName = usePathname();
 
-  console.log("PATHNAME", pathName);
-
   const links = [
     { name: "Home", href: "/", icon: <HiHome /> },
     { name: "About", href: "/about", icon: <BsPersonFill /> },
@@ -77,13 +75,6 @@ const Nav = () => {
                         </motion.div>
                       </Link>
                     </motion.div>
-                    {/* {open && (
-                      <AnimatePresence>
-                        <motion.div layout className="text-lime-500">
-                          portfolio
-                        </motion.div>
-                      </AnimatePresence>
-                    )} */}
                     <motion.div layout className="">
                       <Hamburger size={20} toggle={setOpen} toggled={open} />
                     </motion.div>
