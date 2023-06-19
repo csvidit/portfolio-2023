@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,7 +14,7 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -24,4 +24,31 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    scroll-behavior: smooth !important;
+}
+
+@font-face {
+  font-family: 'CM Geom';
+  src: url('../fonts/CMGeom-Regular.woff2') format('woff2'),
+      url('../fonts/CMGeom-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CM Geom';
+  src: url('../fonts/CMGeom-Regular.woff2') format('woff2'),
+      url('../fonts/CMGeom-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.geom{
+  font-family: "CM Geom", "sans-serif";
+}
+
+.line-gap{
+  line-height: 120%;
 }
