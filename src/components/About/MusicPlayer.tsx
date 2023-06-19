@@ -17,7 +17,7 @@ import useSound from "use-sound";
 const MusicPlayer = () => {
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(true);
-  const audioRef = useRef<HTMLAudioElement | undefined>(new Audio("lavender_haze.mp3"));
+  const audioRef = useRef<HTMLAudioElement>(new Audio("lavender_haze.mp3"));
 
   useEffect(() => {
     if (playing) {
