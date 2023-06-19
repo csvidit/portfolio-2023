@@ -101,6 +101,10 @@ const MusicPlayer = () => {
             className="text-xl lg:text-2xl text-neutral-500"
             onClick={() => {
               setVolume(!volume);
+              if(audioRef.current != undefined)
+              {
+                audioRef.current.muted = !audioRef.current.muted;
+              }
             }}
           >
             <LayoutGroup>
