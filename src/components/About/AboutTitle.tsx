@@ -9,7 +9,7 @@ const AboutTitle = () => {
         layout
         className="flex geom grow text-4xl lg:text-6xl text-sky-500"
       >
-        here's the tl;dr
+        here&apos;s the tl;dr
       </motion.div>
       <motion.div
         layout
