@@ -1,3 +1,5 @@
+'use client'
+
 import AboutTitle from "@/components/About/AboutTitle";
 import ContactForm from "@/components/About/ContactForm";
 import Education from "@/components/About/Education";
