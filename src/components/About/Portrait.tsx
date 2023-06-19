@@ -47,8 +47,6 @@ const Portrait = () => {
             transition={{
               type: "tween",
               duration: 0.2,
-              damping: 20,
-              stiffness: 200,
             }}
             className="w-full h-full bg-neutral-900 bg-opacity-60 z-10 backdrop-blur-sm geom rounded-[3rem] flex justify-center items-center"
           >
