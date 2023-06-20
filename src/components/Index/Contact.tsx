@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import ContactButton from "./ContactButton";
 import InlineButton from "./InlineButton";
 
 const Contact = () => {

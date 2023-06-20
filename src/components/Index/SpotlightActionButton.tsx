@@ -1,9 +1,8 @@
 "use client";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import { BsArrowUpRight } from "react-icons/bs";
-import { HiArrowSmallRight } from "react-icons/hi2";
 import { useMediaQuery } from "react-responsive";
 import { UrlObject } from "url";
 

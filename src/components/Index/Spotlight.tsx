@@ -1,14 +1,11 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import ActionButton from "./ActionButton";
 import Image from "next/image";
-import SpotlightActionButton from "./SpotlightActionButton";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import Link from "next/link";
-import { HiArrowSmallRight } from "react-icons/hi2";
 import { useRouter } from "next/navigation";
 
 const Spotlight = () => {

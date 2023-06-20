@@ -1,9 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import ContactButton from "./ContactButton";
+import { BsArrowUpRight } from "react-icons/bs";
 import { useState } from "react";
 
 const GitHub = () => {

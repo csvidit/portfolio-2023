@@ -1,9 +1,7 @@
 "use client";
 
 import { motion, useScroll } from "framer-motion";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import {TbLocationFilled} from "react-icons/tb"
+import { TbLocationFilled } from "react-icons/tb";
 
 const Location = () => {
 

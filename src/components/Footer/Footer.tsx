@@ -1,8 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BsArrowRight, BsChevronRight } from "react-icons/bs";
-import Link from "next/link";
 
 const Footer = () => {
   const mainDivVariants = {
@@ -36,10 +34,6 @@ const Footer = () => {
         &copy; 2023 Vidit Khandelwal. All rights reserved. All wrongs reserved,
         too.{" "}
       </motion.div>
-      {/* <motion.div>
-        All content on this website is copyrighted intellectual property.
-      </motion.div> */}
-      {/* <motion.div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-2 lg:items-center"></motion.div> */}
     </motion.div>
   );
 };

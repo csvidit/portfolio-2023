@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import InlineButton from "../Index/InlineButton";
 
 const Personality = () => {
   return (

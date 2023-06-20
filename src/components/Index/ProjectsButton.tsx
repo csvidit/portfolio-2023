@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BsArrowRight, BsChevronRight } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 import { useState } from "react";
 

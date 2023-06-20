@@ -4,15 +4,11 @@ import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import {
-  BsFastForwardFill,
   BsFillPlayFill,
-  BsPauseFill,
-  BsRewindFill,
-  BsVolumeMuteFill,
-  BsVolumeUpFill,
+  BsPauseFill, BsVolumeMuteFill,
+  BsVolumeUpFill
 } from "react-icons/bs";
 import { IoIosAlbums } from "react-icons/io";
-import useSound from "use-sound";
 
 const MusicPlayer = () => {
   const [playing, setPlaying] = useState(false);

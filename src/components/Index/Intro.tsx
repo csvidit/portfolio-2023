@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import ActionButton from "./ActionButton";
 import HeroSubtitles from "./HeroSubtitles";
-import styles from "./Intro.module.css"
 
 const Intro = () => {
   return (

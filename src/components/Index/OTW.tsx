@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from "framer-motion";
-import { MdWork } from "react-icons/md";
 import styles from "./OTW.module.css";
 
 const OTW = () => {

@@ -1,9 +1,8 @@
 "use client";
 
-import { AnimatePresence, MotionConfig, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { useState } from "react";
 
 const Portrait = () => {
   const [hover, setHover] = useState(false);

@@ -9,21 +9,17 @@ import {
 import NavLink from "./NavLink";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
-import Logo from "../Index/Logo";
 import { Sling as Hamburger } from "hamburger-react";
 import Link from "next/link";
-import { HiAcademicCap, HiHome } from "react-icons/hi2";
+import { HiHome } from "react-icons/hi2";
 import {
   BsFillLightningChargeFill,
   BsGridFill,
   BsPaletteFill,
   BsPersonFill,
 } from "react-icons/bs";
-import {FaScroll} from "react-icons/fa"
 
 const Nav = () => {
-  const [current, setCurrent] = useState(null);
   const [open, setOpen] = useState(false);
   const pathName = usePathname();
 
