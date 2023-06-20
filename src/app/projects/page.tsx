@@ -25,6 +25,7 @@ import {
   SiAndroid,
   SiPython,
   SiCplusplus,
+  SiVercel,
 } from "react-icons/si";
 
 const Projects = () => {
@@ -41,6 +42,7 @@ const Projects = () => {
           <SiTailwindcss />
           <SiFirebase />
           <SiAuth0 />
+          <SiVercel/>
         </ProjectIconsContainer>
       ),
     },
@@ -57,6 +59,7 @@ const Projects = () => {
           <SiSupabase />
           <SiAuth0 />
           <SiFramer />
+          <SiVercel/>
         </ProjectIconsContainer>
       ),
     },
@@ -71,6 +74,7 @@ const Projects = () => {
           <SiNextdotjs />
           <SiTailwindcss />
           <SiAuth0 />
+          <SiVercel/>
         </ProjectIconsContainer>
       ),
     },
@@ -85,6 +89,7 @@ const Projects = () => {
           <SiNextdotjs />
           <SiTailwindcss />
           <SiFramer />
+          <SiVercel/>
         </ProjectIconsContainer>
       ),
     },
@@ -112,6 +117,22 @@ const Projects = () => {
           <SiReact />
           <SiGraphql />
           <SiTailwindcss />
+          <SiVercel/>
+        </ProjectIconsContainer>
+      ),
+    },
+    {
+      title: "Bio v3",
+      content:
+        "A minimalist link-in-bio style website concept/template, with Framer Motion layout animations.",
+      link: "https://github.com/csvidit/react-bio-v2",
+      icons: (
+        <ProjectIconsContainer>
+          <SiTypescript />
+          <SiNextdotjs/>
+          <SiTailwindcss />
+          <SiFramer/>
+          <SiVercel/>
         </ProjectIconsContainer>
       ),
     },
@@ -126,6 +147,7 @@ const Projects = () => {
           <SiNextdotjs />
           <SiTailwindcss />
           <SiFramer />
+          <SiVercel/>
         </ProjectIconsContainer>
       ),
     },
