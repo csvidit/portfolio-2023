@@ -32,7 +32,11 @@ const Nav = () => {
       icon: <BsFillLightningChargeFill />,
     },
     { name: "Projects", href: "/projects", icon: <BsGridFill /> },
-    { name: "Studio", href: "https://studio.viditkhandelwal.com", icon: <BsPaletteFill /> },
+    {
+      name: "Studio",
+      href: "https://studio.viditkhandelwal.com",
+      icon: <BsPaletteFill />,
+    },
     // { name: "Academic Papers", href: "/papers", icon: <HiAcademicCap /> },
     // { name: "Stories & Poems", href: "/papers", icon: <FaScroll/> },
   ];
@@ -50,8 +54,8 @@ const Nav = () => {
       <AnimatePresence>
         <motion.nav
           layout
-          style={{ borderRadius: "24px" }}
-          className={`geom z-50 fixed self-center top-4 px-4 py-2 flex flex-col space-y-2 items-center border border-neutral-800 bg-neutral-900 bg-opacity-60 backdrop-blur-md`}
+          // style={{ borderRadius: "24px" }}
+          className={`nav_radius geom z-50 fixed self-center top-4 px-4 py-2 flex flex-col space-y-2 items-center border border-neutral-800 bg-neutral-900 bg-opacity-60 backdrop-blur-md`}
         >
           <AnimatePresence>
             <LayoutGroup id="nav-layout-group">
@@ -62,14 +66,18 @@ const Nav = () => {
                 <LayoutGroup>
                   <AnimatePresence mode="wait">
                     <motion.div layout className="">
-                      <Link href="/" className="flex flex-row space-x-1">
-                        <motion.div layout>vidit khandelwal</motion.div>
-                        <motion.div layout className="text-lime-500">
-                          {pathName == "/"
-                            ? "portfolio"
-                            : pathName.substring(1)}
-                        </motion.div>
-                      </Link>
+                      <AnimatePresence>
+                        <Link href="/" className="flex flex-row space-x-1">
+                          <LayoutGroup>
+                            <motion.div layout>vidit khandelwal</motion.div>
+                            <motion.div layout className="text-lime-500">
+                              {pathName == "/"
+                                ? "portfolio"
+                                : pathName.substring(1)}
+                            </motion.div>
+                          </LayoutGroup>
+                        </Link>
+                      </AnimatePresence>
                     </motion.div>
                     <motion.div layout className="">
                       <Hamburger size={20} toggle={setOpen} toggled={open} />
@@ -97,6 +105,7 @@ const Nav = () => {
                               duration: 0.2,
                               stiffness: 200,
                               damping: 20,
+                              when: "beforeChildren",
                               staggerChildren: 0.1,
                             }}
                             layout

@@ -23,6 +23,7 @@ const NavLink = (props: {
           className="p-4 flex flex-col space-y-1 items-center w-full h-full relative transition-all"
         >
           <motion.div
+          layout
             className={`${
               props.current == true ? "text-lime-500" : "text-neutral-100"
             }`}

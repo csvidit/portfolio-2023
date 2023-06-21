@@ -7,10 +7,10 @@ const WebExp = () => {
     <motion.div className="col-span-2 row-span-1 flex flex-col space-y-4 items-start rounded-[3rem] p-8 lg:p-12 text-2xl lg:text-4xl bg-neutral-900 text-neutral-100 font-light">
       <motion.div className="flex flex-col space-y-2 w-full">
         <motion.div className="text-2xl lg:text-4xl geom">
-          DePauw / Information Services
+          DePauw / Web Team
         </motion.div>
         <motion.div className="flex flex-row space-x-2 items-baseline text-blue-500 geom text-xl lg:text-2xl">
-          <motion.div>Summer Intern</motion.div>
+          <motion.div>Web Developer Intern</motion.div>
           <motion.div className="text-neutral-500 text-base">
             Aug 2020 - Dec 2020
           </motion.div>
