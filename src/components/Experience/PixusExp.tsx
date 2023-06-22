@@ -1,22 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ExpCompany from "./ExpCompany";
+import ExpTitle from "./ExpTitle";
+import ExpDate from "./ExpDate";
+import ExpBullets from "./ExpBullets";
 
 const PixusExp = () => {
   return (
     <motion.div className="justify-center col-span-2 row-span-2 flex flex-col space-y-4 items-start rounded-[3rem] p-8 lg:p-12 text-2xl lg:text-4xl bg-neutral-900 text-neutral-100 font-light">
       <motion.div className="flex flex-col space-y-2 w-full">
-        <motion.div className="text-2xl lg:text-4xl geom">
-          Pixus, Inc. / CaptureNoire
-        </motion.div>
+        <ExpCompany>Pixus, Inc. / CaptureNoire</ExpCompany>
         <motion.div className="flex flex-row space-x-2 items-baseline text-blue-500 geom text-xl lg:text-2xl">
-          <motion.div>Software Developer Intern</motion.div>
-          <motion.div className="text-neutral-500 text-base">
+          <ExpTitle>Software Developer Intern</ExpTitle>
+          <ExpDate>
             Nov 2022 - Dec 2022
-          </motion.div>
+          </ExpDate>
         </motion.div>
         <motion.div>
-          <motion.ul className="flex flex-col space-y-1 text-base text-neutral-300 list-disc">
+          <ExpBullets>
             <motion.li>
               Continued development of the CaptureNoire Photography Suite using
               agile methodology.
@@ -26,7 +28,7 @@ const PixusExp = () => {
               wrote detailed technical and non-technical documentation for the
               source code of the application.
             </motion.li>
-          </motion.ul>
+          </ExpBullets>
         </motion.div>
         <motion.div className="flex flex-row space-x-2 items-baseline text-blue-500 geom text-xl lg:text-2xl">
           <motion.div>Software Engineer Intern</motion.div>

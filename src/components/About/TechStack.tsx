@@ -18,9 +18,9 @@ import TechStackMarqueeItem from "./TechStackMarqueeItem";
 const TechStack = () => {
   return (
     <motion.div className="lg:col-span-3 row-span-1 w-100 h-100 flex flex-row items-center space-x-2 rounded-[3rem] p-8 lg:p-12 bg-neutral-900">
-      <motion.div className="geom text-2xl lg:text-4xl flex-nowrap w-4/12 text-yellow-500">
+      <motion.h2 className="geom text-2xl lg:text-4xl flex-nowrap w-4/12 text-yellow-500">
         my tech stack
-      </motion.div>
+      </motion.h2>
       <div className="w-9/12 relative flex overflow-x-hidden text-xl lg:text-2xl">
         <div className="animate-marquee whitespace-nowrap">
           <TechStackMarqueeItem>

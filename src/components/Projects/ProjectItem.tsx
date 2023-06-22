@@ -1,6 +1,6 @@
 "use client";
 
-import { MotionConfig, motion, useInView } from "framer-motion";
+import { MotionConfig, motion } from "framer-motion";
 import { BsArrowUpRight } from "react-icons/bs";
 import { useRef } from "react";
 
@@ -11,7 +11,6 @@ const ProjectItem = (props: {
   icons: React.ReactNode;
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref);
 
   const mainDivVariants = {
     initial: {

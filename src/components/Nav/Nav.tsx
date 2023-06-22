@@ -32,11 +32,11 @@ const Nav = () => {
       icon: <BsFillLightningChargeFill />,
     },
     { name: "Projects", href: "/projects", icon: <BsGridFill /> },
-    {
-      name: "Studio",
-      href: "https://studio.viditkhandelwal.com",
-      icon: <BsPaletteFill />,
-    },
+    // {
+    //   name: "Studio",
+    //   href: "https://studio.viditkhandelwal.com",
+    //   icon: <BsPaletteFill />,
+    // },
     // { name: "Academic Papers", href: "/papers", icon: <HiAcademicCap /> },
     // { name: "Stories & Poems", href: "/papers", icon: <FaScroll/> },
   ];

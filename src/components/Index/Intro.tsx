@@ -17,9 +17,9 @@ const Intro = () => {
           height={100}
           alt="3D Smiley Emoji"
         />
-        <motion.div className="text-4xl lg:text-6xl text-violet-500">
+        <motion.h1 className="text-4xl lg:text-6xl text-violet-500">
           vidit khandelwal
-        </motion.div>
+        </motion.h1>
       </motion.div>{" "}
       <HeroSubtitles />
       <ActionButton href="/about">More About Me</ActionButton>

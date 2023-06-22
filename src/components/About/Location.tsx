@@ -16,9 +16,9 @@ const Location = () => {
         <TbLocationFilled/>
       </motion.div>
       <motion.div className="flex flex-col items-end space-y-1 geom">
-        <motion.div className="">
+        <motion.h2 className="">
         Indianapolis
-        </motion.div>
+        </motion.h2>
         <motion.div className="text-md lg:text-xl">
         {new Date().toLocaleTimeString("en-US", { timeZone: "America/New_York" })}
         </motion.div>

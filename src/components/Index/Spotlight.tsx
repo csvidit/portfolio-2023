@@ -97,9 +97,9 @@ const Spotlight = () => {
             />
           </motion.div>
 
-          <motion.div className="text-4xl lg:text-6xl geom">
+          <motion.h2 className="text-4xl lg:text-6xl geom">
             spotlight
-          </motion.div>
+          </motion.h2>
         </motion.div>
 
         <motion.div

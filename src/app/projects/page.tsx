@@ -27,8 +27,12 @@ import {
   SiCplusplus,
   SiVercel,
 } from "react-icons/si";
+import { gsap } from "gsap";
 
 const Projects = () => {
+
+  gsap.registerPlugin(ScrollTrigger);
+
   const projects = [
     {
       title: "Xzayvian GPT",

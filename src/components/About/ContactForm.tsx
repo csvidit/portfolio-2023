@@ -37,9 +37,9 @@ const ContactForm = () => {
             src="/mail-front-color.png"
           />
         </motion.div>
-        <motion.div className="flex geom text-4xl text-blue-500 lg:text-6xl">
+        <motion.h2 className="flex geom text-4xl text-blue-500 lg:text-6xl">
           Contact
-        </motion.div>
+        </motion.h2>
       </motion.div>
       <motion.div className="relative rounded-full bg-neutral-800 text-neutral-100 w-fit">
         <motion.div className="px-4 py-2">
