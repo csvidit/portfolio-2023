@@ -19,7 +19,7 @@ const ITAPExp = () => {
           <ExpBullets>
             <motion.li>
               First-year internship program for the highly selective ITAP honors
-              program at DePauw University.
+              program at DePauw University that accepts just 20% of applicants.
             </motion.li>
             <motion.li>
               Enhanced classroom experiences through data visualization

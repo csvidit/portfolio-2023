@@ -5,15 +5,18 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import {
   BsFillPlayFill,
-  BsPauseFill, BsVolumeMuteFill,
-  BsVolumeUpFill
+  BsPauseFill,
+  BsVolumeMuteFill,
+  BsVolumeUpFill,
 } from "react-icons/bs";
 import { IoIosAlbums } from "react-icons/io";
 
 const MusicPlayer = () => {
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(true);
-  const audioRef = useRef<HTMLAudioElement | undefined>(typeof Audio !== "undefined" ? new Audio("lavender_haze.mp3") : undefined );
+  const audioRef = useRef<HTMLAudioElement | undefined>(
+    typeof Audio !== "undefined" ? new Audio("lavender_haze.mp3") : undefined
+  );
 
   useEffect(() => {
     if (playing) {
@@ -44,7 +47,7 @@ const MusicPlayer = () => {
       </motion.div>
       <motion.div className="flex flex-row space-x-4 justify-around items-center text-xl lg:text-2xl px-2 py-1 rounded-[3rem] border border-neutral-500">
         <motion.a
-          href="https://spotify.com"
+          href="https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3?si=S2lBnawZTQS81vhdNut1vQ"
           className="text-neutral-500 hover:text-neutral-100 transition-all ease-in-out duration-200"
         >
           <IoIosAlbums className="" />
@@ -97,8 +100,7 @@ const MusicPlayer = () => {
             className="text-xl lg:text-2xl text-neutral-500"
             onClick={() => {
               setVolume(!volume);
-              if(audioRef.current != undefined)
-              {
+              if (audioRef.current != undefined) {
                 audioRef.current.muted = !audioRef.current.muted;
               }
             }}
@@ -137,6 +139,9 @@ const MusicPlayer = () => {
             </LayoutGroup>
           </motion.button>
         }
+      </motion.div>
+      <motion.div className="font-sans text-xs text-right text-neutral-500">
+        &copy; Taylor Swift, Spotify, and others. 
       </motion.div>
     </motion.div>
   );

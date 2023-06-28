@@ -13,6 +13,10 @@ import Nav from "@/components/Nav/Nav";
 import IndexContent from "@/components/IndexContent";
 import MainContainer from "@/components/MainContainer";
 import Footer from "@/components/Footer/Footer";
+import Resume from "@/components/Experience/Resume";
+import Layers from "@/components/About/Layers";
+import GitHubSmall from "@/components/About/GitHubSmall";
+import SmallIconLink from "@/components/About/SmallIconLink";
 
 const About = () => {
   return (
@@ -28,6 +32,9 @@ const About = () => {
         <TechStack/>
         <Personality/>
         <ContactForm />
+        <Resume/>
+        <SmallIconLink type="github"/>
+        <SmallIconLink type="linkedin"/>
         <Footer/>
       </IndexContent>
     </MainContainer>

@@ -11,6 +11,7 @@ const ContactForm = () => {
   const [state, handleSubmit] = useForm("mwkjgaaw");
   const [message, setMessage] = useState("");
   const [emailHover, setEmailHover] = useState(false);
+  const [emailCopyMessage, setEmailCopyMessage] = useState("Copy Email");
 
   function handleMessageChange(event: {
     target: { value: SetStateAction<string> };
@@ -20,7 +21,7 @@ const ContactForm = () => {
 
   return (
     <motion.div className="lg:col-span-2 row-span-2 w-100 h-100 flex flex-col space-y-8 rounded-[3rem] p-8 lg:p-12 bg-neutral-900 font-light">
-     <motion.div className="flex flex-row items-center space-x-4">
+      <motion.div className="flex flex-row items-center space-x-4">
         <motion.div
           animate={{ rotateX: 15, rotateZ: -15 }}
           transition={{
@@ -103,16 +104,17 @@ const ContactForm = () => {
             setEmailHover(false);
           }}
           layout
-          onClick={() =>
-            navigator.clipboard.writeText("viditkhandelwal_2023@depauw.edu")
-          }
+          onClick={() => {
+            navigator.clipboard.writeText("viditkhandelwal_2023@depauw.edu");
+            setEmailCopyMessage("Email copied!");
+          }}
           className="relative group w-fit flex flex-col items-center duration-300 ease-in-out transition-all h-[1.25rem] overflow-hidden"
         >
-          <motion.div className="flex opacity-100 -translate-y-0 group-hover:-translate-y-full group-hover:opacity-0 duration-300 ease-in-out">
+          <motion.div className="flex opacity-100 -translate-y-0 group-hover:-translate-y-[110%] group-hover:opacity-0 duration-300 ease-in-out">
             You can also email me.
           </motion.div>
-          <motion.div className="flex opacity-0 -translate-y-0 group-hover:-translate-y-full group-hover:opacity-100 duration-300 ease-in-out">
-            Copy Email
+          <motion.div className="flex opacity-0 -translate-y-0 group-hover:translate-y-[-110%] group-hover:opacity-100 duration-300 ease-in-out">
+            {emailCopyMessage}
           </motion.div>
         </motion.button>
         <motion.div className="w-full border-t border-t-neutral-100"></motion.div>

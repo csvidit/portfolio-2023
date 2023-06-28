@@ -13,20 +13,19 @@ const PixusExp = () => {
         <ExpCompany>Pixus, Inc. / CaptureNoire</ExpCompany>
         <motion.div className="flex flex-row space-x-2 items-baseline text-blue-500 geom text-xl lg:text-2xl">
           <ExpTitle>Software Developer Intern</ExpTitle>
-          <ExpDate>
-            Nov 2022 - Dec 2022
-          </ExpDate>
+          <ExpDate>Nov 2022 - Dec 2022</ExpDate>
         </motion.div>
         <motion.div>
           <ExpBullets>
             <motion.li>
               Continued development of the CaptureNoire Photography Suite using
-              agile methodology.
+              agile methodology, reducing code complexity, and increasing app
+              efficiency by 30%.
             </motion.li>
             <motion.li>
-              Created a roadmap for AR filter implementation going forward and
-              wrote detailed technical and non-technical documentation for the
-              source code of the application.
+              Wrote detailed technical and non-technical documentation for the
+              source code of the application for seamless async collaboration
+              with other engineers.
             </motion.li>
           </ExpBullets>
         </motion.div>

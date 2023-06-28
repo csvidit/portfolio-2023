@@ -10,9 +10,7 @@ const HubbardExp = () => {
   return (
     <motion.div className="col-span-2 row-span-1 flex flex-col space-y-4 items-start rounded-[3rem] p-8 lg:p-12 text-2xl lg:text-4xl bg-neutral-900 text-neutral-100 font-light">
       <motion.div className="flex flex-col space-y-2 w-full">
-        <ExpCompany>
-          DePauw / Hubbard Center
-        </ExpCompany>
+        <ExpCompany>DePauw / Hubbard Center</ExpCompany>
         <motion.div className="flex flex-row space-x-2 items-baseline">
           <ExpTitle>Marketing Intern</ExpTitle>
           <ExpDate>Nov 2021 - May 2022</ExpDate>
@@ -20,12 +18,14 @@ const HubbardExp = () => {
         <motion.div>
           <ExpBullets>
             <motion.li>
-              Successfully implemented a marketing strategy to bolster the
-              efforts of the on-campus career center.
+              Successfully implemented a weekly marketing strategy to bolster
+              the efforts of the on-campus career center through strategy
+              meetings with directors.
             </motion.li>
             <motion.li>
               Delegated work to the team in weekly meetings to timely and
-              effective marketing of events to 1700+ students.
+              effective marketing of events to 1700+ students using an
+              omni-channel approach.
             </motion.li>
           </ExpBullets>
         </motion.div>
