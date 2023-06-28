@@ -15,7 +15,6 @@ import MainContainer from "@/components/MainContainer";
 import Footer from "@/components/Footer/Footer";
 import Resume from "@/components/Experience/Resume";
 import Layers from "@/components/About/Layers";
-import GitHubSmall from "@/components/About/GitHubSmall";
 import SmallIconLink from "@/components/About/SmallIconLink";
 
 const About = () => {
