@@ -49,7 +49,7 @@ const Resume = () => {
   };
   return (
     <motion.a
-    href="https://read.cv/viditkhandelwal"
+    href="https://www.icloud.com/iclouddrive/06fIUJofAuiq28fvMni89i64w#Vidit_Khandelwal_Resume_27-Jun-23"
       onHoverStart={() => {
         setHover(true);
       }}
