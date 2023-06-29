@@ -49,7 +49,8 @@ const Resume = () => {
   };
   return (
     <motion.a
-    href="https://www.icloud.com/iclouddrive/06fIUJofAuiq28fvMni89i64w#Vidit_Khandelwal_Resume_27-Jun-23"
+      target="_blank"
+      href="https://www.icloud.com/iclouddrive/06fIUJofAuiq28fvMni89i64w#Vidit_Khandelwal_Resume_27-Jun-23"
       onHoverStart={() => {
         setHover(true);
       }}
@@ -72,7 +73,10 @@ const Resume = () => {
         {hover && (
           <motion.div className="flex flex-row items-center space-x-4 w-full">
             {[...Array(n)].map((e, i) => (
-              <motion.div key={i} className="flex flex-row justify-between items-center space-x-4 w-full text-4xl lg:text-6xl">
+              <motion.div
+                key={i}
+                className="flex flex-row justify-between items-center space-x-4 w-full text-4xl lg:text-6xl"
+              >
                 <motion.div className="flex geom grow">Resume</motion.div>
                 <BsArrowUpRight className="flex text-4xl lg:text-6xl" />
               </motion.div>

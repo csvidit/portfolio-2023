@@ -32,8 +32,8 @@ const About = () => {
         <Personality/>
         <ContactForm />
         <Resume/>
-        <SmallIconLink type="github"/>
-        <SmallIconLink type="linkedin"/>
+        <SmallIconLink type="github" href="https://github.com/csvidit"/>
+        <SmallIconLink type="linkedin" href="https://linkedin.com/in/viditkhandelwal"/>
         <Footer/>
       </IndexContent>
     </MainContainer>

@@ -45,7 +45,8 @@ const LinkedIn = () => {
   };
   return (
     <motion.a
-    href="https://github.com/csvidit"
+    target="_blank"
+    href="https://linkedin.com/in/viditkhandelwal"
       onHoverStart={() => {
         setHover(true);
       }}

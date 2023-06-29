@@ -5,7 +5,7 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { useState } from "react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 
-const SmallIconLink = (props: { type: string }) => {
+const SmallIconLink = (props: { type: string; href: string }) => {
   const n = 100;
 
   const [hover, setHover] = useState(false);
@@ -21,8 +21,8 @@ const SmallIconLink = (props: { type: string }) => {
       },
     },
     hover: {
-        backgroundColor: "#a5b4fc",
-        color: "#1e1b4b",
+      backgroundColor: "#a5b4fc",
+      color: "#1e1b4b",
       scale: 0.95,
       transition: {
         type: "spring",
@@ -48,7 +48,8 @@ const SmallIconLink = (props: { type: string }) => {
   };
   return (
     <motion.a
-      href="https://github.com/csvidit"
+      target="_blank"
+      href={props.href}
       onHoverStart={() => {
         setHover(true);
       }}

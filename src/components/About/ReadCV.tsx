@@ -47,6 +47,7 @@ const ReadCV = () => {
   };
   return (
     <motion.a
+    target="_blank"
       href="https://read.cv/viditkhandelwal"
       onHoverStart={() => {
         setHover(true);
@@ -64,7 +65,7 @@ const ReadCV = () => {
         className="flex flex-row items-center space-x-4 w-full"
       >
         <motion.div className="flex flex-row justify-between items-center space-x-4 w-full text-4xl lg:text-6xl">
-          <motion.div className="flex geom grow">READ.CV</motion.div>
+          <motion.div className="flex geom grow">Read.cv</motion.div>
           <BsArrowUpRight className="flex text-4xl lg:text-6xl" />
         </motion.div>
         {/* {[...Array(n)].map((e, i) => (

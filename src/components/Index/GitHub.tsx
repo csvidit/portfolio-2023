@@ -45,6 +45,7 @@ const GitHub = () => {
   };
   return (
     <motion.a
+    target="_blank"
     href="https://github.com/csvidit"
       onHoverStart={() => {
         setHover(true);
