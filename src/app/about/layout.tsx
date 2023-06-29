@@ -39,8 +39,16 @@ export const metadata = {
     siteName: "Vidit Khandelwal Portfolio",
     images: [
       {
-        url: "https://viditkhandelwal.com/opengraph-image.png",
-        alt: "Vidit Khandelwal, Software Engineer, in text with the Vidit Khandelwal Seal",
+        url: "https://viditkhandelwal.com/2-opengraph-square.png",
+        alt: "VK initials text on a gradient background",
+        width: 1001,
+        height: 1001
+      },
+      {
+        url: "https://viditkhandelwal.com/2-opengraph-wide.png",
+        alt: "Vidit Khandelwal, Software Engineer, in text on a gradient background",
+        width: 1200,
+        height: 630
       },
     ],
     type: "website",
