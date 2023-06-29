@@ -67,7 +67,7 @@ const Resume = () => {
         className="flex flex-row items-center space-x-4 w-full"
       >
         <motion.div className="flex flex-row justify-between items-center space-x-4 w-full text-4xl lg:text-6xl">
-          <motion.div className="flex geom grow">Resume</motion.div>
+          <motion.div className="flex geom grow">resume</motion.div>
           <BsArrowUpRight className="flex text-4xl lg:text-6xl" />
         </motion.div>
         {hover && (
@@ -77,7 +77,7 @@ const Resume = () => {
                 key={i}
                 className="flex flex-row justify-between items-center space-x-4 w-full text-4xl lg:text-6xl"
               >
-                <motion.div className="flex geom grow">Resume</motion.div>
+                <motion.div className="flex geom grow">resume</motion.div>
                 <BsArrowUpRight className="flex text-4xl lg:text-6xl" />
               </motion.div>
             ))}

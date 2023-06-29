@@ -63,7 +63,7 @@ const LinkedIn = () => {
         className="flex flex-row items-center space-x-4 w-full"
       >
         <motion.div className="flex flex-row justify-between items-center space-x-4 w-full text-4xl lg:text-6xl">
-          <motion.div className="flex geom grow">LinkedIn</motion.div>
+          <motion.div className="flex geom grow">linkedin</motion.div>
           <BsArrowUpRight className="flex text-4xl lg:text-6xl" />
         </motion.div>
         {/* {[...Array(n)].map((e, i) => (
@@ -79,7 +79,7 @@ const LinkedIn = () => {
           <motion.div className="flex flex-row items-center space-x-4 w-full">
             {[...Array(n)].map((e, i) => (
               <motion.div key={i} className="flex flex-row justify-between items-center space-x-4 w-full text-4xl lg:text-6xl select-none">
-                <motion.div className="flex geom grow">LinkedIn</motion.div>
+                <motion.div className="flex geom grow">linkedin</motion.div>
                 <BsArrowUpRight className="flex text-4xl lg:text-6xl" />
               </motion.div>
             ))}

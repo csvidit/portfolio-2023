@@ -51,7 +51,7 @@ const ProjectsButton = () => {
         className="w-full h-full flex flex-row justify-between items-center space-x-4 text-4xl lg:text-6xl"
       >
         <motion.div layout className="flex geom grow">
-          Projects? Projects.
+          projects? projects.
         </motion.div>
         <BsArrowRight className="flex text-4xl lg:text-6xl" />
       </Link>

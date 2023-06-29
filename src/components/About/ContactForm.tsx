@@ -39,7 +39,7 @@ const ContactForm = () => {
           />
         </motion.div>
         <motion.h2 className="flex geom text-4xl text-blue-500 lg:text-6xl">
-          Contact
+          contact
         </motion.h2>
       </motion.div>
       <motion.div className="relative rounded-full bg-neutral-800 text-neutral-100 w-fit">
