@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import EducationTitle from "./EducationTitle";
+import EducationDescription from "./EducationDescription";
+import EducationItem from "./EducationItem";
 
 const Education = () => {
   return (
@@ -11,34 +14,20 @@ const Education = () => {
       >
         academics
       </motion.h2>
-      <motion.div
-        layout
-        className="flex flex-col space-y-1 font-light flex-wrap "
-      >
-        <motion.div className="text-xl lg:text-2xl">
-            DePauw University
-        </motion.div>
-        <motion.div className="text-neutral-500">
-            BA, Computer Science + Economics minor
-        </motion.div>
-        <motion.div className="text-neutral-500">
-            Aug 2019 - May 2023
-        </motion.div>
-      </motion.div>
-      <motion.div
-        layout
-        className="flex flex-col space-y-1 font-light flex-wrap "
-      >
-        <motion.div className="text-xl lg:text-2xl">
-            New College, University of Oxford
-        </motion.div>
-        <motion.div className="text-neutral-500">
-            Visiting Student, International Business and Creative Writing
-        </motion.div>
-        <motion.div className="text-neutral-500">
-            Sep 2022 - Dec 2022
-        </motion.div>
-      </motion.div>
+      <EducationItem>
+        <EducationTitle>DePauw University</EducationTitle>
+        <EducationDescription>
+          BA, Computer Science + Economics minor
+        </EducationDescription>
+        <EducationDescription>Aug 2019 - May 2023</EducationDescription>
+      </EducationItem>
+      <EducationItem>
+        <EducationTitle>New College, University of Oxford</EducationTitle>
+        <EducationDescription>
+          Visiting Student, International Business and Creative Writing
+        </EducationDescription>
+        <EducationDescription>Sep 2022 - Dec 2022</EducationDescription>
+      </EducationItem>
     </motion.div>
   );
 };

@@ -11,7 +11,7 @@ import Footer from "@/components/Footer/Footer";
 import Nav from "@/components/Nav/Nav";
 import IndexContent from "@/components/IndexContent";
 import MainContainer from "@/components/MainContainer";
-import ExperienceHeader from "@/components/Experience/ExperienceHeader";
+import SimplePageTitle from "@/components/SimplePageTitle";
 
 const Projects = () => {
  
@@ -19,7 +19,7 @@ const Projects = () => {
     <MainContainer>
       <Nav/>
       <IndexContent>
-        <ExperienceHeader/>
+        <SimplePageTitle color="text-blue-500">work experience</SimplePageTitle>
         <PixusExp/>
         <HubbardExp/>
         <ISExp/>

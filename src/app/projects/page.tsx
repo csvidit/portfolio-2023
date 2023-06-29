@@ -6,7 +6,6 @@ import IndexContent from "@/components/IndexContent";
 import MainContainer from "@/components/MainContainer";
 import ProjectIconsContainer from "@/components/Projects/ProjectIconsContainer";
 import ProjectItem from "@/components/Projects/ProjectItem";
-import ProjectsTitle from "@/components/Projects/ProjectsTitle";
 import { FaJava } from "react-icons/fa";
 import {
   SiTypescript,
@@ -28,6 +27,7 @@ import {
   SiVercel,
 } from "react-icons/si";
 import { gsap } from "gsap";
+import SimplePageTitle from "@/components/SimplePageTitle";
 
 const Projects = () => {
 
@@ -212,7 +212,7 @@ const Projects = () => {
     <MainContainer>
       <Nav/>
       <IndexContent>
-        <ProjectsTitle />
+        <SimplePageTitle color="text-violet-500">projects</SimplePageTitle>
         {projects.map((x, index: number) => {
           return (
             <ProjectItem key={index} title={x.title} href={x.link} icons={x.icons}>
