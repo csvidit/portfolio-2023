@@ -1,7 +1,7 @@
 import "../globals.css";
 
 export const metadata = {
-  title: "Vidit Khandelwal - Work Experience",
+  title: "Work Experience - Vidit Khandelwal",
   description:
     "Vidit Khandelwal's past work experience in tech industry and on-campus internships. He is a recent computer science and economics graduate of DePauw University. Open to work, and based in the United States",
   authors: [{ name: "Vidit Khandelwal", url: "https://viditkhandelwal.com" }],

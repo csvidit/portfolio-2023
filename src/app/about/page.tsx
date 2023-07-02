@@ -1,7 +1,7 @@
 'use client'
 
 import AboutTitle from "@/components/About/AboutTitle";
-import ContactForm from "@/components/About/ContactForm";
+import ContactForm from "@/components/ContactForm";
 import Education from "@/components/About/Education";
 import Location from "@/components/About/Location";
 import MusicPlayer from "@/components/About/MusicPlayer";
@@ -13,8 +13,6 @@ import Nav from "@/components/Nav/Nav";
 import IndexContent from "@/components/IndexContent";
 import MainContainer from "@/components/MainContainer";
 import Footer from "@/components/Footer/Footer";
-// import Resume from "@/components/Experience/Resume";
-import Layers from "@/components/About/Layers";
 import MarqueeButton from "@/components/MarqueeButton";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 

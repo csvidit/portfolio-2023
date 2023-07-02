@@ -1,7 +1,7 @@
 import "../globals.css";
 
 export const metadata = {
-  title: "Vidit Khandelwal - About",
+  title: "About - Vidit Khandelwal",
   description:
     "Vidit Khandelwal's is a recent computer science and economics graduate of DePauw University. He loves web development, iced lattes, and Midnights by Taylor Swift. Open to work, and based in the United States",
   authors: [{ name: "Vidit Khandelwal", url: "https://viditkhandelwal.com" }],

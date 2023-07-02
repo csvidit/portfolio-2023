@@ -1,7 +1,7 @@
 import "../globals.css";
 
 export const metadata = {
-  title: "Vidit Khandelwal - Projects",
+  title: "Papers - Vidit Khandelwal",
   description:
     "Select academic papers written Vidit Khandelwal in Economics, Sociology, Gender Studies, and Ethics. He is a recent computer science and economics graduate of DePauw University. Open to work, and based in the United States",
   authors: [{ name: "Vidit Khandelwal", url: "https://viditkhandelwal.com" }],

@@ -1,7 +1,7 @@
 import "../globals.css";
 
 export const metadata = {
-  title: "Vidit Khandelwal - Projects",
+  title: "Projects - Vidit Khandelwal",
   description:
     "Recent open-source and closed-source development projects by Vidit Khandelwal. He is a recent computer science and economics graduate of DePauw University. Open to work, and based in the United States",
   authors: [{ name: "Vidit Khandelwal", url: "https://viditkhandelwal.com" }],
