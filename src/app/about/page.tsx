@@ -15,7 +15,6 @@ import MainContainer from "@/components/MainContainer";
 import Footer from "@/components/Footer/Footer";
 // import Resume from "@/components/Experience/Resume";
 import Layers from "@/components/About/Layers";
-import SmallIconLink from "@/components/About/SmallIconLink";
 import MarqueeButton from "@/components/MarqueeButton";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 

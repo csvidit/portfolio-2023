@@ -53,6 +53,7 @@ const PixusExp = () => {
         </motion.div>
       </motion.div>
       <ActionButton
+        size="full"
         external={true}
         variant="experience"
         href="https://capturenoire.com"
