@@ -6,16 +6,17 @@ import ExpTitle from "./ExpTitle";
 import ExpDate from "./ExpDate";
 import ExpBullets from "./ExpBullets";
 import ExpSubtitleContainer from "./ExpSubtitleContainer";
+import ActionButton from "../Index/ActionButton";
 
 const PixusExp = () => {
   return (
-    <motion.div className="justify-center col-span-2 row-span-2 flex flex-col space-y-4 items-start rounded-[3rem] p-8 lg:p-12 text-2xl lg:text-4xl bg-neutral-900 text-neutral-100 font-light">
+    <motion.div className="justify-between w-full col-span-2 row-span-2 flex flex-col space-y-4 items-start rounded-[3rem] p-8 lg:p-12 text-2xl lg:text-4xl bg-neutral-900 text-neutral-100 font-light">
       <motion.div className="flex flex-col space-y-2 w-full">
         <ExpCompany>Pixus, Inc. / CaptureNoire</ExpCompany>
         <ExpSubtitleContainer>
           <ExpTitle>Software Developer Intern</ExpTitle>
           <ExpDate>Nov 2022 - Dec 2022</ExpDate>
-          </ExpSubtitleContainer>
+        </ExpSubtitleContainer>
         <motion.div>
           <ExpBullets>
             <motion.li>
@@ -51,6 +52,14 @@ const PixusExp = () => {
           </motion.ul>
         </motion.div>
       </motion.div>
+      <ActionButton
+        external={true}
+        variant="experience"
+        href="https://capturenoire.com"
+        className=""
+      >
+        Check out CaptureNoire
+      </ActionButton>
     </motion.div>
   );
 };

@@ -9,13 +9,12 @@ import Link from "next/link";
 import { HiArrowSmallRight, HiArrowUpRight } from "react-icons/hi2";
 import { UrlObject } from "url";
 
-const ActionButton = (props: {
+const SecondaryButton = (props: {
   children: React.ReactNode;
   href: string | UrlObject;
   variant: string; // can be regular, spotight, experience, academic.
   external: boolean;
   className?: string;
-  size: string; // full or fit
 }) => {
   const n = 100;
   const colors = {
@@ -51,13 +50,11 @@ const ActionButton = (props: {
       color: color,
       backgroundColor: backgroundColor,
       borderColor: colors.gray,
-      scale: 1,
     },
     hover: {
-      color: backgroundColor,
-      backgroundColor: color,
+      color: color,
+      backgroundColor: backgroundColor,
       borderColor: color,
-      scale: 1.05,
     },
   };
 
@@ -77,6 +74,7 @@ const ActionButton = (props: {
     initial: {
       display: "none",
       opacity: 0,
+    //   opacity: 1,
       translateY: "+100%",
     },
     hover: {
@@ -104,7 +102,7 @@ const ActionButton = (props: {
           initial="initial"
           whileHover="hover"
           layout
-          className={`group w-${props.size} h-full px-4 py-2 flex flex-row items-center group justify-between space-x-4 text-xl lg:text-2xl border rounded-[3rem] overflow-hidden font-light`}
+          className={`group w-fit h-full py-1 flex flex-row items-center group justify-start space-x-4 text-base border-b overflow-hidden font-light`}
         >
           <motion.div className="flex flex-col overflow-hidden">
             <AnimatePresence mode="popLayout">
@@ -146,4 +144,4 @@ const ActionButton = (props: {
   );
 };
 
-export default ActionButton;
+export default SecondaryButton;

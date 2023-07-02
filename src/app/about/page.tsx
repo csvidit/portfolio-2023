@@ -13,9 +13,11 @@ import Nav from "@/components/Nav/Nav";
 import IndexContent from "@/components/IndexContent";
 import MainContainer from "@/components/MainContainer";
 import Footer from "@/components/Footer/Footer";
-import Resume from "@/components/Experience/Resume";
+// import Resume from "@/components/Experience/Resume";
 import Layers from "@/components/About/Layers";
 import SmallIconLink from "@/components/About/SmallIconLink";
+import MarqueeButton from "@/components/MarqueeButton";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 
 const About = () => {
   return (
@@ -25,15 +27,48 @@ const About = () => {
         <AboutTitle />
         <Portrait />
         <Education />
-        <ReadCV />
+        <MarqueeButton
+          href="/experience"
+          size={2}
+          variant="nonfocus"
+          color="blue"
+          external={false}
+        >
+          experience
+        </MarqueeButton>
+        {/* <ExpButton/> */}
         <Location/>
         <MusicPlayer />
         <TechStack/>
         <Personality/>
         <ContactForm />
-        <Resume/>
-        <SmallIconLink type="github" href="https://github.com/csvidit"/>
-        <SmallIconLink type="linkedin" href="https://linkedin.com/in/viditkhandelwal"/>
+        <MarqueeButton
+          href="https://www.icloud.com/iclouddrive/06fIUJofAuiq28fvMni89i64w#Vidit_Khandelwal_Resume_27-Jun-23"
+          size={2}
+          variant="focus"
+          color="blue"
+          external={true}
+        >
+          resume
+        </MarqueeButton>
+        <MarqueeButton
+          href="https://github.com/csvidit"
+          size={1}
+          variant="nonfocus"
+          color="blue"
+          external={true}
+        >
+          <SiGithub/>
+        </MarqueeButton>
+        <MarqueeButton
+          href="https://linkedin.com/in/viditkhandelwal"
+          size={1}
+          variant="nonfocus"
+          color="blue"
+          external={true}
+        >
+          <SiLinkedin/>
+        </MarqueeButton>
         <Footer/>
       </IndexContent>
     </MainContainer>

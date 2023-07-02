@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import ExpCompany from "./ExpCompany";
 import ExpBullets from "./ExpBullets";
 import ExpSubtitleContainer from "./ExpSubtitleContainer";
+import ExpTitle from "./ExpTitle";
 
 const ITAPExp = () => {
   return (
@@ -11,7 +12,7 @@ const ITAPExp = () => {
       <motion.div className="flex flex-col space-y-2 w-full">
         <ExpCompany>DePauw / ITAP Institue</ExpCompany>
         <ExpSubtitleContainer>
-          <motion.div>ITAP Intern</motion.div>
+          <ExpTitle>ITAP Intern</ExpTitle>
           <motion.div className="text-neutral-500 text-base">
             Aug 2019 - May 2020
           </motion.div>

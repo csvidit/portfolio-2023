@@ -11,7 +11,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Sling as Hamburger } from "hamburger-react";
 import Link from "next/link";
-import { HiHome } from "react-icons/hi2";
+import { HiAcademicCap, HiHome } from "react-icons/hi2";
 import {
   BsFillLightningChargeFill,
   BsGridFill,
@@ -31,7 +31,9 @@ const Nav = () => {
       href: "/experience",
       icon: <BsFillLightningChargeFill />,
     },
+    { name: "Academics", href: "/academics", icon: <HiAcademicCap /> },
     { name: "Projects", href: "/projects", icon: <BsGridFill /> },
+
     // {
     //   name: "Studio",
     //   href: "https://studio.viditkhandelwal.com",

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import EducationTitle from "./EducationTitle";
 import EducationDescription from "./EducationDescription";
 import EducationItem from "./EducationItem";
+import ActionButton from "../Index/ActionButton";
 
 const Education = () => {
   return (
@@ -28,6 +29,7 @@ const Education = () => {
         </EducationDescription>
         <EducationDescription>Sep 2022 - Dec 2022</EducationDescription>
       </EducationItem>
+      <ActionButton size="full" external={false} variant="academic" href="/academics">In Detail</ActionButton>
     </motion.div>
   );
 };

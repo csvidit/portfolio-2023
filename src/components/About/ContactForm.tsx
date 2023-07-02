@@ -22,7 +22,7 @@ const ContactForm = () => {
   return (
     <motion.div className="lg:col-span-2 row-span-2 w-100 h-100 flex flex-col space-y-8 rounded-[3rem] p-8 lg:p-12 bg-neutral-900 font-light">
       <motion.div className="flex flex-row items-center space-x-4">
-        <motion.div
+        {/* <motion.div
           animate={{ rotateX: 15, rotateZ: -15 }}
           transition={{
             ease: "easeInOut",
@@ -37,7 +37,7 @@ const ContactForm = () => {
             alt="3D Envelope"
             src="/mail-front-color.png"
           />
-        </motion.div>
+        </motion.div> */}
         <motion.h2 className="flex geom text-4xl text-blue-500 lg:text-6xl">
           contact
         </motion.h2>

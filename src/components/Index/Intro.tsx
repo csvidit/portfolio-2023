@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import ActionButton from "./ActionButton";
 import HeroSubtitles from "./HeroSubtitles";
+import ActionButton from "./ActionButton";
 
 const Intro = () => {
   return (
@@ -22,7 +22,7 @@ const Intro = () => {
         </motion.h1>
       </motion.div>{" "}
       <HeroSubtitles />
-      <ActionButton href="/about">More About Me</ActionButton>
+      <ActionButton size="full" external={false} variant="plain" href="/about">More About Me</ActionButton>
     </motion.div>
   );
 };

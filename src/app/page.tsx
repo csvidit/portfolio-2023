@@ -9,20 +9,21 @@ import ProjectsButton from "@/components/Index/ProjectsButton";
 import Spotlight from "@/components/Index/Spotlight";
 import IndexContent from "@/components/IndexContent";
 import MainContainer from "@/components/MainContainer";
+import MarqueeButton from "@/components/MarqueeButton";
 
 const Index = () => {
   return (
     <MainContainer>
-      <Nav/>
+      <Nav />
       <IndexContent>
         <Intro />
         <Spotlight />
         <OTW />
-        <ContactForm/>
-        <GitHub/>
-        <LinkedIn/>
-        <ProjectsButton/>
-        <Footer/>
+        <MarqueeButton href="/projects" size={4} variant="nonfocus" color="violet" external={false}>projects</MarqueeButton>
+        <ContactForm />
+        <GitHub />
+        <LinkedIn />
+        <Footer />
       </IndexContent>
     </MainContainer>
   );
