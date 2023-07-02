@@ -82,7 +82,7 @@ const Nav = () => {
                       </AnimatePresence>
                     </motion.div>
                     <motion.div layout className="">
-                      <Hamburger size={20} toggle={setOpen} toggled={open} />
+                      <Hamburger aria-label="hamburger menu button" size={20} toggle={setOpen} toggled={open} />
                     </motion.div>
                   </AnimatePresence>
                 </LayoutGroup>

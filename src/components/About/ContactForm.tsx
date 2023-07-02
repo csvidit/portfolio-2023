@@ -87,6 +87,7 @@ const ContactForm = () => {
           ></motion.input>
           {/* <motion.div className="absolute right-8 bg-gradient-to-r from-transparent to-neutral-900 w-10 z-20"></motion.div> */}
           <motion.button
+            aria-label="send button"
             disabled={state.submitting}
             type="submit"
             className="rounded-full flex flex-row justify-center items-center bg-blue-600 p-2"
