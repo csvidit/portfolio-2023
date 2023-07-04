@@ -42,9 +42,9 @@ const ContactForm = () => {
           contact
         </motion.h2>
       </motion.div>
-      <motion.div className="relative rounded-full bg-neutral-800 text-neutral-100 w-fit">
+      <motion.div className="relative rounded-2xl lg:rounded-full bg-neutral-800 text-neutral-100 w-fit">
         <motion.div className="px-4 py-2">
-          Hey there! What&apos;s on your mind?
+          Hey there! What&apos;s on your mind? (Please include your email in the message as well)
         </motion.div>
       </motion.div>
       {state.submitting && (
@@ -65,7 +65,7 @@ const ContactForm = () => {
         </motion.div>
       )}
       {state.succeeded && (
-        <motion.div className="relative rounded-full bg-neutral-800 text-neutral-100 w-fit">
+        <motion.div className="relative rounded-2xl lg:rounded-full bg-neutral-800 text-neutral-100 w-fit">
           <motion.div className="px-4 py-2">
             Thanks for reaching out! I&apos;ll get back to you soon.
           </motion.div>

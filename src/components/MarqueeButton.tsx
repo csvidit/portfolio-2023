@@ -87,6 +87,7 @@ const MarqueeButton = (props: {
   return (
     <motion.a
       href={props.href}
+      target={props.external ? "_blank" : ""}
       onHoverStart={() => {
         setHover(true);
       }}
