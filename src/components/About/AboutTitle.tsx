@@ -18,10 +18,10 @@ const AboutTitle = () => {
         I am particularly strong in full-stack web development using frameworks
         like Next.js, and have a track record of great outcomes in native
         Android development. I like the design part of development as well as
-        the backend, because I feel that UX is very important in any product. I
+        the backend, because that puts the focus back on end user. I
         am very adaptive, having performed well in both team and independent
         professional and leadership environments. I understand business as well
-        as I do code, and find the intersection of the two quite interesting. 
+        as I do code, and thrive in the intersection of the two.
       </motion.p>
     </motion.div>
   );
