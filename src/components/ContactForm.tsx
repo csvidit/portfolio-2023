@@ -21,56 +21,40 @@ const ContactForm = () => {
 
   return (
     <motion.div className="lg:col-span-2 row-span-2 w-100 h-100 flex flex-col space-y-8 rounded-[3rem] p-8 lg:p-12 bg-neutral-900 font-light">
-      <motion.div className="flex flex-row items-center space-x-4">
-        {/* <motion.div
-          animate={{ rotateX: 15, rotateZ: -15 }}
-          transition={{
-            ease: "easeInOut",
-            duration: 2,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-        >
-          <Image
-            width={50}
-            height={50}
-            alt="3D Envelope"
-            src="/mail-front-color.png"
-          />
-        </motion.div> */}
-        <motion.h2 className="flex geom text-4xl text-blue-500 lg:text-6xl">
-          contact
-        </motion.h2>
-      </motion.div>
-      <motion.div className="relative rounded-2xl lg:rounded-full bg-neutral-800 text-neutral-100 w-fit">
-        <motion.div className="px-4 py-2">
-          Hey there! What&apos;s on your mind? (Please include your email in the message as well)
-        </motion.div>
-      </motion.div>
-      {state.submitting && (
-        <ThreeDots
-          height="20"
-          width="20"
-          radius="9"
-          color="#737373"
-          ariaLabel="three-dots-loading"
-          wrapperStyle={{}}
-          wrapperClass=""
-          visible={true}
-        />
-      )}
-      {state.succeeded && (
-        <motion.div className="relative self-end rounded-2xl bg-blue-600 text-neutral-100 w-fit">
-          <motion.div className="px-4 py-2">{message}</motion.div>
-        </motion.div>
-      )}
-      {state.succeeded && (
+      
+      <motion.div className="flex flex-col h-60 space-y-4 overflow-scroll snap-end">
         <motion.div className="relative rounded-2xl lg:rounded-full bg-neutral-800 text-neutral-100 w-fit">
           <motion.div className="px-4 py-2">
-            Thanks for reaching out! I&apos;ll get back to you soon.
+            Hey there! What&apos;s on your mind? (Please include your email in
+            the message as well)
           </motion.div>
         </motion.div>
-      )}
+        {state.submitting && (
+          <ThreeDots
+            height="20"
+            width="20"
+            radius="9"
+            color="#737373"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+        )}
+        {state.succeeded && (
+          <motion.div className="relative self-end rounded-2xl bg-blue-600 text-neutral-100 w-fit">
+            <motion.div className="px-4 py-2">{message}</motion.div>
+          </motion.div>
+        )}
+        {state.succeeded && (
+          <motion.div className="relative rounded-2xl lg:rounded-full bg-neutral-800 text-neutral-100 w-fit">
+            <motion.div className="px-4 py-2">
+              Thanks for reaching out! I&apos;ll get back to you soon.
+            </motion.div>
+          </motion.div>
+        )}
+      </motion.div>
+
       {!state.succeeded && (
         <motion.form
           onSubmit={handleSubmit}

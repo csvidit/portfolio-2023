@@ -34,7 +34,7 @@ const Projects = () => {
           read.cv
         </MarqueeButton>
         <MarqueeButton
-          href="https://www.icloud.com/iclouddrive/06fIUJofAuiq28fvMni89i64w#Vidit_Khandelwal_Resume_27-Jun-23"
+          href="https://www.icloud.com/iclouddrive/0ddTT7psEd47xFmdE9FOg9rIw#Vidit_Khandelwal_Resume_12-Jul-23_Revised"
           size={2}
           variant="focus"
           color="blue"

@@ -16,7 +16,7 @@ const Academics = () => {
         <DePauw />
         <Oxford />
         <MarqueeButton href="https://read.cv/viditkhandelwal" size={2} variant="nonfocus" color="blue" external={true}>read.cv</MarqueeButton>
-        <MarqueeButton href="https://www.icloud.com/iclouddrive/06fIUJofAuiq28fvMni89i64w#Vidit_Khandelwal_Resume_27-Jun-23" size={2} variant="focus" color="blue" external={true}>resume</MarqueeButton>
+        <MarqueeButton href="https://www.icloud.com/iclouddrive/0ddTT7psEd47xFmdE9FOg9rIw#Vidit_Khandelwal_Resume_12-Jul-23_Revised" size={2} variant="focus" color="blue" external={true}>resume</MarqueeButton>
         <Footer />
       </IndexContent>
     </MainContainer>

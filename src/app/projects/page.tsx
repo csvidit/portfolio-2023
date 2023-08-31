@@ -30,8 +30,22 @@ import { gsap } from "gsap";
 import SimplePageTitle from "@/components/SimplePageTitle";
 
 const Projects = () => {
-
   const projects = [
+    {
+      title: "Turbobiz",
+      content:
+        "Generate a business idea by leveraging the power of AI",
+      link: "https://github.com/csvidit/turbobiz",
+      icons: (
+        <ProjectIconsContainer>
+          <SiTypescript />
+          <SiNextdotjs />
+          <SiTailwindcss />
+          <SiFirebase />
+          <SiVercel />
+        </ProjectIconsContainer>
+      ),
+    },
     {
       title: "Xzayvian GPT",
       content:
@@ -44,7 +58,7 @@ const Projects = () => {
           <SiTailwindcss />
           <SiFirebase />
           <SiAuth0 />
-          <SiVercel/>
+          <SiVercel />
         </ProjectIconsContainer>
       ),
     },
@@ -61,7 +75,7 @@ const Projects = () => {
           <SiSupabase />
           <SiAuth0 />
           <SiFramer />
-          <SiVercel/>
+          <SiVercel />
         </ProjectIconsContainer>
       ),
     },
@@ -76,7 +90,7 @@ const Projects = () => {
           <SiNextdotjs />
           <SiTailwindcss />
           <SiAuth0 />
-          <SiVercel/>
+          <SiVercel />
         </ProjectIconsContainer>
       ),
     },
@@ -91,7 +105,7 @@ const Projects = () => {
           <SiNextdotjs />
           <SiTailwindcss />
           <SiFramer />
-          <SiVercel/>
+          <SiVercel />
         </ProjectIconsContainer>
       ),
     },
@@ -119,7 +133,7 @@ const Projects = () => {
           <SiReact />
           <SiGraphql />
           <SiTailwindcss />
-          <SiVercel/>
+          <SiVercel />
         </ProjectIconsContainer>
       ),
     },
@@ -131,10 +145,10 @@ const Projects = () => {
       icons: (
         <ProjectIconsContainer>
           <SiTypescript />
-          <SiNextdotjs/>
+          <SiNextdotjs />
           <SiTailwindcss />
-          <SiFramer/>
-          <SiVercel/>
+          <SiFramer />
+          <SiVercel />
         </ProjectIconsContainer>
       ),
     },
@@ -149,7 +163,7 @@ const Projects = () => {
           <SiNextdotjs />
           <SiTailwindcss />
           <SiFramer />
-          <SiVercel/>
+          <SiVercel />
         </ProjectIconsContainer>
       ),
     },
@@ -189,8 +203,8 @@ const Projects = () => {
       title: "Tree Sorted Stack",
       content:
         "An abstract data structure similar to a binary stree. Represented as an array where every node must be smaller than its children.",
-        link: "https://github.com/csvidit/TreeSortedStack",
-        icons: (
+      link: "https://github.com/csvidit/TreeSortedStack",
+      icons: (
         <ProjectIconsContainer>
           <SiCplusplus />
         </ProjectIconsContainer>
@@ -210,18 +224,28 @@ const Projects = () => {
 
   return (
     <MainContainer>
-      <Nav/>
+      <Nav />
       <IndexContent>
-        <SimplePageTitle color="text-violet-500">projects</SimplePageTitle>
+        <SimplePageTitle color="text-violet-500">
+          projects
+          <div className="flex w-fit mt-4 rounded-[3rem] bg-violet-950 text-violet-500 px-4 py-1 text-xs font-sans">
+            FILTERING OPTIONS COMING SOON
+          </div>
+        </SimplePageTitle>
         {projects.map((x, index: number) => {
           return (
-            <ProjectItem key={index} title={x.title} href={x.link} icons={x.icons}>
+            <ProjectItem
+              key={index}
+              title={x.title}
+              href={x.link}
+              icons={x.icons}
+            >
               {x.content}
             </ProjectItem>
           );
         })}
         {/* <ProjectItem /> */}
-        <Footer/>
+        <Footer />
       </IndexContent>
     </MainContainer>
   );
