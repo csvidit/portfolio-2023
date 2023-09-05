@@ -9,11 +9,11 @@ type ContactFormData = {
   message: string;
 };
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+// export const config = {
+//   api: {
+//     bodyParser: false,
+//   },
+// };
 
 export async function handler(request: NextApiRequest, response: NextApiResponse) {
   if (request.method != "POST") {
