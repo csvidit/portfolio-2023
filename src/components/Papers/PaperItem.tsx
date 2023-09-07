@@ -1,24 +1,24 @@
 "use client";
 
 import { MotionConfig, motion } from "framer-motion";
-import { BsArrowUpRight } from "react-icons/bs";
+import { BsArrowUpRight, BsDot } from "react-icons/bs";
 import { useRef } from "react";
 import { GiIndiaGate } from "react-icons/gi";
 
 export const tags = [
-    "All",
-    "Development Economics",
-    "International Business",
-    "International Finance",
-  ];
+  "All",
+  "Development Economics",
+  "International Business",
+  "International Finance",
+];
 
 const PaperItem = (props: {
   title: string;
   href: string;
   children: React.ReactNode;
   tag: number;
+  date: string;
 }) => {
-
   const ref = useRef(null);
 
   const mainDivVariants = {
@@ -48,16 +48,20 @@ const PaperItem = (props: {
     initial: {
       backgroundColor: "#0a0a0a",
       color: "#737373",
-      //   borderWidth: "1px",
-      //   borderColor: "#171717"
+      borderWidth: "1px",
+      borderColor: "#171717",
     },
     hover: {
-      backgroundColor: "#7f1d1d",
+      backgroundColor: "#450a0a",
       color: "#fca5a5",
-      //   borderWidth: "1px",
-      //   borderColor: "#fca5a5"
+      borderWidth: "1px",
+      borderColor: "#fca5a5",
     },
   };
+
+  const date = new Date(props.date);
+  let dateString = date.toDateString();
+  dateString = dateString.substring(dateString.indexOf(" "));
 
   return (
     <MotionConfig
@@ -85,14 +89,26 @@ const PaperItem = (props: {
           </motion.div>
         </motion.div>
         <motion.div className="w-full flex flex-row items-center justify-between">
-          <motion.div className="flex flex-wrap space-x-1 items-center w-fit text-xs">
+          <motion.div className="flex flex-row space-x-2 flex-wrap items-center text-neutral-500 text-xs uppercase">
+            <motion.span
+              variants={tagVariants}
+              className="px-2 py-1 bg-neutral-950 rounded-md"
+            >
+              {props.tag == 0 ? "" : tags[props.tag]}
+            </motion.span>
+            <BsDot className="lg:flex hidden" />
+            <motion.span variants={titleVariants} className="text-red-500">
+              {dateString}
+            </motion.span>
+          </motion.div>
+          {/* <motion.div className="flex flex-wrap space-x-1 items-center w-fit text-xs">
             <motion.span
               variants={tagVariants}
               className="px-2 py-1 bg-neutral-950 rounded-md uppercase"
             >
               {props.tag == 0 ? "" : tags[props.tag]}
             </motion.span>
-          </motion.div>
+          </motion.div> */}
           <motion.div variants={arrowVariants} className="flex">
             <BsArrowUpRight />
           </motion.div>

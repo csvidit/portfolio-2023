@@ -6,35 +6,72 @@ import SimplePageTitle from "@/components/SimplePageTitle";
 import MainGridItem from "@/components/MainGridItem";
 import ActionButton from "@/components/Index/ActionButton";
 import SecondaryButton from "@/components/SecondaryButton";
+import { useState, useEffect } from "react";
+import PaperFilters from "@/components/Papers/PaperFilters";
+import PapersLoading from "@/components/Papers/PapersLoading";
+import { GraphQLClient, gql } from "graphql-request";
+import PaperItem from "@/components/Papers/PaperItem";
 
 const Papers = () => {
+  const [data, setData] = useState();
+  const [activeFilter, setActiveFilter] = useState(0);
+
+  useEffect(() => {
+    const getData = async () => {
+      const client = new GraphQLClient(
+        process.env.NEXT_PUBLIC_HYGRAPH_HIGH_PERFORMANCE_ENDPOINT
+      );
+
+      const query = gql`
+        query Papers {
+          papers(orderBy: publishedAt_DESC, where: { toShow: true }) {
+            abstract
+            internalSlug
+            publishDate
+            tag
+            title
+            document {
+              fileName
+              url
+            }
+          }
+        }
+      `;
+
+      const response = await client.request(query);
+      setData(response);
+      console.log(response);
+    };
+
+    getData();
+  }, []);
 
   return (
     <IndexContent>
       <SimplePageTitle color="text-red-500">
         select academic papers
       </SimplePageTitle>
-      <MainGridItem width={4} height={1} className="mt-0">
-        <div className="text-2xl lg:text-4xl">Work In Progress...</div>
-        <div className="text-xl lg:text-2xl">A range of academic papers on economics, ethics, and philosophy.</div>
-        <SecondaryButton external={false} variant="plain" size="fit" href="/projects">Check out my projects in the meantime</SecondaryButton>
-      </MainGridItem>
-      {/* <PapersFilters
+      {/* <PaperFilters
         activeFilter={activeFilter}
         setActiveFilter={setActiveFilter}
       /> */}
-      {/* <Suspense fallback={<PapersLoading />}> */}
-      {/* {data.papers.map((x, index) => (
-          <PaperItem
-            key={index}
-            title={x.title}
-            href={`/view/${x.internalSlug}`}
-            tag={x.tag}
-          >
-            {x.abstract}
-          </PaperItem>
-        ))} */}
-      {/* </Suspense> */}
+      {data ? (
+        <>
+          {data.papers.map((x, index) => (
+            <PaperItem
+              key={index}
+              title={x.title}
+              href={x.document.url}
+              tag={x.tag}
+              date={x.publishDate}
+            >
+              {x.abstract}
+            </PaperItem>
+          ))}
+        </>
+      ) : (
+        <PapersLoading />
+      )}
       <Footer />
     </IndexContent>
   );

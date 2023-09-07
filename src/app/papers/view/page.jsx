@@ -1,8 +1,11 @@
+"use client";
+
 import IndexContent from "@/components/IndexContent";
 import MainGridItem from "@/components/MainGridItem";
 import { BsDot } from "react-icons/bs";
+import { useState } from "react";
 
-const ViewPaper = () => {
+const ViewPaper = (props) => {
   return (
     <IndexContent>
       <MainGridItem
@@ -19,6 +22,14 @@ const ViewPaper = () => {
           <BsDot />
           <div className="">OCT 14, 2022</div>
         </div>
+      </MainGridItem>
+      <MainGridItem width={4} height={2}>
+        {" "}
+        <embed
+          id="iframepdf"
+          src="https://media.graphassets.com/ErcL7ORbRJK4kJglDmNZ"
+          className="w-full h-full"
+        ></embed>
       </MainGridItem>
     </IndexContent>
   );
