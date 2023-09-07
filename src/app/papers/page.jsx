@@ -3,9 +3,6 @@
 import Footer from "@/components/Footer/Footer";
 import IndexContent from "@/components/IndexContent";
 import SimplePageTitle from "@/components/SimplePageTitle";
-import MainGridItem from "@/components/MainGridItem";
-import ActionButton from "@/components/Index/ActionButton";
-import SecondaryButton from "@/components/SecondaryButton";
 import { useState, useEffect } from "react";
 import PaperFilters from "@/components/Papers/PaperFilters";
 import PapersLoading from "@/components/Papers/PapersLoading";

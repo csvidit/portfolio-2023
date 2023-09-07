@@ -47,16 +47,17 @@ const ProjectItem = (props: {
       <motion.a
         ref={ref.current}
         href={props.href}
+        target="_blank"
         variants={mainDivVariants}
         initial="initial"
         whileHover="hover"
-        className="flex flex-row items-center col-span-4 rounded-[3rem] p-8 lg:p-12 text-2xl lg:text-4xl font-light"
+        className="flex flex-row items-center col-span-4 rounded-[3rem] p-8 lg:p-12"
       >
         <motion.div className="flex flex-col space-y-4 justify-start items-start w-full">
-          <motion.div variants={titleVariants} className="geom">
+          <motion.div variants={titleVariants} className="text-2xl lg:text-4xl">
             {props.title}
           </motion.div>
-          <motion.div className="text-md lg:text-xl text-left">
+          <motion.div className="lg:text-xl text-left">
             {props.children}
           </motion.div>
           <motion.div className="w-full flex flex-row items-center justify-between">
