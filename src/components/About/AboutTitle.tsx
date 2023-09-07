@@ -13,7 +13,7 @@ const AboutTitle = () => {
       </motion.h1>
       <motion.p
         layout
-        className="flex flex-row space-x-1 font-light text-xl lg:text-2xl flex-wrap text-justify"
+        className="flex flex-row space-x-1 font-light lg:text-2xl flex-wrap text-justify"
       >
         I am particularly strong in full-stack web development using frameworks
         like Next.js, and have a track record of great outcomes in native
