@@ -9,6 +9,7 @@ import Spotlight from "@/components/Index/Spotlight";
 import IndexContent from "@/components/IndexContent";
 import MainContainer from "@/components/MainContainer";
 import MarqueeButton from "@/components/MarqueeButton";
+import ComingUp from "@/components/Index/ComingUp";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
       <IndexContent>
         <Intro />
         <Spotlight />
+        <ComingUp/>
         <OTW />
         <MarqueeButton href="/projects" size={4} variant="nonfocus" color="violet" external={false}>projects</MarqueeButton>
         <ContactForm />

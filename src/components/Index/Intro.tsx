@@ -8,8 +8,8 @@ import MainGridItem from "../MainGridItem";
 
 const Intro = () => {
   return (
-    <MainGridItem width={2} height={1} className="">
-      <motion.div className="flex flex-col flex-wrap space-y-4 geom">
+    <MainGridItem width={4} height={1} className="items-center bg-transparent">
+      <motion.div className="flex flex-col flex-wrap space-y-4 items-center">
         {/* <Image
         className="self-center"
           src="/v-indigo.svg"
@@ -17,12 +17,12 @@ const Intro = () => {
           height={50}
           alt="Vidit Khandelwal V Stylized Logo"
         /> */}
-        <motion.h1 className="text-4xl lg:text-6xl text-indigo-500">
+        <motion.h1 className="text-4xl lg:text-6xl text-indigo-500 text-center">
           VIDIT KHANDELWAL
         </motion.h1>
         <HeroSubtitles />
       </motion.div>
-      <ActionButton size="full" external={false} variant="plain" href="/about">
+      <ActionButton size="fit" external={false} variant="plain" href="/about">
         More About Me
       </ActionButton>
     </MainGridItem>
