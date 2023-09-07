@@ -7,6 +7,7 @@ It's here! My portfolio spanning computer science, economics, and creative writi
 * Next.js (`/app` router)
 * Tailwind CSS
 * Framer Motion
+* Hygraph CMS (for papers and literature)
 
 ## Website Structure
 
@@ -17,6 +18,8 @@ It is not very complicated. These are the routes:
 * `/experience` : Now maybe you don't want to look at my ATS-compliant resume. Here, you can look at things with a little more formatting.
 * `/academics` : This is probably the place which differs the most from my resume. While academic information in my resume has very little real estate, I am able to thoroughly explain my collegiate career in this, including awards, GPA, full list of courses, and a detailed account of my study abroad experience at New College, University of Oxford. #oxonian.
 * `/projects` : A long list of my projects, with icons to demonstate what all major blocks went into the tech stack of each project. I usually link all of them to my GitHub, but you are encouraged to look at live production versions of all my web apps, updated links to which are in their GitHub repositories.
+* `/papers` : A list of select academic papers, with topic tags, publish dates, and an abstract. All paper cards link to the PDF of the paper, hosted on Hygraph CMS
+* `/literature` : A list of select poems and short stories, with tags, publish dates, and a description (if applicable). All cards link to `/literature/[slug]` dynamic routes that display the entire story/poem. All pathnames of the dynamic routes are generated at build time, with all data fetched from Hygraph. Hence, there is no client-side calling of Hygraph APIs to fetch the required story/poem. 
 
 ## UI/UX Details
 
@@ -36,7 +39,7 @@ bla bla bla
 
 While the primary buttons are jumbo-sized and get scaled down on hover, the secondary buttons scale up on hover. Tertiary buttons, owing to their low-level importance, have a much milder animation on hover, and have a minimal footprint in terms of size as well.
 
-## Backend and Logic - Contact Form
+## (Upcoming Feature) Backend and Logic - Contact Form
 
 There is no comprehensive backend, because for the most part there was not a reason to have one. The only major backend component is the `/contact route`, which is the `/app` router's version of a Next.js API route. This is for contact form submissions.
 
