@@ -24,7 +24,7 @@ const OxfordCoursework = () => {
             Advanced training in prose and poetry writing using a variety of
             styles, under the supervision of Dr Kieron Winn, who has taught in
             multiple Oxford colleges, including Christ Church. Writing styles explored included absurdist, horror and James Joyce-inspired. 
-            corporations
+            
           </SubSectionText>
         </div>
         <div className="w-full flex flex-col space-y-2">
