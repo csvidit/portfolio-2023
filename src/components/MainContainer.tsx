@@ -1,5 +1,5 @@
 import styles from "./MainContainer.module.css";
-import {Work_Sans, Plus_Jakarta_Sans} from "next/font/google";
+import {Work_Sans} from "next/font/google";
 
 const work_sans = Work_Sans({subsets: ["latin"]});
 

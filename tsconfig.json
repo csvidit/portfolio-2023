@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/papers/fetch-all/route.js", "src/app/papers/page.jsx", "src/app/papers/view/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/papers/fetch-all/route.js", "src/app/papers/page.jsx", "src/app/papers/view/page.jsx", "src/app/literature/page.jsx", "src/app/literature/[slug]/page.jsx"],
   "exclude": ["node_modules"]
 }

@@ -18,9 +18,9 @@ import {
   BsPaletteFill,
   BsPersonFill,
 } from "react-icons/bs";
-import { PiBookOpenFill } from "react-icons/pi";
+import { PiBookOpenFill, PiPenFill } from "react-icons/pi";
 
-const Nav = (props: {notFound?: boolean}) => {
+const Nav = (props: { notFound?: boolean }) => {
   const [open, setOpen] = useState(false);
   const pathName = usePathname();
 
@@ -35,6 +35,7 @@ const Nav = (props: {notFound?: boolean}) => {
     { name: "Academics", href: "/academics", icon: <HiAcademicCap /> },
     { name: "Projects", href: "/projects", icon: <BsGridFill /> },
     { name: "Papers", href: "/papers", icon: <PiBookOpenFill /> },
+    { name: "Literature", href: "/literature", icon: <PiPenFill /> },
 
     // {
     //   name: "Studio",
@@ -75,9 +76,14 @@ const Nav = (props: {notFound?: boolean}) => {
                           <LayoutGroup>
                             <motion.div layout>vidit khandelwal</motion.div>
                             <motion.div layout className="text-lime-500">
-                              {pathName == "/"  || props.notFound
+                              {pathName == "/" || props.notFound
                                 ? "portfolio"
-                                : pathName.substring(1)}
+                                : pathName.substring(
+                                    1,
+                                    pathName.lastIndexOf("/") != 0
+                                      ? pathName.lastIndexOf("/")
+                                      : pathName.length
+                                  )}
                             </motion.div>
                           </LayoutGroup>
                         </Link>
