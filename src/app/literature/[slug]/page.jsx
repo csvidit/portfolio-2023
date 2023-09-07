@@ -4,8 +4,9 @@ import MainGridItem from "@/components/MainGridItem";
 import { BsDot } from "react-icons/bs";
 import PapersLoading from "@/components/Papers/PapersLoading";
 import { Interweave, Markup } from "interweave";
-import { polyfill } from 'interweave-ssr';
+import { polyfill } from "interweave-ssr";
 import Footer from "@/components/Footer/Footer";
+import MarqueeButton from "@/components/MarqueeButton";
 
 polyfill();
 
@@ -29,7 +30,7 @@ export default async function ViewLiterature({ params }) {
           <MainGridItem
             width={4}
             height={1}
-            className="justify-start h-fit text-lg lg:text-xl"
+            className="justify-start h-fit text-lg lg:text-xl items-center"
           >
             <div className=" text-indigo-500 uppercase">
               {tags[data.primaryTag]}
@@ -40,13 +41,27 @@ export default async function ViewLiterature({ params }) {
             </div>
           </MainGridItem>
           <MainGridItem width={4} height={1}>
-            <Markup className={`flex flex-col space-y-4 ${data.primaryTag == 1 ? "items-center" : ""}`} content={data.text.html}/>
+            <Markup
+              className={`flex flex-col space-y-4 ${
+                data.primaryTag == 1 ? "items-center" : ""
+              }`}
+              content={data.text.html}
+            />
           </MainGridItem>
         </>
       ) : (
         <PapersLoading />
       )}
-      <Footer/>
+      <MarqueeButton
+        variant="nonfocus"
+        color="indigo"
+        external={false}
+        href="/literature"
+        size={4}
+      >
+        all literature
+      </MarqueeButton>
+      <Footer />
     </IndexContent>
   );
 }

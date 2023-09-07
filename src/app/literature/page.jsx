@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Footer from "@/components/Footer/Footer";
 import IndexContent from "@/components/IndexContent";
@@ -6,7 +6,8 @@ import LiteratureItem from "@/components/Literature/LiteratureItem";
 import SimplePageTitle from "@/components/SimplePageTitle";
 import PapersLoading from "@/components/Papers/PapersLoading";
 import { GraphQLClient, gql } from "graphql-request";
-import {useState, useEffect} from "react"
+import { useState, useEffect } from "react";
+import MarqueeButton from "@/components/MarqueeButton";
 
 const LiteraturePage = () => {
   const [data, setData] = useState();
