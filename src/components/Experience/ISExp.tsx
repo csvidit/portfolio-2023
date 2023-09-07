@@ -25,7 +25,7 @@ const ISExp = () => {
             </motion.li>
             <motion.li>
               Managed the Help Desk and online task ticketing system, ensuring
-              adherence to established workflows and completion of most open
+              adherence to established workflows and completion of 95% of open
               tickets within 30 minutes.
             </motion.li>
           </ExpBullets>

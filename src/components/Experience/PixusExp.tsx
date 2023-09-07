@@ -21,13 +21,13 @@ const PixusExp = () => {
           <ExpBullets>
             <motion.li>
               Continued development of the CaptureNoire Photography Suite using
-              agile methodology, reducing code complexity, and increasing app
+              agile methodology, reducing code complexity, and increasing
               efficiency by 30%.
             </motion.li>
             <motion.li>
-              Wrote detailed technical and non-technical documentation for the
-              source code of the application for seamless async collaboration
-              with other engineers.
+              Wrote technical and non-technical documentation for the source
+              code for async collaboration with other engineers, reducing
+              onboarding time by 60%.
             </motion.li>
           </ExpBullets>
         </motion.div>
@@ -43,6 +43,16 @@ const PixusExp = () => {
               Spearheaded development of CaptureNoire, a photography app for
               Android optimized for people with a broad range of skin tones,
               with an upcoming beta release.
+            </motion.li>
+            <motion.li>
+              Built an image processing backend with results 90% like competing
+              apps while having 30% less complexity based on device type, and
+              RAM usage.
+            </motion.li>
+            <motion.li>
+              Engineered the app to be efficient in its memory usage for
+              compatibility with most smartphones, ensuring optimal performance
+              for all intended users.
             </motion.li>
             <motion.li>
               Applied UI/UX design and Android app development best practices as

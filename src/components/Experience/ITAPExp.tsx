@@ -24,8 +24,9 @@ const ITAPExp = () => {
               program at DePauw University that accepts just 20% of applicants.
             </motion.li>
             <motion.li>
-              Enhanced classroom experiences through data visualization
-              solutions using technologies such as Tableau and ArcGIS.
+              Enhanced classroom experiences using data visualization
+              technologies such as Tableau and ArcGIS, increasing student
+              engagement by over 50%.
             </motion.li>
           </ExpBullets>
         </motion.div>

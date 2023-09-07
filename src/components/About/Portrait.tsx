@@ -19,7 +19,7 @@ const Portrait = () => {
       className="flex flex-col relative col-span-1 lg:row-span-2 w-full h-full min-h-[400px] lg:w-100 lg:h-100 rounded-[3rem]"
     >
       <Image
-        src="/vidit-1.png"
+        src="/vidit-edb.png"
         fill
         alt="Map of Indianapolis"
         className="rounded-[3rem] object-cover"
@@ -49,7 +49,7 @@ const Portrait = () => {
             }}
             className="w-full h-full bg-neutral-900 bg-opacity-60 z-10 backdrop-blur-sm geom rounded-[3rem] flex justify-center items-center"
           >
-            Graduation 2023
+            Edinburgh, Scotland
           </motion.div>
         </AnimatePresence>
       )}

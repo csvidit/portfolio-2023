@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import ActionButton from "./ActionButton";
 import MainGridItem from "../MainGridItem";
+import { PiStarDuotone } from "react-icons/pi";
 
 const Spotlight = () => {
   return (
@@ -15,20 +16,21 @@ const Spotlight = () => {
       <motion.div className="flex flex-col space-y-8">
         <motion.div className="flex flex-row space-x-4 items-center">
           <motion.div
-            animate={{ rotateX: 15, rotateZ: -15 }}
+            animate={{ rotate: [0, 360] }}
             transition={{
               ease: "easeInOut",
-              duration: 2,
+              duration: 32,
               repeat: Infinity,
-              repeatType: "reverse",
+              repeatType: "loop"
             }}
           >
-            <Image
+            {/* <Image
               width={50}
               height={50}
               alt="3D Star"
               src="/star-front-premium.png"
-            />
+            /> */}
+            <PiStarDuotone className="text-4xl lg:text-6xl text-yellow-500"/>
           </motion.div>
 
           <motion.h2 className="text-4xl lg:text-6xl geom">spotlight</motion.h2>
@@ -50,7 +52,7 @@ const Spotlight = () => {
         href="https://github.com/csvidit/squawk"
       >
         <motion.div layout className="flex flex-row space-x-2 items-center">
-          <motion.div>Check out Squawk Social on</motion.div> <BsGithub />
+          <motion.div>Squawk Social on</motion.div> <BsGithub />
         </motion.div>
       </ActionButton>
     </MainGridItem>

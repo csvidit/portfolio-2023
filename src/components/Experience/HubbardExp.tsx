@@ -19,9 +19,7 @@ const HubbardExp = () => {
         <motion.div>
           <ExpBullets>
             <motion.li>
-              Successfully implemented a weekly marketing strategy to bolster
-              the efforts of the on-campus career center through strategy
-              meetings with directors.
+            Implemented a new marketing strategy to bolster the efforts of the career center through strategy meetings with directors, increasing reach by 50%.
             </motion.li>
             <motion.li>
               Delegated work to the team in weekly meetings to timely and

@@ -97,7 +97,7 @@ const ActionButton = (props: {
     >
       <Link
         href={props.href}
-        className={`flex bg-opacity-100 w-full ${props.className}`}
+        className={`flex bg-opacity-100 w-${props.size} ${props.className}`}
       >
         <motion.div
           variants={mainDivVariants}

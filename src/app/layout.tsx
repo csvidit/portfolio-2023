@@ -1,3 +1,5 @@
+import MainContainer from "@/components/MainContainer";
+import Nav from "@/components/Nav/Nav";
 import "./globals.css";
 
 export const metadata = {
@@ -35,13 +37,13 @@ export const metadata = {
         url: "https://viditkhandelwal.com/2-opengraph-square.png",
         alt: "VK initials text on a gradient background",
         width: 1001,
-        height: 1001
+        height: 1001,
       },
       {
         url: "https://viditkhandelwal.com/2-opengraph-wide.png",
         alt: "Vidit Khandelwal, Software Engineer, in text on a gradient background",
         width: 1200,
-        height: 630
+        height: 630,
       },
     ],
     type: "website",

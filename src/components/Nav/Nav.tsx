@@ -18,8 +18,9 @@ import {
   BsPaletteFill,
   BsPersonFill,
 } from "react-icons/bs";
+import { PiBookOpenFill } from "react-icons/pi";
 
-const Nav = () => {
+const Nav = (props: {notFound?: boolean}) => {
   const [open, setOpen] = useState(false);
   const pathName = usePathname();
 
@@ -33,6 +34,7 @@ const Nav = () => {
     },
     { name: "Academics", href: "/academics", icon: <HiAcademicCap /> },
     { name: "Projects", href: "/projects", icon: <BsGridFill /> },
+    { name: "Papers", href: "/papers", icon: <PiBookOpenFill /> },
 
     // {
     //   name: "Studio",
@@ -57,7 +59,7 @@ const Nav = () => {
         <motion.nav
           layout
           // style={{ borderRadius: "24px" }}
-          className={`nav_radius geom z-50 fixed self-center top-4 px-4 py-2 flex flex-col space-y-2 items-center border border-neutral-800 bg-neutral-900 bg-opacity-60 backdrop-blur-md`}
+          className={`nav_radius uppercase geom z-50 fixed self-center top-4 px-4 py-2 flex flex-col space-y-2 items-center border border-neutral-800 bg-neutral-900 bg-opacity-60 backdrop-blur-md`}
         >
           <AnimatePresence>
             <LayoutGroup id="nav-layout-group">
@@ -73,7 +75,7 @@ const Nav = () => {
                           <LayoutGroup>
                             <motion.div layout>vidit khandelwal</motion.div>
                             <motion.div layout className="text-lime-500">
-                              {pathName == "/"
+                              {pathName == "/"  || props.notFound
                                 ? "portfolio"
                                 : pathName.substring(1)}
                             </motion.div>
@@ -82,7 +84,12 @@ const Nav = () => {
                       </AnimatePresence>
                     </motion.div>
                     <motion.div layout className="">
-                      <Hamburger aria-label="hamburger menu button" size={20} toggle={setOpen} toggled={open} />
+                      <Hamburger
+                        aria-label="hamburger menu button"
+                        size={20}
+                        toggle={setOpen}
+                        toggled={open}
+                      />
                     </motion.div>
                   </AnimatePresence>
                 </LayoutGroup>
@@ -91,7 +98,7 @@ const Nav = () => {
               {open && (
                 <motion.ul
                   layout
-                  className="grid grid-cols-2 lg:grid-cols-3 gap-2 items-center"
+                  className="grid grid-cols-2 lg:grid-cols-3 gap-2 items-center text-sm"
                 >
                   <LayoutGroup>
                     <AnimatePresence>
@@ -122,14 +129,18 @@ const Nav = () => {
                                 ></motion.div>
                               )}
                             </AnimatePresence> */}
-                            <NavLink
-                              current={pathName == x.href ? true : false}
-                              key={index}
-                              href={x.href}
-                              icon={x.icon}
-                            >
-                              {x.name}
-                            </NavLink>
+                            <LayoutGroup>
+                              <AnimatePresence mode="popLayout">
+                                <NavLink
+                                  current={pathName == x.href ? true : false}
+                                  key={index}
+                                  href={x.href}
+                                  icon={x.icon}
+                                >
+                                  {x.name}
+                                </NavLink>
+                              </AnimatePresence>
+                            </LayoutGroup>
                           </motion.div>
                         );
                       })}

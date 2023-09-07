@@ -228,8 +228,8 @@ const Projects = () => {
       <IndexContent>
         <SimplePageTitle color="text-violet-500">
           projects
-          <div className="flex w-fit mt-4 rounded-[3rem] bg-violet-950 text-violet-500 px-4 py-1 text-xs font-sans">
-            FILTERING OPTIONS COMING SOON
+          <div className="flex w-fit mt-4 rounded-[3rem] bg-violet-950 text-violet-500 px-4 py-1 text-xs">
+            filtering options coming soon
           </div>
         </SimplePageTitle>
         {projects.map((x, index: number) => {
