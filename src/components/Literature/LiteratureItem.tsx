@@ -1,15 +1,11 @@
 "use client";
 
 import { MotionConfig, motion } from "framer-motion";
-import { BsArrowUpRight, BsDot } from "react-icons/bs";
+import { BsArrowRight, BsArrowUpRight, BsDot } from "react-icons/bs";
 import { useRef } from "react";
 import { GiIndiaGate } from "react-icons/gi";
 
-export const tags = [
-  "All",
-  "Poem",
-  "Short Story",
-];
+export const tags = ["All", "Poem", "Short Story"];
 
 const LiteratureItem = (props: {
   title: string;
@@ -108,8 +104,11 @@ const LiteratureItem = (props: {
               {props.tag == 0 ? "" : tags[props.tag]}
             </motion.span>
           </motion.div> */}
-          <motion.div variants={arrowVariants} className="flex">
-            <BsArrowUpRight />
+          <motion.div
+            variants={arrowVariants}
+            className="flex flex-row space-x-1 items-center"
+          >
+            <BsArrowRight />
           </motion.div>
         </motion.div>
       </motion.a>
