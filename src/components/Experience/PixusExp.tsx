@@ -32,13 +32,13 @@ const PixusExp = () => {
           </ExpBullets>
         </motion.div>
         <motion.div className="flex flex-row space-x-2 items-baseline text-blue-500 geom text-xl lg:text-2xl">
-          <motion.div>Software Engineer Intern</motion.div>
-          <motion.div className="text-neutral-500 text-base">
-            Jun 2022 - Aug 2022
-          </motion.div>
+        <ExpSubtitleContainer>
+          <ExpTitle>Software Engineer Intern</ExpTitle>
+          <ExpDate>Jun 2022 - Aug 2022</ExpDate>
+        </ExpSubtitleContainer>
         </motion.div>
         <motion.div>
-          <motion.ul className="flex flex-col space-y-1 text-base text-neutral-300 list-disc">
+          <ExpBullets>
             <motion.li>
               Spearheaded development of CaptureNoire, a photography app for
               Android optimized for people with a broad range of skin tones,
@@ -59,7 +59,7 @@ const PixusExp = () => {
               the sole person with a computer-science background at this early
               age start-up.
             </motion.li>
-          </motion.ul>
+          </ExpBullets>
         </motion.div>
       </motion.div>
       <ActionButton
