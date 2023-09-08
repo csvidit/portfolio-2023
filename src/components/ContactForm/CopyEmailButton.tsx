@@ -7,7 +7,7 @@ const CopyEmailButton = () => {
     <div className="flex flex-col space-y-2 w-fit">
       <button
         onClick={() => {
-          navigator.clipboard.writeText("viditkhandelwal_2023@depauw.edu");
+          navigator.clipboard.writeText("vidit@viditkhandelwal.com");
           setEmailCopyMessage("Email copied!");
         }}
         className="relative group w-fit flex flex-col items-center duration-300 ease-in-out transition-all h-[1.25rem] overflow-hidden"

@@ -53,6 +53,7 @@ const PhotographyPage = async () => {
               caption={x.caption}
               src={x.photo.url}
               priority={x.priority}
+              date={x.date}
             />
           ))}
         </>

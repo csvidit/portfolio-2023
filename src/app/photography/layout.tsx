@@ -4,9 +4,9 @@ import MainContainer from "@/components/MainContainer";
 import Nav from "@/components/Nav/Nav";
 
 export const metadata = {
-  title: "Literature - Vidit Khandelwal",
+  title: "Photography - Vidit Khandelwal",
   description:
-    "Select short stories and poems written by Vidit Khandelwal, with genres ranging from personal to experimental and sci fi. He is a recent computer science and economics graduate of DePauw University. Open to work, and based in the United States.",
+    "Casual photos Vidit has taken with his iPhone, ranging from nature to cityscapes. He is a recent computer science and economics graduate of DePauw University. Open to work, and based in the United States.",
   authors: [{ name: "Vidit Khandelwal", url: "https://viditkhandelwal.com" }],
   applicationName: "Vidit Khandelwal Portfolio",
   keywords: [
@@ -24,14 +24,18 @@ export const metadata = {
     "software engineer",
     "web developer",
     "UI Engineer",
-    "writer",
-    "literature",
-    "writings",
-    "poems",
-    "short stories",
-    "journal series",
-    "journal",
-    "series"
+    "photography",
+    "iphone",
+    "iphone 12",
+    "photos",
+    "images",
+    "oxford",
+    "sf",
+    "sf bay",
+    "hoover",
+    "san francisco",
+    "oxford union",
+    "darjeeling"
   ],
   openGraph: {
     title: "Vidit Khandelwal",
@@ -67,7 +71,6 @@ export default function RootLayout({
         <MainContainer>
           <Nav/>
         {children}
-        {/* <Footer /> */}
         </MainContainer>
       </body>
     </html>

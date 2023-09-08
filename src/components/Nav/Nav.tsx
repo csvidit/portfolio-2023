@@ -18,7 +18,7 @@ import {
   BsPaletteFill,
   BsPersonFill,
 } from "react-icons/bs";
-import { PiBookOpenFill, PiPenFill } from "react-icons/pi";
+import { PiBookOpenFill, PiCameraFill, PiPenFill } from "react-icons/pi";
 
 const Nav = (props: { notFound?: boolean }) => {
   const [open, setOpen] = useState(false);
@@ -36,6 +36,7 @@ const Nav = (props: { notFound?: boolean }) => {
     { name: "Projects", href: "/projects", icon: <BsGridFill /> },
     { name: "Papers", href: "/papers", icon: <PiBookOpenFill /> },
     { name: "Literature", href: "/literature", icon: <PiPenFill /> },
+    { name: "Photography", href: "/photography", icon: <PiCameraFill /> },
 
     // {
     //   name: "Studio",
