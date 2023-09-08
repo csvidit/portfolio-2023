@@ -1,47 +1,61 @@
-"use client";
-
 import Footer from "@/components/Footer/Footer";
 import IndexContent from "@/components/IndexContent";
 import SimplePageTitle from "@/components/SimplePageTitle";
-import { useState, useEffect } from "react";
 import PaperFilters from "@/components/Papers/PaperFilters";
 import PapersLoading from "@/components/Papers/PapersLoading";
 import { GraphQLClient, gql } from "graphql-request";
 import PaperItem from "@/components/Papers/PaperItem";
 
-const Papers = () => {
-  const [data, setData] = useState();
-  const [activeFilter, setActiveFilter] = useState(0);
+export type Paper = {
+  abstract: string,
+  internalSlug: string,
+  publishDate: string,
+  tag: number,
+  title: string,
+  document: {
+    fileName: string,
+    url: string
+  }
+  id: string
+}
 
-  useEffect(() => {
-    const getData = async () => {
-      const client = new GraphQLClient(
-        process.env.NEXT_PUBLIC_HYGRAPH_HIGH_PERFORMANCE_ENDPOINT
-      );
+type PapersData = {
+  papers: Paper[];
+};
 
-      const query = gql`
-        query Papers {
-          papers(orderBy: publishedAt_DESC, where: { toShow: true }) {
-            abstract
-            internalSlug
-            publishDate
-            tag
-            title
-            document {
-              fileName
-              url
-            }
-          }
+const client = new GraphQLClient(
+  process.env.NEXT_PUBLIC_HYGRAPH_HIGH_PERFORMANCE_ENDPOINT!
+);
+
+const getData = async () => {
+  const query = gql`
+    query Papers {
+      papers(orderBy: publishedAt_DESC, where: { toShow: true }) {
+        abstract
+        internalSlug
+        publishDate
+        tag
+        title
+        document {
+          fileName
+          url
         }
-      `;
+        id
+      }
+    }
+  `;
+  const response: PapersData = await client.request(query);
 
-      const response = await client.request(query);
-      setData(response);
-      console.log(response);
-    };
+  if (!response) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
 
-    getData();
-  }, []);
+  return response;
+};
+
+const Papers = async () => {
+  const data: PapersData = await getData();
 
   return (
     <IndexContent>
@@ -54,9 +68,9 @@ const Papers = () => {
       /> */}
       {data ? (
         <>
-          {data.papers.map((x, index) => (
+          {data.papers.map((x: Paper) => (
             <PaperItem
-              key={index}
+              key={x.id}
               title={x.title}
               href={x.document.url}
               tag={x.tag}

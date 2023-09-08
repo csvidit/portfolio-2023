@@ -7,6 +7,32 @@ import { GiIndiaGate } from "react-icons/gi";
 
 export const tags = ["All", "Poem", "Short Story"];
 
+`
+        query Writings {
+          writings(orderBy: publishDate_DESC, where: { toShow: true }) {
+            description
+            internalSlug
+            primaryTag
+            publishDate
+            title
+            text {
+              html
+            }
+          }
+        }
+      `
+
+export type Writing = {
+  description: string,
+  internalSlug: string,
+  primaryTag: number,
+  publishDate: string,
+  title: string,
+  text: {
+    html: string
+  }
+}
+
 const LiteratureItem = (props: {
   title: string;
   href: string;

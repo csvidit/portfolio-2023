@@ -10,8 +10,8 @@ const ComingUp = () => {
   return (
     <MainGridItem width={2} height={1}>
       <motion.div className="flex flex-col space-y-8">
-        <motion.div className="flex flex-row space-x-4 items-center">
-          <motion.div
+        <motion.div className="flex flex-row space-x-4 items-baseline">
+          {/* <motion.div
             animate={{ rotate: [0, 360] }}
             transition={{
               ease: "easeInOut",
@@ -20,14 +20,14 @@ const ComingUp = () => {
               repeatType: "loop",
             }}
           >
-            {/* <Image
+            <Image
               width={50}
               height={50}
               alt="3D Star"
               src="/star-front-premium.png"
-            /> */}
-            <PiHammerDuotone className="text-4xl lg:text-6xl text-violet-500" />
-          </motion.div>
+            />
+            <PiHammerDuotone className="text-2xl lg:text-4xl text-violet-500" />
+          </motion.div> */}
 
           <motion.h2 className="text-4xl lg:text-6xl geom">coming up</motion.h2>
         </motion.div>

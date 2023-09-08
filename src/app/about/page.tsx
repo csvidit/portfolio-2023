@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import AboutTitle from "@/components/About/AboutTitle";
 import ContactForm from "@/components/ContactForm";
@@ -15,14 +15,16 @@ import MainContainer from "@/components/MainContainer";
 import Footer from "@/components/Footer/Footer";
 import MarqueeButton from "@/components/MarqueeButton";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import PortraitCarousel from "@/components/About/PortraitCarousel";
 
 const About = () => {
   return (
     <MainContainer>
-      <Nav/>
+      <Nav />
       <IndexContent>
         <AboutTitle />
-        <Portrait />
+        {/* <Portrait /> */}
+        <PortraitCarousel />
         <Education />
         <MarqueeButton
           href="/experience"
@@ -33,11 +35,10 @@ const About = () => {
         >
           experience
         </MarqueeButton>
-        {/* <ExpButton/> */}
-        <Location/>
+        <Location />
         <MusicPlayer />
-        <TechStack/>
-        <Personality/>
+        <TechStack />
+        <Personality />
         <ContactForm />
         <MarqueeButton
           href="https://www.icloud.com/iclouddrive/0ddTT7psEd47xFmdE9FOg9rIw#Vidit_Khandelwal_Resume_12-Jul-23_Revised"
@@ -55,7 +56,7 @@ const About = () => {
           color="blue"
           external={true}
         >
-          <SiGithub/>
+          <SiGithub />
         </MarqueeButton>
         <MarqueeButton
           href="https://linkedin.com/in/viditkhandelwal"
@@ -64,9 +65,9 @@ const About = () => {
           color="blue"
           external={true}
         >
-          <SiLinkedin/>
+          <SiLinkedin />
         </MarqueeButton>
-        <Footer/>
+        <Footer />
       </IndexContent>
     </MainContainer>
   );

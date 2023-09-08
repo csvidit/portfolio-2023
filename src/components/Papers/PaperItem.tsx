@@ -5,6 +5,22 @@ import { BsArrowUpRight, BsDot } from "react-icons/bs";
 import { useRef } from "react";
 import { GiIndiaGate } from "react-icons/gi";
 
+`
+    query Papers {
+      papers(orderBy: publishedAt_DESC, where: { toShow: true }) {
+        abstract
+        internalSlug
+        publishDate
+        tag
+        title
+        document {
+          fileName
+          url
+        }
+      }
+    }
+  `
+
 export const tags = [
   "All",
   "Development Economics",

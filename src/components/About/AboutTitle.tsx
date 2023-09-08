@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const AboutTitle = () => {
   return (
-    <motion.div className="lg:col-span-3 row-span-2 w-100 h-100 flex flex-col space-y-8 rounded-[3rem] p-8 lg:p-12 bg-neutral-900">
+    <motion.div className="lg:col-span-3 row-span-2 w-100 h-100 flex flex-col space-y-8 rounded-[3rem] p-8 lg:p-12 bg-transparent">
       <motion.h1
         layout
         className="flex geom grow text-4xl lg:text-6xl text-indigo-500"

@@ -51,7 +51,7 @@ const ProjectItem = (props: {
         variants={mainDivVariants}
         initial="initial"
         whileHover="hover"
-        className="flex flex-row items-center col-span-4 rounded-[3rem] p-8 lg:p-12"
+        className="flex flex-col justify-between space-y-4 col-span-2 rounded-[3rem] p-8 lg:p-12"
       >
         <motion.div className="flex flex-col space-y-4 justify-start items-start w-full">
           <motion.div variants={titleVariants} className="text-2xl lg:text-4xl">
@@ -60,6 +60,8 @@ const ProjectItem = (props: {
           <motion.div className="lg:text-xl text-left">
             {props.children}
           </motion.div>
+        </motion.div>
+        <motion.div className="flex flex-col space-y-4 justify-start items-start w-full">
           <motion.div className="w-full flex flex-row items-center justify-between">
             {props.icons}
             <motion.div variants={arrowVariants} className="flex">

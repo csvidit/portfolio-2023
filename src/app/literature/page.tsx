@@ -1,46 +1,57 @@
-"use client";
-
 import Footer from "@/components/Footer/Footer";
 import IndexContent from "@/components/IndexContent";
 import LiteratureItem from "@/components/Literature/LiteratureItem";
 import SimplePageTitle from "@/components/SimplePageTitle";
 import PapersLoading from "@/components/Papers/PapersLoading";
 import { GraphQLClient, gql } from "graphql-request";
-import { useState, useEffect } from "react";
 import MarqueeButton from "@/components/MarqueeButton";
+import { hygraphClient } from "@/hygraph.config";
 
-const LiteraturePage = () => {
-  const [data, setData] = useState();
-  const [activeFilter, setActiveFilter] = useState(0);
+export type Writing = {
+  description: string;
+  internalSlug: string;
+  primaryTag: number;
+  publishDate: string;
+  title: string;
+  text: {
+    html: string;
+  };
+  id: string;
+};
 
-  useEffect(() => {
-    const getData = async () => {
-      const client = new GraphQLClient(
-        process.env.NEXT_PUBLIC_HYGRAPH_HIGH_PERFORMANCE_ENDPOINT
-      );
+export type WritingsData = {
+  writings: Writing[];
+};
 
-      const query = gql`
-        query Writings {
-          writings(orderBy: publishDate_DESC, where: { toShow: true }) {
-            description
-            internalSlug
-            primaryTag
-            publishDate
-            title
-            text {
-              html
-            }
-          }
+const getData = async () => {
+  const query = gql`
+    query Writings {
+      writings(orderBy: publishDate_DESC, where: { toShow: true }) {
+        description
+        internalSlug
+        primaryTag
+        publishDate
+        title
+        text {
+          html
         }
-      `;
+        id
+      }
+    }
+  `;
 
-      const response = await client.request(query);
-      setData(response);
-      console.log(response);
-    };
+  const response: WritingsData = await hygraphClient.request(query);
 
-    getData();
-  }, []);
+  if (!response) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return response;
+};
+
+const LiteraturePage = async () => {
+  const data: WritingsData = await getData();
 
   return (
     <IndexContent>
@@ -49,9 +60,9 @@ const LiteraturePage = () => {
       </SimplePageTitle>
       {data ? (
         <>
-          {data.writings.map((x, index) => (
+          {data.writings.map((x: Writing, index: number) => (
             <LiteratureItem
-              key={index}
+              key={x.id}
               title={x.title}
               href={`/literature/${x.internalSlug}`}
               tag={x.primaryTag}

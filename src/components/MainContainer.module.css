@@ -160,5 +160,5 @@
 
 .main_container {
   /* font-family: "Aspekta", "sans-serif"; */
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }

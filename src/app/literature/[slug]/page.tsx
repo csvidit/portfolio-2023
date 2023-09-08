@@ -7,16 +7,17 @@ import { Interweave, Markup } from "interweave";
 import { polyfill } from "interweave-ssr";
 import Footer from "@/components/Footer/Footer";
 import MarqueeButton from "@/components/MarqueeButton";
+import { Writing, WritingsData } from "../page";
 
 polyfill();
 
 const tags = ["All", "Poem", "Short Story"];
 
 const client = new GraphQLClient(
-  process.env.NEXT_PUBLIC_HYGRAPH_HIGH_PERFORMANCE_ENDPOINT
+  process.env.NEXT_PUBLIC_HYGRAPH_HIGH_PERFORMANCE_ENDPOINT!
 );
 
-export default async function ViewLiterature({ params }) {
+export default async function ViewLiterature({ params }: any) {
   const data = await getData(params.slug);
 
   const date = new Date(data.publishDate);
@@ -66,7 +67,7 @@ export default async function ViewLiterature({ params }) {
   );
 }
 
-async function getData(slug) {
+async function getData(slug: string) {
   const query = gql`query Writings {
         writings(orderBy: publishedAt_DESC, where: {toShow: true, internalSlug: "${slug}"}) {
           description
@@ -81,7 +82,7 @@ async function getData(slug) {
       }
       `;
 
-  const response = await client.request(query);
+  const response: WritingsData = await client.request(query);
 
   if (!response) {
     // This will activate the closest `error.js` Error Boundary
@@ -107,9 +108,9 @@ export async function generateStaticParams() {
     }
   `;
 
-  const response = await client.request(query);
+  const response: WritingsData = await client.request(query);
 
-  return response.writings.map((x) => ({
+  return response.writings.map((x: Writing) => ({
     slug: x.internalSlug,
   }));
 }
