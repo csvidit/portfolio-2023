@@ -1,9 +1,8 @@
 import { GraphQLClient, gql } from "graphql-request";
 import IndexContent from "@/components/IndexContent";
 import MainGridItem from "@/components/MainGridItem";
-import { BsDot } from "react-icons/bs";
 import PapersLoading from "@/components/Papers/PapersLoading";
-import { Interweave, Markup } from "interweave";
+import { Markup } from "interweave";
 import { polyfill } from "interweave-ssr";
 import Footer from "@/components/Footer/Footer";
 import MarqueeButton from "@/components/MarqueeButton";
