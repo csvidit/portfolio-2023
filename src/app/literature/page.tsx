@@ -60,7 +60,7 @@ const LiteraturePage = async () => {
       </SimplePageTitle>
       {data ? (
         <>
-          {data.writings.map((x: Writing, index: number) => (
+          {data.writings.map((x: Writing) => (
             <LiteratureItem
               key={x.id}
               title={x.title}

@@ -8,12 +8,33 @@ import MarqueeButton from "@/components/MarqueeButton";
 import { hygraphClient } from "@/hygraph.config";
 import PhotoItem from "@/components/Photography/PhotoItem";
 
+export type Photo = {
+  caption: string;
+  date: string;
+  id: string;
+  priority: number,
+  photo: {
+    url: string;
+    width: number;
+    size: number;
+    mimeType: string;
+    height: number;
+  };
+  
+};
+
+export type PhotosData = {
+  photos: Photo[];
+};
+
 const getData = async () => {
   const query = gql`
     query Photos {
-      photos(orderBy: date_DESC, where: { toShow: true }) {
+      photos(orderBy: priority_ASC, where: { toShow: true }) {
         caption
         date
+        id
+        priority
         photo {
           url
           width
@@ -25,7 +46,7 @@ const getData = async () => {
     }
   `;
 
-  const response = await hygraphClient.request(query);
+  const response: PhotosData = await hygraphClient.request(query);
 
   if (!response) {
     // This will activate the closest `error.js` Error Boundary
@@ -36,7 +57,7 @@ const getData = async () => {
 };
 
 const PhotographyPage = async () => {
-  const data = await getData();
+  const data: PhotosData = await getData();
 
   return (
     <IndexContent>
@@ -45,7 +66,7 @@ const PhotographyPage = async () => {
       </SimplePageTitle>
       {data ? (
         <>
-          {data.photos.map((x, index) => (
+          {data.photos.map((x: Photo) => (
             <PhotoItem
               width={x.photo.width}
               height={x.photo.height}
