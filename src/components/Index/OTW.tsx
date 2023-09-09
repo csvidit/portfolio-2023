@@ -13,7 +13,7 @@ const OTW = () => {
         <motion.div className="animate-pulse"><PiBriefcaseDuotone/></motion.div>
         <motion.div>Open to Work</motion.div>
       </motion.div>
-      <motion.div className="text-xl lg:text-2xl text-neutral-100 font-light">
+      <motion.div className="lg:text-2xl text-neutral-100 font-light">
         Software Engineer, Web Developer, UI Engineer positions
       </motion.div>
       {/* <motion.div>

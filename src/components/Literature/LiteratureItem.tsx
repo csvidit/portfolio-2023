@@ -1,9 +1,8 @@
 "use client";
 
 import { MotionConfig, motion } from "framer-motion";
-import { BsArrowRight, BsArrowUpRight, BsDot } from "react-icons/bs";
+import { BsArrowRight, BsDot } from "react-icons/bs";
 import { useRef } from "react";
-import { GiIndiaGate } from "react-icons/gi";
 
 export const tags = ["All", "Poem", "Short Story"];
 

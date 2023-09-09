@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { BsArrowUp } from "react-icons/bs";
 import { useForm } from "@formspree/react";
 import { SetStateAction, useState } from "react";
-import Image from "next/image";
 import { ThreeDots } from "react-loader-spinner";
 
 const ContactForm = () => {

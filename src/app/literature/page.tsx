@@ -3,8 +3,7 @@ import IndexContent from "@/components/IndexContent";
 import LiteratureItem from "@/components/Literature/LiteratureItem";
 import SimplePageTitle from "@/components/SimplePageTitle";
 import PapersLoading from "@/components/Papers/PapersLoading";
-import { GraphQLClient, gql } from "graphql-request";
-import MarqueeButton from "@/components/MarqueeButton";
+import { gql } from "graphql-request";
 import { hygraphClient } from "@/hygraph.config";
 
 export type Writing = {

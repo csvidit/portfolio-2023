@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { PiCaretCircleLeftFill, PiCaretCircleRightFill } from "react-icons/pi";
 
@@ -32,7 +32,7 @@ const PortraitCarousel = () => {
       }}
       className="flex flex-col relative col-span-1 lg:row-span-2 w-full h-full min-h-[400px] lg:w-100 lg:h-100 rounded-[3rem]"
     >
-      <AnimatePresence mode="wait" initial={false}>
+      <AnimatePresence mode="wait">
         <motion.div
           layout
           initial={{ opacity: 0, scale: 1.05 }}

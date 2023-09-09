@@ -11,29 +11,23 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Sling as Hamburger } from "hamburger-react";
 import Link from "next/link";
-import { HiAcademicCap, HiHome } from "react-icons/hi2";
-import {
-  BsFillLightningChargeFill,
-  BsGridFill,
-  BsPaletteFill,
-  BsPersonFill,
-} from "react-icons/bs";
-import { PiBookOpenFill, PiCameraFill, PiPenFill } from "react-icons/pi";
+import { HiAcademicCap } from "react-icons/hi2";
+import { PiBookOpenFill, PiCameraFill, PiHouseFill, PiLightningFill, PiPenFill, PiSquaresFourFill, PiUserFill } from "react-icons/pi";
 
 const Nav = (props: { notFound?: boolean }) => {
   const [open, setOpen] = useState(false);
   const pathName = usePathname();
 
   const links = [
-    { name: "Home", href: "/", icon: <HiHome /> },
-    { name: "About", href: "/about", icon: <BsPersonFill /> },
+    { name: "Home", href: "/", icon: <PiHouseFill /> },
+    { name: "About", href: "/about", icon: <PiUserFill /> },
     {
       name: "Work Experience",
       href: "/experience",
-      icon: <BsFillLightningChargeFill />,
+      icon: <PiLightningFill />,
     },
     { name: "Academics", href: "/academics", icon: <HiAcademicCap /> },
-    { name: "Projects", href: "/projects", icon: <BsGridFill /> },
+    { name: "Projects", href: "/projects", icon: <PiSquaresFourFill /> },
     { name: "Papers", href: "/papers", icon: <PiBookOpenFill /> },
     { name: "Literature", href: "/literature", icon: <PiPenFill /> },
     { name: "Photography", href: "/photography", icon: <PiCameraFill /> },

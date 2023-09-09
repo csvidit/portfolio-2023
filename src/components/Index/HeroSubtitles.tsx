@@ -30,7 +30,7 @@ const HeroSubtitles = () => {
       >
         <motion.div
           layout
-          className="flex flex-row space-x-2.5 text-neutral-500 geom"
+          className="flex flex-row space-x-2.5 text-neutral-100 geom"
         >
           <AnimatePresence mode="wait" initial={false}>
             <motion.div

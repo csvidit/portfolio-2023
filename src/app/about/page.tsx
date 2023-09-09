@@ -16,6 +16,7 @@ import Footer from "@/components/Footer/Footer";
 import MarqueeButton from "@/components/MarqueeButton";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import PortraitCarousel from "@/components/About/PortraitCarousel";
+import { PiGithubLogoDuotone, PiLinkedinLogoDuotone } from "react-icons/pi";
 
 const About = () => {
   return (
@@ -56,7 +57,7 @@ const About = () => {
           color="blue"
           external={true}
         >
-          <SiGithub />
+          <PiGithubLogoDuotone />
         </MarqueeButton>
         <MarqueeButton
           href="https://linkedin.com/in/viditkhandelwal"
@@ -65,7 +66,7 @@ const About = () => {
           color="blue"
           external={true}
         >
-          <SiLinkedin />
+          <PiLinkedinLogoDuotone />
         </MarqueeButton>
         <Footer />
       </IndexContent>

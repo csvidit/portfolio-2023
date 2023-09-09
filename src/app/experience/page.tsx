@@ -1,6 +1,5 @@
 "use client";
 
-import ReadCV from "@/components/About/ReadCV";
 import HubbardExp from "@/components/Experience/HubbardExp";
 import ISExp from "@/components/Experience/ISExp";
 import ITAPExp from "@/components/Experience/ITAPExp";

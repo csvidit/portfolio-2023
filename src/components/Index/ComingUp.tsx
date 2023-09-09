@@ -1,10 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BsGithub } from "react-icons/bs";
-import ActionButton from "./ActionButton";
 import MainGridItem from "../MainGridItem";
-import { PiHammerDuotone, PiStarDuotone } from "react-icons/pi";
 
 const ComingUp = () => {
   return (
@@ -34,7 +31,7 @@ const ComingUp = () => {
 
         <motion.div
           // variants={textVariants}
-          className="font-light text-xl lg:text-2xl text-left line-gap"
+          className="font-light lg:text-2xl text-left line-gap"
         >
           Cerulean, An elevated to-do web app, with priority tags, task
           dependencies, due dates, reminders, and more. Made using Next.js,

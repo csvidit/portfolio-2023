@@ -1,12 +1,10 @@
 "use client";
 import {
   motion,
-  AnimatePresence,
-  useReducedMotion,
-  MotionConfig,
+  AnimatePresence, MotionConfig
 } from "framer-motion";
 import Link from "next/link";
-import { HiArrowSmallRight, HiArrowUpRight } from "react-icons/hi2";
+import { BsArrowRight, BsArrowUpRight } from "react-icons/bs";
 import { UrlObject } from "url";
 
 const ActionButton = (props: {
@@ -124,9 +122,9 @@ const ActionButton = (props: {
             className={`flex flex-row items-center space-x-2`}
           >
             {props.external == true ? (
-              <HiArrowUpRight />
+              <BsArrowUpRight />
             ) : (
-              <HiArrowSmallRight />
+              <BsArrowRight />
             )}
           </motion.div>
           <motion.div
@@ -135,9 +133,9 @@ const ActionButton = (props: {
             className={`flex flex-row items-center space-x-2`}
           >
             {props.external == true ? (
-              <HiArrowUpRight />
+              <BsArrowUpRight />
             ) : (
-              <HiArrowSmallRight />
+              <BsArrowRight />
             )}
           </motion.div>
         </motion.div>

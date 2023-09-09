@@ -3,7 +3,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
-import { PiCalendarBlankDuotone, PiCalendarDuotone } from "react-icons/pi";
 
 const PhotoItem = (props: {
   width: number;

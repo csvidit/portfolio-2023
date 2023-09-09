@@ -146,7 +146,7 @@ const MarqueeButton = (props: {
           } items-center space-x-4 w-full min-w-max text-4xl lg:text-6xl`}
         >
           <motion.div
-            className={`flex geom ${props.size != 1 ? "grow" : "grow-0"} mx-4`}
+            className={`flex flex-row space-x-4 items-center geom ${props.size != 1 ? "grow" : "grow-0"} mx-4`}
           >
             {props.children}
           </motion.div>
@@ -167,7 +167,7 @@ const MarqueeButton = (props: {
                 key={i}
                 className="flex flex-row justify-between items-center space-x-4 w-full min-w-max text-4xl lg:text-6xl grow"
               >
-                <motion.div className="flex geom grow mx-4">
+                <motion.div className="flex flex-row space-x-4 items-center geom grow mx-4">
                   {props.children}
                 </motion.div>
 

@@ -3,7 +3,6 @@
 import { motion, useScroll } from "framer-motion";
 import { useState, useEffect, useMemo, Suspense } from "react";
 import { TbLocationFilled } from "react-icons/tb";
-import { LiaFlagUsaSolid } from "react-icons/lia";
 
 const Location = () => {
   const { scrollY } = useScroll();

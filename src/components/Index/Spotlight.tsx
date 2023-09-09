@@ -1,14 +1,9 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import { useMediaQuery } from "react-responsive";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 import ActionButton from "./ActionButton";
 import MainGridItem from "../MainGridItem";
-import { PiStarDuotone } from "react-icons/pi";
+import { PiGithubLogoDuotone } from "react-icons/pi";
 
 const Spotlight = () => {
   return (
@@ -38,7 +33,7 @@ const Spotlight = () => {
 
         <motion.div
           // variants={textVariants}
-          className="font-light text-xl lg:text-2xl text-left line-gap"
+          className="font-light lg:text-2xl text-left line-gap"
         >
           A fun and unserious social media platform with a bunch of quirky
           reactions targeted towards Gen Z. Made using Next.js, Tailwind, and
@@ -52,7 +47,7 @@ const Spotlight = () => {
         href="https://github.com/csvidit/squawk"
       >
         <motion.div layout className="flex flex-row space-x-2 items-center">
-          <motion.div>Squawk Social on</motion.div> <BsGithub />
+          <motion.div>Squawk Social on</motion.div> <PiGithubLogoDuotone />
         </motion.div>
       </ActionButton>
     </MainGridItem>

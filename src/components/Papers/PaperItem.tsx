@@ -3,7 +3,6 @@
 import { MotionConfig, motion } from "framer-motion";
 import { BsArrowUpRight, BsDot } from "react-icons/bs";
 import { useRef } from "react";
-import { GiIndiaGate } from "react-icons/gi";
 
 `
     query Papers {

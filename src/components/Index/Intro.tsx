@@ -10,13 +10,6 @@ const Intro = () => {
   return (
     <MainGridItem width={4} height={1} className="items-center bg-transparent">
       <motion.div className="flex flex-col flex-wrap space-y-4 items-center">
-        {/* <Image
-        className="self-center"
-          src="/v-indigo.svg"
-          width={50}
-          height={50}
-          alt="Vidit Khandelwal V Stylized Logo"
-        /> */}
         <motion.h1 className="text-4xl lg:text-6xl text-indigo-500 text-center">
           VIDIT KHANDELWAL
         </motion.h1>

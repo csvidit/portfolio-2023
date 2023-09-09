@@ -1,7 +1,6 @@
 import Footer from "@/components/Footer/Footer";
 import IndexContent from "@/components/IndexContent";
 import SimplePageTitle from "@/components/SimplePageTitle";
-import PaperFilters from "@/components/Papers/PaperFilters";
 import PapersLoading from "@/components/Papers/PapersLoading";
 import { GraphQLClient, gql } from "graphql-request";
 import PaperItem from "@/components/Papers/PaperItem";

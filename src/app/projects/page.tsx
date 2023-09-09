@@ -26,15 +26,13 @@ import {
   SiCplusplus,
   SiVercel,
 } from "react-icons/si";
-import { gsap } from "gsap";
 import SimplePageTitle from "@/components/SimplePageTitle";
 
 const Projects = () => {
   const projects = [
     {
       title: "Turbobiz",
-      content:
-        "Generate a business idea by leveraging the power of AI",
+      content: "Generate a business idea by leveraging the power of AI",
       link: "https://github.com/csvidit/turbobiz",
       icons: (
         <ProjectIconsContainer>
@@ -244,7 +242,6 @@ const Projects = () => {
             </ProjectItem>
           );
         })}
-        {/* <ProjectItem /> */}
         <Footer />
       </IndexContent>
     </MainContainer>
