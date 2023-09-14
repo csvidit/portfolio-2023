@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import Image from "next/image";
 import HeroSubtitles from "./HeroSubtitles";
@@ -9,12 +7,13 @@ import MainGridItem from "../MainGridItem";
 const Intro = () => {
   return (
     <MainGridItem width={4} height={1} className="items-center bg-transparent">
-      <motion.div className="flex flex-col flex-wrap space-y-4 items-center">
-        <motion.h1 className="text-4xl lg:text-6xl text-indigo-500 text-center">
+      <div className="flex flex-col flex-wrap space-y-4 items-center">
+        <h1 className="geom text-4xl lg:text-8xl text-indigo-500 text-center text-medium">
           VIDIT KHANDELWAL
-        </motion.h1>
+        </h1>
+        <h2></h2>
         <HeroSubtitles />
-      </motion.div>
+      </div>
       <ActionButton size="fit" external={false} variant="plain" href="/about">
         More About Me
       </ActionButton>

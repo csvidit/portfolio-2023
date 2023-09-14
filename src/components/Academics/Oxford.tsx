@@ -24,10 +24,10 @@ const Oxford = () => {
       </div>
 
       <ActionButton
-      size="fit"
+        size="fit"
         variant="academic"
         external={true}
-        href="https://depauw.edu"
+        href="https://new.ox.ac.uk"
       >
         New College
       </ActionButton>

@@ -29,7 +29,7 @@ const Nav = (props: { notFound?: boolean }) => {
     { name: "Academics", href: "/academics", icon: <HiAcademicCap /> },
     { name: "Projects", href: "/projects", icon: <PiSquaresFourFill /> },
     { name: "Papers", href: "/papers", icon: <PiBookOpenFill /> },
-    { name: "Literature", href: "/literature", icon: <PiPenFill /> },
+    // { name: "Literature", href: "/literature", icon: <PiPenFill /> },
     { name: "Photography", href: "/photography", icon: <PiCameraFill /> },
 
     // {

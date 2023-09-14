@@ -2,52 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-    scroll-behavior: smooth !important;
-}
-
 @font-face {
-  font-family: 'CM Geom';
-  src: url('../fonts/CMGeom-Regular.woff2') format('woff2'),
-      url('../fonts/CMGeom-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+  font-family: 'Satoshi-Variable';
+  src: url('./fonts/Satoshi-Variable.woff2') format('woff2'),
+       url('./fonts/Satoshi-Variable.woff') format('woff'),
+       url('./fonts/Satoshi-Variable.ttf') format('truetype');
+       font-weight: 300 900;
+       font-display: swap;
+       font-style: normal;
 }
 
-@font-face {
-  font-family: 'CM Geom';
-  src: url('../fonts/CMGeom-Regular.woff2') format('woff2'),
-      url('../fonts/CMGeom-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+html{
+  font-family: 'Satoshi', sans-serif;
+  scroll-behavior: smooth !important;
 }
-
-/* .geom{
-  font-family: "CM Geom", "sans-serif";
-} */
 
 .line-gap{
   line-height: 120%;

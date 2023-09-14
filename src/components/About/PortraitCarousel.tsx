@@ -9,9 +9,9 @@ const PortraitCarousel = () => {
   const [hover, setHover] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
 
-  const srcList = ["/vidit-edb.png", "/vidit-1.png"];
+  const srcList = ["/vidit-1.png", "/vidit-edb.png"];
 
-  const captionList = ["Edinburgh, Scotland", "Graduation 2023"];
+  const captionList = ["Graduation 2023", "Edinburgh, Scotland"];
 
   //   useEffect(() => {
   //     const interval = setInterval(() => {
