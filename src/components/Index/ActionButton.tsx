@@ -24,16 +24,19 @@ const ActionButton = (props: {
     blue: "#3b82f6",
     red: "#ef4444",
     sky: "#0ea5e9",
+    indigo: "#6366f1",
   };
+
+  const variant: String = "regular";
 
   let color;
   const backgroundColor = colors.dark;
-  switch (props.variant) {
+  switch (variant) {
     case "plain":
       color = colors.light;
       break;
     case "regular":
-      color = colors.sky;
+      color = colors.indigo;
       break;
     case "spotlight":
       color = colors.yellow;

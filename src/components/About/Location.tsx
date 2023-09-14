@@ -33,7 +33,7 @@ const Location = () => {
       {/* <motion.div className="h-full w-full relative">
         <Image src="/indiana.svg" alt="Flag of the State of Indiana" fill/>
       </motion.div> */}
-      <motion.div style={{ rotate: scrollY }} className="text-emerald-500">
+      <motion.div style={{ rotate: scrollY }} className="text-indigo-500">
         <TbLocationFilled />
       </motion.div>
       <Suspense>
