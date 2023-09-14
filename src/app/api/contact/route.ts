@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
-import { Resend } from "resend";
+// import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// const resend = new Resend(process.env.RESEND_API_KEY);
 
 const POST = async (req: NextRequest) => {
   const res = await fetch("https://api.resend.com/emails", {
@@ -25,9 +25,9 @@ const POST = async (req: NextRequest) => {
   }
 };
 
-resend.emails.send({
-  from: process.env.CONTACT_EMAILS_SENDER!,
-  to: process.env.CONTACT_EMAILS_RECIPIENT!,
-  subject: "Hello World",
-  html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
-});
+// resend.emails.send({
+//   from: process.env.CONTACT_EMAILS_SENDER!,
+//   to: process.env.CONTACT_EMAILS_RECIPIENT!,
+//   subject: "Hello World",
+//   html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
+// });
