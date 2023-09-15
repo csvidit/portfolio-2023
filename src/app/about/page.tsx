@@ -17,6 +17,7 @@ import MarqueeButton from "@/components/MarqueeButton";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import PortraitCarousel from "@/components/About/PortraitCarousel";
 import { PiGithubLogoDuotone, PiLinkedinLogoDuotone } from "react-icons/pi";
+import Mantra from "@/components/About/Mantra";
 
 const About = () => {
   return (
@@ -37,6 +38,7 @@ const About = () => {
           experience
         </MarqueeButton>
         <Location />
+        <Mantra/>
         <MusicPlayer />
         <TechStack />
         <Personality />

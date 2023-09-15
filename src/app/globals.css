@@ -24,3 +24,10 @@ html{
 .nav_radius{
   border-radius: 24px;
 }
+
+.index_bg{
+  background-image: url("/indigo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: scroll;
+}

@@ -1,0 +1,6 @@
+.main_container{
+    background-image: url("/indigo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: scroll;
+}

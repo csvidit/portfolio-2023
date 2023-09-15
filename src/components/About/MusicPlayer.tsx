@@ -32,7 +32,7 @@ const MusicPlayer = () => {
       className={`col-span-1 row-span-2 geom w-100 h-100 flex flex-col space-y-4 rounded-[3rem] p-4 lg:p-6 bg-neutral-900`}
     >
       <motion.div
-        className={`rounded-[3rem] relative w-full h-full aspect-square `}
+        className={`rounded-[3rem] relative w-full h-full aspect-square`}
       >
         <Image
           alt="1989 Album Cover"
@@ -97,7 +97,7 @@ const MusicPlayer = () => {
         {/* <BsFastForwardFill /> */}
         {
           <motion.button
-            className="text-xl lg:text-2xl text-neutral-500"
+            className="text-xl lg:text-2xl text-neutral-500 hover:text-neutral-100 transition-all duration-200 ease-in-out"
             onClick={() => {
               setVolume(!volume);
               if (audioRef.current != undefined) {

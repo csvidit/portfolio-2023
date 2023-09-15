@@ -7,6 +7,7 @@ import ExpDate from "../Experience/ExpDate";
 import ActionButton from "../Index/ActionButton";
 import OxfordCoursework from "./OxfordCoursework";
 import OxfordExtracurriculars from "./OxfordExtracurriculars";
+import OxfordGPA from "./OxfordGPA";
 
 const Oxford = () => {
   return (

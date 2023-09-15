@@ -9,6 +9,7 @@ import GPA from "./GPA";
 import Coursework from "./Coursework";
 import ActionButton from "../Index/ActionButton";
 import Extracurriculars from "./Extracurriculars";
+import Tooltip from "../Tooltip";
 
 const DePauw = () => {
   return (
@@ -17,7 +18,12 @@ const DePauw = () => {
         <div className="flex flex-col space-y-2">
           <ExpCompany>DePauw University</ExpCompany>
           <ExpTitle variant="academic">
-            Bachelor of Arts in Computer Science with a minor in Economics
+            <span>
+              Bachelor of Arts in Computer Science with a minor in Economics
+            </span>
+            <Tooltip>
+              Since DePauw is a liberal-arts college, degrees in the sciences are also BAs.
+            </Tooltip>
           </ExpTitle>
           <ExpDate>August 2019 - May 2023</ExpDate>
         </div>
@@ -29,7 +35,7 @@ const DePauw = () => {
         <Extracurriculars />
       </motion.div>
       <ActionButton
-      size="fit"
+        size="fit"
         variant="academic"
         external={true}
         href="https://depauw.edu"

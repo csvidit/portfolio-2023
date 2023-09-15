@@ -5,7 +5,7 @@ import SubSectionTitle from "./SubSectionTitle";
 const Coursework = () => {
   return (
     <div className="flex w-full flex-col space-y-4 items-start rounded-2xl text-neutral-100 font-light">
-      <SubSectionHeader>Selected Coursework</SubSectionHeader>
+      <SubSectionHeader color="red">Selected Coursework</SubSectionHeader>
       <div className="w-full flex flex-col space-y-4">
         <div className="w-full flex flex-col space-y-2">
           <SubSectionTitle>Computer Science</SubSectionTitle>

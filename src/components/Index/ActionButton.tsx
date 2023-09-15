@@ -1,8 +1,5 @@
 "use client";
-import {
-  motion,
-  AnimatePresence, MotionConfig
-} from "framer-motion";
+import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsArrowUpRight } from "react-icons/bs";
 import { UrlObject } from "url";
@@ -94,6 +91,7 @@ const ActionButton = (props: {
       }}
     >
       <Link
+        target={props.external ? "_blank" : ""}
         href={props.href}
         className={`flex bg-opacity-100 w-${props.size} ${props.className}`}
       >
@@ -121,22 +119,14 @@ const ActionButton = (props: {
             layout
             className={`flex flex-row items-center space-x-2`}
           >
-            {props.external == true ? (
-              <BsArrowUpRight />
-            ) : (
-              <BsArrowRight />
-            )}
+            {props.external == true ? <BsArrowUpRight /> : <BsArrowRight />}
           </motion.div>
           <motion.div
             variants={textVariants2}
             layout
             className={`flex flex-row items-center space-x-2`}
           >
-            {props.external == true ? (
-              <BsArrowUpRight />
-            ) : (
-              <BsArrowRight />
-            )}
+            {props.external == true ? <BsArrowUpRight /> : <BsArrowRight />}
           </motion.div>
         </motion.div>
       </Link>

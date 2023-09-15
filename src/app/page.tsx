@@ -14,7 +14,7 @@ import { SiGithub, SiLinkedin } from "react-icons/si";
 
 const Index = () => {
   return (
-    <MainContainer>
+    <MainContainer className="index_bg">
       <Nav />
       <IndexContent>
         <Intro />

@@ -7,7 +7,7 @@ import SubSectionTitle from "./SubSectionTitle";
 const Extracurriculars = () => {
   return (
     <div className="flex w-full flex-col space-y-4 items-start rounded-2xl text-neutral-100 font-light">
-      <SubSectionHeader>Selected Extracurriculars</SubSectionHeader>
+      <SubSectionHeader color="red">Selected Extracurriculars</SubSectionHeader>
       <div className="w-full flex flex-col space-y-4">
         <div className="w-full flex flex-col space-y-2">
           <SubSectionTitle>

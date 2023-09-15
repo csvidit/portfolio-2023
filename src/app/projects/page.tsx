@@ -25,6 +25,7 @@ import {
   SiPython,
   SiCplusplus,
   SiVercel,
+  SiJavascript,
 } from "react-icons/si";
 import SimplePageTitle from "@/components/SimplePageTitle";
 
@@ -113,6 +114,7 @@ const Projects = () => {
       link: "https://github.com/csvidit/blog-mvp",
       icons: (
         <ProjectIconsContainer>
+          <SiJavascript/>
           <SiHtml5 />
           <SiBootstrap />
           <SiExpress />
