@@ -65,7 +65,7 @@ const BackToTop = (props: {}) => {
         stiffness: 200,
       }}
     >
-      <Link href={"#"} className={`flex bg-opacity-100 w-fit`}>
+      <button onClick={() => window.scrollTo(0, 0)} className={`flex bg-opacity-100 w-fit`}>
         <motion.div
           variants={mainDivVariants}
           initial="initial"
@@ -100,7 +100,7 @@ const BackToTop = (props: {}) => {
             <BsArrowUp />
           </motion.div>
         </motion.div>
-      </Link>
+      </button>
     </MotionConfig>
   );
 };

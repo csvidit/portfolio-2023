@@ -5,7 +5,7 @@ import SubSectionTitle from "./SubSectionTitle";
 const Awards = () => {
   return (
     <div className="lg:w-2/3 flex w-full flex-col space-y-4 items-start rounded-2xl text-neutral-100 font-light">
-      <SubSectionHeader color="red">Awards</SubSectionHeader>
+      <SubSectionHeader color="red">awards</SubSectionHeader>
       <div className="flex flex-col space-y-4">
         <div className="flex flex-col space-y-2">
           <SubSectionTitle>

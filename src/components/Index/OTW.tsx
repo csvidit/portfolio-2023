@@ -7,7 +7,7 @@ const OTW = () => {
     >
       <div className="geom flex flex-row space-x-4 items-center">
         <div className="animate-pulse"><PiBriefcaseDuotone/></div>
-        <div>Open to Work</div>
+        <div>open to work</div>
       </div>
       <div className="lg:text-2xl text-neutral-100 font-light">
         Software Engineer, Web Developer, UI Engineer positions
