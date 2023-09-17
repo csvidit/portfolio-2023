@@ -28,6 +28,9 @@ import {
   SiJavascript,
 } from "react-icons/si";
 import SimplePageTitle from "@/components/SimplePageTitle";
+import MainGridItem from "@/components/MainGridItem";
+import { motion } from "framer-motion";
+import FeaturedProjectItem from "@/components/Projects/FeaturedProjectItem";
 
 const Projects = () => {
   const projects = [
@@ -114,7 +117,7 @@ const Projects = () => {
       link: "https://github.com/csvidit/blog-mvp",
       icons: (
         <ProjectIconsContainer>
-          <SiJavascript/>
+          <SiJavascript />
           <SiHtml5 />
           <SiBootstrap />
           <SiExpress />
@@ -232,6 +235,26 @@ const Projects = () => {
             filtering options coming soon
           </div>
         </SimplePageTitle>
+        {/* <GradientBorderBox>Integrated Portfolio</GradientBorderBox> */}
+        <FeaturedProjectItem
+          title="Portfolio 2023"
+          href="https://github.com/csvidit/portfolio-2023"
+          icons={
+            <ProjectIconsContainer>
+              <SiTypescript />
+              <SiNextdotjs />
+              <SiTailwindcss />
+              <SiFramer />
+              <SiVercel />
+              <SiGraphql />
+            </ProjectIconsContainer>
+          }
+        >
+          My new portfolio for 2023, employing some of the latest web design
+          trends such as bento grids, rounded corners, and glassmorphism. Built
+          from the ground up with inspiration here and there from award-winning
+          design portfolios.
+        </FeaturedProjectItem>
         {projects.map((x, index: number) => {
           return (
             <ProjectItem

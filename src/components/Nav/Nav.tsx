@@ -55,7 +55,7 @@ const Nav = (props: { notFound?: boolean }) => {
         <motion.nav
           layout
           // style={{ borderRadius: "24px" }}
-          className={`nav_radius uppercase geom z-50 fixed self-center top-4 px-4 py-2 flex flex-col space-y-2 items-center border border-neutral-800 bg-neutral-900 bg-opacity-60 backdrop-blur-md shadow-2xl shadow-neutral-950`}
+          className={`nav_radius lowercase geom z-50 fixed self-center top-4 px-4 py-2 flex flex-col space-y-2 items-center border border-neutral-800 bg-neutral-900 bg-opacity-60 backdrop-blur-md shadow-2xl shadow-neutral-950`}
         >
           <AnimatePresence>
             <LayoutGroup id="nav-layout-group">
@@ -67,7 +67,7 @@ const Nav = (props: { notFound?: boolean }) => {
                   <AnimatePresence mode="wait">
                     <motion.div layout className="">
                       <AnimatePresence>
-                        <Link href="/" className="flex flex-row space-x-1">
+                        <Link href="/" className="flex flex-row space-x-1 uppercase">
                           <LayoutGroup>
                             <motion.div layout>vidit khandelwal</motion.div>
                             <motion.div layout className="text-lime-500">

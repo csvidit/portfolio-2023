@@ -89,7 +89,7 @@ const ContactForm = () => {
           }}
           layout
           onClick={() => {
-            navigator.clipboard.writeText("viditkhandelwal_2023@depauw.edu");
+            navigator.clipboard.writeText("viditk17@gmail.com");
             setEmailCopyMessage("Email copied!");
           }}
           className="relative group w-fit flex flex-col items-center duration-300 ease-in-out transition-all h-[1.25rem] overflow-hidden"

@@ -10,6 +10,7 @@ import {
   BsVolumeUpFill,
 } from "react-icons/bs";
 import { IoIosAlbums } from "react-icons/io";
+import { PiPauseFill, PiPlayFill, PiSpeakerHighFill, PiSpeakerXFill } from "react-icons/pi";
 
 const MusicPlayer = () => {
   const [playing, setPlaying] = useState(false);
@@ -45,7 +46,7 @@ const MusicPlayer = () => {
         <motion.div>Lavender Haze</motion.div>
         <motion.div className="text-neutral-500">Taylor Swift</motion.div>
       </motion.div>
-      <motion.div className="flex flex-row space-x-4 justify-around items-center text-xl lg:text-2xl px-2 py-1 rounded-[3rem] border border-neutral-500">
+      <motion.div className="flex flex-row space-x-4 justify-around items-center text-xl lg:text-2xl px-4 py-2 self-center w-full bg-neutral-800 rounded-[3rem] border border-neutral-500">
         <motion.a
           href="https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3?si=S2lBnawZTQS81vhdNut1vQ"
           className="text-neutral-500 hover:text-neutral-100 transition-all ease-in-out duration-200"
@@ -55,7 +56,7 @@ const MusicPlayer = () => {
         {/* <BsRewindFill /> */}
         {
           <motion.button
-            className="text-2xl lg:text-4xl"
+            className="text-xl lg:text-2xl"
             onClick={() => {
               setPlaying(!playing);
             }}
@@ -72,7 +73,7 @@ const MusicPlayer = () => {
                     }}
                     layout
                   >
-                    <BsFillPlayFill />
+                    <PiPlayFill />
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -87,7 +88,7 @@ const MusicPlayer = () => {
                     }}
                     layout
                   >
-                    <BsPauseFill />
+                    <PiPauseFill />
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -117,7 +118,7 @@ const MusicPlayer = () => {
                     }}
                     layout
                   >
-                    <BsVolumeMuteFill />
+                    <PiSpeakerXFill />
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -132,7 +133,7 @@ const MusicPlayer = () => {
                     }}
                     layout
                   >
-                    <BsVolumeUpFill />
+                    <PiSpeakerHighFill />
                   </motion.div>
                 )}
               </AnimatePresence>
