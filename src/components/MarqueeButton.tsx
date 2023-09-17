@@ -13,6 +13,7 @@ const MarqueeButton = (props: {
   external: boolean;
   size: number; // 1, 2, 3, 4
   className?: string; // classNames to add to the button
+  alt?: string;
 }) => {
   const n = 100;
 
@@ -136,6 +137,7 @@ const MarqueeButton = (props: {
       className={`lg:col-span-${props.size} row-span-1 justify-center rounded-[3rem] bg-neutral-900 text-neutral-100 overflow-hidden`}
     >
       <Link
+        aria-label={props.alt ? props.alt : `Link to ${props.children}`}
         href={props.href}
         target={props.external ? "_blank" : ""}
         className="flex flex-col w-full h-full justify-center"

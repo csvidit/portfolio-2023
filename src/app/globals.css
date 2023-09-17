@@ -12,6 +12,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Mattone";
+  src: url("./fonts/Mattone-150.woff2") format("woff2"),
+    url("./fonts/Mattone-150.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
   font-family: "Satoshi-Variable", sans-serif;
   scroll-behavior: smooth !important;
@@ -30,4 +38,8 @@ html {
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: scroll;
+}
+
+.mattone{
+  font-family: 'Mattone', sans-serif;
 }

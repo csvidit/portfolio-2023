@@ -87,6 +87,7 @@ const Nav = (props: { notFound?: boolean }) => {
                     <motion.div layout className="">
                       <Hamburger
                         aria-label="hamburger menu button"
+                        label="hamburger menu button"
                         size={20}
                         toggle={setOpen}
                         toggled={open}

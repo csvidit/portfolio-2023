@@ -35,7 +35,7 @@ const About = () => {
           experience
         </MarqueeButton>
         <Location />
-        <Mantra/>
+        <Mantra />
         <MusicPlayer />
         <TechStack />
         <Personality />
@@ -50,6 +50,7 @@ const About = () => {
           resume
         </MarqueeButton>
         <MarqueeButton
+          alt="Link to Vidit Khandelwal's GitHub profile"
           href="https://github.com/csvidit"
           size={1}
           variant="nonfocus"
@@ -59,6 +60,7 @@ const About = () => {
           <PiGithubLogoDuotone />
         </MarqueeButton>
         <MarqueeButton
+          alt="Link to Vidit Khandelwal's LinkedIn profile"
           href="https://linkedin.com/in/viditkhandelwal"
           size={1}
           variant="nonfocus"

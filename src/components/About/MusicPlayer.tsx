@@ -10,7 +10,12 @@ import {
   BsVolumeUpFill,
 } from "react-icons/bs";
 import { IoIosAlbums } from "react-icons/io";
-import { PiPauseFill, PiPlayFill, PiSpeakerHighFill, PiSpeakerXFill } from "react-icons/pi";
+import {
+  PiPauseFill,
+  PiPlayFill,
+  PiSpeakerHighFill,
+  PiSpeakerXFill,
+} from "react-icons/pi";
 
 const MusicPlayer = () => {
   const [playing, setPlaying] = useState(false);
@@ -36,7 +41,7 @@ const MusicPlayer = () => {
         className={`rounded-[3rem] relative w-full h-full aspect-square`}
       >
         <Image
-          alt="1989 Album Cover"
+          alt="Midnights Album Cover"
           src="/midnights.jpeg"
           fill
           className={`rounded-2xl object-scale-down aspect-square`}
@@ -48,6 +53,7 @@ const MusicPlayer = () => {
       </motion.div>
       <motion.div className="flex flex-row space-x-4 justify-around items-center text-xl lg:text-2xl px-4 py-2 self-center w-full bg-neutral-800 rounded-[3rem] border border-neutral-500">
         <motion.a
+          aria-label="Link to Taylor Swift on Spotify"
           href="https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3?si=S2lBnawZTQS81vhdNut1vQ"
           className="text-neutral-500 hover:text-neutral-100 transition-all ease-in-out duration-200"
         >
@@ -56,6 +62,7 @@ const MusicPlayer = () => {
         {/* <BsRewindFill /> */}
         {
           <motion.button
+            aria-label="Song Play/Pause Button"
             className="text-xl lg:text-2xl"
             onClick={() => {
               setPlaying(!playing);
@@ -98,6 +105,7 @@ const MusicPlayer = () => {
         {/* <BsFastForwardFill /> */}
         {
           <motion.button
+            aria-label="Volume Mute Button"
             className="text-xl lg:text-2xl text-neutral-500 hover:text-neutral-100 transition-all duration-200 ease-in-out"
             onClick={() => {
               setVolume(!volume);
@@ -142,7 +150,7 @@ const MusicPlayer = () => {
         }
       </motion.div>
       <motion.div className="font-sans text-xs text-right text-neutral-500">
-        &copy; Taylor Swift, Spotify, and others. 
+        &copy; Taylor Swift, Spotify, and others.
       </motion.div>
     </motion.div>
   );
