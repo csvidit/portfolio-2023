@@ -91,10 +91,9 @@ const FeaturedProjectItem = (props: {
         className="flex flex-col justify-between space-y-4 col-span-2 row-span-2 rounded-[3rem] p-8 lg:p-12 border border-[#0000] [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
       >
         <motion.div className="flex flex-col space-y-4 justify-start items-start w-full">
-          <motion.div className="flex flex-row space-x-2 text-yellow-500 items-center text-2xl lg:text-4xl">
+          {/* <motion.div className="flex flex-row space-x-2 text-yellow-500 items-center text-2xl lg:text-4xl">
             <PiCrownDuotone />
-            {/* <span>FEATURED</span> */}
-          </motion.div>
+          </motion.div> */}
           <motion.div variants={titleVariants} className="text-2xl lg:text-4xl">
             {props.title}
           </motion.div>

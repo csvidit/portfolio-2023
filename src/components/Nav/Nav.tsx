@@ -100,7 +100,7 @@ const Nav = (props: { notFound?: boolean }) => {
               {open && (
                 <motion.ul
                   layout
-                  className="grid grid-cols-2 lg:grid-cols-3 gap-2 items-center text-sm"
+                  className="grid grid-cols-2 lg:grid-cols-3 gap-2 items-center"
                 >
                   <LayoutGroup>
                     <AnimatePresence>

@@ -31,6 +31,7 @@ import SimplePageTitle from "@/components/SimplePageTitle";
 import MainGridItem from "@/components/MainGridItem";
 import { motion } from "framer-motion";
 import FeaturedProjectItem from "@/components/Projects/FeaturedProjectItem";
+import MarqueeButton from "@/components/MarqueeButton";
 
 const Projects = () => {
   const projects = [
@@ -267,6 +268,15 @@ const Projects = () => {
             </ProjectItem>
           );
         })}
+        <MarqueeButton
+          href="https://github.com/csvidit"
+          size={4}
+          variant="nonfocus"
+          color="violet"
+          external={true}
+        >
+          github
+        </MarqueeButton>
         <Footer />
       </IndexContent>
     </MainContainer>
