@@ -17,7 +17,7 @@ const Projects = () => {
     <MainContainer>
       <Nav />
       <IndexContent>
-        <SimplePageTitle color="text-blue-500">work experience</SimplePageTitle>
+        <SimplePageTitle color="text-indigo-500">work experience</SimplePageTitle>
         <PixusExp />
         <HubbardExp />
         <ISExp />
@@ -27,7 +27,7 @@ const Projects = () => {
           href="https://read.cv/viditkhandelwal"
           size={2}
           variant="nonfocus"
-          color="blue"
+          color="indigo"
           external={true}
         >
           read.cv
@@ -36,7 +36,7 @@ const Projects = () => {
           href="https://media.graphassets.com/GBhBjvxQUGUQlQ1UJuIw"
           size={2}
           variant="focus"
-          color="blue"
+          color="indigo"
           external={true}
         >
           resume

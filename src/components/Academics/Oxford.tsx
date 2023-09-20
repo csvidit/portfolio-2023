@@ -26,7 +26,7 @@ const Oxford = () => {
 
       <ActionButton
         size="fit"
-        variant="academic"
+        variant="lime"
         external={true}
         href="https://new.ox.ac.uk"
       >

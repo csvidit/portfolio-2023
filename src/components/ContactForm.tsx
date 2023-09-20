@@ -20,12 +20,15 @@ const ContactForm = () => {
 
   return (
     <motion.div className="lg:col-span-2 row-span-2 w-100 h-100 flex flex-col space-y-8 rounded-[3rem] p-8 lg:p-12 bg-neutral-900 font-light">
-      
-      <motion.div className="flex flex-col h-60 space-y-4 overflow-scroll snap-end">
-        <motion.div className="relative rounded-2xl lg:rounded-full bg-neutral-800 text-neutral-100 w-fit">
+      <motion.div className="flex flex-col h-60 space-y-2 overflow-scroll snap-end">
+        <motion.div className="relative rounded-2xl rounded-bl-none bg-neutral-800 text-neutral-100 w-fit">
           <motion.div className="px-4 py-2">
-            Hey there! What&apos;s on your mind? (Please include your email in
-            the message as well)
+            Hey there! What&apos;s on your mind?
+          </motion.div>
+        </motion.div>
+        <motion.div className="relative rounded-2xl rounded-tl-none bg-neutral-800 text-neutral-100 w-fit">
+          <motion.div className="px-4 py-2">
+            (Please include your email in the message as well)
           </motion.div>
         </motion.div>
         {state.submitting && (
@@ -41,7 +44,7 @@ const ContactForm = () => {
           />
         )}
         {state.succeeded && (
-          <motion.div className="relative self-end rounded-2xl bg-blue-600 text-neutral-100 w-fit">
+          <motion.div className="relative self-end rounded-2xl bg-indigo-500 text-neutral-100 w-fit">
             <motion.div className="px-4 py-2">{message}</motion.div>
           </motion.div>
         )}
@@ -73,7 +76,7 @@ const ContactForm = () => {
             aria-label="send button"
             disabled={state.submitting}
             type="submit"
-            className="rounded-full flex flex-row justify-center items-center bg-blue-600 p-2"
+            className="rounded-full flex flex-row justify-center items-center bg-indigo-600 p-2"
           >
             <BsArrowUp />
           </motion.button>

@@ -28,20 +28,20 @@ const PaperItem = (props: {
       scale: 1,
     },
     hover: {
-      backgroundColor: "#450a0a",
-      color: "#fca5a5",
+      backgroundColor: "#1e1b4b",
+      color: "#a5b4fc",
       scale: 0.95,
     },
   };
 
   const titleVariants = {
     initial: { color: "#fef2f2" },
-    hover: { color: "#fee2e2" },
+    hover: { color: "#e0e7ff" },
   };
 
   const arrowVariants = {
     initial: { color: "#f5f5f5" },
-    hover: { color: "#eab308" },
+    hover: { color: "#84cc16" },
   };
 
   const tagVariants = {
@@ -52,10 +52,10 @@ const PaperItem = (props: {
       borderColor: "#171717",
     },
     hover: {
-      backgroundColor: "#450a0a",
-      color: "#fca5a5",
+      backgroundColor: "#1a2e05",
+      color: "#bef264",
       borderWidth: "1px",
-      borderColor: "#fca5a5",
+      borderColor: "#bef264",
     },
   };
 

@@ -29,7 +29,7 @@ const About = () => {
           href="/experience"
           size={2}
           variant="nonfocus"
-          color="blue"
+          color="indigo"
           external={false}
         >
           experience
@@ -44,7 +44,7 @@ const About = () => {
           href="https://media.graphassets.com/GBhBjvxQUGUQlQ1UJuIw"
           size={2}
           variant="focus"
-          color="blue"
+          color="indigo"
           external={true}
         >
           resume
@@ -54,7 +54,7 @@ const About = () => {
           href="https://github.com/csvidit"
           size={1}
           variant="nonfocus"
-          color="blue"
+          color="indigo"
           external={true}
         >
           <PiGithubLogoDuotone />
@@ -64,7 +64,7 @@ const About = () => {
           href="https://linkedin.com/in/viditkhandelwal"
           size={1}
           variant="nonfocus"
-          color="blue"
+          color="indigo"
           external={true}
         >
           <PiLinkedinLogoDuotone />

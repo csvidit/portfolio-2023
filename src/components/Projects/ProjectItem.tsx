@@ -15,29 +15,25 @@ const ProjectItem = (props: {
 
   const mainDivVariants = {
     initial: {
-      // borderWidth: "1px",
-      // borderColor: "#262626",
       backgroundColor: "#171717",
       color: "#737373",
       scale: 1,
     },
     hover: {
-      // borderWidth: "1px",
-      // borderColor: "#5b21b6",
-      backgroundColor: "#2e1065",
-      color: "#c4b5fd",
+      backgroundColor: "#1e1b4b",
+      color: "#a5b4fc",
       scale: 0.95,
     },
   };
 
   const titleVariants = {
-    initial: { color: "#f5f5f5" },
-    hover: { color: "#ede9fe" },
+    initial: { color: "#fef2f2" },
+    hover: { color: "#e0e7ff" },
   };
 
   const arrowVariants = {
     initial: { color: "#f5f5f5" },
-    hover: { color: "#eab308" },
+    hover: { color: "#84cc16" },
   };
 
   return (

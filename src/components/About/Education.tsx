@@ -8,7 +8,7 @@ const Education = () => {
     <div className="lg:col-span-2 row-span-2 w-100 h-100 flex flex-col space-y-8 rounded-[3rem] p-8 lg:p-12 bg-neutral-900">
       <h2
         
-        className="flex geom grow text-4xl lg:text-6xl text-red-500"
+        className="flex geom grow text-4xl lg:text-6xl text-indigo-500"
       >
         academics
       </h2>
@@ -26,7 +26,7 @@ const Education = () => {
         </EducationDescription>
         <EducationDescription>Sep 2022 - Dec 2022</EducationDescription>
       </EducationItem>
-      <ActionButton size="full" external={false} variant="academic" href="/academics">In Detail</ActionButton>
+      <ActionButton size="full" external={false} variant="lime" href="/academics">In Detail</ActionButton>
     </div>
   );
 };

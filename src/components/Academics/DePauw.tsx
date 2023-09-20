@@ -33,7 +33,7 @@ const DePauw = () => {
       </div>
       <ActionButton
         size="fit"
-        variant="academic"
+        variant="lime"
         external={true}
         href="https://depauw.edu"
       >

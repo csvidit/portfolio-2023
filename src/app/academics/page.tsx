@@ -12,12 +12,12 @@ const Academics = () => {
     <MainContainer>
       <Nav />
       <IndexContent>
-        <SimplePageTitle color="text-red-500">academic credentials</SimplePageTitle>
+        <SimplePageTitle color="text-indigo-500">academic credentials</SimplePageTitle>
         <DePauw />
         <Oxford />
-        <MarqueeButton href="/papers" size={4} variant="nonfocus" color="red" external={false}>academic papers</MarqueeButton>
-        <MarqueeButton href="https://read.cv/viditkhandelwal" size={2} variant="nonfocus" color="blue" external={true}>read.cv</MarqueeButton>
-        <MarqueeButton href="https://media.graphassets.com/GBhBjvxQUGUQlQ1UJuIw" size={2} variant="focus" color="blue" external={true}>resume</MarqueeButton>
+        <MarqueeButton href="/papers" size={4} variant="nonfocus" color="indigo" external={false}>academic papers</MarqueeButton>
+        <MarqueeButton href="https://read.cv/viditkhandelwal" size={2} variant="nonfocus" color="indigo" external={true}>read.cv</MarqueeButton>
+        <MarqueeButton href="https://media.graphassets.com/GBhBjvxQUGUQlQ1UJuIw" size={2} variant="focus" color="indigo" external={true}>resume</MarqueeButton>
         <Footer />
       </IndexContent>
     </MainContainer>

@@ -21,6 +21,8 @@ const ActionButton = (props: {
     blue: "#3b82f6",
     red: "#ef4444",
     sky: "#0ea5e9",
+    violet: "#8b5cf6",
+    lime: "#84cc16",
   };
 
   let color;
@@ -38,8 +40,14 @@ const ActionButton = (props: {
     case "experience":
       color = colors.blue;
       break;
+    case "technical":
+      color = colors.violet;
+      break;
     case "academic":
       color = colors.red;
+      break;
+    case "lime":
+      color = colors.lime;
   }
   const mainDivVariants = {
     initial: {

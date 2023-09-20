@@ -58,7 +58,7 @@ const Papers = async () => {
 
   return (
     <IndexContent>
-      <SimplePageTitle color="text-red-500">
+      <SimplePageTitle color="text-indigo-500">
         select academic papers
       </SimplePageTitle>
       {/* <PaperFilters

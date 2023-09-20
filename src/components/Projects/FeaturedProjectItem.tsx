@@ -14,7 +14,7 @@ const FeaturedProjectItem = (props: {
   const ref = useRef<HTMLAnchorElement>(null);
   const [hover, setHover] = useState(false);
   // const [color, setColor] = useState("#171717");
-  const [color, setColor] = useState("#2e1065");
+  const [color, setColor] = useState("#1e1b4b");
 
   useEffect(() => {
     const boxElement = ref.current;
@@ -48,12 +48,12 @@ const FeaturedProjectItem = (props: {
 
   const titleVariants = {
     initial: { color: "#f5f5f5" },
-    hover: { color: "#ede9fe" },
+    hover: { color: "#e0e7ff" },
   };
 
   const arrowVariants = {
     initial: { color: "#f5f5f5" },
-    hover: { color: "#eab308" },
+    hover: { color: "#84cc16" },
   };
 
   return (
@@ -68,12 +68,12 @@ const FeaturedProjectItem = (props: {
       <motion.a
         onHoverStart={() => {
           setHover(true);
-          setColor("#2e1065");
+          setColor("#1e1b4b");
         }}
         onHoverEnd={() => {
           setHover(false);
           // setColor("#171717");
-          setColor("#2e1065");
+          setColor("#1e1b4b");
         }}
         ref={ref}
         href={props.href}
@@ -84,7 +84,7 @@ const FeaturedProjectItem = (props: {
         style={
           {
             "--angle": "0deg",
-            "--border-color": "linear-gradient(var(--angle), #0a0a0a, #8b5cf6)",
+            "--border-color": "linear-gradient(var(--angle), #0a0a0a, #6366f1)",
             "--bg-color": `linear-gradient(#0a0a0a, ${color})`,
           } as CSSProperties
         }
@@ -97,12 +97,12 @@ const FeaturedProjectItem = (props: {
           <motion.div variants={titleVariants} className="text-2xl lg:text-4xl">
             {props.title}
           </motion.div>
-          <motion.div className="lg:text-xl text-left text-violet-300">
+          <motion.div className="lg:text-xl text-left text-indigo-300">
             {props.children}
           </motion.div>
         </motion.div>
         <motion.div className="flex flex-col space-y-4 justify-start items-start w-full">
-          <motion.div className="w-full flex flex-col space-y-4 text-violet-300">
+          <motion.div className="w-full flex flex-col space-y-4 text-indigo-300">
             {props.icons}
             <motion.div
               variants={arrowVariants}

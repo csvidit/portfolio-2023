@@ -31,6 +31,8 @@ const MarqueeButton = (props: {
     darkRed: "#7f1d1d",
     lightViolet: "#c4b5fd",
     darkViolet: "#4c1d95",
+    lightLime: "#84cc16",
+    darkLime: "#365314",
   };
 
   let initialColor, color, initialBackgroundColor, backgroundColor;
@@ -55,6 +57,9 @@ const MarqueeButton = (props: {
         backgroundColor = colors.lightIndigo;
         color = colors.darkIndigo;
         break;
+      case "lime":
+        backgroundColor = colors.lightLime;
+        color = colors.darkLime;
     }
   } else {
     switch (props.color) {
@@ -82,6 +87,11 @@ const MarqueeButton = (props: {
         backgroundColor = colors.lightIndigo;
         color = colors.darkIndigo;
         break;
+      case "lime":
+        initialBackgroundColor = colors.lightLime;
+        initialColor = colors.darkLime;
+        backgroundColor = colors.lightLime;
+        color = colors.darkLime;
     }
   }
 

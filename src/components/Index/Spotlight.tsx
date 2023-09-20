@@ -22,9 +22,9 @@ const Spotlight = () => {
         </div>
       </div>
       <ActionButton
-        size="full"
+        size="fit"
         external={true}
-        variant="spotlight"
+        variant="lime"
         href="https://github.com/csvidit/squawk"
       >
         <motion.div layout className="flex flex-row space-x-2 items-center">

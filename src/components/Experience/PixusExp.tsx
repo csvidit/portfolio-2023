@@ -71,7 +71,7 @@ const PixusExp = () => {
         <ActionButton
           size="full"
           external={true}
-          variant="experience"
+          variant="lime"
           href="https://capturenoire.com"
           className=""
         >

@@ -22,7 +22,7 @@ const Index = () => {
           href="/projects"
           size={4}
           variant="nonfocus"
-          color="violet"
+          color="indigo"
           external={false}
         >
           projects
@@ -32,7 +32,7 @@ const Index = () => {
           href="https://github.com/csvidit"
           size={2}
           variant="nonfocus"
-          color="blue"
+          color="indigo"
           external={true}
         >
           github
@@ -41,7 +41,7 @@ const Index = () => {
           href="https://linkedin.com/in/viditkhandelwal"
           size={2}
           variant="nonfocus"
-          color="blue"
+          color="indigo"
           external={true}
         >
           linkedin

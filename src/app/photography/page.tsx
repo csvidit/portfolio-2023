@@ -59,7 +59,7 @@ const PhotographyPage = async () => {
 
   return (
     <IndexContent>
-      <SimplePageTitle color="text-emerald-500">
+      <SimplePageTitle color="text-indigo-500">
         casual photography
       </SimplePageTitle>
       {data ? (
