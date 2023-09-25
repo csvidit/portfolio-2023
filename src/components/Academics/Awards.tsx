@@ -27,6 +27,17 @@ const Awards = () => {
           </SubSectionText>
         </div>
         <div className="flex flex-col space-y-2">
+          <SubSectionTitle>
+            Steve and Michelle Trulaske International Scholarship for Off-Campus
+            Study
+          </SubSectionTitle>
+          <SubSectionText>
+            Received by qualified students who are successful in their
+            application to a off-campus domestic or international study or
+            exchange program.
+          </SubSectionText>
+        </div>
+        <div className="flex flex-col space-y-2">
           <SubSectionTitle>Latin Honors - Summa Cum Laude</SubSectionTitle>
           <SubSectionText>
             Highest category of graduation honors, awarded to students who have
@@ -39,6 +50,12 @@ const Awards = () => {
             Eligibility is based on the completion of at least three courses in
             a primary term (Fall or Spring) with a 3.5 semester GPA or better
             with no incomplete or failing grades.
+          </SubSectionText>
+        </div>
+        <div className="flex flex-col space-y-2">
+          <SubSectionTitle>University Merit Scholarship</SubSectionTitle>
+          <SubSectionText>
+            Received one of the highest merit scholarships offered by DePauw.
           </SubSectionText>
         </div>
       </div>
