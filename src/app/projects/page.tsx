@@ -32,23 +32,10 @@ import MainGridItem from "@/components/MainGridItem";
 import { motion } from "framer-motion";
 import FeaturedProjectItem from "@/components/Projects/FeaturedProjectItem";
 import MarqueeButton from "@/components/MarqueeButton";
+import { TbBrandFramerMotion, TbBrandOauth } from "react-icons/tb";
 
 const Projects = () => {
   const projects = [
-    {
-      title: "Turbobiz",
-      content: "Generate a business idea by leveraging the power of AI",
-      link: "https://github.com/csvidit/turbobiz",
-      icons: (
-        <ProjectIconsContainer>
-          <SiTypescript />
-          <SiNextdotjs />
-          <SiTailwindcss />
-          <SiFirebase />
-          <SiVercel />
-        </ProjectIconsContainer>
-      ),
-    },
     {
       title: "Xzayvian GPT",
       content:
@@ -77,7 +64,7 @@ const Projects = () => {
           <SiTailwindcss />
           <SiSupabase />
           <SiAuth0 />
-          <SiFramer />
+          <TbBrandFramerMotion />
           <SiVercel />
         </ProjectIconsContainer>
       ),
@@ -98,6 +85,22 @@ const Projects = () => {
       ),
     },
     {
+      title: "Turbobiz",
+      content: "Generate a business idea by leveraging the power of AI",
+      link: "https://github.com/csvidit/turbobiz",
+      icons: (
+        <ProjectIconsContainer>
+          <SiTypescript />
+          <SiNextdotjs />
+          <SiTailwindcss />
+          <TbBrandFramerMotion />
+          <TbBrandOauth />
+          <SiFirebase />
+          <SiVercel />
+        </ProjectIconsContainer>
+      ),
+    },
+    {
       title: "Lit. Portfolio",
       content:
         "A beautiful literature portfolio design made using Tailwind and Framer Motion",
@@ -107,7 +110,7 @@ const Projects = () => {
           <SiTypescript />
           <SiNextdotjs />
           <SiTailwindcss />
-          <SiFramer />
+          <TbBrandFramerMotion />
           <SiVercel />
         </ProjectIconsContainer>
       ),
@@ -151,7 +154,7 @@ const Projects = () => {
           <SiTypescript />
           <SiNextdotjs />
           <SiTailwindcss />
-          <SiFramer />
+          <TbBrandFramerMotion />
           <SiVercel />
         </ProjectIconsContainer>
       ),
@@ -166,7 +169,7 @@ const Projects = () => {
           <SiTypescript />
           <SiNextdotjs />
           <SiTailwindcss />
-          <SiFramer />
+          <TbBrandFramerMotion />
           <SiVercel />
         </ProjectIconsContainer>
       ),
@@ -238,23 +241,25 @@ const Projects = () => {
         </SimplePageTitle>
         {/* <GradientBorderBox>Integrated Portfolio</GradientBorderBox> */}
         <FeaturedProjectItem
-          title="Portfolio 2023"
-          href="https://github.com/csvidit/portfolio-2023"
+          title="Turbobiz"
+          href="https://github.com/csvidit/turbobiz"
           icons={
             <ProjectIconsContainer>
               <SiTypescript />
               <SiNextdotjs />
               <SiTailwindcss />
-              <SiFramer />
+              <TbBrandFramerMotion />
+              <TbBrandOauth />
+              <SiFirebase />
               <SiVercel />
-              <SiGraphql />
             </ProjectIconsContainer>
           }
         >
-          My new portfolio for 2023, employing some of the latest web design
-          trends such as bento grids, rounded corners, and glassmorphism. Built
-          from the ground up with inspiration here and there from award-winning
-          design portfolios.
+          Generate a business idea by leveraging the power of cutting-edge
+          generative AI. Turbobiz is based on OpenAI&apos;s GPT-4 LLM with
+          custom instructions. Users can view their past searches too, which are
+          stored in Firestore, and get redirected to a registrar to buy possible
+          domain names for their business.
         </FeaturedProjectItem>
         {projects.map((x, index: number) => {
           return (
