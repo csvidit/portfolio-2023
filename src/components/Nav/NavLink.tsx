@@ -42,7 +42,7 @@ const NavLink = (props: {
   return (
     <MotionConfig
       transition={{
-        type: "spring",
+        type: "tween",
         duration: 0.2,
         damping: 20,
         stiffness: 200,
