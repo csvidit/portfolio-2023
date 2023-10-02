@@ -53,13 +53,14 @@ export default async function ViewLiterature({ params }: any) {
         <PapersLoading />
       )}
       <MarqueeButton
+        label="all literature"
         variant="nonfocus"
         color="indigo"
         external={false}
         href="/literature"
         size={4}
       >
-        all literature
+        go back to the literature page
       </MarqueeButton>
       <Footer />
     </IndexContent>
