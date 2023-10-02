@@ -19,32 +19,35 @@ const Index = () => {
         <ComingUp />
         <OTW />
         <MarqueeButton
+        label="projects"
           href="/projects"
           size={4}
           variant="nonfocus"
           color="violet"
           external={false}
         >
-          projects
+          projects across platforms and stacks
         </MarqueeButton>
         <ContactForm />
         <MarqueeButton
+          label="github"
           href="https://github.com/csvidit"
           size={2}
           variant="nonfocus"
           color="blue"
           external={true}
         >
-          github
+          github profile and respositories
         </MarqueeButton>
         <MarqueeButton
+        label="linkedin"
           href="https://linkedin.com/in/viditkhandelwal"
           size={2}
           variant="nonfocus"
           color="blue"
           external={true}
         >
-          linkedin
+          view my professional profile
         </MarqueeButton>
         {/* <GitHub />
         <LinkedIn /> */}

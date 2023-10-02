@@ -26,13 +26,14 @@ const About = () => {
         <PortraitCarousel />
         <Education />
         <MarqueeButton
+          label="experience"
           href="/experience"
           size={2}
           variant="nonfocus"
           color="blue"
           external={false}
         >
-          experience
+          detailed list of my prior work experience and duties
         </MarqueeButton>
         <Location />
         <Mantra />
@@ -41,15 +42,17 @@ const About = () => {
         <Personality />
         <ContactForm />
         <MarqueeButton
+          label="resume"
           href="https://media.graphassets.com/GBhBjvxQUGUQlQ1UJuIw"
           size={2}
           variant="focus"
           color="blue"
           external={true}
         >
-          resume
+          resume, up to date and ATS optimized
         </MarqueeButton>
         <MarqueeButton
+        label={<PiGithubLogoDuotone/>}
           alt="Link to Vidit Khandelwal's GitHub profile"
           href="https://github.com/csvidit"
           size={1}
@@ -57,9 +60,10 @@ const About = () => {
           color="blue"
           external={true}
         >
-          <PiGithubLogoDuotone />
+          github profile and respositories
         </MarqueeButton>
         <MarqueeButton
+        label={<PiLinkedinLogoDuotone/>}
           alt="Link to Vidit Khandelwal's LinkedIn profile"
           href="https://linkedin.com/in/viditkhandelwal"
           size={1}
@@ -67,7 +71,7 @@ const About = () => {
           color="blue"
           external={true}
         >
-          <PiLinkedinLogoDuotone />
+          view my professional profile
         </MarqueeButton>
         <Footer />
       </IndexContent>

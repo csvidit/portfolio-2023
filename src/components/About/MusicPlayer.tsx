@@ -16,6 +16,7 @@ import {
   PiSpeakerHighFill,
   PiSpeakerXFill,
 } from "react-icons/pi";
+import MusicAnimation from "./MusicAnimation";
 
 const MusicPlayer = () => {
   const [playing, setPlaying] = useState(false);
@@ -47,10 +48,14 @@ const MusicPlayer = () => {
           className={`rounded-2xl object-scale-down aspect-square`}
         ></Image>
       </motion.div>
-      <motion.div className="flex flex-col space-y-1">
-        <motion.div>Lavender Haze</motion.div>
-        <motion.div className="text-neutral-500">Taylor Swift</motion.div>
-      </motion.div>
+      <div className="flex flex-row items-center justify-between">
+        <motion.div className="flex flex-col space-y-1">
+          <motion.div>Lavender Haze</motion.div>
+          <motion.div className="text-neutral-500">Taylor Swift</motion.div>
+        </motion.div>
+        {playing ? <MusicAnimation /> : <></>}
+      </div>
+
       <motion.div className="flex flex-row space-x-4 justify-around items-center text-xl lg:text-2xl px-4 py-2 self-center w-full bg-neutral-800 rounded-[3rem] border border-neutral-500">
         <motion.a
           aria-label="Link to Taylor Swift on Spotify"
@@ -59,95 +64,91 @@ const MusicPlayer = () => {
         >
           <IoIosAlbums className="" />
         </motion.a>
-        {/* <BsRewindFill /> */}
-        {
-          <motion.button
-            aria-label="Song Play/Pause Button"
-            className="text-xl lg:text-2xl"
-            onClick={() => {
-              setPlaying(!playing);
-            }}
-          >
-            <LayoutGroup>
-              <AnimatePresence mode="popLayout">
-                {!playing && (
-                  <motion.div
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{
-                      type: "spring",
-                      duration: 0.1,
-                    }}
-                    layout
-                  >
-                    <PiPlayFill />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-              <AnimatePresence mode="popLayout">
-                {playing && (
-                  <motion.div
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{
-                      type: "spring",
-                      duration: 0.01,
-                    }}
-                    layout
-                  >
-                    <PiPauseFill />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </LayoutGroup>
-          </motion.button>
-        }
-        {/* <BsFastForwardFill /> */}
-        {
-          <motion.button
-            aria-label="Volume Mute Button"
-            className="text-xl lg:text-2xl text-neutral-500 hover:text-neutral-100 transition-all duration-200 ease-in-out"
-            onClick={() => {
-              setVolume(!volume);
-              if (audioRef.current != undefined) {
-                audioRef.current.muted = !audioRef.current.muted;
-              }
-            }}
-          >
-            <LayoutGroup>
-              <AnimatePresence mode="popLayout">
-                {!volume && (
-                  <motion.div
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{
-                      type: "spring",
-                      duration: 0.1,
-                    }}
-                    layout
-                  >
-                    <PiSpeakerXFill />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-              <AnimatePresence mode="popLayout">
-                {volume && (
-                  <motion.div
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{
-                      type: "spring",
-                      duration: 0.01,
-                    }}
-                    layout
-                  >
-                    <PiSpeakerHighFill />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </LayoutGroup>
-          </motion.button>
-        }
+
+        <motion.button
+          aria-label="Song Play/Pause Button"
+          className="text-xl lg:text-2xl"
+          onClick={() => {
+            setPlaying(!playing);
+          }}
+        >
+          <LayoutGroup>
+            <AnimatePresence mode="popLayout">
+              {!playing && (
+                <motion.div
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{
+                    type: "spring",
+                    duration: 0.1,
+                  }}
+                  layout
+                >
+                  <PiPlayFill />
+                </motion.div>
+              )}
+            </AnimatePresence>
+            <AnimatePresence mode="popLayout">
+              {playing && (
+                <motion.div
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{
+                    type: "spring",
+                    duration: 0.01,
+                  }}
+                  layout
+                >
+                  <PiPauseFill />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </LayoutGroup>
+        </motion.button>
+
+        <motion.button
+          aria-label="Volume Mute Button"
+          className="text-xl lg:text-2xl text-neutral-500 hover:text-neutral-100 transition-all duration-200 ease-in-out"
+          onClick={() => {
+            setVolume(!volume);
+            if (audioRef.current != undefined) {
+              audioRef.current.muted = !audioRef.current.muted;
+            }
+          }}
+        >
+          <LayoutGroup>
+            <AnimatePresence mode="popLayout">
+              {!volume && (
+                <motion.div
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{
+                    type: "spring",
+                    duration: 0.1,
+                  }}
+                  layout
+                >
+                  <PiSpeakerXFill />
+                </motion.div>
+              )}
+            </AnimatePresence>
+            <AnimatePresence mode="popLayout">
+              {volume && (
+                <motion.div
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{
+                    type: "spring",
+                    duration: 0.01,
+                  }}
+                  layout
+                >
+                  <PiSpeakerHighFill />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </LayoutGroup>
+        </motion.button>
       </motion.div>
       <motion.div className="font-sans text-xs text-right text-neutral-500">
         &copy; Taylor Swift, Spotify, and others.

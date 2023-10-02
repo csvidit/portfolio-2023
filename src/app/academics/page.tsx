@@ -12,12 +12,41 @@ const Academics = () => {
     <MainContainer>
       <Nav />
       <IndexContent>
-        <SimplePageTitle color="text-red-500">academic credentials</SimplePageTitle>
+        <SimplePageTitle color="text-red-500">
+          academic credentials
+        </SimplePageTitle>
         <DePauw />
         <Oxford />
-        <MarqueeButton href="/papers" size={4} variant="nonfocus" color="red" external={false}>academic papers</MarqueeButton>
-        <MarqueeButton href="https://read.cv/viditkhandelwal" size={2} variant="nonfocus" color="blue" external={true}>read.cv</MarqueeButton>
-        <MarqueeButton href="https://media.graphassets.com/GBhBjvxQUGUQlQ1UJuIw" size={2} variant="focus" color="blue" external={true}>resume</MarqueeButton>
+        <MarqueeButton
+          label="papers"
+          href="/papers"
+          size={4}
+          variant="nonfocus"
+          color="red"
+          external={false}
+        >
+          academic and research papers in economics and ethics
+        </MarqueeButton>
+        <MarqueeButton
+          label="read.cv"
+          href="https://read.cv/viditkhandelwal"
+          size={2}
+          variant="nonfocus"
+          color="blue"
+          external={true}
+        >
+          read.cv profile and posts
+        </MarqueeButton>
+        <MarqueeButton
+          label="resume"
+          href="https://media.graphassets.com/GBhBjvxQUGUQlQ1UJuIw"
+          size={2}
+          variant="focus"
+          color="blue"
+          external={true}
+        >
+          resume, up to date and ATS optimized
+        </MarqueeButton>
         <Footer />
       </IndexContent>
     </MainContainer>

@@ -274,13 +274,14 @@ const Projects = () => {
           );
         })}
         <MarqueeButton
+        label="github"
           href="https://github.com/csvidit"
           size={4}
           variant="nonfocus"
           color="violet"
           external={true}
         >
-          github
+          source code and all other projects
         </MarqueeButton>
         <Footer />
       </IndexContent>

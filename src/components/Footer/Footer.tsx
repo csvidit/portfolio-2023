@@ -1,4 +1,3 @@
-import SecondaryButton from "../SecondaryButton";
 import BackToTop from "./BackToTop";
 
 const Footer = () => {
@@ -9,7 +8,7 @@ const Footer = () => {
           VK
         </div>
         <div>
-          &copy; 2023 Vidit Khandelwal. All rights reserved. All wrongs
+          &copy; {new Date().getFullYear()} Vidit Khandelwal. All rights reserved. All wrongs
           reserved, too.
         </div>
       </div>

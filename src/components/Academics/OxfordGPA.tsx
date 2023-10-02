@@ -3,7 +3,7 @@ import SubSectionTitle from "./SubSectionTitle";
 
 const OxfordGPA = () => {
   return (
-    <div className="lg:w-1/3 flex w-full flex-col space-y-4 items-start rounded-2xl text-neutral-100 font-light">
+    <div className="flex w-full flex-col space-y-4 items-start rounded-2xl text-neutral-100 font-light">
       <SubSectionHeader color="red">
         gpa (converted to the U.S. 4.0 scale)
       </SubSectionHeader>

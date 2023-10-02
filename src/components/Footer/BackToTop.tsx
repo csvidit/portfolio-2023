@@ -59,10 +59,11 @@ const BackToTop = (props: {}) => {
   return (
     <MotionConfig
       transition={{
-        type: "spring",
+        // type: "just",
         duration: 0.2,
-        damping: 20,
-        stiffness: 200,
+        ease: "easeInOut",
+        // damping: 20,
+        // stiffness: 200,
       }}
     >
       <button onClick={() => window.scrollTo(0, 0)} className={`flex bg-opacity-100 w-fit`}>

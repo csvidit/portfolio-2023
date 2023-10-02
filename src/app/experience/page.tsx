@@ -24,22 +24,24 @@ const Projects = () => {
         <WebExp />
         <ITAPExp />
         <MarqueeButton
+          label="read.cv"
           href="https://read.cv/viditkhandelwal"
           size={2}
           variant="nonfocus"
           color="blue"
           external={true}
         >
-          read.cv
+          read.cv profile and posts
         </MarqueeButton>
         <MarqueeButton
+        label="resume"
           href="https://media.graphassets.com/GBhBjvxQUGUQlQ1UJuIw"
           size={2}
           variant="focus"
           color="blue"
           external={true}
         >
-          resume
+          resume, up to date and ATS optimized
         </MarqueeButton>
         <Footer />
       </IndexContent>

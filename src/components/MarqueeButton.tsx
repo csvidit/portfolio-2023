@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion";
 import { BsArrowRight, BsArrowUpRight } from "react-icons/bs";
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 const MarqueeButton = (props: {
+  label: string | React.ReactNode;
   children: React.ReactNode;
   href: string;
   variant: string; // can be nonfocus or focus
@@ -156,7 +157,7 @@ const MarqueeButton = (props: {
                 props.size != 1 ? "grow" : "grow-0"
               } mx-4`}
             >
-              {props.children}
+              {hover ? props.children : props.label}
             </motion.div>
             {props.size != 1 ? (
               props.external == true ? (

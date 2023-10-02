@@ -1,4 +1,4 @@
-import ExpBullets from "../Experience/ExpBullets";
+import ExpBullets from "./ExpBullets";
 import SecondaryButton from "../SecondaryButton";
 import SubSectionHeader from "./SubSectionHeader";
 import SubSectionText from "./SubSectionText";
