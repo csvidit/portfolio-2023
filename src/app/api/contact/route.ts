@@ -9,10 +9,6 @@ export async function POST(request: NextRequest) {
 
   const {name, email, message} = await request.json();
 
-  console.log("NAME", name);
-  console.log("EMAIL", email);
-  console.log("MESSAGE", message);
-
   resend.emails
     .send({
       from: `Portfolio Contact Form <${process.env

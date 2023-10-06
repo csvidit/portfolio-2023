@@ -7,7 +7,6 @@ import IndexContent from "@/components/IndexContent";
 import MainContainer from "@/components/MainContainer";
 import MarqueeButton from "@/components/MarqueeButton";
 import ComingUp from "@/components/Index/ComingUp";
-import ContactForm3 from "@/components/ContactForm/ContactForm";
 import ContactForm2 from "@/components/ContactForm/ContactForm2";
 
 const Index = () => {

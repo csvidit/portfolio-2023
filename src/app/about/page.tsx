@@ -14,7 +14,7 @@ import MarqueeButton from "@/components/MarqueeButton";
 import PortraitCarousel from "@/components/About/PortraitCarousel";
 import { PiGithubLogoDuotone, PiLinkedinLogoDuotone } from "react-icons/pi";
 import Mantra from "@/components/About/Mantra";
-import ContactForm from "@/components/ContactForm/ContactForm";
+import ContactForm2 from "@/components/ContactForm/ContactForm2";
 
 const About = () => {
   return (
@@ -40,7 +40,7 @@ const About = () => {
         <MusicPlayer />
         <TechStack />
         <Personality />
-        <ContactForm/>
+        <ContactForm2/>
         <MarqueeButton
           label="resume"
           href="https://media.graphassets.com/GBhBjvxQUGUQlQ1UJuIw"
