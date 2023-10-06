@@ -65,6 +65,10 @@ const ContactForm2 = () => {
     }
   }, [focus, messages, stage]);
 
+  const handleKeyDown = (event: { key: string }) => {
+    if (event.key === "Enter") handleButtonClick();
+  };
+
   const handleButtonClick = () => {
     const nextStage = stage + 1;
     setStage(nextStage);
@@ -74,7 +78,7 @@ const ContactForm2 = () => {
   };
 
   return (
-    <motion.div className="lg:col-span-2 row-span-2 w-100 h-100 flex flex-col space-y-8 rounded-[3rem] p-8 lg:p-12 bg-neutral-900 font-light">
+    <motion.div id="form-root" className="lg:col-span-2 row-span-2 w-100 h-100 flex flex-col space-y-8 rounded-[3rem] p-8 lg:p-12 bg-neutral-900 font-light">
       <motion.div className="flex flex-col h-60 space-y-4 overflow-scroll snap-end">
         {messages.map((x, index) => {
           return (
@@ -90,7 +94,7 @@ const ContactForm2 = () => {
         <div id="bottom" ref={bottomRef}></div>
       </motion.div>
 
-      {isLoading && (
+      {/* {isLoading && (
         <ThreeDots
           height="20"
           width="20"
@@ -101,10 +105,13 @@ const ContactForm2 = () => {
           wrapperClass=""
           visible={true}
         />
-      )}
+      )} */}
       {!succeeded && !isLoading && (
-        <motion.form className="relative flex flex-row space-x-4 justify-between rounded-full border border-neutral-500 px-2 py-2">
+        <motion.div className={`relative flex flex-row space-x-4 justify-between rounded-full border border-neutral-500 px-2 py-2`}>
           <motion.input
+            onKeyDown={(e) => {
+              handleKeyDown(e);
+            }}
             id="message"
             type="message"
             name="message"
@@ -114,7 +121,7 @@ const ContactForm2 = () => {
             }}
             value={currentMessage}
             onChange={handleMessageChange}
-            className="w-full grow px-2 placeholder:text-neutral-500 bg-transparent border-none focus:border-0 focus:ring-offset-0 focus:ring-0 focus:border-none focus:outline-none resize-none"
+            className="w-full grow px-2 placeholder:text-neutral-500 bg-transparent border-none focus:border-0 focus:ring-offset-0 focus:ring-0 focus:border-none focus:outline-none focus:placeholder-blue-500 resize-none caret-blue-500"
           ></motion.input>
           <motion.button
             onClick={() => handleButtonClick()}
@@ -125,7 +132,7 @@ const ContactForm2 = () => {
           >
             <BsArrowUp />
           </motion.button>
-        </motion.form>
+        </motion.div>
       )}
       <motion.div className="flex flex-col space-y-2 w-fit">
         <motion.button
