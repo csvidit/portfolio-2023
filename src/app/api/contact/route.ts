@@ -1,33 +1,35 @@
+import EmailTemplate from "@/components/ContactForm/EmailTemplate";
 import { NextRequest, NextResponse } from "next/server";
 
-// import { Resend } from "resend";
+import { Resend } from "resend";
 
-// const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-const POST = async (req: NextRequest) => {
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-    },
-    body: JSON.stringify({
-      from: `Vidit Khandelwal Portfolio <${process.env.CONTACT_FORM_SENDER_EMAIL}>`,
-      to: [`${process.env.CONTACT_FORM_RECEIVER_EMAIL}`],
-      subject: "hello world",
-      html: "<strong>it works!</strong>",
-    }),
-  });
+export async function POST(request: NextRequest) {
 
-  if (res.ok) {
-    const data = await res.json();
-    return NextResponse.json(data);
-  }
-};
+  const {name, email, message} = await request.json();
 
-// resend.emails.send({
-//   from: process.env.CONTACT_EMAILS_SENDER!,
-//   to: process.env.CONTACT_EMAILS_RECIPIENT!,
-//   subject: "Hello World",
-//   html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
-// });
+  console.log("NAME", name);
+  console.log("EMAIL", email);
+  console.log("MESSAGE", message);
+
+  resend.emails
+    .send({
+      from: `Portfolio Contact Form <${process.env
+        .CONTACT_EMAILS_SENDER!}>`,
+      to: process.env.CONTACT_EMAILS_RECIPIENT!,
+      subject: `New Submission - ${name}`,
+      reply_to: email,
+      react: EmailTemplate({ name, email, message }),
+    })
+    .then((res) => {
+      console.log(res);
+      return NextResponse.json(res);
+    })
+    .catch((err) => {
+      console.log(err);
+      return NextResponse.error().json();
+    })
+
+  return NextResponse.json({ message: "success" });
+}

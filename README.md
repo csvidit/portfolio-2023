@@ -65,21 +65,29 @@ Similarly, the dynamic routes for the `/literature/[slug]` path are created usin
 
 The issue is that I want to display projects in a very specific order, and that order can change as projects evolve and new projects emerge. As a beginner/early intermediate GraphQL user, I have not figured out how I can give myself this kind of flexible (and granular control) over the order of items when returned using a GraphQL API call from Hygraph. Until an optimal solution is reached, the `/projects` route and content of it will be hardcoded in the form of a JavaScript object (which will be mapped into a component grid as with other content in routes elsewhere).
 
-## (Upcoming Feature) Backend and Logic - Contact Form
+## *New Feature* Backend and Logic - Contact Form
 
-There is no comprehensive backend, because for the most part there was not a reason to have one. The only major backend component is the `/contact route`, which is the `/app` router's version of a Next.js API route. This is for contact form submissions.
+There is no comprehensive backend, because for the most part there was not a reason to have one. The only major backend component is the `/contact` backend route handler, which is the `/app` router's version of a Next.js API route. This is for contact form submissions.
 
 ### How it Works
 
 * The UI of the contact form is modelled after a mock iMessage UI, with most interactivity coming from a standard form, and state and input management done through a `useReducer` hook.
-* When all the details have been collected from the form, the backend `/contact` API route is called via `POST`, which in turn fires a  call to Amazon SES (Simple Email Service) and sends a `FormData` object in the request body.
-* In the API route, the `FormData` is parsed, and then combined into a standard barebones HTML email body to be send through SES to me.
+* When all the details have been collected from the form, the backend `/contact` route handler is called via `POST`, which in turn fires a call to Resend and sends the user's `name`, `email`, and `message` in the request body.
+* In the API route, the request body is parsed and filled into a formatted email template. This email is then sent via a Resend reserved custom subdomain and my email address. Both the Resend reserved email address and Vidit Khandelwal's email address (where I would receive the form submissions) are stored as server-only environment variables which makes sure that these are never exposed to the client. 
 
 ### Key Decisions
 
-* Why use Amazon SES?
-It is a low-stakes way of demonstrating my AWS knowledge. It is also fancy. I like using enterprise software. Jokes aside, it was also the cheapest service when you consider the fact that a lot of free form-to-email sending services like Formspree are restrictive in their free limits and have a higher monthly fee once you surpass the free tier. Also, SES opens the door to many more possibilites, customization, and control over what exactly happens.
-* Why use an API route? Why not a direct API call fire to SES?
-If someone on a browser (i.e., client side) looks enough, they can make out blocks of raw JavaScript even after Next.js compiles them into static files. This is not that big of a deal until you consider the fact that your environment variables can also get exposed to the client-side. Obviously, I do not want someone to gain access to my AWS Access Keys and Secret Keys. (Even if you did gain access to them, those keys are very restricted -- they only have IAM access to SES for sending emails, and I can rate-limit the access or rotate the keys at any time).
+* **Why use Resend?**
+If you had read the README a while ago, you may have noticed that my initial design decision for the contact form involved using Amazon SES. This is why I did not use it:
+  * Setting up SSL certificates for a custom domain and other required verifications was time consuming and hard to maintain.
+  * Using SES only for contact forms was inefficient because it still required doing all the setting up and configuration, both in the project itself and in the AWS console. This was not worth it for a simple contact form-triggered email.
+  * Resend was much more friendly, with a straightforward API, Next.js-specific documentation, and easy integration with other libraries such as react-email.
+  * The admin console was much simpler since it did not have all the complexity of the AWS console.
+  * The free-tier of Resend is VERY generous - 100 emails per day, 3,000 emails per month at no extra charge.
+  * It provided all email and email body customization options that I required, and will require in the future.
+
+* **Why use an API route? Why not a direct API call fire to Resend?** If someone on a browser (i.e., client side) looks enough, they can make out blocks of raw JavaScript even after Next.js compiles them into static files. This is not that big of a deal until you consider the fact that your environment variables can also get exposed to the client-side. Obviously, I do not want someone to gain access to my Resend keys, and use up my email limits or get access to the email addresses themselves.
+
+* **But what about the performance and stability you were talking about with regards to AWS?** Fun fact, Resend is just a more beginner and developer-friendly abstraction over Amazon SES. So, I am getting the best of both worlds.
 
 (c) 2023 Vidit Khandelwal. All rights reserved. All wrongs reserved, too.

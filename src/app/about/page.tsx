@@ -1,7 +1,6 @@
 "use client";
 
 import AboutTitle from "@/components/About/AboutTitle";
-import ContactForm from "@/components/ContactForm";
 import Education from "@/components/About/Education";
 import Location from "@/components/About/Location";
 import MusicPlayer from "@/components/About/MusicPlayer";
@@ -15,6 +14,7 @@ import MarqueeButton from "@/components/MarqueeButton";
 import PortraitCarousel from "@/components/About/PortraitCarousel";
 import { PiGithubLogoDuotone, PiLinkedinLogoDuotone } from "react-icons/pi";
 import Mantra from "@/components/About/Mantra";
+import ContactForm from "@/components/ContactForm/ContactForm";
 
 const About = () => {
   return (
@@ -40,7 +40,7 @@ const About = () => {
         <MusicPlayer />
         <TechStack />
         <Personality />
-        <ContactForm />
+        <ContactForm/>
         <MarqueeButton
           label="resume"
           href="https://media.graphassets.com/GBhBjvxQUGUQlQ1UJuIw"
