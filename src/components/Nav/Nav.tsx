@@ -12,7 +12,16 @@ import { usePathname } from "next/navigation";
 import { Sling as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { HiAcademicCap } from "react-icons/hi2";
-import { PiBookOpenFill, PiCameraFill, PiHouseFill, PiLightningFill, PiPenFill, PiSquaresFourFill, PiUserFill } from "react-icons/pi";
+import {
+  PiBookOpenFill,
+  PiCameraFill,
+  PiHouseFill,
+  PiLightningFill,
+  PiPenFill,
+  PiSquaresFourFill,
+  PiUserFill,
+} from "react-icons/pi";
+import { v4 as uuidv4 } from "uuid";
 
 const Nav = (props: { notFound?: boolean }) => {
   const [open, setOpen] = useState(false);
@@ -64,10 +73,13 @@ const Nav = (props: { notFound?: boolean }) => {
                 className="flex flex-row space-x-2 items-center"
               >
                 <LayoutGroup>
-                  <AnimatePresence mode="wait">
+                  <AnimatePresence mode="popLayout">
                     <motion.div layout className="">
                       <AnimatePresence>
-                        <Link href="/" className="flex flex-row space-x-1 uppercase">
+                        <Link
+                          href="/"
+                          className="flex flex-row space-x-1 uppercase"
+                        >
                           <LayoutGroup>
                             <motion.div layout>vidit khandelwal</motion.div>
                             <motion.div layout className="text-lime-500">
@@ -76,7 +88,7 @@ const Nav = (props: { notFound?: boolean }) => {
                                 : pathName.substring(
                                     1,
                                     pathName.lastIndexOf("/") != 0
-                                      ? pathName.lastIndexOf("/")
+                                      ? pathName.indexOf("/", 1)
                                       : pathName.length
                                   )}
                             </motion.div>
@@ -105,6 +117,7 @@ const Nav = (props: { notFound?: boolean }) => {
                   <LayoutGroup>
                     <AnimatePresence>
                       {links.map((x, index) => {
+                        const uuid = uuidv4();
                         return (
                           <motion.div
                             initial={{ skewY: 20 }}
@@ -120,22 +133,14 @@ const Nav = (props: { notFound?: boolean }) => {
                               staggerChildren: 0.1,
                             }}
                             layout
-                            key={index}
+                            key={uuid}
                             className="flex flex-row space-x-1 items-center"
                           >
-                            {/* <AnimatePresence>
-                              {pathName == x.href && (
-                                <motion.div
-                                  layout
-                                  className="w-1 h-1 bg-lime-500 rounded-full"
-                                ></motion.div>
-                              )}
-                            </AnimatePresence> */}
-                            <LayoutGroup>
-                              <AnimatePresence mode="popLayout">
+                            <LayoutGroup key={uuid}>
+                              <AnimatePresence mode="popLayout" key={uuid}>
                                 <NavLink
                                   current={pathName == x.href ? true : false}
-                                  key={index}
+                                  key={uuid}
                                   href={x.href}
                                   icon={x.icon}
                                 >

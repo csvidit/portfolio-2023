@@ -4,6 +4,7 @@ import { MotionConfig, motion } from "framer-motion";
 import { BsArrowUpRight } from "react-icons/bs";
 import { CSSProperties, useEffect, useRef, useState } from "react";
 import { PiCrownDuotone, PiStarFill } from "react-icons/pi";
+import Image from "next/image";
 
 const FeaturedProjectItem = (props: {
   title: string;
@@ -88,9 +89,9 @@ const FeaturedProjectItem = (props: {
             "--bg-color": `linear-gradient(#0a0a0a, ${color})`,
           } as CSSProperties
         }
-        className="flex flex-col justify-between space-y-4 col-span-2 row-span-2 rounded-[3rem] p-8 lg:p-12 border border-[#0000] [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+        className="relative flex flex-col justify-between space-y-4 col-span-2 row-span-2 rounded-[3rem] p-8 lg:p-12 border border-[#0000] [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
       >
-        <motion.div className="flex flex-col space-y-4 justify-start items-start w-full">
+        <motion.div className="flex flex-col space-y-4 justify-start items-start w-full overflow-hidden">
           {/* <motion.div className="flex flex-row space-x-2 text-yellow-500 items-center text-2xl lg:text-4xl">
             <PiCrownDuotone />
           </motion.div> */}

@@ -6,26 +6,46 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
+  const { name, email, message } = await request.json();
 
-  const {name, email, message} = await request.json();
+  try {
+    await resend.emails
+      .send({
+        from: `Portfolio Contact Form <${process.env.CONTACT_EMAILS_SENDER!}>`,
+        to: process.env.CONTACT_EMAILS_RECIPIENT!,
+        subject: `New Submission - ${name}`,
+        reply_to: email,
+        react: EmailTemplate({ name, email, message }),
+      })
+      .then((res) => {
+        return NextResponse.json(res);
+      })
+      .catch((err) => {
+        return NextResponse.error().json();
+      });
 
-  resend.emails
-    .send({
-      from: `Portfolio Contact Form <${process.env
-        .CONTACT_EMAILS_SENDER!}>`,
-      to: process.env.CONTACT_EMAILS_RECIPIENT!,
-      subject: `New Submission - ${name}`,
-      reply_to: email,
-      react: EmailTemplate({ name, email, message }),
-    })
-    .then((res) => {
-      console.log(res);
-      return NextResponse.json(res);
-    })
-    .catch((err) => {
-      console.log(err);
-      return NextResponse.error().json();
-    })
+    // return NextResponse.json(data);
+  } catch (err) {
+    return NextResponse.error();
+  }
 
-  return NextResponse.json({ message: "success" });
+  // resend.emails
+  //   .send({
+  //     from: `Portfolio Contact Form <${process.env
+  //       .CONTACT_EMAILS_SENDER!}>`,
+  //     to: process.env.CONTACT_EMAILS_RECIPIENT!,
+  //     subject: `New Submission - ${name}`,
+  //     reply_to: email,
+  //     react: EmailTemplate({ name, email, message }),
+  //   })
+  //   .then((res) => {
+  //     console.log(res);
+  //     return NextResponse.json(res);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //     return NextResponse.json(err);
+  //   })
+
+  // return NextResponse.json({ message: "success" });
 }

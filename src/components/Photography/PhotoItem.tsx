@@ -54,7 +54,7 @@ const PhotoItem = (props: {
             }}
             className="absolute top-0 bottom-0 right-0 left-0 w-full h-full bg-neutral-900 bg-opacity-60 z-10 backdrop-blur-sm geom rounded-[3rem] flex flex-col space-y-4 text-center flex-wrap justify-center items-center p-8 lg:p-12"
           >
-            <motion.div>{props.caption}</motion.div>
+            <motion.caption>{props.caption}</motion.caption>
             {/* <motion.div className="flex flex-row space-x-2 flex-wrap items-center">
               <PiCalendarBlankDuotone />
               <motion.div className="uppercase">{dateString}</motion.div>

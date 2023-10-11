@@ -6,7 +6,6 @@ import { useRef } from "react";
 import Link from "next/link";
 
 export const tags = ["All", "Poem", "Short Story"];
-
 `
         query Writings {
           writings(orderBy: publishDate_DESC, where: { toShow: true }) {

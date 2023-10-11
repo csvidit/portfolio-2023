@@ -82,7 +82,7 @@ const PaperItem = (props: {
         <Link
           href={props.href}
           target="_blank"
-          className="p-8 lg:p-12 flex flex-col space-y-4 justify-between items-center"
+          className="p-8 lg:p-12 flex flex-col space-y-4 h-full justify-between items-center"
         >
           <motion.div className="flex flex-col space-y-4 justify-start items-start w-full">
             <motion.div

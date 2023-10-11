@@ -1,3 +1,7 @@
+"use client"
+
+import { Tailwind } from '@react-email/tailwind';
+
 interface EmailTemplateProps {
   name: string;
   email: string;
@@ -10,6 +14,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   message,
 }) => {
   return (
+    <Tailwind>
     <div className="text-neutral-900">
       <h1 className="text-xl lg:text-2xl text-indigo-500 font-medium">
         Vidit Khandelwal Portfolio
@@ -28,6 +33,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
         Khandelwal Contact Form.
       </p>
     </div>
+    </Tailwind>
   );
 };
 

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { UrlObject } from "url";
 
 const NavLink = (props: {
+  key: string;
   href: string | UrlObject;
   children: React.ReactNode;
   current?: boolean;
@@ -47,6 +48,7 @@ const NavLink = (props: {
       }}
     >
       <motion.li
+        key={props.key}
         variants={mainDivVariants}
         initial="initial"
         whileHover="hover"

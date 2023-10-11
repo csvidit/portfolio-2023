@@ -8,6 +8,19 @@ const nextConfig = {images: {
         pathname: '**',
       },
     ],
-  },}
+  },
+
+async redirects() {return [
+  {
+    source: '/backslash',
+    destination: '/blog',
+    permanent: true
+  },
+  {
+    source: '/backslash/:slug',
+    destination: '/blog/:slug/',
+    permanent: true
+  }
+]}}
 
 module.exports = nextConfig

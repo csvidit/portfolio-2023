@@ -1,46 +1,21 @@
-import { motion } from "framer-motion";
-import { Dispatch, SetStateAction } from "react";
+import Link from "next/link";
 
-const mainDivVariants = {
-  initial: {
-    backgroundColor: "#0a0a0a",
-    color: "#737373",
-    borderWidth: "1px",
-    borderColor: "#171717",
-  },
-  hover: {
-    backgroundColor: "#171717",
-    color: "#d4d4d4",
-    borderWidth: "1px",
-    borderColor: "#525252",
-  },
-  focus: {
-    backgroundColor: "#7f1d1d",
-    color: "#fca5a5",
-    borderWidth: "1px",
-    borderColor: "#fca5a5",
-  },
-};
 
 const PaperFilterItem = (props: {
+  key: string
   isActive: boolean
-  setActiveFilter: Dispatch<SetStateAction<number>>
+  href: string;
   tag: number;
   children: React.ReactNode;
 }) => {
   return (
-    <motion.button
-      className="w-fit px-2 py-1 bg-neutral-950 rounded-md uppercase text-base"
-      initial="initial"
-      whileHover="hover"
-      whileFocus="focus"
-      variants={mainDivVariants}
-      onClick={() => {
-        console.log("Hello");
-      }}
+    <Link
+    key={props.key}
+    href={props.href}
+      className={`w-fit px-2 py-1 bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 hover:border-neutral-500 text-neutral-500 hover:text-neutral-300 transition-all duration-200 ease-in-out rounded-md uppercase text-base ${props.isActive ? "text-red-500 border-red-500 hover:text-red-500 hover:border-red-400" : ""}`}
     >
       {props.children}
-    </motion.button>
+    </Link>
   );
 };
 
