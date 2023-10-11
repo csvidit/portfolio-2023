@@ -33,7 +33,7 @@ const getData = async (tag: number) => {
   if (tag == 0) {
     query = gql`
       query Papers {
-        papers(orderBy: publishedAt_DESC, where: { toShow: true }) {
+        papers(orderBy: publishDate_DESC, where: { toShow: true }) {
           abstract
           internalSlug
           publishDate
@@ -50,7 +50,7 @@ const getData = async (tag: number) => {
   } else {
     query = gql`
     query Papers {
-      papers(orderBy: publishedAt_DESC, where: { tag: ${tag} }) {
+      papers(orderBy: publishDate_DESC, where: { tag: ${tag} }) {
         abstract
         internalSlug
         publishDate
@@ -112,7 +112,7 @@ const PapersByTag = async ({ params }: { params: { slug: string } }) => {
 export async function generateStaticParams() {
   const query = gql`
     query Papers {
-      papers(orderBy: publishedAt_DESC, where: { toShow: true }) {
+      papers(orderBy: publishDate_DESC, where: { toShow: true }) {
         abstract
         internalSlug
         publishDate

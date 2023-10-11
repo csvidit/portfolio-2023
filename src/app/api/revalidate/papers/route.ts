@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
   const secret = request.headers.get("secret");
 
   if (secret !== process.env.REVALIDATE_SECRET) {
-    return NextResponse.json({ message: "Invalid secret" }, { status: 401 });
+    return NextResponse.json({ message: `Invalid secret - ${secret}` }, { status: 401 });
   }
 
   revalidatePath("/papers");

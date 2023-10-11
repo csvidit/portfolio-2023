@@ -30,7 +30,7 @@ const client = new GraphQLClient(
 const getData = async () => {
   const query = gql`
     query Papers {
-      papers(orderBy: publishedAt_DESC, where: { toShow: true }) {
+      papers(orderBy: publishDate_DESC, where: { toShow: true }) {
         abstract
         internalSlug
         publishDate

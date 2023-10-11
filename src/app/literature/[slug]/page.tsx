@@ -69,7 +69,7 @@ export default async function ViewLiterature({ params }: any) {
 
 async function getData(slug: string) {
   const query = gql`query Writings {
-        writings(orderBy: publishedAt_DESC, where: {toShow: true, internalSlug: "${slug}"}) {
+        writings(orderBy: publishDate_DESC, where: {toShow: true, internalSlug: "${slug}"}) {
           description
           internalSlug
           primaryTag
@@ -95,7 +95,7 @@ async function getData(slug: string) {
 export async function generateStaticParams() {
   const query = gql`
     query Writings {
-      writings(orderBy: publishedAt_DESC, where: { toShow: true }) {
+      writings(orderBy: publishDate_DESC, where: { toShow: true }) {
         description
         internalSlug
         primaryTag
