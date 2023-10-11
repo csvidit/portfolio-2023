@@ -9,43 +9,17 @@ export async function POST(request: NextRequest) {
   const { name, email, message } = await request.json();
 
   try {
-    await resend.emails
-      .send({
-        from: `Portfolio Contact Form <${process.env.CONTACT_EMAILS_SENDER!}>`,
-        to: process.env.CONTACT_EMAILS_RECIPIENT!,
-        subject: `New Submission - ${name}`,
-        reply_to: email,
-        react: EmailTemplate({ name, email, message }),
-      })
-      .then((res) => {
-        return NextResponse.json(res);
-      })
-      .catch((err) => {
-        return NextResponse.error().json();
-      });
+    const response = await resend.emails.send({
+      from: `Portfolio Contact Form <${process.env
+        .CONTACT_EMAILS_SENDER!}>`,
+      to: process.env.CONTACT_EMAILS_RECIPIENT!,
+      subject: `New Submission - ${name}`,
+      reply_to: email,
+      react: EmailTemplate({ name, email, message }),
+    });
 
-    // return NextResponse.json(data);
+    return NextResponse.json({ response, status: 200 });
   } catch (err) {
-    return NextResponse.error();
+    return NextResponse.json({ error: err, status: 500 });
   }
-
-  // resend.emails
-  //   .send({
-  //     from: `Portfolio Contact Form <${process.env
-  //       .CONTACT_EMAILS_SENDER!}>`,
-  //     to: process.env.CONTACT_EMAILS_RECIPIENT!,
-  //     subject: `New Submission - ${name}`,
-  //     reply_to: email,
-  //     react: EmailTemplate({ name, email, message }),
-  //   })
-  //   .then((res) => {
-  //     console.log(res);
-  //     return NextResponse.json(res);
-  //   })
-  //   .catch((err) => {
-  //     console.log(err);
-  //     return NextResponse.json(err);
-  //   })
-
-  // return NextResponse.json({ message: "success" });
 }
