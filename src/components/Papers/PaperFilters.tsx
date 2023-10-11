@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import PaperFiltersDesktop from "./PaperFiltersDesktop";
 import PaperFiltersMobile from "./PaperFiltersMobile";
@@ -26,12 +26,20 @@ export const tags = [
 ];
 
 function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
+  if (typeof window !== "undefined") {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height
+    };
+  }
+  // Handle server-side rendering or other cases where window is not available.
   return {
-    width,
-    height
+    width: 0,
+    height: 0
   };
 }
+
 
 const PaperFilters = (props: { activeFilter: number }) => {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
