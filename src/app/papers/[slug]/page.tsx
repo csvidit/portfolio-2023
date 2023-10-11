@@ -109,4 +109,30 @@ const PapersByTag = async ({ params }: { params: { slug: string } }) => {
   );
 };
 
+export async function generateStaticParams() {
+  const query = gql`
+    query Papers {
+      papers(orderBy: publishedAt_DESC, where: { toShow: true }) {
+        abstract
+        internalSlug
+        publishDate
+        tag
+        title
+        document {
+          fileName
+          url
+        }
+        id
+      }
+    }
+  `;
+
+  const response: PapersData = await client.request(query);
+
+  return response.papers.map((x: Paper) => ({
+    slug: slugs[x.tag],
+  }));
+}
+
+
 export default PapersByTag;
