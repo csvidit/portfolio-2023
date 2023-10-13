@@ -1,4 +1,4 @@
-import { GraphQLClient, gql } from "graphql-request";
+import { GraphQLClient, RequestDocument, gql } from "graphql-request";
 import IndexContent from "@/components/IndexContent";
 import MainGridItem from "@/components/MainGridItem";
 import PapersLoading from "@/components/Papers/PapersLoading";
@@ -6,7 +6,8 @@ import { Markup } from "interweave";
 import { polyfill } from "interweave-ssr";
 import Footer from "@/components/Footer/Footer";
 import MarqueeButton from "@/components/MarqueeButton";
-import { Writing, WritingsData } from "../page";
+import { throttledWritingsFetch } from "@/throttle";
+import { WritingsData, Writing } from "@/hygraph.config";
 
 polyfill();
 
@@ -83,7 +84,8 @@ async function getData(slug: string) {
       }
       `;
 
-  const response: WritingsData = await client.request(query);
+  // const response: WritingsData = await client.request(query);
+  const response: WritingsData = await throttledWritingsFetch(query);
 
   if (!response) {
     // This will activate the closest `error.js` Error Boundary
@@ -94,7 +96,7 @@ async function getData(slug: string) {
 }
 
 export async function generateStaticParams() {
-  const query = gql`
+  const query: RequestDocument = gql`
     query Writings {
       writings(orderBy: publishDate_DESC, where: { toShow: true, primaryTag: 1 }) {
         description
@@ -110,7 +112,8 @@ export async function generateStaticParams() {
     }
   `;
 
-  const response: WritingsData = await client.request(query);
+  // const response: WritingsData = await client.request(query);
+  const response: WritingsData = await throttledWritingsFetch(query);
 
   return response.writings.map((x: Writing) => ({
     slug: x.internalSlug,

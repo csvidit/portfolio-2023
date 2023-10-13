@@ -6,7 +6,8 @@ import { Markup } from "interweave";
 import { polyfill } from "interweave-ssr";
 import Footer from "@/components/Footer/Footer";
 import MarqueeButton from "@/components/MarqueeButton";
-import { Writing, WritingsData } from "../page";
+import { WritingsData, Writing } from "@/hygraph.config";
+import { throttledWritingsFetch } from "@/throttle";
 
 polyfill();
 
@@ -83,7 +84,8 @@ async function getData(slug: string) {
       }
       `;
 
-  const response: WritingsData = await client.request(query);
+  // const response: WritingsData = await client.request(query);
+  const response: WritingsData = await throttledWritingsFetch(query);
 
   if (!response) {
     // This will activate the closest `error.js` Error Boundary
@@ -110,7 +112,8 @@ export async function generateStaticParams() {
     }
   `;
 
-  const response: WritingsData = await client.request(query);
+  // const response: WritingsData = await client.request(query);
+  const response: WritingsData = await throttledWritingsFetch(query);
 
   return response.writings.map((x: Writing) => ({
     slug: x.internalSlug,

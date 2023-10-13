@@ -3,28 +3,12 @@ import IndexContent from "@/components/IndexContent";
 import SimplePageTitle from "@/components/SimplePageTitle";
 import PapersLoading from "@/components/Papers/PapersLoading";
 import { gql } from "graphql-request";
-import { hygraphClient } from "@/hygraph.config";
+import { Writing, WritingsData, hygraphClient } from "@/hygraph.config";
 import MainGridItem from "@/components/MainGridItem";
 import BackslashLogo from "@/components/Literature/BackslashLogo";
 import { BsSlashSquare } from "react-icons/bs";
 import WritingItem from "@/components/WritingItem";
-
-export type Writing = {
-  description: string;
-  internalSlug: string;
-  primaryTag: number;
-  secondaryTag: number;
-  publishDate: string;
-  title: string;
-  text: {
-    html: string;
-  };
-  id: string;
-};
-
-export type WritingsData = {
-  writings: Writing[];
-};
+import { throttledWritingsFetch } from "@/throttle";
 
 const getData = async () => {
   const query = gql`
@@ -47,7 +31,8 @@ const getData = async () => {
     }
   `;
 
-  const response: WritingsData = await hygraphClient.request(query);
+  // const response: WritingsData = await hygraphClient.request(query);
+  const response: WritingsData = await throttledWritingsFetch(query);
 
   if (!response) {
     // This will activate the closest `error.js` Error Boundary

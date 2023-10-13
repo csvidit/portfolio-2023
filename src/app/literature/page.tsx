@@ -3,28 +3,12 @@ import IndexContent from "@/components/IndexContent";
 import LiteratureItem from "@/components/WritingItem";
 import SimplePageTitle from "@/components/SimplePageTitle";
 import PapersLoading from "@/components/Papers/PapersLoading";
-import { gql } from "graphql-request";
-import { hygraphClient } from "@/hygraph.config";
-
-export type Writing = {
-  description: string;
-  internalSlug: string;
-  primaryTag: number;
-  secondaryTag: number;
-  publishDate: string;
-  title: string;
-  text: {
-    html: string;
-  };
-  id: string;
-};
-
-export type WritingsData = {
-  writings: Writing[];
-};
+import { RequestDocument, gql } from "graphql-request";
+import { Writing, WritingsData, hygraphClient } from "@/hygraph.config";
+import { throttledWritingsFetch } from "@/throttle";
 
 const getData = async () => {
-  const query = gql`
+  const query: RequestDocument = gql`
     query Writings {
       writings(orderBy: publishDate_DESC, where: { primaryTag: 1 }) {
         description
@@ -41,7 +25,8 @@ const getData = async () => {
     }
   `;
 
-  const response: WritingsData = await hygraphClient.request(query);
+  // const response: WritingsData = await hygraphClient.request(query);
+  const response: WritingsData = await throttledWritingsFetch(query);
 
   if (!response) {
     // This will activate the closest `error.js` Error Boundary

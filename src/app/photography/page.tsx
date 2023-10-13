@@ -3,27 +3,9 @@ import IndexContent from "@/components/IndexContent";
 import SimplePageTitle from "@/components/SimplePageTitle";
 import PapersLoading from "@/components/Papers/PapersLoading";
 import { gql } from "graphql-request";
-import { hygraphClient } from "@/hygraph.config";
+import { Photo, PhotosData } from "@/hygraph.config";
 import PhotoItem from "@/components/Photography/PhotoItem";
-
-export type Photo = {
-  caption: string;
-  date: string;
-  id: string;
-  priority: number,
-  photo: {
-    url: string;
-    width: number;
-    size: number;
-    mimeType: string;
-    height: number;
-  };
-  
-};
-
-export type PhotosData = {
-  photos: Photo[];
-};
+import { throttledPhotosFetch } from "@/throttle";
 
 const getData = async () => {
   const query = gql`
@@ -44,7 +26,8 @@ const getData = async () => {
     }
   `;
 
-  const response: PhotosData = await hygraphClient.request(query);
+  // const response: PhotosData = await hygraphClient.request(query);
+  const response: PhotosData = await throttledPhotosFetch(query);
 
   if (!response) {
     // This will activate the closest `error.js` Error Boundary

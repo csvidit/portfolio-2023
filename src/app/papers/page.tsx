@@ -5,23 +5,8 @@ import PapersLoading from "@/components/Papers/PapersLoading";
 import { GraphQLClient, gql } from "graphql-request";
 import PaperItem from "@/components/Papers/PaperItem";
 import PaperFilters from "@/components/Papers/PaperFilters";
-
-export type Paper = {
-  abstract: string,
-  internalSlug: string,
-  publishDate: string,
-  tag: number,
-  title: string,
-  document: {
-    fileName: string,
-    url: string
-  }
-  id: string
-}
-
-type PapersData = {
-  papers: Paper[];
-};
+import { throttledPapersFetch } from "@/throttle";
+import { Paper, PapersData } from "@/hygraph.config";
 
 const client = new GraphQLClient(
   process.env.NEXT_PUBLIC_HYGRAPH_HIGH_PERFORMANCE_ENDPOINT!
@@ -44,7 +29,8 @@ const getData = async () => {
       }
     }
   `;
-  const response: PapersData = await client.request(query);
+  // const response: PapersData = await client.request(query);
+  const response: PapersData = await throttledPapersFetch(query);
 
   if (!response) {
     // This will activate the closest `error.js` Error Boundary

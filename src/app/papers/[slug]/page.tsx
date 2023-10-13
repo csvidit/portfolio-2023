@@ -2,34 +2,19 @@ import Footer from "@/components/Footer/Footer";
 import IndexContent from "@/components/IndexContent";
 import SimplePageTitle from "@/components/SimplePageTitle";
 import PapersLoading from "@/components/Papers/PapersLoading";
-import { GraphQLClient, gql } from "graphql-request";
+import { GraphQLClient, RequestDocument, gql } from "graphql-request";
 import PaperItem from "@/components/Papers/PaperItem";
 import PaperFilters from "@/components/Papers/PaperFilters";
 import { slugs } from "@/components/Papers/Filters";
-
-export type Paper = {
-  abstract: string;
-  internalSlug: string;
-  publishDate: string;
-  tag: number;
-  title: string;
-  document: {
-    fileName: string;
-    url: string;
-  };
-  id: string;
-};
-
-type PapersData = {
-  papers: Paper[];
-};
+import { Paper, PapersData, WritingsData } from "@/hygraph.config";
+import { throttledPapersFetch } from "@/throttle";
 
 const client = new GraphQLClient(
   process.env.NEXT_PUBLIC_HYGRAPH_HIGH_PERFORMANCE_ENDPOINT!
 );
 
 const getData = async (tag: number) => {
-  let query;
+  let query: RequestDocument;
   if (tag == 0) {
     query = gql`
       query Papers {
@@ -66,7 +51,8 @@ const getData = async (tag: number) => {
   `;
   }
 
-  const response: PapersData = await client.request(query);
+  // const response: PapersData = await client.request(query);
+  const response: PapersData = await throttledPapersFetch(query);
 
   if (!response) {
     // This will activate the closest `error.js` Error Boundary
@@ -127,7 +113,8 @@ export async function generateStaticParams() {
     }
   `;
 
-  const response: PapersData = await client.request(query);
+  // const response: PapersData = await client.request(query);
+  const response: PapersData = await throttledPapersFetch(query);
 
   return response.papers.map((x: Paper) => ({
     slug: slugs[x.tag],
