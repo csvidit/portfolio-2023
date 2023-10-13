@@ -10,7 +10,7 @@ import { Writing, WritingsData } from "../page";
 
 polyfill();
 
-const tags = ["All", "Poem", "Short Story"];
+const secondaryTags = ["All", "Poem", "Short Story"];
 
 const client = new GraphQLClient(
   process.env.NEXT_PUBLIC_HYGRAPH_HIGH_PERFORMANCE_ENDPOINT!
@@ -33,7 +33,7 @@ export default async function ViewLiterature({ params }: any) {
             className="justify-start h-fit text-lg lg:text-xl items-center"
           >
             <div className=" text-indigo-500 uppercase">
-              {tags[data.primaryTag]}
+              {secondaryTags[data.primaryTag]}
             </div>
             <div className="text-2xl lg:text-4xl">{data.title}</div>
             <div className="flex flex-row space-x-2 flex-wrap items-center text-neutral-500">
@@ -43,7 +43,7 @@ export default async function ViewLiterature({ params }: any) {
           <MainGridItem width={4} height={1}>
             <Markup
               className={`flex flex-col space-y-4 ${
-                data.primaryTag == 1 ? "items-center" : ""
+                data.secondaryTag == 1 ? "items-center" : ""
               }`}
               content={data.text.html}
             />
@@ -73,6 +73,7 @@ async function getData(slug: string) {
           description
           internalSlug
           primaryTag
+          secondaryTag
           publishDate
           title
           text {
@@ -95,10 +96,11 @@ async function getData(slug: string) {
 export async function generateStaticParams() {
   const query = gql`
     query Writings {
-      writings(orderBy: publishDate_DESC, where: { toShow: true }) {
+      writings(orderBy: publishDate_DESC, where: { toShow: true, primaryTag: 1 }) {
         description
         internalSlug
         primaryTag
+        secondaryTag
         publishDate
         title
         text {

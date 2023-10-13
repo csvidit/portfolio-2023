@@ -5,26 +5,13 @@ import { BsArrowRight, BsDot } from "react-icons/bs";
 import { useRef } from "react";
 import Link from "next/link";
 
-export const tags = ["All", "Poem", "Short Story"];
-`
-        query Writings {
-          writings(orderBy: publishDate_DESC, where: { toShow: true }) {
-            description
-            internalSlug
-            primaryTag
-            publishDate
-            title
-            text {
-              html
-            }
-          }
-        }
-      `;
+export const secondaryTags = [["All"],["All", "Poem", "Short Story"], ["All", "Web Development"]];
 
 export type Writing = {
   description: string;
   internalSlug: string;
   primaryTag: number;
+  secondaryTag: number;
   publishDate: string;
   title: string;
   text: {
@@ -32,11 +19,13 @@ export type Writing = {
   };
 };
 
-const LiteratureItem = (props: {
+const WritingItem = (props: {
+  type: string;
   title: string;
   href: string;
   children: React.ReactNode;
-  tag: number;
+  primaryTag: number;
+  secondaryTag: number;
   date: string;
 }) => {
   const ref = useRef(null);
@@ -48,15 +37,15 @@ const LiteratureItem = (props: {
       scale: 1,
     },
     hover: {
-      backgroundColor: "#1e1b4b",
-      color: "#a5b4fc",
+      backgroundColor: props.type == "literature" ? "#1e1b4b" : "#172554",
+      color: props.type == "literature" ? "#a5b4fc" : "#93c5fd",
       scale: 0.95,
     },
   };
 
   const titleVariants = {
     initial: { color: "#fef2f2" },
-    hover: { color: "#e0e7ff" },
+    hover: { color: props.type == "literature" ? "#e0e7ff" : "#dbeafe" },
   };
 
   const arrowVariants = {
@@ -66,16 +55,16 @@ const LiteratureItem = (props: {
 
   const tagVariants = {
     initial: {
-      backgroundColor: "#0a0a0a",
+      backgroundColor: props.type == "literature" ? "#0a0a0a" : "#172554",
       color: "#737373",
       borderWidth: "1px",
       borderColor: "#171717",
     },
     hover: {
       backgroundColor: "#1e1b4b",
-      color: "#a5b4fc",
+      color: props.type == "literature" ? "#a5b4fc" : "#93c5fd",
       borderWidth: "1px",
-      borderColor: "#a5b4fc",
+      borderColor: props.type == "literature" ? "#a5b4fc" : "#93c5fd",
     },
   };
 
@@ -121,21 +110,13 @@ const LiteratureItem = (props: {
                 variants={tagVariants}
                 className="px-2 py-1 bg-neutral-950 rounded-md"
               >
-                {props.tag == 0 ? "" : tags[props.tag]}
+                {props.primaryTag == 0 ? "" : secondaryTags[props.primaryTag][props.secondaryTag]}
               </motion.span>
               <BsDot className="lg:flex hidden" />
-              <motion.span variants={titleVariants} className="text-red-500">
+              <motion.span variants={titleVariants}>
                 {dateString}
               </motion.span>
             </motion.div>
-            {/* <motion.div className="flex flex-wrap space-x-1 items-center w-fit text-xs">
-            <motion.span
-              variants={tagVariants}
-              className="px-2 py-1 bg-neutral-950 rounded-md uppercase"
-            >
-              {props.tag == 0 ? "" : tags[props.tag]}
-            </motion.span>
-          </motion.div> */}
             <motion.div
               variants={arrowVariants}
               className="flex flex-row space-x-1 items-center"
@@ -149,4 +130,4 @@ const LiteratureItem = (props: {
   );
 };
 
-export default LiteratureItem;
+export default WritingItem;

@@ -28,6 +28,7 @@ const PaperItem = (props: {
       scale: 1,
     },
     hover: {
+      // boxShadow: "inset 0px 0px 16px 0 #991b1b",
       backgroundColor: "#450a0a",
       color: "#fca5a5",
       scale: 0.95,

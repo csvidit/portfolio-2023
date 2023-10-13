@@ -43,3 +43,33 @@ html {
 .mattone{
   font-family: 'Mattone', sans-serif;
 }
+
+.markup_blog{
+  h1, h2, h3, h4, h5, h6{
+    @apply text-blue-500
+  }
+  h1{
+    @apply text-4xl lg:text-6xl bg-blue-950 bg-opacity-60 px-4 py-2 rounded-full
+  }
+  h2{
+    @apply text-2xl lg:text-4xl bg-blue-950 bg-opacity-60 px-4 py-2 rounded-full
+  }
+  h3{
+    @apply text-xl lg:text-2xl
+  }
+  h4{
+    @apply text-lg lg:text-xl
+  }
+  h5{
+    @apply text-base lg:text-lg
+  }
+  html{
+    @apply w-full
+  }
+  p{
+    @apply w-full min-w-full 
+  }
+  img{
+    @apply w-full lg:w-1/2 self-center
+  }
+}

@@ -13,6 +13,7 @@ import { Sling as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { HiAcademicCap } from "react-icons/hi2";
 import {
+  PiArticleFill,
   PiBookOpenFill,
   PiCameraFill,
   PiHouseFill,
@@ -40,6 +41,7 @@ const Nav = (props: { notFound?: boolean }) => {
     { name: "Papers", href: "/papers", icon: <PiBookOpenFill /> },
     // { name: "Literature", href: "/literature", icon: <PiPenFill /> },
     { name: "Photography", href: "/photography", icon: <PiCameraFill /> },
+    { name: "Blog", href: "/blog", icon: <PiArticleFill/> },
 
     // {
     //   name: "Studio",

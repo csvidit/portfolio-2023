@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer/Footer";
 import IndexContent from "@/components/IndexContent";
-import LiteratureItem from "@/components/Literature/LiteratureItem";
+import LiteratureItem from "@/components/WritingItem";
 import SimplePageTitle from "@/components/SimplePageTitle";
 import PapersLoading from "@/components/Papers/PapersLoading";
 import { gql } from "graphql-request";
@@ -10,6 +10,7 @@ export type Writing = {
   description: string;
   internalSlug: string;
   primaryTag: number;
+  secondaryTag: number;
   publishDate: string;
   title: string;
   text: {
@@ -25,10 +26,11 @@ export type WritingsData = {
 const getData = async () => {
   const query = gql`
     query Writings {
-      writings(orderBy: publishDate_DESC, where: { toShow: true }) {
+      writings(orderBy: publishDate_DESC, where: { primaryTag: 1 }) {
         description
         internalSlug
         primaryTag
+        secondaryTag
         publishDate
         title
         text {
@@ -61,10 +63,12 @@ const LiteraturePage = async () => {
         <>
           {data.writings.map((x: Writing) => (
             <LiteratureItem
+              type="literature"
               key={x.id}
               title={x.title}
               href={`/literature/${x.internalSlug}`}
-              tag={x.primaryTag}
+              primaryTag={x.primaryTag}
+              secondaryTag={x.secondaryTag}
               date={x.publishDate}
             >
               {x.description}

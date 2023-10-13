@@ -1,6 +1,5 @@
 import Footer from "@/components/Footer/Footer";
 import IndexContent from "@/components/IndexContent";
-import LiteratureItem from "@/components/Literature/LiteratureItem";
 import SimplePageTitle from "@/components/SimplePageTitle";
 import PapersLoading from "@/components/Papers/PapersLoading";
 import { gql } from "graphql-request";
@@ -8,11 +7,13 @@ import { hygraphClient } from "@/hygraph.config";
 import MainGridItem from "@/components/MainGridItem";
 import BackslashLogo from "@/components/Literature/BackslashLogo";
 import { BsSlashSquare } from "react-icons/bs";
+import WritingItem from "@/components/WritingItem";
 
 export type Writing = {
   description: string;
   internalSlug: string;
   primaryTag: number;
+  secondaryTag: number;
   publishDate: string;
   title: string;
   text: {
@@ -30,11 +31,12 @@ const getData = async () => {
     query Writings {
       writings(
         orderBy: publishDate_DESC
-        where: { toShow: true, primaryTag: 3 }
+        where: { toShow: true, primaryTag: 2 }
       ) {
         description
         internalSlug
         primaryTag
+        secondaryTag
         publishDate
         title
         text {
@@ -69,8 +71,11 @@ const LiteraturePage = async () => {
         <div className="space-x-4">
           <span className="">the</span>
           <span>
-            
-            <span className="">backs<BackslashLogo />ash</span>
+            <span className="">
+              backs
+              <BackslashLogo />
+              ash
+            </span>
           </span>
           <span>blog</span>
         </div>
@@ -82,15 +87,17 @@ const LiteraturePage = async () => {
       {data ? (
         <>
           {data.writings.map((x: Writing) => (
-            <LiteratureItem
+            <WritingItem
+              type="blog"
               key={x.id}
               title={x.title}
               href={`/blog/${x.internalSlug}`}
-              tag={x.primaryTag}
+              primaryTag={x.primaryTag}
+              secondaryTag={x.secondaryTag}
               date={x.publishDate}
             >
               {x.description}
-            </LiteratureItem>
+            </WritingItem>
           ))}
         </>
       ) : (

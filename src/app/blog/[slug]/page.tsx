@@ -10,7 +10,7 @@ import { Writing, WritingsData } from "../page";
 
 polyfill();
 
-const tags = ["All", "Poem", "Short Story"];
+const secondaryTags = ["All", "Web Development"]
 
 const client = new GraphQLClient(
   process.env.NEXT_PUBLIC_HYGRAPH_HIGH_PERFORMANCE_ENDPOINT!
@@ -32,8 +32,8 @@ export default async function ViewLiterature({ params }: any) {
             height={1}
             className="justify-start h-fit text-lg lg:text-xl items-center"
           >
-            <div className=" text-indigo-500 uppercase">
-              {tags[data.primaryTag]}
+            <div className="text-blue-500 uppercase">
+              {secondaryTags[data.secondaryTag]}
             </div>
             <div className="text-2xl lg:text-4xl">{data.title}</div>
             <div className="flex flex-row space-x-2 flex-wrap items-center text-neutral-500">
@@ -44,7 +44,7 @@ export default async function ViewLiterature({ params }: any) {
             <Markup
               className={`flex flex-col space-y-4 ${
                 data.primaryTag == 1 ? "items-center" : ""
-              }`}
+              } markup_blog`}
               content={data.text.html}
             />
           </MainGridItem>
@@ -69,10 +69,11 @@ export default async function ViewLiterature({ params }: any) {
 
 async function getData(slug: string) {
   const query = gql`query Writings {
-        writings(orderBy: publishedAt_DESC, where: {toShow: true, primaryTag: 4, internalSlug: "${slug}"}) {
+        writings(orderBy: publishedAt_DESC, where: {toShow: true, internalSlug: "${slug}"}) {
           description
           internalSlug
           primaryTag
+          secondaryTag
           publishDate
           title
           text {
@@ -95,10 +96,11 @@ async function getData(slug: string) {
 export async function generateStaticParams() {
   const query = gql`
     query Writings {
-      writings(orderBy: publishedAt_DESC, where: { toShow: true, primaryTag: 4 }) {
+      writings(orderBy: publishedAt_DESC, where: { toShow: true, primaryTag: 2 }) {
         description
         internalSlug
         primaryTag
+        secondaryTag
         publishDate
         title
         text {

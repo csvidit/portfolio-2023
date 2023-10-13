@@ -24,6 +24,7 @@ const ProjectItem = (props: {
     hover: {
       // borderWidth: "1px",
       // borderColor: "#5b21b6",
+      // boxShadow: "inset 0px 0px 16px 0 #5b21b6",
       backgroundColor: "#2e1065",
       color: "#c4b5fd",
       scale: 0.95,
