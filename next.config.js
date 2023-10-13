@@ -8,6 +8,10 @@ const nextConfig = {images: {
         pathname: '**',
       },
     ],
+    experimental: {
+      workerThreads: false,
+      cpus: 1
+    },
   },
 
 async redirects() {return [
