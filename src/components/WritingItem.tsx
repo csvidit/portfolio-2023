@@ -90,7 +90,6 @@ const WritingItem = (props: {
       >
         <Link
           href={props.href}
-          target="_blank"
           className="flex flex-col justify-between space-y-4 w-full h-full p-8 lg:p-12"
         >
           <motion.div className="flex flex-col space-y-4 justify-start items-start w-full">
