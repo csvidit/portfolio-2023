@@ -33,9 +33,7 @@ const ComingUp = () => {
           // variants={textVariants}
           className="font-light lg:text-2xl text-left line-gap"
         >
-          Cerulean, An elevated to-do web app, with priority tags, task
-          dependencies, due dates, reminders, and more. Made using Next.js,
-          Tailwind, and Firebase.
+         trimr, a minimalist URL shortener service. Made using Next.js and Firebase.
         </motion.div>
       </motion.div>
       {/* <ActionButton

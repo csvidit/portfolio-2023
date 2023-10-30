@@ -6,6 +6,8 @@ import { ThreeDots } from "react-loader-spinner";
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import MessageItem from "./MessageItem";
+import InlineButton from "../Index/InlineButton";
+import SecondaryButton from "../SecondaryButton";
 
 const systemMessages = [
   "Hey there! What's your name?",
@@ -78,7 +80,10 @@ const ContactForm2 = () => {
   };
 
   return (
-    <motion.div id="form-root" className="lg:col-span-2 row-span-2 w-100 h-100 flex flex-col space-y-8 rounded-[3rem] p-8 lg:p-12 bg-neutral-900 font-light">
+    <motion.div
+      id="form-root"
+      className="lg:col-span-2 row-span-2 w-100 h-100 flex flex-col space-y-8 rounded-[3rem] p-8 lg:p-12 bg-neutral-900 font-light"
+    >
       <motion.div className="flex flex-col h-60 space-y-4 overflow-scroll snap-end">
         {messages.map((x, index) => {
           return (
@@ -107,7 +112,9 @@ const ContactForm2 = () => {
         />
       )} */}
       {!succeeded && !isLoading && (
-        <motion.div className={`relative flex flex-row space-x-4 justify-between rounded-full border border-neutral-500 px-2 py-2`}>
+        <motion.div
+          className={`relative flex flex-row space-x-4 justify-between rounded-full border border-neutral-500 px-2 py-2`}
+        >
           <motion.input
             onKeyDown={(e) => {
               handleKeyDown(e);
@@ -156,7 +163,15 @@ const ContactForm2 = () => {
             {emailCopyMessage}
           </motion.div>
         </motion.button>
-        <motion.div className="w-full border-t border-t-neutral-100"></motion.div>
+        <motion.div className={`w-full border-t ${emailHover ? "border-t-neutral-100" : "border-t-neutral-500"}`}></motion.div>
+        <SecondaryButton
+          variant="plain"
+          href="https://calendly.com/viditkhandelwal"
+          external
+
+        >
+          Let&apos;s schedule a meeting!
+        </SecondaryButton>
       </motion.div>
     </motion.div>
   );
