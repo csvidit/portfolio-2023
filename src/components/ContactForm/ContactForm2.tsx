@@ -154,7 +154,7 @@ const ContactForm2 = () => {
             navigator.clipboard.writeText("viditk17@gmail.com");
             setEmailCopyMessage("Email copied!");
           }}
-          className="relative group w-fit flex flex-col items-center duration-300 ease-in-out transition-all h-[1.25rem] overflow-hidden"
+          className="relative group w-fit flex flex-col duration-300 ease-in-out transition-all h-[1.25rem] overflow-hidden"
         >
           <motion.div className="flex opacity-100 -translate-y-0 group-hover:-translate-y-[110%] group-hover:opacity-0 duration-300 ease-in-out">
             You can also email me.

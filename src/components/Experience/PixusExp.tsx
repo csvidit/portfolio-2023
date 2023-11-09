@@ -11,7 +11,9 @@ import ActionButton from "../Index/ActionButton";
 const PixusExp = () => {
   return (
     <motion.div
-      initial={{ backgroundColor: `linear-gradient("45deg", #171717", "#3b82f6")`}}
+      initial={{
+        backgroundColor: `linear-gradient("45deg", #171717", "#3b82f6")`,
+      }}
       // animate={{ backgroundSize: "200% 200%" }}
       // transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
       className=" p-[0.8px] col-span-2 row-span-2 w-full rounded-[3rem]"
@@ -20,50 +22,44 @@ const PixusExp = () => {
         <div className="flex flex-col space-y-2 w-full">
           <ExpCompany>Pixus, Inc. / CaptureNoire</ExpCompany>
           <ExpSubtitleContainer>
-            <ExpTitle>Software Developer Intern</ExpTitle>
-            <ExpDate>Nov 2022 - Dec 2022</ExpDate>
+            <ExpTitle>Software Engineer Intern</ExpTitle>
+            <ExpDate>Jun 2022 - Dec 2022</ExpDate>
           </ExpSubtitleContainer>
           <div>
             <ExpBullets>
               <li>
-                Continued development of the CaptureNoire Photography Suite
-                using agile methodology, reducing code complexity, and
-                increasing efficiency by 30%.
+                Spearheaded development of CaptureNoire, an Android photography
+                app catering to diverse skin tones, with an upcoming beta
+                release
               </li>
               <li>
-                Wrote technical and non-technical documentation for the source
-                code for async collaboration with other engineers, reducing
-                onboarding time by 60%.
-              </li>
-            </ExpBullets>
-          </div>
-          <div className="flex flex-row space-x-2 items-baseline text-blue-500 geom text-xl lg:text-2xl">
-            <ExpSubtitleContainer>
-              <ExpTitle>Software Engineer Intern</ExpTitle>
-              <ExpDate>Jun 2022 - Aug 2022</ExpDate>
-            </ExpSubtitleContainer>
-          </div>
-          <div>
-            <ExpBullets>
-              <li>
-                Spearheaded development of CaptureNoire, a photography app for
-                Android optimized for people with a broad range of skin tones,
-                with an upcoming beta release.
+                Applied best practices in UI/UX design, object-oriented
+                principles, and Android development as the sole computer science
+                expert at a budding startup
               </li>
               <li>
-                Built an image processing backend with results 90% like
-                competing apps while having 30% less complexity based on device
-                type, and RAM usage.
+                Engineered a high quality and innovative image processing
+                backend that achieved results 90% equivalent to competitor apps
+                with 30% less complexity
               </li>
               <li>
-                Engineered the app to be efficient in its memory usage for
-                compatibility with most smartphones, ensuring optimal
-                performance for all intended users.
+                Maximized compatibility and optimized RAM usage based on device
+                type by providing backward compatibility across SDKs to meet
+                quality standards.
               </li>
               <li>
-                Applied UI/UX design and Android app development best practices
-                as the sole person with a computer-science background at this
-                early age start-up.
+                Improved efficiency by 30% through agile development, code
+                simplification, and efficient algorithms for the CaptureNoire
+                photography application
+              </li>
+              <li>
+                Reduced onboarding time by 60% and enhanced collaboration by
+                creating comprehensive technical and non-technical documentation
+              </li>
+              <li>
+                Formulated user testing for adding AR functionality using ARCore
+                and introducing premium subscriptions to the application in the
+                medium-term
               </li>
             </ExpBullets>
           </div>

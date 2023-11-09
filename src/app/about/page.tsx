@@ -1,5 +1,3 @@
-"use client";
-
 import AboutTitle from "@/components/About/AboutTitle";
 import Education from "@/components/About/Education";
 import Location from "@/components/About/Location";
@@ -60,7 +58,7 @@ const About = () => {
           color="blue"
           external={true}
         >
-          github profile and respositories
+          github profile and repositories
         </MarqueeButton>
         <MarqueeButton
         label={<PiLinkedinLogoDuotone/>}

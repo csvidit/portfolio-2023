@@ -89,7 +89,7 @@ const FeaturedProjectItem = (props: {
             "--bg-color": `linear-gradient(#0a0a0a, ${color})`,
           } as CSSProperties
         }
-        className="relative flex flex-col justify-between space-y-4 col-span-2 row-span-2 rounded-[3rem] p-8 lg:p-12 border border-[#0000] [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+        className="relative flex flex-col justify-between space-y-4 col-span-2 row-span-2 rounded-[3rem] p-8 lg:p-12 font-normal border border-[#0000] [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
       >
         <motion.div className="flex flex-col space-y-4 justify-start items-start w-full overflow-hidden">
           {/* <motion.div className="flex flex-row space-x-2 text-yellow-500 items-center text-2xl lg:text-4xl">
@@ -107,7 +107,7 @@ const FeaturedProjectItem = (props: {
             {props.icons}
             <motion.div
               variants={arrowVariants}
-              className="flex flex-row space-x-2 items-center"
+              className="font-normal flex flex-row space-x-2 items-center"
             >
               <span>Detailed README on Github</span>
               <BsArrowUpRight />

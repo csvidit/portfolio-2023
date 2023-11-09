@@ -91,14 +91,14 @@ const SecondaryButton = (props: {
     >
       <Link
         href={props.href}
-        className={`flex bg-opacity-100 w-full ${props.className}`}
+        className={`flex bg-opacity-100 w-fit ${props.className}`}
       >
         <motion.div
           variants={mainDivVariants}
           initial="initial"
           whileHover="hover"
           layout
-          className={`group w-fit h-full py-1 flex flex-row items-center group justify-start space-x-4 text-base border-b overflow-hidden font-light`}
+          className={`group w-fit h-fit py-1 flex flex-row items-center group justify-start space-x-4 text-base border-b overflow-hidden font-light`}
         >
           <motion.div className="flex flex-col overflow-hidden">
             <AnimatePresence mode="popLayout">

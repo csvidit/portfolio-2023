@@ -17,7 +17,6 @@ const Index = () => {
         <Intro />
         <Spotlight />
         <ComingUp />
-        <OTW />
         <MarqueeButton
         label="projects"
           href="/projects"
@@ -37,7 +36,7 @@ const Index = () => {
           color="blue"
           external={true}
         >
-          github profile and respositories
+          github profile and repositories
         </MarqueeButton>
         <MarqueeButton
         label="linkedin"
@@ -49,8 +48,6 @@ const Index = () => {
         >
           view my professional profile
         </MarqueeButton>
-        {/* <GitHub />
-        <LinkedIn /> */}
         <Footer />
       </IndexContent>
     </MainContainer>

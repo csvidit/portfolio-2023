@@ -23,7 +23,7 @@ const MainContainer = (props: { children: any; className?: string }) => {
   return (
     <div
       className={`relative min-w-screen min-h-screen h-full flex flex-col font-light justify-center bg-neutral-950 text-neutral-100
-        ${props.className} ${albert.className}`}
+        ${props.className}`}
     >
       {props.children}
     </div>

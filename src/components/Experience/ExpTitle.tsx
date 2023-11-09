@@ -1,13 +1,13 @@
-const ExpTitle = (props: { children: React.ReactNode; variant?: string }) => {
+const ExpTitle = (props: { children: React.ReactNode; variant?: string, className?: string}) => {
   if (props.variant == "academic") {
     return (
-      <h3 className="text-red-500 geom text-xl lg:text-2xl flex flex-row space-x-2 items-center">
+      <h3 className={`text-red-500 geom text-xl lg:text-2xl flex flex-row space-x-2 items-center ${props.className}`}>
         {props.children}
       </h3>
     );
   }
   return (
-    <h3 className="text-blue-500 geom text-xl lg:text-2xl flex flex-row space-x-2 items-center">{props.children}</h3>
+    <h3 className={`text-blue-500 geom text-xl lg:text-2xl flex flex-row space-x-2 items-center ${props.className}`}>{props.children}</h3>
   );
 };
 

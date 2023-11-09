@@ -22,7 +22,7 @@ const Spotlight = () => {
         </div>
       </div>
       <ActionButton
-        size="full"
+        size="fit"
         external={true}
         variant="spotlight"
         href="https://github.com/csvidit/squawk"

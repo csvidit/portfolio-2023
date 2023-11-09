@@ -11,6 +11,7 @@ import IndexContent from "@/components/IndexContent";
 import MainContainer from "@/components/MainContainer";
 import SimplePageTitle from "@/components/SimplePageTitle";
 import MarqueeButton from "@/components/MarqueeButton";
+import CurrentExp from "@/components/Experience/CurrentExp";
 
 const Projects = () => {
   return (
@@ -18,6 +19,7 @@ const Projects = () => {
       <Nav />
       <IndexContent>
         <SimplePageTitle color="text-blue-500">work experience</SimplePageTitle>
+        <CurrentExp/>
         <PixusExp />
         <HubbardExp />
         <ISExp />

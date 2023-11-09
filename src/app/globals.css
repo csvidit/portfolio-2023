@@ -20,9 +20,19 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    url('../fonts/Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../fonts/Mona-Sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
 html {
   /* font-family: "Satoshi-Variable", sans-serif; */
   scroll-behavior: smooth !important;
+  font-family: 'Mona Sans', sans-serif;
 }
 
 .line-gap {
@@ -42,6 +52,10 @@ html {
 
 .mattone{
   font-family: 'Mattone', sans-serif;
+}
+
+.extended{
+  font-stretch: 125%;
 }
 
 .markup_blog{

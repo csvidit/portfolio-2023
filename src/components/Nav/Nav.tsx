@@ -80,10 +80,10 @@ const Nav = (props: { notFound?: boolean }) => {
                       <AnimatePresence>
                         <Link
                           href="/"
-                          className="flex flex-row space-x-1 uppercase"
+                          className="group flex flex-row space-x-1 uppercase"
                         >
                           <LayoutGroup>
-                            <motion.div layout>vidit khandelwal</motion.div>
+                            <motion.div layout className="group-hover:opacity-60 transition-all duration-200 ease-in-out">vidit khandelwal</motion.div>
                             <motion.div layout className="text-lime-500">
                               {pathName == "/" || props.notFound
                                 ? "portfolio"
