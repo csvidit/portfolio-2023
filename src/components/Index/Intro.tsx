@@ -7,6 +7,7 @@ import OTW2 from "./OTW2";
 
 const Intro = () => {
   return (
+    
     <MainGridItem width={4} height={1} className="items-center bg-transparent">
       <div className="flex flex-col flex-wrap space-y-4 items-center">
         <h1 className="extended text-4xl lg:text-8xl text-indigo-500 text-center text-medium">
