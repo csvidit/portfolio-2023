@@ -22,7 +22,7 @@ const MusicPlayer = () => {
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(true);
   const audioRef = useRef<HTMLAudioElement | undefined>(
-    typeof Audio !== "undefined" ? new Audio("lavender_haze.mp3") : undefined
+    typeof Audio !== "undefined" ? new Audio("Style-TV.mp3") : undefined
   );
 
   useEffect(() => {
@@ -43,14 +43,14 @@ const MusicPlayer = () => {
       >
         <Image
           alt="Midnights Album Cover"
-          src="/midnights.jpeg"
+          src="/1989-TV.webp"
           fill
           className={`rounded-2xl object-scale-down aspect-square`}
         ></Image>
       </motion.div>
       <div className="flex flex-row items-center justify-between">
         <motion.div className="flex flex-col space-y-1">
-          <motion.div>Lavender Haze</motion.div>
+          <motion.div>Style (Taylor&apos;s Version)</motion.div>
           <motion.div className="text-neutral-500">Taylor Swift</motion.div>
         </motion.div>
         {playing ? <MusicAnimation /> : <></>}
@@ -59,7 +59,7 @@ const MusicPlayer = () => {
       <motion.div className="flex flex-row space-x-4 justify-around items-center text-xl lg:text-2xl px-4 py-2 self-center w-full bg-neutral-800 rounded-[3rem] border border-neutral-500">
         <motion.a
           aria-label="Link to Taylor Swift on Spotify"
-          href="https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3?si=S2lBnawZTQS81vhdNut1vQ"
+          href="https://open.spotify.com/album/1o59UpKw81iHR0HPiSkJR0?si=HD37WNAVRYywEDj9oVL9OQ"
           className="text-neutral-500 hover:text-neutral-100 transition-all ease-in-out duration-200"
         >
           <IoIosAlbums className="" />
@@ -150,8 +150,11 @@ const MusicPlayer = () => {
           </LayoutGroup>
         </motion.button>
       </motion.div>
-      <motion.div className="font-sans text-xs text-right text-neutral-500">
-        &copy; Taylor Swift, Spotify, and others.
+      <motion.div
+        className="text-xs text-right text-neutral-500"
+        style={{ fontStretch: "90%" }}
+      >
+        &copy; 2023 Taylor Swift, Republic Records, et al.
       </motion.div>
     </motion.div>
   );

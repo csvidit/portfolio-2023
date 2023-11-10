@@ -91,7 +91,7 @@ const SecondaryButton = (props: {
     >
       <Link
         href={props.href}
-        className={`flex bg-opacity-100 w-fit ${props.className}`}
+        className={`inline-flex bg-opacity-100 w-fit  ${props.className}`}
       >
         <motion.div
           variants={mainDivVariants}

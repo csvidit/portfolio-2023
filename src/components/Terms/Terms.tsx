@@ -43,17 +43,17 @@ const Terms = () => {
           of this copyright notice.
         </p>
         <div className="inline-flex items-center space-x-1">
-          <p>
+          <p className="inline">
             For questions or inquiries regarding this copyright notice, please
-            contact Vidit Khandelwal at
+            contact Vidit Khandelwal at{" "}
+            <SecondaryButton
+              variant="plain"
+              href="mailto:legal@viditkhandelwal.com"
+              external
+            >
+              legal@viditkhandelwal.com
+            </SecondaryButton>
           </p>
-          <SecondaryButton
-            variant="plain"
-            href="mailto:legal@viditkhandelwal.com"
-            external
-          >
-            legal@viditkhandelwal.com
-          </SecondaryButton>
         </div>
         <TermsSectionHeader>copyright - projects</TermsSectionHeader>
         <p>
