@@ -2,11 +2,12 @@ import Footer from "@/components/Footer/Footer";
 import "../globals.css";
 import MainContainer from "@/components/MainContainer";
 import Nav from "@/components/Nav/Nav";
+import BlogIntro from "@/components/Blog/BlogIntro";
 
 export const metadata = {
-  title: "Literature - Vidit Khandelwal",
+  title: "Blog - Vidit Khandelwal",
   description:
-    "Select short stories and poems written by Vidit Khandelwal, with genres ranging from personal to experimental and sci fi. He is a recent computer science and economics graduate of DePauw University. Open to work, and based in the United States.",
+    "Articles on tech and economics by Vidit Khandelwal He is a recent computer science and economics graduate of DePauw University. Open to work, and based in the United States.",
   authors: [{ name: "Vidit Khandelwal", url: "https://viditkhandelwal.com" }],
   applicationName: "Vidit Khandelwal Portfolio",
   keywords: [
@@ -17,6 +18,12 @@ export const metadata = {
     "DPU",
     "Indianapolis",
     "Computer Science",
+    "economics",
+    "business",
+    "finance",
+    "development economics",
+    "international economics",
+    "finance",
     "graduate",
     "entry level",
     "CS",
@@ -129,6 +136,7 @@ export default function RootLayout({
       <body>
         <MainContainer>
           <Nav/>
+          
         {children}
         {/* <Footer /> */}
         </MainContainer>

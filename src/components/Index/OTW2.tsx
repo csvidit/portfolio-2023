@@ -9,7 +9,7 @@ const OTW2 = () => {
       <div className="rounded-full px-4 py-2 bg-neutral-900 inline-flex items-center space-x-1">
         <div className="inline-flex flex-row space-x-1 items-center w-fit text-emerald-500">
           <PiBriefcaseDuotone />
-          <span className="inline">Looking For</span>
+          <span className="inline">Open To Work</span>
         </div>
         <span className="text-neutral-300 hidden lg:inline w-fit capitalize">
           Entry-level Software Engineer, Web Developer, UI Engineer positions

@@ -55,7 +55,7 @@ const WritingItem = (props: {
 
   const tagVariants = {
     initial: {
-      backgroundColor: props.type == "literature" ? "#0a0a0a" : "#172554",
+      backgroundColor: props.type == "literature" ? "#0a0a0a" : "#0a0a0a",
       color: "#737373",
       borderWidth: "1px",
       borderColor: "#171717",

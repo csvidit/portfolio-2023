@@ -3,7 +3,7 @@ import Nav from "@/components/Nav/Nav";
 import "./globals.css";
 
 export const metadata = {
-  title: "Vidit Khandelwal",
+  title: "Vidit Khandelwal - Software Engineer",
   description:
     "The official portfolio of Vidit Khandelwal. Recent computer science and economics graduate of DePauw University. Software engineer, Web Developer, UI Engineer. Open to work, and based in the United States",
   authors: [{ name: "Vidit Khandelwal", url: "https://viditkhandelwal.com" }],
@@ -28,7 +28,7 @@ export const metadata = {
     "ICSA",
   ],
   openGraph: {
-    title: "Vidit Khandelwal",
+    title: "Vidit Khandelwal - Software Engineer",
     description: "The official portfolio of Vidit Khandelwal.",
     url: "https://viditkhandelwal.com",
     siteName: "Vidit Khandelwal Portfolio",

@@ -58,6 +58,17 @@ html {
   font-stretch: 125%;
 }
 
+.condensed{
+  font-stretch: 75%;
+}
+
+.blog_title{
+  background-image: url("/blog-3.png");
+  background-repeat: no-repeat;
+  background-size: 100vw 100%;
+  background-attachment: scroll;
+}
+
 .markup_blog{
   h1, h2, h3, h4, h5, h6{
     @apply text-blue-500

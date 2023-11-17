@@ -5,7 +5,6 @@ import {v4 as uuidv4} from "uuid";
 const PaperFilterItems = (props: {activeFilter: number}) => {
   return (
     <>
-      {" "}
       <PaperFilterItem
         key={uuidv4()}
         href={urls[Filters.All]}
