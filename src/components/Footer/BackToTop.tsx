@@ -4,25 +4,15 @@ import Link from "next/link";
 import { BsArrowUp } from "react-icons/bs";
 
 const BackToTop = (props: {}) => {
-  const colors = {
-    dark: "#171717",
-    gray: "#525252",
-    light: "#f5f5f5",
-    yellow: "#eab308",
-    blue: "#3b82f6",
-    red: "#ef4444",
-    sky: "#0ea5e9",
-  };
 
-//   const variant: String = "plain";
-  const color = colors.light;
+  const color = "#f5f5f5";
   const backgroundColor = "transparent";
 
   const mainDivVariants = {
     initial: {
       color: color,
       backgroundColor: backgroundColor,
-      borderColor: colors.gray,
+      borderColor: "#525252",
     },
     hover: {
       color: color,
