@@ -19,7 +19,8 @@ const Projects = () => {
       <Nav />
       <IndexContent>
         <SimplePageTitle color="text-blue-500">work experience</SimplePageTitle>
-        <CurrentExp/>
+        <CurrentExp />
+        {/* <CurrentExp/> */}
         <PixusExp />
         <HubbardExp />
         <ISExp />
@@ -36,7 +37,7 @@ const Projects = () => {
           read.cv profile and posts
         </MarqueeButton>
         <MarqueeButton
-        label="resume"
+          label="resume"
           href="https://media.graphassets.com/GBhBjvxQUGUQlQ1UJuIw"
           size={2}
           variant="focus"

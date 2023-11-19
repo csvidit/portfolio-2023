@@ -1,62 +1,94 @@
 "use client";
 
-import { CSSProperties, useEffect, useRef, useState } from "react";
-import ExpTitle from "./ExpTitle";
-import ExpCompany from "./ExpCompany";
+import { MotionConfig, motion } from "framer-motion";
+import { BsArrowUpRight } from "react-icons/bs";
 import ExpBullets from "./ExpBullets";
 
-const CurrentExp = (props: {}) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [color, setColor] = useState("#172554");
+const CurrentExp = () => {
+  const parentDivVariants = {
+    initial: {
+      scale: 1,
+    },
+    hover: {
+      scale: 0.95,
+    },
+  };
 
-  useEffect(() => {
-    const boxElement = ref.current;
+  const mainDivVariants = {
+    initial: {
+      backgroundColor: "#171717",
+      scale: 1,
+    },
+    hover: {
+      backgroundColor: "#2e1065",
+      scale: 1,
+    },
+  };
 
-    if (!boxElement) {
-      return;
-    }
+  const titleVariants = {
+    initial: { color: "#f5f5f5" },
+    hover: { color: "#ede9fe" },
+  };
 
-    const updateAnimation = () => {
-      const angle =
-        (parseFloat(boxElement.style.getPropertyValue("--angle")) + 0.8) % 360;
-      boxElement.style.setProperty("--angle", `${angle}deg`);
-      requestAnimationFrame(updateAnimation);
-    };
-
-    requestAnimationFrame(updateAnimation);
-  }, []);
+  const arrowVariants = {
+    initial: { color: "#f5f5f5" },
+    hover: { color: "#eab308" },
+  };
 
   return (
-    <div
-      ref={ref}
-      style={
-        {
-          "--angle": "0deg",
-          "--border-color": "linear-gradient(var(--angle), #0a0a0a, #3b82f6)",
-          "--bg-color": `linear-gradient(#0a0a0a, ${color})`,
-        } as CSSProperties
-      }
-      className="relative flex flex-col justify-between space-y-4 col-span-4 row-span-2 rounded-[3rem] p-8 lg:p-12 border border-[#0000] [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+    <MotionConfig
+      transition={{
+        type: "spring",
+        duration: 0.2,
+        damping: 20,
+        stiffness: 200,
+      }}
     >
-      <div className="text-blue-500">Short Term Contract</div>
-      <div className="font-normal text-2xl lg:text-4xl">Pixus Inc.</div>
-      <h3
-        className={`font-normal text-blue-500 geom text-xl lg:text-2xl flex flex-row space-x-2 items-center`}
+      <motion.div
+        variants={parentDivVariants}
+        initial="initial"
+        whileHover="hover"
+        animate={{
+          background: [
+            "conic-gradient( from 0deg, #0a0a0a 60%, #3b82f6)",
+            "conic-gradient( from 360deg, #0a0a0a 60%, #3b82f6)",
+          ],
+          transition: {
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 4,
+            type: "tween",
+            ease: "linear",
+          },
+        }}
+        className="relative col-span-4 row-span-2 rounded-[3rem] p-[1px]"
       >
-        Software Development Engineer
-      </h3>
-      <ExpBullets>
-        <li>
-          Developed the second version of the CaptureNoire internal beta with
-          refreshed UI made using Jetpack Compose and backend code ported to
-          Kotlin
-        </li>
-        <li>
-          Revamped the user flow of the app for a more immersive UX, and added
-          Firebase Authentication, Storage, and Firestore database integrations
-        </li>
-      </ExpBullets>
-    </div>
+        <motion.div
+          variants={mainDivVariants}
+          className="rounded-[3rem] p-8 lg:p-12 font-normal w-full h-full flex flex-col justify-between space-y-4 bg-gradient-to-b from-neutral-950 via-neutral-950 to-blue-950 bg-opacity-[60%]"
+        >
+          <div className="text-blue-500">Short Term Contract</div>
+          <div className="font-normal text-2xl lg:text-4xl">Pixus Inc.</div>
+          <h3
+            className={`font-normal text-blue-500 geom text-xl lg:text-2xl flex flex-row space-x-2 items-center`}
+          >
+            Software Development Engineer
+          </h3>
+          <ExpBullets>
+            <li>
+              Developed the second version of the CaptureNoire internal beta
+              with refreshed UI made using Jetpack Compose and backend code
+              ported to Kotlin
+            </li>
+            <li>
+              Revamped the user flow of the app for a more immersive UX, and
+              added Firebase Authentication, Storage, and Firestore database
+              integrations
+            </li>
+          </ExpBullets>
+        </motion.div>
+      </motion.div>
+    </MotionConfig>
   );
 };
 

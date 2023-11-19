@@ -2,9 +2,6 @@
 
 import { MotionConfig, motion } from "framer-motion";
 import { BsArrowUpRight } from "react-icons/bs";
-import { CSSProperties, useEffect, useRef, useState } from "react";
-import { PiCrownDuotone, PiStarFill } from "react-icons/pi";
-import Image from "next/image";
 
 const FeaturedProjectItem = (props: {
   title: string;
@@ -12,38 +9,23 @@ const FeaturedProjectItem = (props: {
   children: React.ReactNode;
   icons: React.ReactNode;
 }) => {
-  const ref = useRef<HTMLAnchorElement>(null);
-  const [hover, setHover] = useState(false);
-  // const [color, setColor] = useState("#171717");
-  const [color, setColor] = useState("#2e1065");
-
-  useEffect(() => {
-    const boxElement = ref.current;
-
-    if (!boxElement) {
-      return;
-    }
-
-    const updateAnimation = () => {
-      const angle =
-        (parseFloat(boxElement.style.getPropertyValue("--angle")) + 0.6) % 360;
-      boxElement.style.setProperty("--angle", `${angle}deg`);
-      requestAnimationFrame(updateAnimation);
-    };
-
-    requestAnimationFrame(updateAnimation);
-  }, []);
+  const parentDivVariants = {
+    initial: {
+      scale: 1,
+    },
+    hover: {
+      scale: 0.95,
+    },
+  };
 
   const mainDivVariants = {
     initial: {
       backgroundColor: "#171717",
-      // color: "#737373",
       scale: 1,
     },
     hover: {
       backgroundColor: "#2e1065",
-      // color: "#c4b5fd",
-      scale: 0.95,
+      scale: 1,
     },
   };
 
@@ -66,55 +48,56 @@ const FeaturedProjectItem = (props: {
         stiffness: 200,
       }}
     >
-      <motion.a
-        onHoverStart={() => {
-          setHover(true);
-          setColor("#2e1065");
-        }}
-        onHoverEnd={() => {
-          setHover(false);
-          // setColor("#171717");
-          setColor("#2e1065");
-        }}
-        ref={ref}
-        href={props.href}
-        target="_blank"
-        variants={mainDivVariants}
+      <motion.div
+        variants={parentDivVariants}
         initial="initial"
         whileHover="hover"
-        style={
-          {
-            "--angle": "0deg",
-            "--border-color": "linear-gradient(var(--angle), #0a0a0a, #8b5cf6)",
-            "--bg-color": `linear-gradient(#0a0a0a, ${color})`,
-          } as CSSProperties
-        }
-        className="relative flex flex-col justify-between space-y-4 col-span-2 row-span-2 rounded-[3rem] p-8 lg:p-12 font-normal border border-[#0000] [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+        animate={{
+          background: [
+            "conic-gradient( from 0deg, #0a0a0a 60%, #8b5cf6)",
+            "conic-gradient( from 360deg, #0a0a0a 60%, #8b5cf6)",
+          ],
+          transition: {
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 4,
+            type: "tween",
+            ease: "linear",
+          },
+        }}
+        className="relative col-span-2 row-span-2 rounded-[3rem] p-[1px]"
       >
-        <motion.div className="flex flex-col space-y-4 justify-start items-start w-full overflow-hidden">
-          {/* <motion.div className="flex flex-row space-x-2 text-yellow-500 items-center text-2xl lg:text-4xl">
-            <PiCrownDuotone />
-          </motion.div> */}
-          <motion.div variants={titleVariants} className="text-2xl lg:text-4xl">
-            {props.title}
-          </motion.div>
-          <motion.div className="lg:text-xl text-left text-violet-300">
-            {props.children}
-          </motion.div>
-        </motion.div>
-        <motion.div className="flex flex-col space-y-4 justify-start items-start w-full">
-          <motion.div className="w-full flex flex-col space-y-4 text-violet-300">
-            {props.icons}
+        <motion.a
+          href={props.href}
+          target="_blank"
+          variants={mainDivVariants}
+          className="rounded-[3rem] p-8 lg:p-12 font-normal w-full h-full flex flex-col justify-between space-y-4 bg-gradient-to-b from-neutral-950 via-neutral-950 to-violet-950 bg-opacity-[60%]"
+        >
+          <motion.div className="flex flex-col space-y-4 justify-start items-start w-full overflow-hidden">
             <motion.div
-              variants={arrowVariants}
-              className="font-normal flex flex-row space-x-2 items-center"
+              variants={titleVariants}
+              className="text-2xl lg:text-4xl"
             >
-              <span>Detailed README on Github</span>
-              <BsArrowUpRight />
+              {props.title}
+            </motion.div>
+            <motion.div className="lg:text-xl text-left text-violet-300">
+              {props.children}
             </motion.div>
           </motion.div>
-        </motion.div>
-      </motion.a>
+          <motion.div className="flex flex-col space-y-4 justify-start items-start w-full">
+            <motion.div className="w-full flex flex-col space-y-4 text-violet-300">
+              {props.icons}
+              <motion.div
+                variants={arrowVariants}
+                className="font-normal flex flex-row space-x-2 items-center"
+              >
+                <span>Detailed README on Github</span>
+                <BsArrowUpRight />
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </motion.a>
+      </motion.div>
     </MotionConfig>
   );
 };

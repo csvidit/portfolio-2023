@@ -30,9 +30,9 @@ import {
 import SimplePageTitle from "@/components/SimplePageTitle";
 import MainGridItem from "@/components/MainGridItem";
 import { motion } from "framer-motion";
-import FeaturedProjectItem from "@/components/Projects/FeaturedProjectItem";
 import MarqueeButton from "@/components/MarqueeButton";
 import { TbBrandFramerMotion, TbBrandOauth } from "react-icons/tb";
+import FeaturedProjectItem from "@/components/Projects/FeaturedProjectItem";
 
 const Projects = () => {
   const projects = [
