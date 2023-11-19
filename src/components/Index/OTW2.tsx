@@ -16,7 +16,7 @@ const OTW2 = () => {
           repeat: 2,
           repeatType: "reverse",
           duration: 2,
-          type: "just",
+          type: "tween",
           ease: "linear"
         },
       }}

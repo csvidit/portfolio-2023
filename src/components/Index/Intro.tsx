@@ -1,9 +1,6 @@
-import { motion } from "framer-motion";
-import Image from "next/image";
 import HeroSubtitles from "./HeroSubtitles";
 import ActionButton from "./ActionButton";
-import MainGridItem from "../MainGridItem";
-import OTW2 from "./OTW2";
+import OTW from "./OTW";
 
 const Intro = () => {
   return (
@@ -19,7 +16,7 @@ const Intro = () => {
           More About Me
         </ActionButton>
       </div>
-      <OTW2 />
+      <OTW />
     </div>
   );
 };

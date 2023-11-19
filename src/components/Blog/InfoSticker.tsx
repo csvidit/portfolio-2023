@@ -15,7 +15,7 @@ const InfoSticker = () => {
         repeat: Infinity,
         repeatType: "loop",
         duration: 2,
-        type: "just",
+        type: "tween",
         ease: "linear",
       }}
       className="mt-24 p-[1px] rounded-[3rem] w-fit"
