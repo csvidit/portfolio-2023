@@ -1,6 +1,6 @@
 import HeroSubtitles from "./HeroSubtitles";
 import ActionButton from "./ActionButton";
-import OTW from "./OTW";
+import OTW2 from "./OTW2";
 
 const Intro = () => {
   return (
@@ -16,7 +16,7 @@ const Intro = () => {
           More About Me
         </ActionButton>
       </div>
-      <OTW />
+      <OTW2 />
     </div>
   );
 };
