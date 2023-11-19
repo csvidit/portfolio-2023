@@ -9,17 +9,13 @@ const PortraitCarousel = () => {
   const [hover, setHover] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
 
-  const srcList = ["/vidit-1.png", "/vidit-edb.png"];
+  const srcList = ["/vidit-axo.webp", "/vidit-1.png", "/vidit-edb.png"];
 
-  const captionList = ["Graduation 2023", "Edinburgh, Scotland"];
-
-  //   useEffect(() => {
-  //     const interval = setInterval(() => {
-  //       setCurrentImage((previousImage) => (previousImage + 1) % srcList.length);
-  //     }, 5000);
-
-  //     return () => clearInterval(interval); // Cleanup on component unmount
-  //   }, []);
+  const captionList = [
+    "AXO Formal 2021",
+    "Graduation 2023",
+    "Edinburgh, Scotland",
+  ];
 
   return (
     <motion.div
@@ -32,30 +28,29 @@ const PortraitCarousel = () => {
       }}
       className="flex flex-col relative col-span-1 lg:row-span-2 w-full h-full min-h-[400px] lg:w-100 lg:h-100 rounded-[3rem]"
     >
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="popLayout">
         <motion.div
           layout
           initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1}}
+          animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 1.05 }}
           transition={{
-            type: "tween",
+            type: "spring",
             duration: 0.2,
           }}
           className="rounded-[3rem] object-cover"
         >
-          <AnimatePresence>
-            <Image
-              key={srcList[currentImage]}
-              src={srcList[currentImage]}
-              fill
-              alt="Map of Indianapolis"
-              className="rounded-[3rem] object-cover"
-            />
-          </AnimatePresence>
+          <Image
+            key={srcList[currentImage]}
+            src={srcList[currentImage]}
+            fill
+            alt={captionList[currentImage]}
+            className="rounded-[3rem] object-cover"
+          />
         </motion.div>
       </AnimatePresence>
-      {hover && (
+
+      {
         <AnimatePresence>
           <motion.div
             layout
@@ -66,10 +61,9 @@ const PortraitCarousel = () => {
               type: "tween",
               duration: 0.2,
             }}
-            className="flex flex-col space-y-2 w-full h-full bg-neutral-900 bg-opacity-60 z-10 backdrop-blur-sm geom rounded-[3rem] justify-center items-center"
+            className="flex flex-col space-y-2 w-full h-full rounded-[3rem] justify-center items-center"
           >
-            {captionList[currentImage]}
-            <motion.div className="absolute bottom-8 flex flex-row space-x-16 justify-around items-center text-xl lg:text-2xl px-2 py-1 rounded-[3rem] border border-neutral-100">
+            <motion.div className="absolute bottom-4 flex flex-row space-x-16 justify-around items-center text-xl lg:text-2xl px-2 py-1 rounded-[3rem] bg-neutral-900 bg-opacity-40 backdrop-blur-md text-neutral-100 text-opacity-60">
               <motion.button
                 className="flex w-fit"
                 onClick={() =>
@@ -93,7 +87,7 @@ const PortraitCarousel = () => {
             </motion.div>
           </motion.div>
         </AnimatePresence>
-      )}
+      }
     </motion.div>
   );
 };

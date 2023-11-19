@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import "../globals.css";
 
 export const metadata = {
@@ -30,11 +31,12 @@ export const metadata = {
     "resume",
     "work",
     "employment",
-    "read.cv"
+    "read.cv",
   ],
   openGraph: {
     title: "Vidit Khandelwal",
-    description: "Vidit Khandelwal's past work experience in tech industry and on-campus internships.",
+    description:
+      "Vidit Khandelwal's past work experience in tech industry and on-campus internships.",
     url: "https://viditkhandelwal.com",
     siteName: "Vidit Khandelwal Portfolio",
     images: [
@@ -42,13 +44,13 @@ export const metadata = {
         url: "https://viditkhandelwal.com/2-opengraph-square.png",
         alt: "VK initials text on a gradient background",
         width: 1001,
-        height: 1001
+        height: 1001,
       },
       {
         url: "https://viditkhandelwal.com/2-opengraph-wide.png",
         alt: "Vidit Khandelwal, Software Engineer, in text on a gradient background",
         width: 1200,
-        height: 630
+        height: 630,
       },
     ],
     type: "website",
@@ -62,7 +64,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

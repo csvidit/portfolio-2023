@@ -1,7 +1,6 @@
 import Footer from "@/components/Footer/Footer";
 import Nav from "@/components/Nav/Nav";
 import Intro from "@/components/Index/Intro";
-import OTW from "@/components/Index/OTW";
 import Spotlight from "@/components/Index/Spotlight";
 import IndexContent from "@/components/IndexContent";
 import MainContainer from "@/components/MainContainer";
@@ -14,11 +13,11 @@ const Index = () => {
     <MainContainer className="index_bg">
       <Nav />
       <IndexContent>
-        <Intro />
+        <Intro/>
         <Spotlight />
         <ComingUp />
         <MarqueeButton
-        label="projects"
+          label="projects"
           href="/projects"
           size={4}
           variant="nonfocus"
@@ -27,7 +26,7 @@ const Index = () => {
         >
           projects across platforms and stacks
         </MarqueeButton>
-        <ContactForm2/>
+        <ContactForm2 />
         <MarqueeButton
           label="github"
           href="https://github.com/csvidit"
@@ -39,7 +38,7 @@ const Index = () => {
           github profile and repositories
         </MarqueeButton>
         <MarqueeButton
-        label="linkedin"
+          label="linkedin"
           href="https://linkedin.com/in/viditkhandelwal"
           size={2}
           variant="nonfocus"

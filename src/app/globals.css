@@ -69,6 +69,13 @@ html {
   background-attachment: scroll;
 }
 
+.index_title{
+  background-image: url("/blog-1.png");
+  background-repeat: no-repeat;
+  background-size: 100vw 100%;
+  background-attachment: scroll;
+}
+
 .markup_blog{
   h1, h2, h3, h4, h5, h6{
     @apply text-blue-500

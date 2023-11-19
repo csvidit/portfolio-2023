@@ -2,16 +2,6 @@
 
 import { motion } from "framer-motion";
 
-const gradientVariants = {
-  initial: {
-    background: "linear-gradient(to top, #0a0a0a, #f5f5f5)",
-  },
-  animate: {
-    background: "radial-gradient(to top, #0a0a0a, #f5f5f5)",
-    // backgroundPosition: ["0", "100%"], // Move the gradient to the right
-  },
-};
-
 const InfoSticker = () => {
   return (
     <motion.div
@@ -25,7 +15,8 @@ const InfoSticker = () => {
         repeat: Infinity,
         repeatType: "loop",
         duration: 2,
-        type: "tween"
+        type: "just",
+        ease: "linear",
       }}
       className="mt-24 p-[1px] rounded-[3rem] w-fit"
     >

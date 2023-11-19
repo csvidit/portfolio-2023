@@ -1,6 +1,7 @@
 import MainContainer from "@/components/MainContainer";
 import Nav from "@/components/Nav/Nav";
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: "Vidit Khandelwal - Software Engineer",
@@ -57,7 +58,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>{children}
+      <Analytics/></body>
     </html>
   );
 }
