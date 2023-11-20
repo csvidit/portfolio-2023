@@ -148,7 +148,7 @@ const Projects = () => {
       title: "Bento Portfolio",
       content:
         "A minimalist bento-style, single-page portfolio design made with Next.js, Tailwind, and Framer Motion",
-      link: "https://github.com/csvidit/bento-bio-concept",
+      link: "https://github.com/csvidit/bento-portfolio-concept",
       icons: (
         <ProjectIconsContainer>
           <SiTypescript />
