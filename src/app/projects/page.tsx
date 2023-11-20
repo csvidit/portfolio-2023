@@ -130,16 +130,31 @@ const Projects = () => {
       ),
     },
     {
-      title: "Bio v2",
+      title: "Bento Bio",
       content:
-        "A link-in-bio style website made in React, which fetches links from Hygraph CMS",
-      link: "https://github.com/csvidit/react-bio-v2",
+        "A minimalist bento-style, technical-looking link-in-bio style website made in Next.js",
+      link: "https://github.com/csvidit/bento-bio-concept",
       icons: (
         <ProjectIconsContainer>
           <SiTypescript />
-          <SiReact />
-          <SiGraphql />
+          <SiNextdotjs />
           <SiTailwindcss />
+          <TbBrandFramerMotion />
+          <SiVercel />
+        </ProjectIconsContainer>
+      ),
+    },
+    {
+      title: "Bento Portfolio",
+      content:
+        "A minimalist bento-style, single-page portfolio design made with Next.js, Tailwind, and Framer Motion",
+      link: "https://github.com/csvidit/bento-bio-concept",
+      icons: (
+        <ProjectIconsContainer>
+          <SiTypescript />
+          <SiNextdotjs />
+          <SiTailwindcss />
+          <TbBrandFramerMotion />
           <SiVercel />
         </ProjectIconsContainer>
       ),
@@ -159,6 +174,22 @@ const Projects = () => {
         </ProjectIconsContainer>
       ),
     },
+    {
+      title: "Bio v2",
+      content:
+        "A link-in-bio style website made in React, which fetches links from Hygraph CMS",
+      link: "https://github.com/csvidit/react-bio-v2",
+      icons: (
+        <ProjectIconsContainer>
+          <SiTypescript />
+          <SiReact />
+          <SiGraphql />
+          <SiTailwindcss />
+          <SiVercel />
+        </ProjectIconsContainer>
+      ),
+    },
+
     {
       title: "NYT",
       content:
@@ -274,7 +305,7 @@ const Projects = () => {
           );
         })}
         <MarqueeButton
-        label="github"
+          label="github"
           href="https://github.com/csvidit"
           size={4}
           variant="nonfocus"
