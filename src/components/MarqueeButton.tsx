@@ -88,6 +88,7 @@ const MarqueeButton = (props: {
 
   const mainDivVariants = {
     initial: {
+      gridRow: "span 1 / span 1",
       backgroundColor: initialBackgroundColor,
       color: initialColor,
       scale: 1,
@@ -99,6 +100,7 @@ const MarqueeButton = (props: {
       },
     },
     hover: {
+      gridRow: "span 1 / span 1",
       scale: 0.95,
       backgroundColor: backgroundColor,
       color: color,
@@ -135,7 +137,7 @@ const MarqueeButton = (props: {
       initial="initial"
       whileHover="hover"
       variants={mainDivVariants}
-      className={`lg:col-span-${props.size} row-span-1 justify-center rounded-[3rem] bg-neutral-900 text-neutral-100 overflow-hidden`}
+      className={`col-span-${props.size} row-span-1 justify-center rounded-[3rem] bg-neutral-900 text-neutral-100 text-4xl lg:text-6xl min-h-[160px] overflow-x-hidden`}
     >
       <Link
         aria-label={props.alt ? props.alt : `Link to ${props.children}`}
@@ -150,7 +152,7 @@ const MarqueeButton = (props: {
           <motion.div
             className={`flex flex-row ${
               props.size != 1 ? "justify-between" : "justify-center"
-            } items-center space-x-4 w-full min-w-max text-4xl lg:text-6xl`}
+            } items-center space-x-4 w-full min-w-max `}
           >
             <motion.div
               className={`flex flex-row space-x-4 items-center geom ${
