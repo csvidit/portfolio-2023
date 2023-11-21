@@ -137,7 +137,7 @@ const MarqueeButton = (props: {
       initial="initial"
       whileHover="hover"
       variants={mainDivVariants}
-      className={`col-span-${props.size} row-span-1 justify-center rounded-[3rem] bg-neutral-900 text-neutral-100 text-4xl lg:text-6xl min-h-[160px] overflow-x-hidden`}
+      className={`col-span-${props.size} row-span-1 justify-center rounded-[3rem] bg-neutral-900 text-neutral-100 text-4xl lg:text-6xl lg:min-h-[160px] overflow-x-hidden`}
     >
       <Link
         aria-label={props.alt ? props.alt : `Link to ${props.children}`}
