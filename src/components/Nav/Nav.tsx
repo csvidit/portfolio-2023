@@ -41,7 +41,7 @@ const Nav = (props: { notFound?: boolean }) => {
     { name: "Papers", href: "/papers", icon: <PiBookOpenFill /> },
     // { name: "Literature", href: "/literature", icon: <PiPenFill /> },
     { name: "Photography", href: "/photography", icon: <PiCameraFill /> },
-    { name: "Blog", href: "/blog", icon: <PiArticleFill/> },
+    { name: "Blog", href: "/blog", icon: <PiArticleFill /> },
 
     // {
     //   name: "Studio",
@@ -64,9 +64,15 @@ const Nav = (props: { notFound?: boolean }) => {
     >
       <AnimatePresence>
         <motion.nav
+          // style={{
+          //   paddingLeft: "1rem",
+          //   paddingRight: "1rem",
+          //   paddingTop: "0.5rem",
+          //   paddingBottom: open ? "1rem" : "0.5rem",
+          // }}
           layout
           // style={{ borderRadius: "24px" }}
-          className={`nav_radius lowercase z-50 fixed self-center top-4 px-4 py-2 flex flex-col space-y-2 items-center border border-neutral-800 bg-neutral-900 bg-opacity-60 backdrop-blur-md shadow-2xl shadow-neutral-950`}
+          className={`nav_radius lowercase z-50 fixed self-center top-4 px-4 pt-2 ${open ? "pb-4" : "pb-2"} flex flex-col space-y-2 items-center border border-neutral-800 bg-neutral-900 bg-opacity-60 backdrop-blur-md shadow-2xl shadow-neutral-950`}
         >
           <AnimatePresence>
             <LayoutGroup id="nav-layout-group">
@@ -83,8 +89,13 @@ const Nav = (props: { notFound?: boolean }) => {
                           className="group flex flex-row space-x-1 uppercase"
                         >
                           <LayoutGroup>
-                            <motion.div layout className="group-hover:opacity-60 transition-all duration-200 ease-in-out">vidit khandelwal</motion.div>
-                            <motion.div layout className="text-lime-500">
+                            <motion.div
+                              layout
+                              className="group-hover:opacity-60 transition-all duration-200 ease-in-out"
+                            >
+                              vidit khandelwal
+                            </motion.div>
+                            <motion.div layout className={`text-lime-500`}>
                               {pathName == "/" || props.notFound
                                 ? "portfolio"
                                 : pathName.substring(

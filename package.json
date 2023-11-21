@@ -56,6 +56,7 @@
     "@types/aos": "^3.0.4",
     "@types/formidable": "^3.4.0",
     "@types/uuid": "^9.0.5",
-    "interweave-ssr": "^2.0.0"
+    "interweave-ssr": "^2.0.0",
+    "postcss-nesting": "^12.0.1"
   }
 }
