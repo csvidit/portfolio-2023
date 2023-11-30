@@ -10,10 +10,10 @@ const Spotlight2 = () => {
     <motion.div
       layout
       initial={{ background: "conic-gradient( from 0deg, #171717, #171717)" }}
-      whileHover={{
+      animate={{
         background: [
-          "conic-gradient( from 0deg, #171717 60%, #eab308)",
-          "conic-gradient( from 360deg, #171717 60%, #eab308)",
+          "conic-gradient( from 0deg, #0a0a0a 60%, #eab308)",
+          "conic-gradient( from 360deg, #0a0a0a 60%, #eab308)",
         ],
         transition: {
           repeat: Infinity,
@@ -23,9 +23,9 @@ const Spotlight2 = () => {
           ease: "linear",
         },
       }}
-      className="col-span-2 row-span-1 rounded-[3rem] p-[2px]"
+      className="col-span-2 row-span-1 rounded-[3rem] p-[1px]"
     >
-      <MainGridItem width={2} height={1} className="">
+      <MainGridItem width={2} height={1} className="bg-gradient-to-b from-neutral-950 via-neutral-950 via-60% to-[#40eab308]">
         <div className="flex flex-col space-y-8">
           <div className="flex flex-row space-x-4 items-baseline">
             <h2 className="text-4xl lg:text-6xl geom">spotlight</h2>

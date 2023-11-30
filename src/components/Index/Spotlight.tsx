@@ -10,7 +10,7 @@ const Spotlight = () => {
    <MainGridItem width={2} height={1} className="">
       <div className="flex flex-col space-y-8">
         <div className="flex flex-row space-x-4 items-baseline">
-          <h2 className="text-4xl lg:text-6xl geom">spotlight</h2>
+          <h2 className="text-4xl lg:text-6xl text-yellow-500">spotlight</h2>
         </div>
 
         <div

@@ -8,13 +8,17 @@ const OTW2 = () => {
     <motion.div
       layout
       animate={{
+        // background: [
+        //   "radial-gradient( circle at 0% 0%, #171717 60%, #6ee7b7)",
+        //   "radial-gradient( circle at 100% 100%, #171717 60%, #6ee7b7)",
+        // ],
         background: [
-          "radial-gradient( circle at 0% 0%, #171717 60%, #6ee7b7)",
-          "radial-gradient( circle at 100% 100%, #171717 60%, #6ee7b7)",
+          "conic-gradient( from 0deg, #171717 60%, #6ee7b7)",
+          "conic-gradient( from 360deg, #171717 60%, #6ee7b7)",
         ],
         transition: {
-          repeat: 2,
-          repeatType: "reverse",
+          // repeat: 0,
+          // repeatType: "reverse",
           duration: 2,
           type: "tween",
           ease: "linear"
