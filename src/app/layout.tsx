@@ -1,7 +1,8 @@
 import MainContainer from "@/components/MainContainer";
 import Nav from "@/components/Nav/Nav";
 import "./globals.css";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
+import localFont from "next/font/local";
 
 export const metadata = {
   title: "Vidit Khandelwal - Software Engineer",
@@ -51,6 +52,11 @@ export const metadata = {
   },
 };
 
+const monaFont = localFont({
+  src: "./Mona-Sans.woff2",
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -58,8 +64,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}
-      <Analytics/></body>
+      <body className={monaFont.className}>
+        <MainContainer className="index_bg">
+          <Nav />
+          {children}
+        </MainContainer>
+        <Analytics />
+      </body>
     </html>
   );
 }

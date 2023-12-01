@@ -67,14 +67,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        <MainContainer>
-          <Nav/>
-        {children}
-        <Analytics/>
-        </MainContainer>
-      </body>
-    </html>
+   <section>{children}</section>
   );
 }
