@@ -4,6 +4,7 @@ import Footer from "@/components/Footer/Footer";
 import MainContent from "@/components/MainContent";
 import MarqueeButton from "@/components/MarqueeButton";
 import SimplePageTitle from "@/components/SimplePageTitle";
+import { hygraphResumeLink } from "@/constants";
 
 const Academics = () => {
   return (
@@ -35,7 +36,7 @@ const Academics = () => {
       </MarqueeButton>
       <MarqueeButton
         label="resume"
-        href="https://media.graphassets.com/GBhBjvxQUGUQlQ1UJuIw"
+        href={hygraphResumeLink}
         size={2}
         variant="focus"
         color="blue"

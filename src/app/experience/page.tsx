@@ -8,6 +8,7 @@ import SimplePageTitle from "@/components/SimplePageTitle";
 import MarqueeButton from "@/components/MarqueeButton";
 import CurrentExp from "@/components/Experience/CurrentExp";
 import MainContent from "@/components/MainContent";
+import { hygraphResumeLink } from "@/constants";
 
 const Projects = () => {
   return (
@@ -32,7 +33,7 @@ const Projects = () => {
       </MarqueeButton>
       <MarqueeButton
         label="resume"
-        href="https://media.graphassets.com/GBhBjvxQUGUQlQ1UJuIw"
+        href={hygraphResumeLink}
         size={2}
         variant="focus"
         color="blue"

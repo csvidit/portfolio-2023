@@ -1,0 +1,1 @@
+export const hygraphResumeLink = "https://media.graphassets.com/CU1YZiIFQHqv6LxrwVxs?dl=true"

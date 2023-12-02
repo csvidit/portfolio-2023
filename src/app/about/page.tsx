@@ -11,6 +11,7 @@ import { PiGithubLogoDuotone, PiLinkedinLogoDuotone } from "react-icons/pi";
 import Mantra from "@/components/About/Mantra";
 import ContactForm2 from "@/components/ContactForm/ContactForm2";
 import MainContent from "@/components/MainContent";
+import { hygraphResumeLink } from "@/constants";
 
 const About = () => {
   return (
@@ -37,7 +38,7 @@ const About = () => {
       <ContactForm2 />
       <MarqueeButton
         label="resume"
-        href="https://media.graphassets.com/GBhBjvxQUGUQlQ1UJuIw"
+        href={hygraphResumeLink}
         size={2}
         variant="focus"
         color="blue"

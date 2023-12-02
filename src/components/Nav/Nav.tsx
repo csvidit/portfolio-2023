@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import NavLink from "./NavLink";
 import { useEffect, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Sling as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { HiAcademicCap } from "react-icons/hi2";
@@ -17,12 +17,9 @@ import {
   PiBookOpenFill,
   PiCameraFill,
   PiHouseFill,
-  PiLightningFill,
-  PiPenFill,
-  PiSquaresFourFill,
-  PiUserFill,
+  PiLightningFill, PiSquaresFourFill,
+  PiUserFill
 } from "react-icons/pi";
-import { v4 as uuidv4 } from "uuid";
 
 const Nav = (props: { notFound?: boolean }) => {
   const [open, setOpen] = useState(false);
