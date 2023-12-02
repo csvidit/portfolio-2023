@@ -7,8 +7,8 @@ import {
   motion,
 } from "framer-motion";
 import NavLink from "./NavLink";
-import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { Sling as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { HiAcademicCap } from "react-icons/hi2";
@@ -28,28 +28,51 @@ const Nav = (props: { notFound?: boolean }) => {
   const [open, setOpen] = useState(false);
   const pathName = usePathname();
 
+  useEffect(() => {
+    setOpen(!open);
+  }, [pathName]);
+
   const links = [
-    { name: "Home", href: "/", icon: <PiHouseFill /> },
-    { name: "About", href: "/about", icon: <PiUserFill /> },
+    { id: "nav-home", name: "Home", href: "/", icon: <PiHouseFill /> },
+    { id: "nav-about", name: "About", href: "/about", icon: <PiUserFill /> },
     {
+      id: "nav-experience",
       name: "Work Experience",
       href: "/experience",
       icon: <PiLightningFill />,
     },
-    { name: "Academics", href: "/academics", icon: <HiAcademicCap /> },
-    { name: "Projects", href: "/projects", icon: <PiSquaresFourFill /> },
-    { name: "Papers", href: "/papers", icon: <PiBookOpenFill /> },
+    {
+      id: "nav-academics",
+      name: "Academics",
+      href: "/academics",
+      icon: <HiAcademicCap />,
+    },
+    {
+      id: "nav-projects",
+      name: "Projects",
+      href: "/projects",
+      icon: <PiSquaresFourFill />,
+    },
+    {
+      id: "nav-papers",
+      name: "Papers",
+      href: "/papers",
+      icon: <PiBookOpenFill />,
+    },
     // { name: "Literature", href: "/literature", icon: <PiPenFill /> },
-    { name: "Photography", href: "/photography", icon: <PiCameraFill /> },
-    { name: "Blog", href: "/blog", icon: <PiArticleFill /> },
+    {
+      id: "nav-photography",
+      name: "Photography",
+      href: "/photography",
+      icon: <PiCameraFill />,
+    },
+    { id: "nav-blog", name: "Blog", href: "/blog", icon: <PiArticleFill /> },
 
     // {
     //   name: "Studio",
     //   href: "https://studio.viditkhandelwal.com",
     //   icon: <BsPaletteFill />,
     // },
-    // { name: "Academic Papers", href: "/papers", icon: <HiAcademicCap /> },
-    // { name: "Stories & Poems", href: "/papers", icon: <FaScroll/> },
   ];
 
   return (
@@ -64,15 +87,10 @@ const Nav = (props: { notFound?: boolean }) => {
     >
       <AnimatePresence>
         <motion.nav
-          // style={{
-          //   paddingLeft: "1rem",
-          //   paddingRight: "1rem",
-          //   paddingTop: "0.5rem",
-          //   paddingBottom: open ? "1rem" : "0.5rem",
-          // }}
           layout
-          // style={{ borderRadius: "24px" }}
-          className={`nav_radius lowercase z-50 fixed self-center top-4 px-4 pt-2 ${open ? "pb-4" : "pb-2"} flex flex-col space-y-2 items-center border border-neutral-800 bg-neutral-900 bg-opacity-60 backdrop-blur-md shadow-2xl shadow-neutral-950`}
+          className={`nav_radius lowercase z-50 fixed self-center top-4 px-4 pt-2 ${
+            open ? "pb-4" : "pb-2"
+          } flex flex-col space-y-2 items-center border border-neutral-800 bg-neutral-900 bg-opacity-60 backdrop-blur-md shadow-2xl shadow-neutral-950`}
         >
           <AnimatePresence>
             <LayoutGroup id="nav-layout-group">
@@ -86,26 +104,32 @@ const Nav = (props: { notFound?: boolean }) => {
                       <AnimatePresence>
                         <Link
                           href="/"
-                          className="group flex flex-row space-x-1 uppercase"
+                          className="group flex flex-row space-x-1 uppercase w-max"
                         >
-                          <LayoutGroup>
-                            <motion.div
-                              layout
-                              className="group-hover:opacity-60 transition-all duration-200 ease-in-out"
-                            >
-                              vidit khandelwal
-                            </motion.div>
-                            <motion.div layout className={`text-lime-500`}>
-                              {pathName == "/" || props.notFound
-                                ? "portfolio"
-                                : pathName.substring(
-                                    1,
-                                    pathName.lastIndexOf("/") != 0
-                                      ? pathName.indexOf("/", 1)
-                                      : pathName.length
-                                  )}
-                            </motion.div>
-                          </LayoutGroup>
+                          <MotionConfig
+                            transition={{
+                              type: "tween",
+                            }}
+                          >
+                            <LayoutGroup>
+                              <motion.div
+                                layout
+                                className="group-hover:opacity-60 transition-all duration-200 ease-in-out"
+                              >
+                                vidit khandelwal
+                              </motion.div>
+                              <motion.div layout className={`text-lime-500`}>
+                                {pathName == "/" || props.notFound
+                                  ? "portfolio"
+                                  : pathName.substring(
+                                      1,
+                                      pathName.lastIndexOf("/") != 0
+                                        ? pathName.indexOf("/", 1)
+                                        : pathName.length
+                                    )}
+                              </motion.div>
+                            </LayoutGroup>
+                          </MotionConfig>
                         </Link>
                       </AnimatePresence>
                     </motion.div>
@@ -130,38 +154,40 @@ const Nav = (props: { notFound?: boolean }) => {
                   <LayoutGroup>
                     <AnimatePresence>
                       {links.map((x, index) => {
-                        const uuid = uuidv4();
                         return (
-                          <motion.div
-                            initial={{ skewY: 20 }}
-                            animate={{ skewY: 0 }}
-                            exit={{ skewY: 20 }}
-                            transition={{
-                              delay: 0.4,
-                              type: "spring",
-                              duration: 0.2,
-                              stiffness: 200,
-                              damping: 20,
-                              when: "beforeChildren",
-                              staggerChildren: 0.1,
-                            }}
-                            layout
-                            key={uuid}
-                            className="flex flex-row space-x-1 items-center"
-                          >
-                            <LayoutGroup key={uuid}>
-                              <AnimatePresence mode="popLayout" key={uuid}>
-                                <NavLink
-                                  current={pathName == x.href ? true : false}
-                                  key={uuid}
-                                  href={x.href}
-                                  icon={x.icon}
-                                >
-                                  {x.name}
-                                </NavLink>
-                              </AnimatePresence>
-                            </LayoutGroup>
-                          </motion.div>
+                          // <motion.div
+                          //   initial={{ skewY: 20 }}
+                          //   animate={{ skewY: 0 }}
+                          //   exit={{ skewY: 20 }}
+                          //   transition={{
+                          //     delay: 0.4,
+                          //     type: "spring",
+                          //     duration: 0.2,
+                          //     stiffness: 200,
+                          //     damping: 20,
+                          //     when: "beforeChildren",
+                          //     staggerChildren: 0.1,
+                          //   }}
+                          //   layout
+                          //   key={uuidv4()}
+                          //   className="flex flex-row space-x-1 items-center"
+                          // >
+                          <LayoutGroup key="nav-links-layout-group">
+                            <AnimatePresence
+                              mode="popLayout"
+                              key="nav-animate-presence"
+                            >
+                              <NavLink
+                                current={pathName == x.href ? true : false}
+                                key={x.id}
+                                href={x.href}
+                                icon={x.icon}
+                              >
+                                {x.name}
+                              </NavLink>
+                            </AnimatePresence>
+                          </LayoutGroup>
+                          // </motion.div>
                         );
                       })}
                     </AnimatePresence>
