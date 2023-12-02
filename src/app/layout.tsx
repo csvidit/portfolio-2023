@@ -62,10 +62,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html lang="en">
       <body className={monaFont.className}>
-        <MainContainer className="index_bg">
+        <MainContainer>
           <Nav />
           {children}
         </MainContainer>

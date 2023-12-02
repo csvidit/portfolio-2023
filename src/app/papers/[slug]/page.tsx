@@ -1,13 +1,13 @@
 import Footer from "@/components/Footer/Footer";
-import IndexContent from "@/components/IndexContent";
 import SimplePageTitle from "@/components/SimplePageTitle";
 import PapersLoading from "@/components/Papers/PapersLoading";
 import { GraphQLClient, RequestDocument, gql } from "graphql-request";
 import PaperItem from "@/components/Papers/PaperItem";
 import PaperFilters from "@/components/Papers/PaperFilters";
 import { slugs } from "@/components/Papers/Filters";
-import { Paper, PapersData, WritingsData } from "@/hygraph.config";
+import { Paper, PapersData } from "@/hygraph.config";
 import { throttledPapersFetch } from "@/throttle";
+import MainContent from "@/components/MainContent";
 
 const client = new GraphQLClient(
   process.env.NEXT_PUBLIC_HYGRAPH_HIGH_PERFORMANCE_ENDPOINT!
@@ -68,7 +68,7 @@ const PapersByTag = async ({ params }: { params: { slug: string } }) => {
   const data: PapersData = await getData(tag);
 
   return (
-    <IndexContent>
+    <MainContent>
       <SimplePageTitle color="text-red-500">
         select academic papers
       </SimplePageTitle>
@@ -91,7 +91,7 @@ const PapersByTag = async ({ params }: { params: { slug: string } }) => {
         <PapersLoading />
       )}
       <Footer />
-    </IndexContent>
+    </MainContent>
   );
 };
 

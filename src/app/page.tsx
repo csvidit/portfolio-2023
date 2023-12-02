@@ -1,16 +1,15 @@
 import Footer from "@/components/Footer/Footer";
-import Nav from "@/components/Nav/Nav";
 import Intro from "@/components/Index/Intro";
 import Spotlight from "@/components/Index/Spotlight";
-import IndexContent from "@/components/IndexContent";
-import MainContainer from "@/components/MainContainer";
 import MarqueeButton from "@/components/MarqueeButton";
 import ComingUp from "@/components/Index/ComingUp";
 import ContactForm2 from "@/components/ContactForm/ContactForm2";
+import MainContent from "@/components/MainContent";
+import Intro2 from "@/components/Index/Intro2";
 
 const Index = () => {
   return (
-    <IndexContent>
+    <MainContent>
       <Intro />
       <Spotlight />
       <ComingUp />
@@ -46,7 +45,7 @@ const Index = () => {
         view my professional profile
       </MarqueeButton>
       <Footer />
-    </IndexContent>
+    </MainContent>
   );
 };
 

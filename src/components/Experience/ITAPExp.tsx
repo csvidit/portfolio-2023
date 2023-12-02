@@ -2,10 +2,14 @@ import ExpCompany from "./ExpCompany";
 import ExpBullets from "./ExpBullets";
 import ExpSubtitleContainer from "./ExpSubtitleContainer";
 import ExpTitle from "./ExpTitle";
+import { SiHtml5, SiCss3, SiTableau, SiArcgis } from "react-icons/si";
+import { TbSeo } from "react-icons/tb";
+import KeySkillItem from "./KeySkillItem";
+import KeySkillsContainer from "./KeySkillsContainer";
 
 const ITAPExp = () => {
   return (
-    <div className="col-span-2 row-span-1 flex flex-col space-y-4 items-start rounded-[3rem] p-8 lg:p-12 text-2xl lg:text-4xl bg-neutral-900 text-neutral-100 font-light">
+    <div className="col-span-2 row-span-1 flex flex-col space-y-4 justify-between items-start rounded-[3rem] p-8 lg:p-12 text-2xl lg:text-4xl bg-neutral-900 text-neutral-100 font-light">
       <div className="flex flex-col space-y-2 w-full">
         <ExpCompany>DePauw / ITAP Institue</ExpCompany>
         <ExpSubtitleContainer>
@@ -28,6 +32,12 @@ const ITAPExp = () => {
           </ExpBullets>
         </div>
       </div>
+      <KeySkillsContainer>
+        <KeySkillItem icon={<SiTableau/>}>Tableau</KeySkillItem>
+        <KeySkillItem icon={<SiArcgis/>}>ArcGIS</KeySkillItem>
+        <KeySkillItem icon={<SiHtml5/>}>HTML5</KeySkillItem>
+        <KeySkillItem icon={<SiCss3/>}>CSS3</KeySkillItem>
+      </KeySkillsContainer>
     </div>
   );
 };

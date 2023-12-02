@@ -1,9 +1,6 @@
 "use client";
 
 import Footer from "@/components/Footer/Footer";
-import Nav from "@/components/Nav/Nav";
-import IndexContent from "@/components/IndexContent";
-import MainContainer from "@/components/MainContainer";
 import ProjectIconsContainer from "@/components/Projects/ProjectIconsContainer";
 import ProjectItem from "@/components/Projects/ProjectItem";
 import { FaJava } from "react-icons/fa";
@@ -19,20 +16,17 @@ import {
   SiPostgresql,
   SiBootstrap,
   SiGraphql,
-  SiReact,
-  SiFramer,
-  SiAndroid,
+  SiReact, SiAndroid,
   SiPython,
   SiCplusplus,
   SiVercel,
-  SiJavascript,
+  SiJavascript
 } from "react-icons/si";
 import SimplePageTitle from "@/components/SimplePageTitle";
-import MainGridItem from "@/components/MainGridItem";
-import { motion } from "framer-motion";
 import MarqueeButton from "@/components/MarqueeButton";
 import { TbBrandFramerMotion, TbBrandOauth } from "react-icons/tb";
 import FeaturedProjectItem from "@/components/Projects/FeaturedProjectItem";
+import MainContent from "@/components/MainContent";
 
 const Projects = () => {
   const projects = [
@@ -261,62 +255,59 @@ const Projects = () => {
   ];
 
   return (
-    <MainContainer>
-      <Nav />
-      <IndexContent>
-        <SimplePageTitle color="text-violet-500">
-          projects
-          <div className="flex w-fit mt-4 rounded-[3rem] bg-violet-950 text-violet-500 px-4 py-1 text-xs">
-            filtering options coming soon
-          </div>
-        </SimplePageTitle>
-        {/* <GradientBorderBox>Integrated Portfolio</GradientBorderBox> */}
-        <FeaturedProjectItem
-          title="Turbobiz"
-          href="https://github.com/csvidit/turbobiz"
-          icons={
-            <ProjectIconsContainer>
-              <SiTypescript />
-              <SiNextdotjs />
-              <SiTailwindcss />
-              <TbBrandFramerMotion />
-              <TbBrandOauth />
-              <SiFirebase />
-              <SiVercel />
-            </ProjectIconsContainer>
-          }
-        >
-          Generate a business idea by leveraging the power of cutting-edge
-          generative AI. Turbobiz is based on OpenAI&apos;s GPT-4 LLM with
-          custom instructions. Users can view their past searches too, which are
-          stored in Firestore, and get redirected to a registrar to buy possible
-          domain names for their business.
-        </FeaturedProjectItem>
-        {projects.map((x, index: number) => {
-          return (
-            <ProjectItem
-              key={index}
-              title={x.title}
-              href={x.link}
-              icons={x.icons}
-            >
-              {x.content}
-            </ProjectItem>
-          );
-        })}
-        <MarqueeButton
-          label="github"
-          href="https://github.com/csvidit"
-          size={4}
-          variant="nonfocus"
-          color="violet"
-          external={true}
-        >
-          source code and all other projects
-        </MarqueeButton>
-        <Footer />
-      </IndexContent>
-    </MainContainer>
+    <MainContent>
+      <SimplePageTitle color="text-violet-500">
+        projects
+        <div className="flex w-fit mt-4 rounded-[3rem] bg-violet-950 text-violet-500 px-4 py-1 text-xs">
+          filtering options coming soon
+        </div>
+      </SimplePageTitle>
+      {/* <GradientBorderBox>Integrated Portfolio</GradientBorderBox> */}
+      <FeaturedProjectItem
+        title="Turbobiz"
+        href="https://github.com/csvidit/turbobiz"
+        icons={
+          <ProjectIconsContainer>
+            <SiTypescript />
+            <SiNextdotjs />
+            <SiTailwindcss />
+            <TbBrandFramerMotion />
+            <TbBrandOauth />
+            <SiFirebase />
+            <SiVercel />
+          </ProjectIconsContainer>
+        }
+      >
+        Generate a business idea by leveraging the power of cutting-edge
+        generative AI. Turbobiz is based on OpenAI&apos;s GPT-4 LLM with custom
+        instructions. Users can view their past searches too, which are stored
+        in Firestore, and get redirected to a registrar to buy possible domain
+        names for their business.
+      </FeaturedProjectItem>
+      {projects.map((x, index: number) => {
+        return (
+          <ProjectItem
+            key={index}
+            title={x.title}
+            href={x.link}
+            icons={x.icons}
+          >
+            {x.content}
+          </ProjectItem>
+        );
+      })}
+      <MarqueeButton
+        label="github"
+        href="https://github.com/csvidit"
+        size={4}
+        variant="nonfocus"
+        color="violet"
+        external={true}
+      >
+        source code and all other projects
+      </MarqueeButton>
+      <Footer />
+    </MainContent>
   );
 };
 

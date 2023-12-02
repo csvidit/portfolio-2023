@@ -1,5 +1,4 @@
 import { GraphQLClient, RequestDocument, gql } from "graphql-request";
-import IndexContent from "@/components/IndexContent";
 import MainGridItem from "@/components/MainGridItem";
 import PapersLoading from "@/components/Papers/PapersLoading";
 import { Markup } from "interweave";
@@ -8,6 +7,7 @@ import Footer from "@/components/Footer/Footer";
 import MarqueeButton from "@/components/MarqueeButton";
 import { throttledWritingsFetch } from "@/throttle";
 import { WritingsData, Writing } from "@/hygraph.config";
+import MainContent from "@/components/MainContent";
 
 polyfill();
 
@@ -25,7 +25,7 @@ export default async function ViewLiterature({ params }: any) {
   dateString = dateString.substring(dateString.indexOf(" "));
 
   return (
-    <IndexContent>
+    <MainContent>
       {data ? (
         <>
           <MainGridItem
@@ -64,7 +64,7 @@ export default async function ViewLiterature({ params }: any) {
         go back to the literature page
       </MarqueeButton>
       <Footer />
-    </IndexContent>
+    </MainContent>
   );
 }
 

@@ -3,6 +3,10 @@
 import { MotionConfig, motion } from "framer-motion";
 import { BsArrowUpRight } from "react-icons/bs";
 import ExpBullets from "./ExpBullets";
+import KeySkillItem from "./KeySkillItem";
+import KeySkillsContainer from "./KeySkillsContainer";
+import CurrentKeySkillItem from "./CurrentKeySkillItem";
+import { SiAndroidstudio, SiFirebase, SiJetpackcompose, SiKotlin } from "react-icons/si";
 
 const CurrentExp = () => {
   const parentDivVariants = {
@@ -10,7 +14,7 @@ const CurrentExp = () => {
       scale: 1,
     },
     hover: {
-      scale: 0.95,
+      scale: 1
     },
   };
 
@@ -86,6 +90,12 @@ const CurrentExp = () => {
               integrations
             </li>
           </ExpBullets>
+          <KeySkillsContainer>
+          <CurrentKeySkillItem icon={<SiKotlin/>}>Kotlin</CurrentKeySkillItem>
+            <CurrentKeySkillItem icon={<SiJetpackcompose/>}>Jetpack Compose</CurrentKeySkillItem>
+            <CurrentKeySkillItem icon={<SiFirebase/>}>Firebase</CurrentKeySkillItem>
+            <CurrentKeySkillItem icon={<SiAndroidstudio/>}>Android Studio</CurrentKeySkillItem>
+          </KeySkillsContainer>
         </motion.div>
       </motion.div>
     </MotionConfig>

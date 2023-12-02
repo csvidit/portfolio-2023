@@ -1,5 +1,4 @@
 import Footer from "@/components/Footer/Footer";
-import IndexContent from "@/components/IndexContent";
 import SimplePageTitle from "@/components/SimplePageTitle";
 import PapersLoading from "@/components/Papers/PapersLoading";
 import { GraphQLClient, gql } from "graphql-request";
@@ -7,6 +6,7 @@ import PaperItem from "@/components/Papers/PaperItem";
 import PaperFilters from "@/components/Papers/PaperFilters";
 import { throttledPapersFetch } from "@/throttle";
 import { Paper, PapersData } from "@/hygraph.config";
+import MainContent from "@/components/MainContent";
 
 const client = new GraphQLClient(
   process.env.NEXT_PUBLIC_HYGRAPH_HIGH_PERFORMANCE_ENDPOINT!
@@ -44,7 +44,7 @@ const Papers = async () => {
   const data: PapersData = await getData();
 
   return (
-    <IndexContent>
+    <MainContent>
       <SimplePageTitle color="text-red-500">
         select academic papers
       </SimplePageTitle>
@@ -69,7 +69,7 @@ const Papers = async () => {
         <PapersLoading />
       )}
       <Footer />
-    </IndexContent>
+    </MainContent>
   );
 };
 

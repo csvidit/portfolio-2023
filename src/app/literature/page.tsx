@@ -1,11 +1,11 @@
 import Footer from "@/components/Footer/Footer";
-import IndexContent from "@/components/IndexContent";
 import LiteratureItem from "@/components/WritingItem";
 import SimplePageTitle from "@/components/SimplePageTitle";
 import PapersLoading from "@/components/Papers/PapersLoading";
 import { RequestDocument, gql } from "graphql-request";
-import { Writing, WritingsData, hygraphClient } from "@/hygraph.config";
+import { Writing, WritingsData } from "@/hygraph.config";
 import { throttledWritingsFetch } from "@/throttle";
+import MainContent from "@/components/MainContent";
 
 const getData = async () => {
   const query: RequestDocument = gql`
@@ -40,7 +40,7 @@ const LiteraturePage = async () => {
   const data: WritingsData = await getData();
 
   return (
-    <IndexContent>
+    <MainContent>
       <SimplePageTitle color="text-indigo-500">
         select works of literature
       </SimplePageTitle>
@@ -64,7 +64,7 @@ const LiteraturePage = async () => {
         <PapersLoading />
       )}
       <Footer />
-    </IndexContent>
+    </MainContent>
   );
 };
 

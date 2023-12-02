@@ -1,9 +1,4 @@
-import Footer from "@/components/Footer/Footer";
 import "../globals.css";
-import MainContainer from "@/components/MainContainer";
-import Nav from "@/components/Nav/Nav";
-import BlogIntro from "@/components/Blog/BlogIntro";
-import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Blog - Vidit Khandelwal",

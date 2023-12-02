@@ -1,11 +1,11 @@
 import Footer from "@/components/Footer/Footer";
-import IndexContent from "@/components/IndexContent";
 import SimplePageTitle from "@/components/SimplePageTitle";
 import PapersLoading from "@/components/Papers/PapersLoading";
 import { gql } from "graphql-request";
 import { Photo, PhotosData } from "@/hygraph.config";
 import PhotoItem from "@/components/Photography/PhotoItem";
 import { throttledPhotosFetch } from "@/throttle";
+import MainContent from "@/components/MainContent";
 
 const getData = async () => {
   const query = gql`
@@ -41,7 +41,7 @@ const PhotographyPage = async () => {
   const data: PhotosData = await getData();
 
   return (
-    <IndexContent>
+    <MainContent>
       <SimplePageTitle color="text-emerald-500">
         casual photography
       </SimplePageTitle>
@@ -63,7 +63,7 @@ const PhotographyPage = async () => {
         <PapersLoading />
       )}
       <Footer />
-    </IndexContent>
+    </MainContent>
   );
 };
 

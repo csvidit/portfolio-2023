@@ -1,13 +1,6 @@
-const MainContent = (props: { type: string; children: any }) => {
-  if ((props.type == "center")) {
-    return (
-      <div className="mt-20 lg:mt-10 min-w-screen min-h-screen h-full flex flex-col space-y-5 lg:space-y-10 bg-transparent justify-center p-4 lg:p-20">
-        {props.children}
-      </div>
-    );
-  }
+const MainContent = (props: { children: React.ReactNode }) => {
   return (
-    <div className="mt-20 lg:mt-10 min-w-screen min-h-screen h-full flex flex-col space-y-5 lg:space-y-10 bg-transparent justify-start p-4 lg:p-20">
+    <div className="mt-20 lg:mt-10 min-w-screen min-h-screen w-full h-full flex flex-col space-y-4 lg:grid grid-cols-1 lg:grid-cols-4 lg:space-y-0 lg:gap-4 bg-transparent py-8 px-2 lg:p-20">
       {props.children}
     </div>
   );
