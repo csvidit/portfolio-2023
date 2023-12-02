@@ -29,11 +29,7 @@ const Nav = (props: { notFound?: boolean }) => {
   const pathName = usePathname();
 
   useEffect(() => {
-    if (pathName == "/") {
-      setOpen(false);
-    } else {
-      setOpen(!open);
-    }
+    setOpen(false)
   }, [pathName]);
 
   const links = [
