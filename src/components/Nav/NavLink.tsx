@@ -60,7 +60,7 @@ const NavLink = (props: {
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
         layout
-        className={`grid-cols-1 w-full h-full border group transition-all ease-in-out duration-300 rounded-xl ${
+        className={`grid-cols-1 w-full h-fit border group transition-all ease-in-out duration-300 rounded-xl ${
           props.current == true
             ? "border-lime-500 hover:border-lime-300"
             : "border-neutral-800 hover:border-neutral-600"
