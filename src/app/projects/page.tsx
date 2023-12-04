@@ -64,6 +64,21 @@ const Projects = () => {
       ),
     },
     {
+      title: "Snippetopia",
+      content:
+        "A collection of free React, Next.js, TailwindCSS, and Framer Motion snippets and templates made by me",
+      link: "https://snippetopia.xyz",
+      icons: (
+        <ProjectIconsContainer>
+          <SiTypescript />
+          <SiNextdotjs />
+          <SiTailwindcss />
+          <TbBrandFramerMotion />
+          <SiVercel />
+        </ProjectIconsContainer>
+      ),
+    },
+    {
       title: "Snapshot",
       content:
         "A web app that shows you a briefing of the day, including news and weather",
