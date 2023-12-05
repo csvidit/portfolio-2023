@@ -169,10 +169,10 @@ const Projects = () => {
       ),
     },
     {
-      title: "Bio v3",
+      title: "Swiss Bio",
       content:
         "A minimalist link-in-bio style website concept/template, with Framer Motion layout animations.",
-      link: "https://github.com/csvidit/react-bio-v2",
+      link: "https://github.com/csvidit/bio-swiss",
       icons: (
         <ProjectIconsContainer>
           <SiTypescript />

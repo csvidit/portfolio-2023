@@ -56,7 +56,7 @@ const MusicPlayer = () => {
         {playing ? <MusicAnimation /> : <></>}
       </div>
 
-      <motion.div className="flex flex-row space-x-4 justify-around items-center text-xl lg:text-2xl px-4 py-2 self-center w-full bg-neutral-800 rounded-[3rem] border border-neutral-500">
+      <motion.div className="group flex flex-row space-x-4 justify-around items-center text-xl lg:text-2xl px-4 py-2 self-center w-full bg-neutral-950 rounded-[3rem] border border-neutral-800 hover:border-neutral-500 hover:bg-neutral-800 transition-all duration-200 ease-in-out">
         <motion.a
           aria-label="Link to Taylor Swift on Spotify"
           href="https://open.spotify.com/album/1o59UpKw81iHR0HPiSkJR0?si=HD37WNAVRYywEDj9oVL9OQ"

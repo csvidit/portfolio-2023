@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import NavLink from "./NavLink";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Sling as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { HiAcademicCap } from "react-icons/hi2";
