@@ -19,12 +19,12 @@ const OTW3 = () => {
                 "0px 0px 2px 2px rgba(16,185,129,0.3)",
                 "0px 0px 6px 6px rgba(16,185,129,0.3)",
               ],
-              transition: {
-                repeat: Infinity,
-                repeatType: "reverse",
-                duration: 2,
-                type: "just",
-              },
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "reverse",
+              duration: 2,
+              type: "tween",
             }}
             className="w-2 h-2 rounded-full bg-emerald-500 aspect-square"
           />
