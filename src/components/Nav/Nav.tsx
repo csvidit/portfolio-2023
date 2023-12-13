@@ -17,16 +17,33 @@ import {
   PiBookOpenFill,
   PiCameraFill,
   PiHouseFill,
-  PiLightningFill, PiSquaresFourFill,
-  PiUserFill
+  PiLightningFill,
+  PiSquaresFourFill,
+  PiUserFill,
 } from "react-icons/pi";
+import path from "path";
+
+const definedRoutes = [
+  "/",
+  "/about",
+  "/experience",
+  "/academics",
+  "/projects",
+  "/papers",
+  "/photography",
+  "/blog",
+  "/literature",
+  "/terms",
+];
 
 const Nav = (props: { notFound?: boolean }) => {
   const [open, setOpen] = useState(false);
   const pathName = usePathname();
+  const [croppedPathname, setCroppedPathname] = useState(pathName.substring(0, pathName.indexOf("/", 1) > 1 ? pathName.indexOf("/", 1) : pathName.length));
 
   useEffect(() => {
-    setOpen(false)
+    setCroppedPathname(pathName.substring(0, pathName.indexOf("/", 1) > 1 ? pathName.indexOf("/", 1) : pathName.length));
+    setOpen(false);
   }, [pathName]);
 
   const links = [
@@ -116,7 +133,7 @@ const Nav = (props: { notFound?: boolean }) => {
                                 vidit khandelwal
                               </motion.div>
                               <motion.div layout className={`text-lime-500`}>
-                                {pathName == "/" || props.notFound
+                                {pathName == "/" || props.notFound || !definedRoutes.includes(croppedPathname)
                                   ? "portfolio"
                                   : pathName.substring(
                                       1,
@@ -175,7 +192,7 @@ const Nav = (props: { notFound?: boolean }) => {
                               key="nav-animate-presence"
                             >
                               <NavLink
-                                current={pathName == x.href ? true : false}
+                                current={croppedPathname == x.href ? true : false}
                                 key={x.id}
                                 href={x.href}
                                 icon={x.icon}
