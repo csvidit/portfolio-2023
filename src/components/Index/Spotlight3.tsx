@@ -5,9 +5,9 @@ import ActionButton from "../ActionButton";
 import MainGridItem from "../MainGridItem";
 import { PiGithubLogoDuotone } from "react-icons/pi";
 
-const Spotlight = () => {
+const Spotlight3 = () => {
   return (
-   <MainGridItem width={2} height={1} className="">
+   <MainGridItem width={2} height={1} className="bg-gradient-to-bl from-neutral-950 from-80% to-yellow-950 shadow-inner shadow-yellow-950 border border-yellow-950">
       <div className="flex flex-col space-y-8">
         <div className="flex flex-row space-x-4 items-baseline">
           <h2 className="text-4xl lg:text-6xl text-yellow-500">spotlight</h2>
@@ -35,4 +35,4 @@ const Spotlight = () => {
   );
 };
 
-export default Spotlight;
+export default Spotlight3;

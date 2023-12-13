@@ -1,7 +1,7 @@
 import EducationTitle from "./EducationTitle";
 import EducationDescription from "./EducationDescription";
 import EducationItem from "./EducationItem";
-import ActionButton from "../Index/ActionButton";
+import ActionButton from "../ActionButton";
 
 const Education = () => {
   return (

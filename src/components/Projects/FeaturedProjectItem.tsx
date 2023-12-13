@@ -71,7 +71,7 @@ const FeaturedProjectItem = (props: {
           href={props.href}
           target="_blank"
           variants={mainDivVariants}
-          className="rounded-[3rem] p-8 lg:p-12 font-normal w-full h-full flex flex-col justify-between space-y-4 bg-gradient-to-b from-neutral-950 via-neutral-950 to-violet-950 bg-opacity-[60%]"
+          className="rounded-[3rem] p-8 lg:p-12 font-normal w-full h-full flex flex-col justify-between space-y-4 bg-gradient-to-br from-neutral-950 via-neutral-950 to-violet-950 bg-opacity-[60%]"
         >
           <motion.div className="flex flex-col space-y-4 justify-start items-start w-full overflow-hidden">
             <motion.div

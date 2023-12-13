@@ -9,7 +9,7 @@ import MarqueeButton from "@/components/MarqueeButton";
 import PortraitCarousel from "@/components/About/PortraitCarousel";
 import { PiGithubLogoDuotone, PiLinkedinLogoDuotone } from "react-icons/pi";
 import Mantra from "@/components/About/Mantra";
-import ContactForm2 from "@/components/ContactForm/ContactForm2";
+import ContactForm from "@/components/ContactForm/ContactForm";
 import MainContent from "@/components/MainContent";
 import { hygraphResumeLink } from "@/constants";
 
@@ -35,7 +35,7 @@ const About = () => {
       <MusicPlayer />
       <TechStack />
       <Personality />
-      <ContactForm2 />
+      <ContactForm />
       <MarqueeButton
         label="resume"
         href={hygraphResumeLink}

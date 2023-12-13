@@ -1,4 +1,4 @@
-import ActionButton from "./ActionButton";
+import ActionButton from "../ActionButton";
 import HeroSubtitles from "./HeroSubtitles";
 import OTW2 from "./OTW2";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import Footer from "@/components/Footer/Footer";
-import ActionButton from "@/components/Index/ActionButton";
+import ActionButton from "@/components/ActionButton";
 import IndexContent from "@/components/IndexContent";
 
 const NotFound = () => {

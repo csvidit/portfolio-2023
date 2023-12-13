@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import NavLink from "./NavLink";
 import { useEffect, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Sling as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { HiAcademicCap } from "react-icons/hi2";
@@ -21,7 +21,6 @@ import {
   PiSquaresFourFill,
   PiUserFill,
 } from "react-icons/pi";
-import path from "path";
 
 const definedRoutes = [
   "/",
@@ -36,13 +35,25 @@ const definedRoutes = [
   "/terms",
 ];
 
-const Nav = (props: { notFound?: boolean }) => {
+const Nav = () => {
   const [open, setOpen] = useState(false);
   const pathName = usePathname();
-  const [croppedPathname, setCroppedPathname] = useState(pathName.substring(0, pathName.indexOf("/", 1) > 1 ? pathName.indexOf("/", 1) : pathName.length));
+  const [croppedPathname, setCroppedPathname] = useState(
+    pathName.substring(
+      0,
+      pathName.indexOf("/", 1) > 1 ? pathName.indexOf("/", 1) : pathName.length
+    )
+  );
 
   useEffect(() => {
-    setCroppedPathname(pathName.substring(0, pathName.indexOf("/", 1) > 1 ? pathName.indexOf("/", 1) : pathName.length));
+    setCroppedPathname(
+      pathName.substring(
+        0,
+        pathName.indexOf("/", 1) > 1
+          ? pathName.indexOf("/", 1)
+          : pathName.length
+      )
+    );
     setOpen(false);
   }, [pathName]);
 
@@ -126,14 +137,20 @@ const Nav = (props: { notFound?: boolean }) => {
                             }}
                           >
                             <LayoutGroup>
-                              <motion.div
+                              <motion.span
                                 layout
-                                className="group-hover:opacity-60 transition-all duration-200 ease-in-out"
+                                layoutRoot
+                                className="group-hover:opacity-60 transition-all duration-200 ease-in-out will-change-transform"
                               >
                                 vidit khandelwal
-                              </motion.div>
-                              <motion.div layout className={`text-lime-500`}>
-                                {pathName == "/" || props.notFound || !definedRoutes.includes(croppedPathname)
+                              </motion.span>
+                              <motion.span
+                                layout
+                                layoutRoot
+                                className={`text-lime-500 will-change-transform`}
+                              >
+                                {pathName == "/" ||
+                                !definedRoutes.includes(croppedPathname)
                                   ? "portfolio"
                                   : pathName.substring(
                                       1,
@@ -141,7 +158,7 @@ const Nav = (props: { notFound?: boolean }) => {
                                         ? pathName.indexOf("/", 1)
                                         : pathName.length
                                     )}
-                              </motion.div>
+                              </motion.span>
                             </LayoutGroup>
                           </MotionConfig>
                         </Link>
@@ -154,6 +171,7 @@ const Nav = (props: { notFound?: boolean }) => {
                         size={20}
                         toggle={setOpen}
                         toggled={open}
+                        aria-expanded={open}
                       />
                     </motion.div>
                   </AnimatePresence>
@@ -192,7 +210,9 @@ const Nav = (props: { notFound?: boolean }) => {
                               key="nav-animate-presence"
                             >
                               <NavLink
-                                current={croppedPathname == x.href ? true : false}
+                                current={
+                                  croppedPathname == x.href ? true : false
+                                }
                                 key={x.id}
                                 href={x.href}
                                 icon={x.icon}

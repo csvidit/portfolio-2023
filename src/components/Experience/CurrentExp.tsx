@@ -69,7 +69,7 @@ const CurrentExp = () => {
       >
         <motion.div
           variants={mainDivVariants}
-          className="rounded-[3rem] p-8 lg:p-12 font-normal w-full h-full flex flex-col justify-between space-y-4 bg-gradient-to-b from-neutral-950 via-neutral-950 to-blue-950 bg-opacity-[60%]"
+          className="rounded-[3rem] p-8 lg:p-12 font-normal w-full h-full flex flex-col justify-between space-y-4 bg-gradient-to-br from-neutral-950 via-neutral-950 to-blue-950 bg-opacity-[60%]"
         >
           <div className="text-blue-500">Short Term Contract</div>
           <div className="font-normal text-2xl lg:text-4xl">Pixus Inc.</div>

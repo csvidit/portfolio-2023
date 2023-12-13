@@ -12,12 +12,9 @@ const NavLink = (props: {
   current?: boolean;
   icon: React.ReactNode;
 }) => {
-
-  const [hover, setHover] = useState(false);
-
   const mainDivVariants = {
     initial: { opacity: 1 },
-    hover: { opacity: 1, ring: "2px", ringOffset: "1px"},
+    hover: { opacity: 1, ring: "2px", ringOffset: "1px" },
   };
 
   const textVariants1 = {
@@ -52,13 +49,11 @@ const NavLink = (props: {
       }}
     >
       <motion.li
-      // style={{shadow: "0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.15)"}}
+        // style={{shadow: "0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.15)"}}
         key={props.key}
         variants={mainDivVariants}
         initial="initial"
         whileHover="hover"
-        onHoverStart={() => setHover(true)}
-        onHoverEnd={() => setHover(false)}
         layout
         className={`grid-cols-1 w-full h-fit border group transition-all ease-in-out duration-300 rounded-xl ${
           props.current == true

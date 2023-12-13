@@ -2,11 +2,9 @@
 
 import { motion } from "framer-motion";
 import { BsArrowUp } from "react-icons/bs";
-import { ThreeDots } from "react-loader-spinner";
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import MessageItem from "./MessageItem";
-import InlineButton from "../Index/InlineButton";
 import SecondaryButton from "../SecondaryButton";
 
 const systemMessages = [
@@ -17,7 +15,7 @@ const systemMessages = [
   "There was a problem sending this. Please try again later.",
 ];
 
-const ContactForm2 = () => {
+const ContactForm = () => {
   const [focus, setFocus] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [succeeded, setSucceeded] = useState(false);
@@ -177,4 +175,4 @@ const ContactForm2 = () => {
   );
 };
 
-export default ContactForm2;
+export default ContactForm;

@@ -21,7 +21,7 @@ const ActionButton = (props: {
     blue: "#3b82f6",
     red: "#ef4444",
     sky: "#0ea5e9",
-    indigo: "#6366f1"
+    indigo: "#6366f1",
   };
 
   let color;
@@ -41,6 +41,7 @@ const ActionButton = (props: {
       break;
     case "academic":
       color = colors.red;
+      break;
     case "indigo":
       color = colors.indigo;
   }
@@ -92,6 +93,7 @@ const ActionButton = (props: {
       }}
     >
       <Link
+        tabIndex={0}
         target={props.external ? "_blank" : ""}
         href={props.href}
         className={`flex bg-opacity-100 w-${props.size} ${props.className}`}

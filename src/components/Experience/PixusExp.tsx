@@ -6,7 +6,7 @@ import ExpTitle from "./ExpTitle";
 import ExpDate from "./ExpDate";
 import ExpBullets from "./ExpBullets";
 import ExpSubtitleContainer from "./ExpSubtitleContainer";
-import ActionButton from "../Index/ActionButton";
+import ActionButton from "../ActionButton";
 import KeySkillsContainer from "./KeySkillsContainer";
 import KeySkillItem from "./KeySkillItem";
 import { SiAndroid, SiAndroidstudio } from "react-icons/si";

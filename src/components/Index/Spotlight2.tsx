@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import ActionButton from "./ActionButton";
+import ActionButton from "../ActionButton";
 import MainGridItem from "../MainGridItem";
 import { PiGithubLogoDuotone } from "react-icons/pi";
 

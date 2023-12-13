@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import ExpTitle from "../Experience/ExpTitle";
 import ExpCompany from "../Experience/ExpCompany";
 import ExpDate from "../Experience/ExpDate";
-import ActionButton from "../Index/ActionButton";
+import ActionButton from "../ActionButton";
 import OxfordCoursework from "./OxfordCoursework";
 import OxfordExtracurriculars from "./OxfordExtracurriculars";
 import OxfordGPA from "./OxfordGPA";

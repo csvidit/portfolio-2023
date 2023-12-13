@@ -3,8 +3,8 @@ import Intro from "@/components/Index/Intro";
 import Spotlight from "@/components/Index/Spotlight";
 import MarqueeButton from "@/components/MarqueeButton";
 import ComingUp from "@/components/Index/ComingUp";
-import ContactForm2 from "@/components/ContactForm/ContactForm2";
 import MainContent from "@/components/MainContent";
+import ContactForm from "@/components/ContactForm/ContactForm";
 
 const Index = () => {
   return (
@@ -22,7 +22,7 @@ const Index = () => {
       >
         projects across platforms and stacks
       </MarqueeButton>
-      <ContactForm2 />
+      <ContactForm/>
       <MarqueeButton
         label="github"
         href="https://github.com/csvidit"
