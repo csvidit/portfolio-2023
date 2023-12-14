@@ -12,7 +12,7 @@ import MainGridItem from "../MainGridItem";
 const DePauw = () => {
   return (
     <>
-      <div className="col-span-4 row-span-1 flex flex-col space-y-8 items-start rounded-[3rem] p-8 lg:p-12 text-2xl lg:text-4xl bg-neutral-900 text-neutral-100 font-light">
+      <div id="depauw" className="col-span-4 row-span-1 flex flex-col space-y-8 items-start rounded-[3rem] p-8 lg:p-12 text-2xl lg:text-4xl bg-neutral-900 text-neutral-100 font-light">
         <div className="flex flex-col space-y-8 w-full">
           <div className="flex flex-col space-y-2">
             <ExpCompany>DePauw University</ExpCompany>

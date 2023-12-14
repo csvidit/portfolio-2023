@@ -1,3 +1,4 @@
+import AtAGlance from "@/components/Academics/AtAGlance";
 import DePauw from "@/components/Academics/DePauw";
 import Oxford from "@/components/Academics/Oxford";
 import Footer from "@/components/Footer/Footer";
@@ -12,6 +13,7 @@ const Academics = () => {
       <SimplePageTitle color="text-red-500">
         academic credentials
       </SimplePageTitle>
+      <AtAGlance />
       <DePauw />
       <Oxford />
       <MarqueeButton

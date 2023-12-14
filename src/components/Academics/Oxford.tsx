@@ -13,7 +13,7 @@ import MainGridItem from "../MainGridItem";
 const Oxford = () => {
   return (
     <>
-      <div className="col-span-4 row-span-1 flex flex-col space-y-4 items-start rounded-[3rem] p-8 lg:p-12 text-2xl lg:text-4xl bg-neutral-900 text-neutral-100 font-light">
+      <div id="oxford" className="col-span-4 row-span-1 flex flex-col space-y-4 items-start rounded-[3rem] p-8 lg:p-12 text-2xl lg:text-4xl bg-neutral-900 text-neutral-100 font-light">
         <div className="flex flex-col space-y-2 w-full">
           <ExpCompany>New College, University of Oxford</ExpCompany>
           <ExpTitle variant="academic">
