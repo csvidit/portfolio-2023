@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import ActionButton from "../ActionButton";
 import MainGridItem from "../MainGridItem";
 import { PiGithubLogoDuotone } from "react-icons/pi";
+import ActionLink from "../ActionLink";
 
 const Spotlight = () => {
   return (
@@ -21,7 +21,7 @@ const Spotlight = () => {
           Supabase.
         </div>
       </div>
-      <ActionButton
+      <ActionLink
         size="fit"
         external={true}
         variant="spotlight"
@@ -30,7 +30,7 @@ const Spotlight = () => {
         <motion.div layout className="flex flex-row space-x-2 items-center">
           <motion.div>Squawk Social on</motion.div> <PiGithubLogoDuotone />
         </motion.div>
-      </ActionButton>
+      </ActionLink>
     </MainGridItem>
   );
 };

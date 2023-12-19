@@ -1,13 +1,13 @@
 "use client";
 
 import { MotionConfig, motion } from "framer-motion";
-import { BsArrowUpRight } from "react-icons/bs";
 import ExpBullets from "./ExpBullets";
 import KeySkillItem from "./KeySkillItem";
 import KeySkillsContainer from "./KeySkillsContainer";
 import CurrentKeySkillItem from "./CurrentKeySkillItem";
 import { SiAndroidstudio, SiFirebase, SiJetpackcompose, SiKotlin } from "react-icons/si";
 import { PiCompassFill } from "react-icons/pi";
+import { MdArchitecture } from "react-icons/md";
 
 const CurrentExp = () => {
   const parentDivVariants = {
@@ -72,7 +72,7 @@ const CurrentExp = () => {
           variants={mainDivVariants}
           className="rounded-[3rem] p-8 lg:p-12 font-normal w-full h-full flex flex-col justify-between space-y-4 bg-gradient-to-br from-neutral-950 via-neutral-950 to-blue-950 bg-opacity-[60%]"
         >
-          <div className="text-blue-500">Short Term Contract</div>
+          <div className="text-blue-500">Contract</div>
           <div className="font-normal text-2xl lg:text-4xl">Pixus Inc.</div>
           <h3
             className={`font-normal text-blue-500 geom text-xl lg:text-2xl flex flex-row space-x-2 items-center`}
@@ -91,7 +91,7 @@ const CurrentExp = () => {
               integrations
             </li>
             <li>
-              Used Hilt for dependency injection and for implementation of the MVVM architecture.
+              Used Hilt for dependency injection and for implementation of the MVVM architecture
             </li>
           </ExpBullets>
           <KeySkillsContainer>
@@ -100,6 +100,7 @@ const CurrentExp = () => {
             <CurrentKeySkillItem icon={<PiCompassFill/>}>Hilt</CurrentKeySkillItem>
             <CurrentKeySkillItem icon={<SiFirebase/>}>Firebase</CurrentKeySkillItem>
             <CurrentKeySkillItem icon={<SiAndroidstudio/>}>Android Studio</CurrentKeySkillItem>
+            <KeySkillItem icon={<MdArchitecture />}>MVVM</KeySkillItem>
           </KeySkillsContainer>
         </motion.div>
       </motion.div>

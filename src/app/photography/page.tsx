@@ -26,11 +26,9 @@ const getData = async () => {
     }
   `;
 
-  // const response: PhotosData = await hygraphClient.request(query);
   const response: PhotosData = await throttledPhotosFetch(query);
 
   if (!response) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
 

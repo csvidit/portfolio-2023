@@ -84,11 +84,9 @@ async function getData(slug: string) {
       }
       `;
 
-  // const response: WritingsData = await client.request(query);
   const response: WritingsData = await throttledWritingsFetch(query);
 
   if (!response) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
 
@@ -112,7 +110,6 @@ export async function generateStaticParams() {
     }
   `;
 
-  // const response: WritingsData = await client.request(query);
   const response: WritingsData = await throttledWritingsFetch(query);
 
   return response.writings.map((x: Writing) => ({

@@ -1,4 +1,4 @@
-import ActionButton from "../ActionButton";
+import ActionLink from "../ActionLink";
 import HeroSubtitles from "./HeroSubtitles";
 import OTW2 from "./OTW2";
 
@@ -12,9 +12,9 @@ const Intro2 = () => {
           VIDIT KHANDELWAL
         </h1>
         <HeroSubtitles />
-        <ActionButton size="fit" external={false} variant="plain" href="/about">
+        <ActionLink size="fit" external={false} variant="plain" href="/about">
           More About Me
-        </ActionButton>
+        </ActionLink>
       </div>
       <OTW2 />
     </div>

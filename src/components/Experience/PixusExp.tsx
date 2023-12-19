@@ -6,7 +6,7 @@ import ExpTitle from "./ExpTitle";
 import ExpDate from "./ExpDate";
 import ExpBullets from "./ExpBullets";
 import ExpSubtitleContainer from "./ExpSubtitleContainer";
-import ActionButton from "../ActionButton";
+import ActionLink from "../ActionLink";
 import KeySkillsContainer from "./KeySkillsContainer";
 import KeySkillItem from "./KeySkillItem";
 import { SiAndroid, SiAndroidstudio } from "react-icons/si";
@@ -79,7 +79,7 @@ const PixusExp = () => {
           <KeySkillItem icon={<MdArchitecture />}>MVVM</KeySkillItem>
           <KeySkillItem icon={<SiAndroidstudio />}>Android Studio</KeySkillItem>
         </KeySkillsContainer>
-        <ActionButton
+        <ActionLink
           size="full"
           external={true}
           variant="experience"
@@ -87,7 +87,7 @@ const PixusExp = () => {
           className=""
         >
           Check out CaptureNoire
-        </ActionButton>
+        </ActionLink>
       </div>
     </motion.div>
   );

@@ -50,12 +50,9 @@ const getData = async (tag: number) => {
     }
   `;
   }
-
-  // const response: PapersData = await client.request(query);
   const response: PapersData = await throttledPapersFetch(query);
 
   if (!response) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
 
@@ -112,8 +109,7 @@ export async function generateStaticParams() {
       }
     }
   `;
-
-  // const response: PapersData = await client.request(query);
+  
   const response: PapersData = await throttledPapersFetch(query);
 
   return response.papers.map((x: Paper) => ({

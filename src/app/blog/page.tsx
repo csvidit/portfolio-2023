@@ -28,11 +28,9 @@ const getData = async () => {
     }
   `;
 
-  // const response: WritingsData = await hygraphClient.request(query);
   const response: WritingsData = await throttledWritingsFetch(query);
 
   if (!response) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
 

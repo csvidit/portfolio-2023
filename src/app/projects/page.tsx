@@ -277,7 +277,6 @@ const Projects = () => {
           filtering options coming soon
         </div>
       </SimplePageTitle>
-      {/* <GradientBorderBox>Integrated Portfolio</GradientBorderBox> */}
       <FeaturedProjectItem
         title="Turbobiz"
         href="https://github.com/csvidit/turbobiz"

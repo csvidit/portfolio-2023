@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import MainGridItem from "../MainGridItem";
-import ActionButton from "../ActionButton";
+import ActionLink from "../ActionLink";
 
 const ComingUp = () => {
   return (
@@ -17,7 +17,7 @@ const ComingUp = () => {
         >
          A collection of free React, Next.js, TailwindCSS, and Framer Motion snippets and templates made from scratch by me.
         </motion.div>
-        <ActionButton external={true} size="fit" variant="plain" href={"https://snippetopia.xyz"}>Check out Snippetopia</ActionButton>
+        <ActionLink external={true} size="fit" variant="plain" href={"https://snippetopia.xyz"}>Check out Snippetopia</ActionLink>
       </motion.div>
       {/* <ActionButton
         size="full"

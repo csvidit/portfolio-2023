@@ -29,11 +29,10 @@ const getData = async () => {
       }
     }
   `;
-  // const response: PapersData = await client.request(query);
+  
   const response: PapersData = await throttledPapersFetch(query);
 
   if (!response) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
 

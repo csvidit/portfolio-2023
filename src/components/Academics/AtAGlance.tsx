@@ -1,16 +1,7 @@
 "use client";
 
-import { MotionConfig, motion } from "framer-motion";
-import { BsArrowUpRight } from "react-icons/bs";
-import ExpBullets from "./ExpBullets";
-import {
-  SiAndroidstudio,
-  SiFirebase,
-  SiJetpackcompose,
-  SiKotlin,
-} from "react-icons/si";
-import { PiCompassFill } from "react-icons/pi";
-import SectionsLinkItem from "./SectionsLinkItem";
+import { motion } from "framer-motion";
+import ScrollToButton from "./ScrollToButton";
 
 const AtAGlance = () => {
   return (
@@ -46,12 +37,8 @@ const AtAGlance = () => {
 
         <div className="flex flex-row space-x-4 items-center">
           <div className="text-md lg:text-lg text-red-500">Sections</div>
-          <SectionsLinkItem key="depauw-section" href="/academics/#depauw">
-            DePauw
-          </SectionsLinkItem>
-          <SectionsLinkItem key="oxford-section" href="/academics/#oxford">
-            Oxford
-          </SectionsLinkItem>
+          <ScrollToButton id="depauw">DePauw</ScrollToButton>
+          <ScrollToButton id="oxford">Oxford</ScrollToButton>
         </div>
       </motion.div>
     </motion.div>

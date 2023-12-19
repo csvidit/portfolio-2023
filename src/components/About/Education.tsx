@@ -1,7 +1,7 @@
 import EducationTitle from "./EducationTitle";
 import EducationDescription from "./EducationDescription";
 import EducationItem from "./EducationItem";
-import ActionButton from "../ActionButton";
+import ActionLink from "../ActionLink";
 
 const Education = () => {
   return (
@@ -26,7 +26,7 @@ const Education = () => {
         </EducationDescription>
         <EducationDescription>Sep 2022 - Dec 2022</EducationDescription>
       </EducationItem>
-      <ActionButton size="full" external={false} variant="academic" href="/academics">In Detail</ActionButton>
+      <ActionLink size="full" external={false} variant="academic" href="/academics">In Detail</ActionLink>
     </div>
   );
 };

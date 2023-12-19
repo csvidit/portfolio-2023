@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BsArrowRight, BsArrowUpRight } from "react-icons/bs";
 import { UrlObject } from "url";
 
-const ActionButton = (props: {
+const ActionLink = (props: {
   children: React.ReactNode;
   href: string | UrlObject;
   variant: string; // can be regular, spotight, experience, academic.
@@ -137,4 +137,4 @@ const ActionButton = (props: {
   );
 };
 
-export default ActionButton;
+export default ActionLink;
