@@ -2,7 +2,6 @@
 
 import { MotionConfig, motion } from "framer-motion";
 import ExpBullets from "./ExpBullets";
-import KeySkillItem from "./KeySkillItem";
 import KeySkillsContainer from "./KeySkillsContainer";
 import CurrentKeySkillItem from "./CurrentKeySkillItem";
 import { SiAndroidstudio, SiFirebase, SiJetpackcompose, SiKotlin } from "react-icons/si";
@@ -100,7 +99,7 @@ const CurrentExp = () => {
             <CurrentKeySkillItem icon={<PiCompassFill/>}>Hilt</CurrentKeySkillItem>
             <CurrentKeySkillItem icon={<SiFirebase/>}>Firebase</CurrentKeySkillItem>
             <CurrentKeySkillItem icon={<SiAndroidstudio/>}>Android Studio</CurrentKeySkillItem>
-            <KeySkillItem icon={<MdArchitecture />}>MVVM</KeySkillItem>
+            <CurrentKeySkillItem icon={<MdArchitecture />}>MVVM</CurrentKeySkillItem>
           </KeySkillsContainer>
         </motion.div>
       </motion.div>

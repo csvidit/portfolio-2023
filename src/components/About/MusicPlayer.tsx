@@ -3,12 +3,6 @@
 import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import {
-  BsFillPlayFill,
-  BsPauseFill,
-  BsVolumeMuteFill,
-  BsVolumeUpFill,
-} from "react-icons/bs";
 import { IoIosAlbums } from "react-icons/io";
 import {
   PiPauseFill,
@@ -22,7 +16,7 @@ const MusicPlayer = () => {
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(true);
   const audioRef = useRef<HTMLAudioElement | undefined>(
-    typeof Audio !== "undefined" ? new Audio("Style-TV.mp3") : undefined
+    typeof Audio !== "undefined" ? new Audio("lavender_haze.mp3") : undefined
   );
 
   useEffect(() => {
@@ -39,18 +33,18 @@ const MusicPlayer = () => {
       className={`col-span-1 row-span-2 geom w-100 h-100 flex flex-col space-y-4 rounded-[3rem] p-4 lg:p-6 bg-neutral-900`}
     >
       <motion.div
-        className={`rounded-[3rem] relative w-full h-full aspect-square`}
+        className={`relative w-full h-full`}
       >
         <Image
           alt="Midnights Album Cover"
-          src="/1989-TV.webp"
+          src="/midnights.webp"
           fill
-          className={`rounded-2xl object-scale-down aspect-square`}
+          className={`object-scale-down aspect-square shadow-md shadow-indigo-500`}
         ></Image>
       </motion.div>
       <div className="flex flex-row items-center justify-between">
         <motion.div className="flex flex-col space-y-1">
-          <motion.div>Style (Taylor&apos;s Version)</motion.div>
+          <motion.div>Lavender Haze</motion.div>
           <motion.div className="text-neutral-500">Taylor Swift</motion.div>
         </motion.div>
         {playing ? <MusicAnimation /> : <></>}
@@ -59,7 +53,7 @@ const MusicPlayer = () => {
       <motion.div className="group flex flex-row space-x-4 justify-around items-center text-xl lg:text-2xl px-4 py-2 self-center w-full bg-neutral-950 rounded-[3rem] border border-neutral-800 hover:border-neutral-500 hover:bg-neutral-800 transition-all duration-200 ease-in-out">
         <motion.a
           aria-label="Link to Taylor Swift on Spotify"
-          href="https://open.spotify.com/album/1o59UpKw81iHR0HPiSkJR0?si=HD37WNAVRYywEDj9oVL9OQ"
+          href="https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3?si=tlC-V2J0S5W92ZYbWdOviA"
           className="text-neutral-500 hover:text-neutral-100 transition-all ease-in-out duration-200"
         >
           <IoIosAlbums className="" />
@@ -154,7 +148,7 @@ const MusicPlayer = () => {
         className="text-xs text-right text-neutral-500"
         style={{ fontStretch: "90%" }}
       >
-        &copy; 2023 Taylor Swift, Republic Records, et al.
+        &copy; Taylor Swift, Universal Music Group, et al.
       </motion.div>
     </motion.div>
   );

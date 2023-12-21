@@ -25,7 +25,7 @@ const PixusExp = () => {
       // transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
       className=" p-[0.8px] col-span-2 row-span-2 w-full rounded-[3rem]"
     >
-      <div className="justify-between flex flex-col space-y-4 justify-between items-start rounded-[3rem] p-8 lg:p-12 text-2xl lg:text-4xl bg-neutral-900 text-neutral-100 font-light">
+      <div className="flex flex-col space-y-4 justify-between items-start rounded-[3rem] p-8 lg:p-12 text-2xl lg:text-4xl bg-neutral-900 text-neutral-100 font-light">
         <div className="flex flex-col space-y-2 w-full">
           <ExpCompany>Pixus, Inc. / CaptureNoire</ExpCompany>
           <ExpSubtitleContainer>
