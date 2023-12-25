@@ -12,7 +12,7 @@ const Intro2 = () => {
           VIDIT KHANDELWAL
         </h1>
         <HeroSubtitles />
-        <ActionLink size="fit" external={false} variant="plain" href="/about">
+        <ActionLink size="fit" variant="plain" href="/about">
           More About Me
         </ActionLink>
       </div>

@@ -2,8 +2,6 @@
 
 import { motion } from "framer-motion";
 import MainGridItem from "../MainGridItem";
-import ActionLink from "../ActionLink";
-import InlineButton from "./InlineButton";
 import SecondaryButton from "../SecondaryButton";
 
 const ComingUp = () => {

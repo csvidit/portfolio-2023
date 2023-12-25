@@ -13,7 +13,7 @@ const Intro = () => {
         </h1>
         {/* <h2 className="text-2xl lg:text-4xl text-neutral-100 text-medium">A passionate software engineer with a focus on the frontend</h2> */}
         <HeroSubtitles />
-        <ActionLink size="fit" external={false} variant="plain" href="/about">
+        <ActionLink size="fit" variant="plain" href="/about">
           More About Me
         </ActionLink>
       </div>

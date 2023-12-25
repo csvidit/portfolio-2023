@@ -26,7 +26,7 @@ const Education = () => {
         </EducationDescription>
         <EducationDescription>Sep 2022 - Dec 2022</EducationDescription>
       </EducationItem>
-      <ActionLink size="full" external={false} variant="academic" href="/academics">In Detail</ActionLink>
+      <ActionLink size="full" variant="academic" href="/academics">In Detail</ActionLink>
     </div>
   );
 };

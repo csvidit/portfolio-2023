@@ -81,7 +81,6 @@ const PixusExp = () => {
         </KeySkillsContainer>
         <ActionLink
           size="full"
-          external={true}
           variant="experience"
           href="https://capturenoire.com"
           className=""

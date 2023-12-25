@@ -17,7 +17,7 @@ const ComingUp2 = () => {
         >
          A collection of free React, Next.js, TailwindCSS, and Framer Motion snippets and templates made from scratch by me.
         </motion.div>
-        <ActionLink external={true} size="fit" variant="plain" href={"https://snippetopia.xyz"}>Check out Snippetopia</ActionLink>
+        <ActionLink size="fit" variant="plain" href={"https://snippetopia.xyz"}>Check out Snippetopia</ActionLink>
       </motion.div>
      
     </MainGridItem>

@@ -23,7 +23,6 @@ const Spotlight = () => {
       </div>
       <ActionLink
         size="fit"
-        external={true}
         variant="spotlight"
         href="https://github.com/csvidit/squawk"
       >

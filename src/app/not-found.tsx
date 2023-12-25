@@ -1,7 +1,7 @@
 "use client";
 
 import Footer from "@/components/Footer/Footer";
-import ActionButton from "@/components/ActionLink";
+import ActionLink from "@/components/ActionLink";
 import IndexContent from "@/components/IndexContent";
 
 const NotFound = () => {
@@ -14,9 +14,9 @@ const NotFound = () => {
         <div className="text-xl lg:text-2xl">
           You were trying to explore uncharted space.
         </div>
-        <ActionButton size="fit" external={false} variant="plain" href="/">
+        <ActionLink size="fit" variant="plain" href="/">
           Go to homepage
-        </ActionButton>
+        </ActionLink>
       </div>
 
       <Footer />
