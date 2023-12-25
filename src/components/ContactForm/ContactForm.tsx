@@ -152,16 +152,16 @@ const ContactForm = () => {
             navigator.clipboard.writeText("viditk17@gmail.com");
             setEmailCopyMessage("Email copied!");
           }}
-          className="relative group w-fit flex flex-col duration-300 ease-in-out transition-all h-[1.25rem] overflow-hidden"
+          className="relative group w-full flex flex-col duration-200 ease-in-out transition-all h-[1.25rem] overflow-hidden"
         >
-          <motion.div className="flex opacity-100 -translate-y-0 group-hover:-translate-y-[110%] group-hover:opacity-0 duration-300 ease-in-out">
+          <motion.div className="flex opacity-100 -translate-y-0 group-hover:-translate-y-[110%] group-hover:opacity-0 duration-200 ease-in-out">
             You can also email me.
           </motion.div>
-          <motion.div className="flex opacity-0 -translate-y-0 group-hover:translate-y-[-110%] group-hover:opacity-100 duration-300 ease-in-out">
+          <motion.div className="flex opacity-0 -translate-y-0 group-hover:translate-y-[-110%] group-hover:opacity-100 duration-200 ease-in-out">
             {emailCopyMessage}
           </motion.div>
         </motion.button>
-        <motion.div className={`w-full border-t ${emailHover ? "border-t-neutral-100" : "border-t-neutral-500"}`}></motion.div>
+        <motion.div className={`w-full border-t ${emailHover ? "border-t-neutral-100" : "border-t-neutral-500"} duration-200 ease-in-out`}></motion.div>
         <SecondaryButton
           variant="plain"
           href="https://calendly.com/viditkhandelwal"

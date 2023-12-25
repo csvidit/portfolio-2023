@@ -1,17 +1,15 @@
 "use client";
-import {
-  motion,
-  AnimatePresence, MotionConfig
-} from "framer-motion";
+import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsArrowUpRight } from "react-icons/bs";
-import { UrlObject } from "url";
 
 const SecondaryButton = (props: {
   children: React.ReactNode;
-  href: string | UrlObject;
-  variant: string; // can be regular, spotight, experience, academic.
-  external: boolean;
+  href: string;
+  variant: string;
+  external?: boolean;
+  noArrow?: boolean;
+  plain?: boolean;
   className?: string;
 }) => {
   const n = 100;
@@ -23,6 +21,7 @@ const SecondaryButton = (props: {
     blue: "#3b82f6",
     red: "#ef4444",
     sky: "#0ea5e9",
+    indigo: "#6366f1",
   };
 
   let color;
@@ -39,6 +38,10 @@ const SecondaryButton = (props: {
       break;
     case "experience":
       color = colors.blue;
+      break;
+    case "index":
+    case "indigo":
+      color = colors.indigo;
       break;
     case "academic":
       color = colors.red;
@@ -72,7 +75,6 @@ const SecondaryButton = (props: {
     initial: {
       display: "none",
       opacity: 0,
-    //   opacity: 1,
       translateY: "+100%",
     },
     hover: {
@@ -91,14 +93,14 @@ const SecondaryButton = (props: {
     >
       <Link
         href={props.href}
-        className={`inline-flex bg-opacity-100 w-fit  ${props.className}`}
+        className={`inline-flex bg-opacity-100 w-fit ${props.className}`}
       >
         <motion.div
           variants={mainDivVariants}
           initial="initial"
           whileHover="hover"
           layout
-          className={`group w-fit h-fit py-1 flex flex-row items-center group justify-start space-x-4 text-base border-b overflow-hidden font-light`}
+          className={`group w-fit h-fit py-1 flex flex-row items-center group justify-start space-x-4 overflow-hidden font-light ${props.plain ? "" : "border-b"}`}
         >
           <motion.div className="flex flex-col overflow-hidden">
             <AnimatePresence mode="popLayout">
@@ -112,28 +114,24 @@ const SecondaryButton = (props: {
               </motion.div>
             </AnimatePresence>
           </motion.div>
-          <motion.div
-            variants={textVariants1}
-            layout
-            className={`flex flex-row items-center space-x-2`}
-          >
-            {props.external == true ? (
-              <BsArrowUpRight />
-            ) : (
-              <BsArrowRight />
-            )}
-          </motion.div>
-          <motion.div
-            variants={textVariants2}
-            layout
-            className={`flex flex-row items-center space-x-2`}
-          >
-            {props.external == true ? (
-              <BsArrowUpRight />
-            ) : (
-              <BsArrowRight />
-            )}
-          </motion.div>
+          {!props.noArrow && (
+            <motion.div
+              variants={textVariants1}
+              layout
+              className={`flex flex-row items-center space-x-2`}
+            >
+              {props.href.startsWith("http") || props.href.startsWith("https") ? <BsArrowUpRight /> : <BsArrowRight />}
+            </motion.div>
+          )}
+          {!props.noArrow && (
+            <motion.div
+              variants={textVariants2}
+              layout
+              className={`flex flex-row items-center space-x-2`}
+            >
+              {props.href.startsWith("http") || props.href.startsWith("https") ? <BsArrowUpRight /> : <BsArrowRight />}
+            </motion.div>
+          )}
         </motion.div>
       </Link>
     </MotionConfig>

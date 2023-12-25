@@ -41,7 +41,7 @@ const PortraitCarousel = () => {
       >
         <Image
           key={srcList[currentImage]}
-          src={srcList[currentImage]}
+          src={process.env.NEXT_PUBLIC_DIGITALOCEAN_CDN_ENDPOINT+srcList[currentImage]}
           fill
           alt={captionList[currentImage]}
           className="rounded-[3rem] object-cover"

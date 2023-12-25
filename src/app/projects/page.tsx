@@ -316,7 +316,6 @@ const Projects = () => {
         size={4}
         variant="nonfocus"
         color="violet"
-        external={true}
       >
         source code and all other projects
       </MarqueeButton>

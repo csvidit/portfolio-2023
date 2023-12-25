@@ -8,6 +8,13 @@ const nextConfig = {
         port: "",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: process.env.DIGITALOCEAN_CDN_REMOTEPATTERN,
+        port: "",
+        pathname: "**",
+      },
+      
     ],
   },
   experimental: {

@@ -35,8 +35,52 @@ const definedRoutes = [
   "/terms",
 ];
 
+const links = [
+  { id: "nav-home", name: "Home", href: "/", icon: <PiHouseFill /> },
+  { id: "nav-about", name: "About", href: "/about", icon: <PiUserFill /> },
+  {
+    id: "nav-experience",
+    name: "Work Experience",
+    href: "/experience",
+    icon: <PiLightningFill />,
+  },
+  {
+    id: "nav-academics",
+    name: "Academics",
+    href: "/academics",
+    icon: <HiAcademicCap />,
+  },
+  {
+    id: "nav-projects",
+    name: "Projects",
+    href: "/projects",
+    icon: <PiSquaresFourFill />,
+  },
+  {
+    id: "nav-papers",
+    name: "Papers",
+    href: "/papers",
+    icon: <PiBookOpenFill />,
+  },
+  // { name: "Literature", href: "/literature", icon: <PiPenFill /> },
+  {
+    id: "nav-photography",
+    name: "Photography",
+    href: "/photography",
+    icon: <PiCameraFill />,
+  },
+  { id: "nav-blog", name: "Blog", href: "/blog", icon: <PiArticleFill /> },
+
+  // {
+  //   name: "Studio",
+  //   href: "https://studio.viditkhandelwal.com",
+  //   icon: <BsPaletteFill />,
+  // },
+];
+
 const Nav = () => {
   const [open, setOpen] = useState(false);
+  const [hoveredLinkIndex, setHoveredLinkIndex] = useState(null);
   const pathName = usePathname();
   const [croppedPathname, setCroppedPathname] = useState(
     pathName.substring(
@@ -56,49 +100,6 @@ const Nav = () => {
     );
     setOpen(false);
   }, [pathName]);
-
-  const links = [
-    { id: "nav-home", name: "Home", href: "/", icon: <PiHouseFill /> },
-    { id: "nav-about", name: "About", href: "/about", icon: <PiUserFill /> },
-    {
-      id: "nav-experience",
-      name: "Work Experience",
-      href: "/experience",
-      icon: <PiLightningFill />,
-    },
-    {
-      id: "nav-academics",
-      name: "Academics",
-      href: "/academics",
-      icon: <HiAcademicCap />,
-    },
-    {
-      id: "nav-projects",
-      name: "Projects",
-      href: "/projects",
-      icon: <PiSquaresFourFill />,
-    },
-    {
-      id: "nav-papers",
-      name: "Papers",
-      href: "/papers",
-      icon: <PiBookOpenFill />,
-    },
-    // { name: "Literature", href: "/literature", icon: <PiPenFill /> },
-    {
-      id: "nav-photography",
-      name: "Photography",
-      href: "/photography",
-      icon: <PiCameraFill />,
-    },
-    { id: "nav-blog", name: "Blog", href: "/blog", icon: <PiArticleFill /> },
-
-    // {
-    //   name: "Studio",
-    //   href: "https://studio.viditkhandelwal.com",
-    //   icon: <BsPaletteFill />,
-    // },
-  ];
 
   return (
     <MotionConfig
@@ -216,6 +217,9 @@ const Nav = () => {
                                 key={x.id}
                                 href={x.href}
                                 icon={x.icon}
+                                index={index}
+                                hoveredLinkIndex={hoveredLinkIndex}
+                                setHoveredLinkIndex={setHoveredLinkIndex}
                               >
                                 {x.name}
                               </NavLink>

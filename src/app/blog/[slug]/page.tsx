@@ -57,7 +57,6 @@ export default async function ViewLiterature({ params }: any) {
         label="all blog articles"
         variant="nonfocus"
         color="indigo"
-        external={false}
         href="/blog"
         size={4}
       >

@@ -26,7 +26,6 @@ const About = () => {
         size={2}
         variant="nonfocus"
         color="blue"
-        external={false}
       >
         detailed list of my prior work experience and duties
       </MarqueeButton>
@@ -42,7 +41,6 @@ const About = () => {
         size={2}
         variant="focus"
         color="blue"
-        external={true}
       >
         resume, up to date and ATS optimized
       </MarqueeButton>
@@ -53,7 +51,6 @@ const About = () => {
         size={1}
         variant="nonfocus"
         color="blue"
-        external={true}
       >
         github profile and repositories
       </MarqueeButton>
@@ -64,7 +61,6 @@ const About = () => {
         size={1}
         variant="nonfocus"
         color="blue"
-        external={true}
       >
         view my professional profile
       </MarqueeButton>

@@ -18,7 +18,6 @@ const Index = () => {
         size={4}
         variant="nonfocus"
         color="violet"
-        external={false}
       >
         projects across platforms and stacks
       </MarqueeButton>
@@ -29,7 +28,6 @@ const Index = () => {
         size={2}
         variant="nonfocus"
         color="blue"
-        external={true}
       >
         github profile and repositories
       </MarqueeButton>
@@ -39,7 +37,6 @@ const Index = () => {
         size={2}
         variant="nonfocus"
         color="blue"
-        external={true}
       >
         view my professional profile
       </MarqueeButton>

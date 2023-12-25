@@ -22,7 +22,6 @@ const Academics = () => {
         size={4}
         variant="nonfocus"
         color="red"
-        external={false}
       >
         academic and research papers in economics and ethics
       </MarqueeButton>
@@ -32,7 +31,6 @@ const Academics = () => {
         size={2}
         variant="nonfocus"
         color="blue"
-        external={true}
       >
         read.cv profile and posts
       </MarqueeButton>
@@ -42,7 +40,6 @@ const Academics = () => {
         size={2}
         variant="focus"
         color="blue"
-        external={true}
       >
         resume, up to date and ATS optimized
       </MarqueeButton>

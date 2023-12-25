@@ -39,7 +39,7 @@ const MusicPlayer = () => {
           alt="Midnights Album Cover"
           src="/midnights.webp"
           fill
-          className={`object-scale-down aspect-square shadow-md shadow-indigo-500`}
+          className={`object-scale-down aspect-square`}
         ></Image>
       </motion.div>
       <div className="flex flex-row items-center justify-between">

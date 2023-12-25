@@ -57,7 +57,6 @@ export default async function ViewLiterature({ params }: any) {
         label="all literature"
         variant="nonfocus"
         color="indigo"
-        external={false}
         href="/literature"
         size={4}
       >

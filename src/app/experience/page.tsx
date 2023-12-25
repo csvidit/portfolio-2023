@@ -27,7 +27,6 @@ const Projects = () => {
         size={2}
         variant="nonfocus"
         color="blue"
-        external={true}
       >
         read.cv profile and posts
       </MarqueeButton>
@@ -37,7 +36,6 @@ const Projects = () => {
         size={2}
         variant="focus"
         color="blue"
-        external={true}
       >
         resume, up to date and ATS optimized
       </MarqueeButton>

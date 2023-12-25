@@ -11,7 +11,6 @@ const MarqueeButton = (props: {
   href: string;
   variant: string; // can be nonfocus or focus
   color: string; // can be blue, violet, red, or indigo
-  external: boolean;
   size: number; // 1, 2, 3, 4
   className?: string; // classNames to add to the button
   alt?: string;
@@ -143,7 +142,7 @@ const MarqueeButton = (props: {
         tabIndex={0}
         aria-label={props.alt ? props.alt : `Link to ${props.children}`}
         href={props.href}
-        target={props.external ? "_blank" : ""}
+        target={props.href.startsWith("http") || props.href.startsWith("https") ? "_blank" : ""}
         className="flex flex-col w-full h-full justify-center"
       >
         <motion.div
@@ -163,7 +162,7 @@ const MarqueeButton = (props: {
               {hover ? props.children : props.label}
             </motion.div>
             {props.size != 1 ? (
-              props.external == true ? (
+              props.href.startsWith("http") || props.href.startsWith("https") ? (
                 <BsArrowUpRight />
               ) : (
                 <BsArrowRight />
@@ -184,7 +183,7 @@ const MarqueeButton = (props: {
                   </motion.div>
 
                   {props.size != 1 ? (
-                    props.external == true ? (
+                    props.href.startsWith("http") || props.href.startsWith("https") ? (
                       <BsArrowUpRight />
                     ) : (
                       <BsArrowRight />

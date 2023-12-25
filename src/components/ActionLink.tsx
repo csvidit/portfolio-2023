@@ -2,13 +2,11 @@
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsArrowUpRight } from "react-icons/bs";
-import { UrlObject } from "url";
 
 const ActionLink = (props: {
   children: React.ReactNode;
-  href: string | UrlObject;
-  variant: string; // can be regular, spotight, experience, academic.
-  external: boolean;
+  href: string;
+  variant: string;
   className?: string;
   size: string; // full or fit
 }) => {
@@ -94,7 +92,7 @@ const ActionLink = (props: {
     >
       <Link
         tabIndex={0}
-        target={props.external ? "_blank" : ""}
+        target={props.href.startsWith("http") || props.href.startsWith("https") ? "_blank" : ""}
         href={props.href}
         className={`flex bg-opacity-100 w-${props.size} ${props.className}`}
       >
@@ -122,14 +120,14 @@ const ActionLink = (props: {
             layout
             className={`flex flex-row items-center space-x-2`}
           >
-            {props.external == true ? <BsArrowUpRight /> : <BsArrowRight />}
+            {props.href.startsWith("http") || props.href.startsWith("https") ? <BsArrowUpRight /> : <BsArrowRight />}
           </motion.div>
           <motion.div
             variants={textVariants2}
             layout
             className={`flex flex-row items-center space-x-2`}
           >
-            {props.external == true ? <BsArrowUpRight /> : <BsArrowRight />}
+            {props.href.startsWith("http") || props.href.startsWith("https") ? <BsArrowUpRight /> : <BsArrowRight />}
           </motion.div>
         </motion.div>
       </Link>
