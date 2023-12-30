@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import MainGridItem from "../MainGridItem";
 import { PiGithubLogoDuotone } from "react-icons/pi";
 import ActionLink from "../ActionLink";
+import SecondaryButton from "../SecondaryButton";
 
 const Spotlight = () => {
   return (
@@ -16,20 +17,17 @@ const Spotlight = () => {
         <div
           className="font-light lg:text-2xl text-left line-gap"
         >
-          A fun and unserious social media platform with a bunch of quirky
+           <SecondaryButton
+            plain
+            variant="spotlight"
+            href="https://snippetopia.xyz"
+          >
+            Squawk Social
+          </SecondaryButton>{" "}, a fun and unserious social media platform with a bunch of quirky
           reactions targeted towards Gen Z. Made using Next.js, Tailwind, and
           Supabase.
         </div>
       </div>
-      <ActionLink
-        size="fit"
-        variant="spotlight"
-        href="https://github.com/csvidit/squawk"
-      >
-        <motion.div layout className="flex flex-row space-x-2 items-center">
-          <motion.div>Squawk Social on</motion.div> <PiGithubLogoDuotone />
-        </motion.div>
-      </ActionLink>
     </MainGridItem>
   );
 };

@@ -33,13 +33,13 @@ const MusicPlayer = () => {
       className={`col-span-1 row-span-2 geom w-100 h-100 flex flex-col space-y-4 rounded-[3rem] p-4 lg:p-6 bg-neutral-900`}
     >
       <motion.div
-        className={`relative w-full h-full`}
+        className={`rounded-[3rem] relative w-full h-full aspect-square`}
       >
         <Image
           alt="Midnights Album Cover"
           src="/midnights.webp"
           fill
-          className={`object-scale-down aspect-square`}
+          className={`rounded-2xl object-scale-down aspect-square`}
         ></Image>
       </motion.div>
       <div className="flex flex-row items-center justify-between">
@@ -47,7 +47,13 @@ const MusicPlayer = () => {
           <motion.div>Lavender Haze</motion.div>
           <motion.div className="text-neutral-500">Taylor Swift</motion.div>
         </motion.div>
-        {playing ? <MusicAnimation /> : <></>}
+        {playing ? (
+          <AnimatePresence>
+            <MusicAnimation />
+          </AnimatePresence>
+        ) : (
+          <></>
+        )}
       </div>
 
       <motion.div className="group flex flex-row space-x-4 justify-around items-center text-xl lg:text-2xl px-4 py-2 self-center w-full bg-neutral-950 rounded-[3rem] border border-neutral-800 hover:border-neutral-500 hover:bg-neutral-800 transition-all duration-200 ease-in-out">

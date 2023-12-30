@@ -76,7 +76,7 @@ const NavLink = (props: {
             props.current == true ? "text-lime-500" : "text-neutral-100"
           }`}
         >
-          <motion.div layout className={``}>
+          <motion.div layout className={`hidden lg:block`}>
             {props.icon}
           </motion.div>
 
