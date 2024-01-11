@@ -4,7 +4,12 @@ import { MotionConfig, motion } from "framer-motion";
 import ExpBullets from "./ExpBullets";
 import KeySkillsContainer from "./KeySkillsContainer";
 import CurrentKeySkillItem from "./CurrentKeySkillItem";
-import { SiAndroidstudio, SiFirebase, SiJetpackcompose, SiKotlin } from "react-icons/si";
+import {
+  SiAndroidstudio,
+  SiFirebase,
+  SiJetpackcompose,
+  SiKotlin,
+} from "react-icons/si";
 import { PiCompassFill } from "react-icons/pi";
 import { MdArchitecture } from "react-icons/md";
 
@@ -14,7 +19,7 @@ const CurrentExp = () => {
       scale: 1,
     },
     hover: {
-      scale: 1
+      scale: 1,
     },
   };
 
@@ -71,7 +76,7 @@ const CurrentExp = () => {
           variants={mainDivVariants}
           className="rounded-[3rem] p-8 lg:p-12 font-normal w-full h-full flex flex-col justify-between space-y-4 bg-gradient-to-br from-neutral-950 via-neutral-950 to-blue-950 bg-opacity-[60%]"
         >
-          <div className="text-blue-500">Contract</div>
+          {/* <div className="text-blue-500">Contract</div> */}
           <div className="font-normal text-2xl lg:text-4xl">Pixus Inc.</div>
           <h3
             className={`font-normal text-blue-500 geom text-xl lg:text-2xl flex flex-row space-x-2 items-center`}
@@ -90,16 +95,37 @@ const CurrentExp = () => {
               integrations
             </li>
             <li>
-              Used Hilt for dependency injection and for implementation of the MVVM architecture
+              Wrote app in strict adherence to a single-activity paradigm and
+              clean architecture principes, with distinct layers for
+              presentation, business logic, data, and domain
+            </li>
+            <li>
+              Clean architecture allowed for easy unit testing of the app, and
+              for swift debugging and refactoring
             </li>
           </ExpBullets>
           <KeySkillsContainer>
-          <CurrentKeySkillItem icon={<SiKotlin/>}>Kotlin</CurrentKeySkillItem>
-            <CurrentKeySkillItem icon={<SiJetpackcompose/>}>Jetpack Compose</CurrentKeySkillItem>
-            <CurrentKeySkillItem icon={<PiCompassFill/>}>Hilt</CurrentKeySkillItem>
-            <CurrentKeySkillItem icon={<SiFirebase/>}>Firebase</CurrentKeySkillItem>
-            <CurrentKeySkillItem icon={<SiAndroidstudio/>}>Android Studio</CurrentKeySkillItem>
-            <CurrentKeySkillItem icon={<MdArchitecture />}>MVVM</CurrentKeySkillItem>
+            <CurrentKeySkillItem icon={<SiKotlin />}>
+              Kotlin
+            </CurrentKeySkillItem>
+            <CurrentKeySkillItem icon={<SiJetpackcompose />}>
+              Jetpack Compose
+            </CurrentKeySkillItem>
+            <CurrentKeySkillItem icon={<PiCompassFill />}>
+              Hilt
+            </CurrentKeySkillItem>
+            <CurrentKeySkillItem icon={<SiFirebase />}>
+              Firebase
+            </CurrentKeySkillItem>
+            <CurrentKeySkillItem icon={<SiAndroidstudio />}>
+              Android Studio
+            </CurrentKeySkillItem>
+            <CurrentKeySkillItem icon={<MdArchitecture />}>
+              MVVM
+            </CurrentKeySkillItem>
+            <CurrentKeySkillItem icon={<MdArchitecture />}>
+              Clean Architecture
+            </CurrentKeySkillItem>
           </KeySkillsContainer>
         </motion.div>
       </motion.div>

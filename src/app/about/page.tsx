@@ -12,6 +12,7 @@ import Mantra from "@/components/About/Mantra";
 import ContactForm from "@/components/ContactForm/ContactForm";
 import MainContent from "@/components/MainContent";
 import { hygraphResumeLink } from "@/constants";
+import { RiTwitterXLine } from "react-icons/ri";
 
 const About = () => {
   return (
@@ -34,6 +35,24 @@ const About = () => {
       <MusicPlayer />
       <TechStack />
       <Personality />
+      <MarqueeButton
+        label="engineering blog"
+        href="/blog"
+        size={3}
+        variant="nonfocus"
+        color="blue"
+      >
+        engineering blog
+      </MarqueeButton>
+      <MarqueeButton
+        label={<RiTwitterXLine />}
+        href="https://twitter.com/csvidit"
+        size={1}
+        variant="nonfocus"
+        color="blue"
+      >
+        x/twitter profile
+      </MarqueeButton>
       <ContactForm />
       <MarqueeButton
         label="resume"

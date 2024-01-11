@@ -15,11 +15,20 @@ const Index = () => {
       <MarqueeButton
         label="projects"
         href="/projects"
-        size={4}
-        variant="nonfocus"
+        size={2}
+        variant="focus"
         color="violet"
       >
         projects across platforms and stacks
+      </MarqueeButton>
+      <MarqueeButton
+        label="blog"
+        href="/blog"
+        size={2}
+        variant="nonfocus"
+        color="blue"
+      >
+        engineering blog
       </MarqueeButton>
       <ContactForm/>
       <MarqueeButton

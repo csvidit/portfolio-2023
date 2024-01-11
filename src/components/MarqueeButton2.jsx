@@ -4,21 +4,15 @@ import { motion } from "framer-motion";
 import { BsArrowRight, BsArrowUpRight } from "react-icons/bs";
 import React, { useState } from "react";
 import Link from "next/link";
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from "../../tailwind.config.js"
 
-const MarqueeButton = (props: {
-  label: string | React.ReactNode;
-  children: React.ReactNode;
-  href: string;
-  variant: string; // can be nonfocus or focus
-  color: string; // can be blue, violet, red, or indigo
-  size: number; // 1, 2, 3, 4
-  height?: number; // only for overriding the default due
-  className?: string; // classNames to add to the button
-  alt?: string;
-}) => {
+const MarqueeButton2 = (props) => {
   const n = 100;
 
   const [hover, setHover] = useState(false);
+
+  const fullTailwindConfig = resolveConfig(tailwindConfig)
 
   const colors = {
     dark: "#171717",
@@ -37,51 +31,51 @@ const MarqueeButton = (props: {
   let initialColor, color, initialBackgroundColor, backgroundColor;
 
   if (props.variant == "nonfocus") {
-    initialColor = colors.light;
-    initialBackgroundColor = colors.dark;
+    initialColor = fullTailwindConfig.theme.colors.neutral[100]
+    initialBackgroundColor = fullTailwindConfig.theme.colors.neutral[900]
     switch (props.color) {
       case "blue":
-        backgroundColor = colors.lightBlue;
-        color = colors.darkBlue;
+        backgroundColor = fullTailwindConfig.theme.colors.blue[300]
+        color = fullTailwindConfig.theme.colors.blue[950]
         break;
       case "violet":
-        backgroundColor = colors.lightViolet;
-        color = colors.darkViolet;
+        backgroundColor = fullTailwindConfig.theme.colors.violet[300]
+        color = fullTailwindConfig.theme.colors.violet[950]
         break;
       case "red":
-        backgroundColor = colors.lightRed;
-        color = colors.darkRed;
+        backgroundColor = fullTailwindConfig.theme.colors.red[300]
+        color = fullTailwindConfig.theme.colors.red[950]
         break;
       case "indigo":
-        backgroundColor = colors.lightIndigo;
-        color = colors.darkIndigo;
+        backgroundColor = fullTailwindConfig.theme.colors.indigo[300]
+        color = fullTailwindConfig.theme.colors.indigo[950]
         break;
     }
   } else {
     switch (props.color) {
       case "blue":
-        initialBackgroundColor = colors.lightBlue;
-        initialColor = colors.darkBlue;
-        backgroundColor = colors.lightBlue;
-        color = colors.darkBlue;
+        initialBackgroundColor = fullTailwindConfig.theme.colors.blue[300]
+        initialColor = fullTailwindConfig.theme.colors.blue[950]
+        backgroundColor = fullTailwindConfig.theme.colors.blue[300]
+        color = fullTailwindConfig.theme.colors.blue[950]
         break;
       case "violet":
-        initialBackgroundColor = colors.lightViolet;
-        initialColor = colors.darkViolet;
-        backgroundColor = colors.lightViolet;
-        color = colors.darkViolet;
+        initialBackgroundColor = fullTailwindConfig.theme.colors.violet[300]
+        initialColor = fullTailwindConfig.theme.colors.violet[950]
+        backgroundColor = fullTailwindConfig.theme.colors.violet[300]
+        color = fullTailwindConfig.theme.colors.violet[950]
         break;
       case "red":
-        initialBackgroundColor = colors.lightRed;
-        initialColor = colors.darkRed;
-        backgroundColor = colors.lightRed;
-        color = colors.darkRed;
+        initialBackgroundColor = fullTailwindConfig.theme.colors.red[300]
+        initialColor = fullTailwindConfig.theme.colors.red[950]
+        backgroundColor = fullTailwindConfig.theme.colors.red[300]
+        color = fullTailwindConfig.theme.colors.red[950]
         break;
       case "indigo":
-        initialBackgroundColor = colors.lightIndigo;
-        initialColor = colors.darkIndigo;
-        backgroundColor = colors.lightIndigo;
-        color = colors.darkIndigo;
+        initialBackgroundColor = fullTailwindConfig.theme.colors.indigo[300]
+        initialColor = fullTailwindConfig.theme.colors.indigo[950]
+        backgroundColor = fullTailwindConfig.theme.colors.indigo[300]
+        color = fullTailwindConfig.theme.colors.indigo[950]
         break;
     }
   }
@@ -204,4 +198,4 @@ const MarqueeButton = (props: {
   );
 };
 
-export default MarqueeButton;
+export default MarqueeButton2;

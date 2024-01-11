@@ -32,7 +32,9 @@ const AtAGlance = () => {
           Oxford, where I took concentrated courses in International Economics
           and Creative Writing. My strong suits in computer science are mobile
           and web development, and my strength in Economics lies in development
-          economics, often with an international perspective.
+          economics, often with an international perspective. My future academic
+          goal is to either pursue a Master&apos;s degree in Software
+          Engineering or Human Computer Interaction, or a tech-oriented MBA.
         </p>
 
         <div className="flex flex-row space-x-4 items-center">

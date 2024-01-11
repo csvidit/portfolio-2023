@@ -62,6 +62,7 @@ const links = [
     href: "/papers",
     icon: <PiBookOpenFill />,
   },
+  { id: "nav-blog", name: "Blog", href: "/blog", icon: <PiArticleFill /> },
   // { name: "Literature", href: "/literature", icon: <PiPenFill /> },
   {
     id: "nav-photography",
@@ -69,7 +70,7 @@ const links = [
     href: "/photography",
     icon: <PiCameraFill />,
   },
-  { id: "nav-blog", name: "Blog", href: "/blog", icon: <PiArticleFill /> },
+  
 
   // {
   //   name: "Studio",

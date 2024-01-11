@@ -1,4 +1,5 @@
 import BackToTop from "./BackToTop";
+import FooterIconLinks from "./FooterIconLinks";
 
 const Footer = () => {
   return (
@@ -10,8 +11,9 @@ const Footer = () => {
         <div className="extended text-neutral-100 font-medium">
           &copy; {new Date().getFullYear()} VIDIT KHANDELWAL
         </div>
-        <div className="">
-          All rights reserved. All wrongs reserved, too.
+        <div className="">All rights reserved. All wrongs reserved, too.</div>
+        <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-2 items-center divide-solid">
+        <FooterIconLinks />
         </div>
       </div>
       <BackToTop />

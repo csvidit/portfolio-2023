@@ -14,6 +14,7 @@ const SecondaryButton = (props: {
 }) => {
   const n = 100;
   const colors = {
+    extraDark: "#0a0a0a", 
     dark: "#171717",
     gray: "#525252",
     light: "#f5f5f5",

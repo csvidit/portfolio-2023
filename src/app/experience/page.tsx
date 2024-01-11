@@ -9,6 +9,7 @@ import MarqueeButton from "@/components/MarqueeButton";
 import CurrentExp from "@/components/Experience/CurrentExp";
 import MainContent from "@/components/MainContent";
 import { hygraphResumeLink } from "@/constants";
+import { PiLinkedinLogoDuotone } from "react-icons/pi";
 
 const Projects = () => {
   return (
@@ -38,6 +39,24 @@ const Projects = () => {
         color="blue"
       >
         resume, up to date and ATS optimized
+      </MarqueeButton>
+      <MarqueeButton
+        label="engineering blog"
+        href="/blog"
+        size={3}
+        variant="nonfocus"
+        color="blue"
+      >
+        check out my engineering blog
+      </MarqueeButton>
+      <MarqueeButton
+        label={<PiLinkedinLogoDuotone/>}
+        href="/blog"
+        size={1}
+        variant="nonfocus"
+        color="blue"
+      >
+        view my linkedin profile
       </MarqueeButton>
       <Footer />
     </MainContent>

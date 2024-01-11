@@ -4,10 +4,11 @@ It's here! My comprehensive portfolio spanning computer science, economics, and 
 
 ## Detailed Tech Stack
 
-* Next.js 13 (`/app` router)
+* Next.js app router
 * Tailwind CSS
 * Framer Motion
 * Hygraph CMS (for papers and literature)
+* Contentful CMS (for the engineering blog)
 * Resend
 
 ## Website Structure
@@ -18,7 +19,7 @@ It's here! My comprehensive portfolio spanning computer science, economics, and 
 * `/academics` : This is probably the place which differs the most from my resume. While academic information in my resume has very little real estate, I am able to thoroughly explain my collegiate career in this, including awards, GPA, full list of courses, and a detailed account of my study abroad experience at New College, University of Oxford. #oxonian.
 * `/projects` : A long list of my projects, with icons to demonstate what all major blocks went into the tech stack of each project. I usually link all of them to my GitHub, but you are encouraged to look at live production versions of all my web apps, updated links to which are in their GitHub repositories.
 * `/papers` : A list of select academic papers, with topic tags, publish dates, and an abstract. All paper cards link to the PDF of the paper, hosted on Hygraph CMS
-* `/blog` or `/backslash` : My new upcoming blog. All cards link to `/blog/[slug]` dynamic routes that display the entire article in rich styled HTML.  All pathnames of the dynamic routes are generated at build time (using the Next.js reserved function export `getStaticParams()`), with all data fetched from Hygraph. Hence, there is no client-side calling of Hygraph APIs to fetch the required post.
+* `/blog` or `/backslash` : My new upcoming blog. All cards link to `/blog/[slug]` dynamic routes that display the entire article in rich styled HTML.  All pathnames of the dynamic routes are generated at build time (using the Next.js reserved function export `getStaticParams()`), with all data fetched from Contentful CMS. Hence, there is no client-side calling of Contentful APIs to fetch the required post.
 * `/literature` : A list of select poems and short stories, with tags, publish dates, and a description (if applicable). All cards link to `/literature/[slug]` dynamic routes that display the entire story/poem. All pathnames of the dynamic routes are generated at build time (using the Next.js reserved function export `getStaticParams()`), with all data fetched from Hygraph. Hence, there is no client-side calling of Hygraph APIs to fetch the required story/poem.
 * `/photography` : A grid of high-quality versions of some of my favorite photos that I took, which do NOT include humans. All photos are fetched from my dedicated CMS endpoint. The quality is not 100% perfect -- since for the purposes of hosting and displaying I had to convert RAW, DNG, HEIC, and HDR images all to PNGs, but its mostly there. All photos are optimized thanks to `next/image` and the `<Image/>` component.
 * `/api/revalidate` : Since all data is fetched during build time, how do we update the data on the web app when it is updated in the CMS? Simple. We call `/api/revalidate/[slug]` to revalidate the page with the `[slug]` route. For example, if I want to revalidate the `/blog` route, I can call `/api/revalidate/blog`, which will revalidate both the blog and the dynamic routes associated with it (this is not a given; I have set it up this way). The route handlers in turn call the Next.js function `revalidatePath(path)` which purges the data cache of the given path and re-fetches the data (or in a way, re-renders it on the server). This makes sure that both the benefits of SSR and fast data updates are realized. A secret in the header of all calls to `/api/revalidate` route handlers is required, so no one can misuse the route by bombarding it with POST requests unless they have the secret as well.
