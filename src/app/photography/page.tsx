@@ -6,6 +6,7 @@ import { Photo, PhotosData } from "@/hygraph.config";
 import PhotoItem from "@/components/Photography/PhotoItem";
 import { throttledPhotosFetch } from "@/throttle";
 import MainContent from "@/components/MainContent";
+import Script from "next/script";
 
 const getData = async () => {
   const query = gql`
@@ -61,6 +62,16 @@ const PhotographyPage = async () => {
         <PapersLoading />
       )}
       <Footer />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-N2YVZ9CL5X" />
+      <Script id="google-analytics">
+        {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N2YVZ9CL5X');
+  `}
+      </Script>
     </MainContent>
   );
 };

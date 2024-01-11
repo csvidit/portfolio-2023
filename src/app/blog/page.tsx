@@ -6,6 +6,7 @@ import WritingItem from "@/components/WritingItem";
 import { throttledWritingsFetch } from "@/throttle";
 import BlogContent from "@/components/Blog/BlogContent";
 import BlogIntro from "@/components/Blog/BlogIntro";
+import Script from "next/script";
 
 const getData = async () => {
   const query = gql`
@@ -64,6 +65,16 @@ const LiteraturePage = async () => {
           <PapersLoading />
         )}
         <Footer />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-N2YVZ9CL5X" />
+      <Script id="google-analytics">
+        {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N2YVZ9CL5X');
+  `}
+      </Script>
       </BlogContent>
     </>
   );

@@ -5,6 +5,7 @@ import MarqueeButton from "@/components/MarqueeButton";
 import ComingUp from "@/components/Index/ComingUp";
 import MainContent from "@/components/MainContent";
 import ContactForm from "@/components/ContactForm/ContactForm";
+import Script from "next/script";
 
 const Index = () => {
   return (
@@ -30,7 +31,7 @@ const Index = () => {
       >
         engineering blog
       </MarqueeButton>
-      <ContactForm/>
+      <ContactForm />
       <MarqueeButton
         label="github"
         href="https://github.com/csvidit"
@@ -50,6 +51,16 @@ const Index = () => {
         view my professional profile
       </MarqueeButton>
       <Footer />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-N2YVZ9CL5X" />
+      <Script id="google-analytics">
+        {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N2YVZ9CL5X');
+  `}
+      </Script>
     </MainContent>
   );
 };

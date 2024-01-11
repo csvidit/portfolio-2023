@@ -7,9 +7,11 @@ It's here! My comprehensive portfolio spanning computer science, economics, and 
 * Next.js app router
 * Tailwind CSS
 * Framer Motion
-* Hygraph CMS (for papers and literature)
-* Contentful CMS (for the engineering blog)
+* Hygraph CMS
+* Contentful CMS
 * Resend
+* Vercel Analytics
+* Google Analytics
 
 ## Website Structure
 

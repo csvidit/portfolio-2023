@@ -8,6 +8,7 @@ import MarqueeButton from "@/components/MarqueeButton";
 import { throttledWritingsFetch } from "@/throttle";
 import { WritingsData, Writing } from "@/hygraph.config";
 import MainContent from "@/components/MainContent";
+import Script from "next/script";
 
 polyfill();
 
@@ -63,6 +64,16 @@ export default async function ViewLiterature({ params }: any) {
         go back to the literature page
       </MarqueeButton>
       <Footer />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-N2YVZ9CL5X" />
+      <Script id="google-analytics">
+        {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N2YVZ9CL5X');
+  `}
+      </Script>
     </MainContent>
   );
 }
