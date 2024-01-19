@@ -8,15 +8,18 @@ const decorationBorderVariants = {
 };
 
 const DecorationBorderHorizontal = (props: {color: string}) => {
+
+  const colorClassName = "via-"+props.color
+
   return (
     <>
       <motion.div
         variants={decorationBorderVariants}
-        className={`absolute top-full left-[8.33%] w-10/12 h-[1px] bg-gradient-to-r from-neutral-950 via-${props.color} to-neutral-950`}
+        className={`absolute top-full left-[8.33%] w-10/12 h-[1px] bg-gradient-to-r from-neutral-950 ${colorClassName} to-neutral-950`}
       ></motion.div>
       <motion.div
         variants={decorationBorderVariants}
-        className={`absolute bottom-full left-[8.33%] w-10/12 h-[1px] bg-gradient-to-r from-neutral-950 via-${props.color} to-neutral-950`}
+        className={`absolute bottom-full left-[8.33%] w-10/12 h-[1px] bg-gradient-to-r from-neutral-950 ${colorClassName} to-neutral-950`}
       ></motion.div>
     </>
   );
