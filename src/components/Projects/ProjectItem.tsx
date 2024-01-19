@@ -4,6 +4,7 @@ import { MotionConfig, motion } from "framer-motion";
 import { BsArrowUpRight } from "react-icons/bs";
 import { useRef } from "react";
 import Link from "next/link";
+import DecorationBorderHorizontal from "../DecorationBorderHorizontal";
 
 const ProjectItem = (props: {
   title: string;
@@ -18,7 +19,7 @@ const ProjectItem = (props: {
       // borderWidth: "1px",
       // borderColor: "#262626",
       backgroundColor: "#171717",
-      // backgroundImage: "linear-gradient(to bottom right, rgb(23, 23, 23) 0%, rgb(23, 23, 23) 100%)",
+      // backgroundImage: "linear-gradient(to bottom, rgb(23, 23, 23) 0%, rgb(23, 23, 23) 100%)",
       color: "#737373",
       scale: 1,
     },
@@ -27,7 +28,7 @@ const ProjectItem = (props: {
       // borderColor: "#5b21b6",
       // boxShadow: "inset 0px 0px 16px 0 #5b21b6",
       backgroundColor: "#2e1065",
-      // backgroundImage: "linear-gradient(to bottom right, rgb(10, 10, 10) 0%, rgb(46, 16, 101) 100%)",
+      // backgroundImage: "linear-gradient(to bottom, rgb(23, 23, 23) 20%, rgb(10, 10, 10) 100%)",
       color: "#c4b5fd",
       scale: 0.95,
     },
@@ -41,6 +42,11 @@ const ProjectItem = (props: {
   const arrowVariants = {
     initial: { color: "#f5f5f5" },
     hover: { color: "#eab308" },
+  };
+
+  const decorationBorderVariants = {
+    initial: { opacity: 0 },
+    hover: { opacity: 1 },
   };
 
   return (
@@ -57,7 +63,7 @@ const ProjectItem = (props: {
         variants={mainDivVariants}
         initial="initial"
         whileHover="hover"
-        className="col-span-2 rounded-[3rem]"
+        className="relative col-span-2 rounded-[3rem]"
       >
         <Link href={props.href} target="_blank" className="flex flex-col justify-between space-y-4 w-full h-full p-8 lg:p-12">
           <motion.div className="flex flex-col space-y-4 justify-start items-start w-full">
@@ -80,6 +86,7 @@ const ProjectItem = (props: {
             </motion.div>
           </motion.div>
         </Link>
+       <DecorationBorderHorizontal color="violet-500" />
       </motion.div>
     </MotionConfig>
   );
