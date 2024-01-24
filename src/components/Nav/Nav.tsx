@@ -70,7 +70,6 @@ const links = [
     href: "/photography",
     icon: <PiCameraFill />,
   },
-  
 
   // {
   //   name: "Studio",
@@ -166,7 +165,16 @@ const Nav = () => {
                         </Link>
                       </AnimatePresence>
                     </motion.div>
-                    <motion.div layout className="">
+                    <motion.div
+                      layout
+                      whileFocus="hover"
+                      whileTap="hover"
+                      className=""
+                      onClick={() => setOpen(!open)}
+                      onKeyDown={(e) => {
+                        if (e.key == "Enter") setOpen(!open);
+                      }}
+                    >
                       <Hamburger
                         aria-label="hamburger menu button"
                         label="hamburger menu button"

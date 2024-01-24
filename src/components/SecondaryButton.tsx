@@ -14,7 +14,7 @@ const SecondaryButton = (props: {
 }) => {
   const n = 100;
   const colors = {
-    extraDark: "#0a0a0a", 
+    extraDark: "#0a0a0a",
     dark: "#171717",
     gray: "#525252",
     light: "#f5f5f5",
@@ -23,10 +23,11 @@ const SecondaryButton = (props: {
     red: "#ef4444",
     sky: "#0ea5e9",
     indigo: "#6366f1",
+    violet: "#8b5cf6",
   };
 
   let color;
-  const backgroundColor = colors.dark;
+  // const backgroundColor = colors.dark;
   switch (props.variant) {
     case "plain":
       color = colors.light;
@@ -44,18 +45,22 @@ const SecondaryButton = (props: {
     case "indigo":
       color = colors.indigo;
       break;
+    case "violet":
+    case "projects":
+      color = colors.violet;
+      break;
     case "academic":
       color = colors.red;
   }
   const mainDivVariants = {
     initial: {
       color: color,
-      backgroundColor: backgroundColor,
+      backgroundColor: "transparent",
       borderColor: colors.gray,
     },
     hover: {
       color: color,
-      backgroundColor: backgroundColor,
+      backgroundColor: "transparent",
       borderColor: color,
     },
   };
@@ -100,8 +105,12 @@ const SecondaryButton = (props: {
           variants={mainDivVariants}
           initial="initial"
           whileHover="hover"
+          whileTap="hover"
+          whileFocus="hover"
           layout
-          className={`group w-fit h-fit py-1 flex flex-row items-center group justify-start space-x-4 overflow-hidden font-light ${props.plain ? "" : "border-b"}`}
+          className={`group w-fit h-fit py-1 flex flex-row items-center group justify-start space-x-4 overflow-hidden font-light ${
+            props.plain ? "" : "border-b"
+          }`}
         >
           <motion.div className="flex flex-col overflow-hidden">
             <AnimatePresence mode="popLayout">
@@ -121,7 +130,12 @@ const SecondaryButton = (props: {
               layout
               className={`flex flex-row items-center space-x-2`}
             >
-              {props.href.startsWith("http") || props.href.startsWith("https") ? <BsArrowUpRight /> : <BsArrowRight />}
+              {props.href.startsWith("http") ||
+              props.href.startsWith("https") ? (
+                <BsArrowUpRight />
+              ) : (
+                <BsArrowRight />
+              )}
             </motion.div>
           )}
           {!props.noArrow && (
@@ -130,7 +144,12 @@ const SecondaryButton = (props: {
               layout
               className={`flex flex-row items-center space-x-2`}
             >
-              {props.href.startsWith("http") || props.href.startsWith("https") ? <BsArrowUpRight /> : <BsArrowRight />}
+              {props.href.startsWith("http") ||
+              props.href.startsWith("https") ? (
+                <BsArrowUpRight />
+              ) : (
+                <BsArrowRight />
+              )}
             </motion.div>
           )}
         </motion.div>

@@ -16,11 +16,12 @@ import {
   SiPostgresql,
   SiBootstrap,
   SiGraphql,
-  SiReact, SiAndroid,
+  SiReact,
+  SiAndroid,
   SiPython,
   SiCplusplus,
   SiVercel,
-  SiJavascript
+  SiJavascript,
 } from "react-icons/si";
 import SimplePageTitle from "@/components/SimplePageTitle";
 import MarqueeButton from "@/components/MarqueeButton";
@@ -28,6 +29,7 @@ import { TbBrandFramerMotion, TbBrandOauth } from "react-icons/tb";
 import FeaturedProjectItem from "@/components/Projects/FeaturedProjectItem";
 import MainContent from "@/components/MainContent";
 import Script from "next/script";
+import ProjectsIntro from "@/components/Projects/ProjectsIntro";
 
 const Projects = () => {
   const projects = [
@@ -278,6 +280,7 @@ const Projects = () => {
           filtering options coming soon
         </div>
       </SimplePageTitle>
+      <ProjectsIntro />
       <FeaturedProjectItem
         title="Turbobiz"
         href="https://github.com/csvidit/turbobiz"

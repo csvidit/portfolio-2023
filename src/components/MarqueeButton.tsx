@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { BsArrowRight, BsArrowUpRight } from "react-icons/bs";
 import React, { useState } from "react";
 import Link from "next/link";
+import { truncate } from "fs";
 
 const MarqueeButton = (props: {
   label: string | React.ReactNode;
@@ -116,6 +117,7 @@ const MarqueeButton = (props: {
   };
 
   const marqueeVariants = {
+    initial: { x: 0 },
     hover: {
       x: [0, -10350],
       transition: {
@@ -138,14 +140,28 @@ const MarqueeButton = (props: {
       }}
       initial="initial"
       whileHover="hover"
+      whileFocus="hover"
+      whileTap="hover"
+      onFocus={() => setHover(true)}
+      onBlur={() => setHover(false)}
+      onTapStart={() => setHover(true)}
+      onTapCancel={() => setHover(false)}
+      onTouchStart={() => setHover(true)}
+      onTouchEnd={() => setHover(false)}
       variants={mainDivVariants}
-      className={`lg:col-span-${props.size} ${props.height? "lg:row-span-"+props.height : "lg:row-span-1"} justify-center rounded-[3rem] bg-neutral-900 text-neutral-100 text-4xl lg:text-6xl lg:min-h-[160px] overflow-x-hidden`}
+      className={`lg:col-span-${props.size} ${
+        props.height ? "lg:row-span-" + props.height : "lg:row-span-1"
+      } justify-center rounded-[3rem] bg-neutral-900 text-neutral-100 text-4xl lg:text-6xl lg:min-h-[160px] overflow-x-hidden`}
     >
       <Link
         tabIndex={0}
         aria-label={props.alt ? props.alt : `Link to ${props.children}`}
         href={props.href}
-        target={props.href.startsWith("http") || props.href.startsWith("https") ? "_blank" : ""}
+        target={
+          props.href.startsWith("http") || props.href.startsWith("https")
+            ? "_blank"
+            : ""
+        }
         className="flex flex-col w-full h-full justify-center"
       >
         <motion.div
@@ -165,7 +181,8 @@ const MarqueeButton = (props: {
               {hover ? props.children : props.label}
             </motion.div>
             {props.size != 1 ? (
-              props.href.startsWith("http") || props.href.startsWith("https") ? (
+              props.href.startsWith("http") ||
+              props.href.startsWith("https") ? (
                 <BsArrowUpRight />
               ) : (
                 <BsArrowRight />
@@ -186,7 +203,8 @@ const MarqueeButton = (props: {
                   </motion.div>
 
                   {props.size != 1 ? (
-                    props.href.startsWith("http") || props.href.startsWith("https") ? (
+                    props.href.startsWith("http") ||
+                    props.href.startsWith("https") ? (
                       <BsArrowUpRight />
                     ) : (
                       <BsArrowRight />

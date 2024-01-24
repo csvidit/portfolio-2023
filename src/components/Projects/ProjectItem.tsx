@@ -4,7 +4,6 @@ import { MotionConfig, motion } from "framer-motion";
 import { BsArrowUpRight } from "react-icons/bs";
 import { useRef } from "react";
 import Link from "next/link";
-import DecorationBorderHorizontal from "../DecorationBorderHorizontal";
 
 const ProjectItem = (props: {
   title: string;
@@ -86,7 +85,6 @@ const ProjectItem = (props: {
             </motion.div>
           </motion.div>
         </Link>
-       <DecorationBorderHorizontal color="violet-500" />
       </motion.div>
     </MotionConfig>
   );

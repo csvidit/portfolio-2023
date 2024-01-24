@@ -63,6 +63,14 @@ const NavLink = (props: {
         variants={mainDivVariants}
         initial="initial"
         whileHover="hover"
+        whileFocus="hover"
+        whileTap="hover"
+        // onFocus={() => setHover(true)}
+        // onBlur={() => setHover(false)}
+        // onTapStart={() => setHover(true)}
+        // onTapCancel={() => setHover(false)}
+        // onTouchStart={() => setHover(true)}
+        // onTouchEnd={() => setHover(false)}
         layout
         className={`z-50 relative grid-cols-1 w-full h-fit border group transition-all ease-in-out duration-300 rounded-xl ${
           props.current == true

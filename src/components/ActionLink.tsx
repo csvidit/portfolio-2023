@@ -92,7 +92,11 @@ const ActionLink = (props: {
     >
       <Link
         tabIndex={0}
-        target={props.href.startsWith("http") || props.href.startsWith("https") ? "_blank" : ""}
+        target={
+          props.href.startsWith("http") || props.href.startsWith("https")
+            ? "_blank"
+            : ""
+        }
         href={props.href}
         className={`flex bg-opacity-100 w-${props.size} ${props.className}`}
       >
@@ -100,6 +104,8 @@ const ActionLink = (props: {
           variants={mainDivVariants}
           initial="initial"
           whileHover="hover"
+          whileFocus="hover"
+          whileTap="hover"
           layout
           className={`group w-${props.size} h-full px-4 py-2 flex flex-row items-center group justify-between space-x-4 text-xl lg:text-2xl border rounded-[3rem] overflow-hidden font-light`}
         >
@@ -120,14 +126,22 @@ const ActionLink = (props: {
             layout
             className={`flex flex-row items-center space-x-2`}
           >
-            {props.href.startsWith("http") || props.href.startsWith("https") ? <BsArrowUpRight /> : <BsArrowRight />}
+            {props.href.startsWith("http") || props.href.startsWith("https") ? (
+              <BsArrowUpRight />
+            ) : (
+              <BsArrowRight />
+            )}
           </motion.div>
           <motion.div
             variants={textVariants2}
             layout
             className={`flex flex-row items-center space-x-2`}
           >
-            {props.href.startsWith("http") || props.href.startsWith("https") ? <BsArrowUpRight /> : <BsArrowRight />}
+            {props.href.startsWith("http") || props.href.startsWith("https") ? (
+              <BsArrowUpRight />
+            ) : (
+              <BsArrowRight />
+            )}
           </motion.div>
         </motion.div>
       </Link>

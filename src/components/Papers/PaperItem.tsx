@@ -4,7 +4,6 @@ import { MotionConfig, motion } from "framer-motion";
 import { BsArrowUpRight, BsDot } from "react-icons/bs";
 import { useRef } from "react";
 import Link from "next/link";
-import DecorationBorderHorizontal from "../DecorationBorderHorizontal";
 
 export const tags = [
   "All",
@@ -115,7 +114,6 @@ const PaperItem = (props: {
             </motion.div>
           </motion.div>
         </Link>
-       <DecorationBorderHorizontal color="red-500" />
       </motion.div>
     </MotionConfig>
   );
