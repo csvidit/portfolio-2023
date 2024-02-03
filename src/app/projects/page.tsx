@@ -82,16 +82,15 @@ const Projects = () => {
       ),
     },
     {
-      title: "Snapshot",
-      content:
-        "A web app that shows you a briefing of the day, including news and weather",
-      link: "https://github.com/csvidit/snapshot",
+      title: "Trimr",
+      content: "A URL shortener service",
+      link: "https://github.com/csvidit/trimr",
       icons: (
         <ProjectIconsContainer>
           <SiTypescript />
           <SiNextdotjs />
           <SiTailwindcss />
-          <SiAuth0 />
+          <SiFirebase />
           <SiVercel />
         </ProjectIconsContainer>
       ),
@@ -112,6 +111,22 @@ const Projects = () => {
         </ProjectIconsContainer>
       ),
     },
+    {
+      title: "Snapshot",
+      content:
+        "A web app that shows you a briefing of the day, including news and weather",
+      link: "https://github.com/csvidit/snapshot",
+      icons: (
+        <ProjectIconsContainer>
+          <SiTypescript />
+          <SiNextdotjs />
+          <SiTailwindcss />
+          <SiAuth0 />
+          <SiVercel />
+        </ProjectIconsContainer>
+      ),
+    },
+    
     {
       title: "Lit. Portfolio",
       content:

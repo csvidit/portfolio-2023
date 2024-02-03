@@ -51,7 +51,7 @@ const Extracurriculars = () => {
         </div>
         <div className="w-full flex flex-col space-y-2">
           <SubSectionTitle>
-            Board Member, International Student Association
+          International Student Ambassador, International Student Affairs
           </SubSectionTitle>
           <ExpBullets>
             <li>
