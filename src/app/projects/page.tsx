@@ -80,21 +80,6 @@ const Projects = () => {
       ),
     },
     {
-      title: "Snapshot",
-      content:
-        "A web app that shows you a briefing of the day, including news and weather",
-      link: "https://github.com/csvidit/snapshot",
-      icons: (
-        <ProjectIconsContainer>
-          <SiTypescript />
-          <SiNextdotjs />
-          <SiTailwindcss />
-          <SiAuth0 />
-          <SiVercel />
-        </ProjectIconsContainer>
-      ),
-    },
-    {
       title: "Turbobiz",
       content: "Generate a business idea by leveraging the power of AI",
       link: "https://github.com/csvidit/turbobiz",
@@ -106,6 +91,35 @@ const Projects = () => {
           <TbBrandFramerMotion />
           <TbBrandOauth />
           <SiFirebase />
+          <SiVercel />
+        </ProjectIconsContainer>
+      ),
+    },
+    {
+      title: "Trimr",
+      content: "A simple URL shortener service",
+      link: "https://github.com/csvidit/trimr",
+      icons: (
+        <ProjectIconsContainer>
+          <SiTypescript />
+          <SiNextdotjs />
+          <SiTailwindcss />
+          <SiFirebase />
+          <SiVercel />
+        </ProjectIconsContainer>
+      ),
+    },
+    {
+      title: "Snapshot",
+      content:
+        "A web app that shows you a briefing of the day, including news and weather",
+      link: "https://github.com/csvidit/snapshot",
+      icons: (
+        <ProjectIconsContainer>
+          <SiTypescript />
+          <SiNextdotjs />
+          <SiTailwindcss />
+          <SiAuth0 />
           <SiVercel />
         </ProjectIconsContainer>
       ),
