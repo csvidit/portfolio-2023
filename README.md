@@ -1,3 +1,5 @@
+## DEPRECATED. Currently, the source-code for my new portfolio for 2024 is private. Check out the new one at [viditkhandelwal.com](https://viditkhandelwal.com), the same domain as before.
+
 # Integrated Portfolio
 
 It's here! My comprehensive portfolio spanning computer science, economics, and the creative arts is here. I call it my first-ever integrated portfolio, because never before have all of my academic (or otherwise) disciplines been in one cohesive website.
